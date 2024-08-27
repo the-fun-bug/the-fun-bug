@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Nickainley';
+  src: local('Nickainley'),
+    url('../fonts/Nickainley-Normal.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,6 +33,14 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+h1 {
+  font-size: 48px;
+
+  @media (max-width: 640px) {
+    font-size: 30px;
+  }
 }
 
 @layer utilities {
