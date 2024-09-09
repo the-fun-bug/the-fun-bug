@@ -12,7 +12,7 @@ export default function GlobalLayout({
   return (
     <>
       <div className={quicksand.className}>
-        <div className="flex flex-col justify-between min-h-screen bg-white">
+        <div className={`flex flex-col justify-between min-h-screen bg-white`}>
           <Navbar />
           <main className="block min-h-[100vh - 291px] w-full flex items-center justify-center">
             <div className="flex flex-col justify-center w-full max-w-[85.75rem] mx-[0.625rem] md:mx-[1.5625rem]">

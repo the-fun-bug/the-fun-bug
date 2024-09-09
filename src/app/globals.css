@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: 'Nickainley';
-  src: local('Nickainley'),
+  src:
+    local('Nickainley'),
     url('../fonts/Nickainley-Normal.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
@@ -47,4 +48,21 @@ h1 {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Swiper */
+
+/* .packages-at-a-glance .swiper-pagination {
+  bottom: 10px;
+} */
+
+.homepage-gallery .swiper-pagination-bullet-active {
+  background: #218b82 !important;
+}
+
+.homepage-gallery .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background: #d9ebdd;
+  opacity: 1;
 }
