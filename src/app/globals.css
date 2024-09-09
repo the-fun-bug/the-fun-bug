@@ -41,6 +41,13 @@ h1 {
 
   @media (max-width: 640px) {
     font-size: 30px;
+    line-height: 1.25;
+  }
+}
+
+p {
+  @media (max-width: 640px) {
+    font-size: 14px;
   }
 }
 
