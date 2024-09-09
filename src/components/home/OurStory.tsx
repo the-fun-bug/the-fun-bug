@@ -25,7 +25,7 @@ export default function OurStory() {
       <Image
         src={bugsImg}
         alt="The Fun Bug's little bugs"
-        className="max-w-[1045px] w-full"
+        className="max-w-[750px] w-full"
         height={362}
         width={2090}
       />

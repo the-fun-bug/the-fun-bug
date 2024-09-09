@@ -67,8 +67,8 @@ export default function Navbar() {
             <div className="flex gap-[2rem] items-center">
               <Link
                 href={'/parties'}
-                className="font-medium border border-black hover:border-transparent rounded-lg px-[2rem] py-[0.5rem] my-[1rem] 
-             transition-colors duration-300 bg-soft-pink hover:bg-dark-pink hover:text-white"
+                className="hidden xxs:block font-medium border border-black hover:border-transparent rounded-lg px-[2rem] py-[0.5rem] my-[1rem] 
+  transition-colors duration-300 bg-soft-pink hover:bg-dark-pink hover:text-white"
               >
                 Book a Party
               </Link>

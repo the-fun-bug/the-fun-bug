@@ -24,6 +24,10 @@ const config: Config = {
       fontFamily: {
         nickainley: ['Nickainley'],
       },
+      screens: {
+        xxs: '375px',
+        xs: '425px',
+      },
     },
   },
   plugins: [],
