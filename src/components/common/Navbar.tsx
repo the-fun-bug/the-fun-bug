@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import NavLink from './NavLink';
 import Image from 'next/image';
 import navLogo from './img/logo-nav.png';
@@ -59,11 +60,13 @@ export default function Navbar() {
       {mounted &&
         (isMobile ? (
           <nav className="bg-white p-[0.5rem] sm:p-[1rem] flex justify-between">
-            <Image
-              src={navLogo}
-              alt="The Fun Bug, Play Studio & Parties Logo"
-              className="w-[100px]"
-            />
+            <Link href="/">
+              <Image
+                src={navLogo}
+                alt="The Fun Bug, Play Studio & Parties Logo"
+                className="w-[100px]"
+              />
+            </Link>
             <div className="flex gap-[2rem] items-center">
               <ButtonLink
                 buttonText="Book a Party"
@@ -115,12 +118,14 @@ export default function Navbar() {
                 style={{ height: '100%' }}
               >
                 <div className="w-[185px] flex justify-center">
-                  <Image
-                    src={navLogo}
-                    alt="The Fun Bug, Play Studio & Parties Logo"
-                    className="transition-all duration-300"
-                    style={{ maxWidth: `${logoSize}px`, maxHeight: '100%' }} // Resizing logo
-                  />
+                  <Link href="/">
+                    <Image
+                      src={navLogo}
+                      alt="The Fun Bug, Play Studio & Parties Logo"
+                      className="transition-all duration-300"
+                      style={{ maxWidth: `${logoSize}px`, maxHeight: '100%' }} // Resizing logo
+                    />
+                  </Link>
                 </div>
               </div>
               <NavLink link="/cafe" linkName="Cafe" />
