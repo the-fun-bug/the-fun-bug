@@ -75,25 +75,29 @@ export default function Navbar() {
                 buttonClass="hidden xxs:block bg-soft-pink hover:bg-dark-pink hover:text-white"
               />
               <button
-                onClick={() => {
-                  setNavOpen(!navOpen);
-                }}
-                className="flex flex-col items-center justify-between w-[35px] h-[25px] p-0"
+                onClick={() => setNavOpen(!navOpen)}
+                className="relative flex flex-col items-center justify-between w-[35px] h-[25px] p-0 mr-[0.5rem]"
               >
-                <div className="bg-dark-blue h-[2px] w-full " />
-                <div className="bg-dark-blue h-[2px] w-full " />
-                <div className="bg-dark-blue h-[2px] w-full " />
+                <div
+                  className={`bg-dark-blue h-[2px] w-full transition-all duration-300 ease-in-out ${navOpen ? 'rotate-45 translate-y-[16px]' : ''}`}
+                />
+                <div
+                  className={`bg-dark-blue h-[2px] w-full transition-opacity duration-300 ease-in-out ${navOpen ? 'opacity-0' : 'opacity-100'}`}
+                />
+                <div
+                  className={`bg-dark-blue h-[2px] w-full transition-all duration-300 ease-in-out ${navOpen ? '-rotate-45 -translate-y-[6px]' : ''}`}
+                />
               </button>
             </div>
             {navOpen && (
               <div className="fixed top-[82px] left-0 h-screen w-screen bg-white">
-                {/* Border image below the navbar */}
                 <div
-                  className="w-full h-[20px] bg-repeat-x bg-[length:auto_20px] mt-[0.5rem]"
+                  className="h-[3px] w-full mt-[0.5rem]"
                   style={{
-                    backgroundImage: `url(${navBorder.src})`,
+                    background:
+                      'linear-gradient(to left, #FDD7EC 0%, #FECDA1 33%, #FBFEC1 66%, #D9EBDD 100%',
                   }}
-                ></div>
+                />
 
                 <div className="flex flex-col">
                   <NavLink link="/about" linkName="About" />
