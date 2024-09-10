@@ -17,6 +17,7 @@ const config: Config = {
       'dark-pink': '#EB96AA',
       'soft-green': '#D9EBDD',
       'bright-green': '#95B97B',
+      'dark-green': '#218B82',
       'soft-orange': '#FFCEA0',
       'soft-yellow': '#FBFEC1',
       'dark-yellow': '#D1925B',
