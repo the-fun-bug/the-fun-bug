@@ -18,6 +18,8 @@ const config: Config = {
       'soft-green': '#D9EBDD',
       'bright-green': '#95B97B',
       'soft-orange': '#FFCEA0',
+      'soft-yellow': '#FBFEC1',
+      'dark-yellow': '#D1925B',
       transparent: 'transparent',
     },
     extend: {

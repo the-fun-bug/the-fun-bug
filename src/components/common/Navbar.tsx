@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import NavLink from './NavLink';
-import Link from 'next/link';
 import Image from 'next/image';
 import navLogo from './img/logo-nav.png';
 import navBorder from './img/nav-border.png';
 import useIsMobile from '@/hooks/useIsMobile';
+import ButtonLink from './ButtonLink';
 
 export default function Navbar() {
   const [logoSize, setLogoSize] = useState(245); // Default logo size
@@ -65,14 +65,11 @@ export default function Navbar() {
               className="w-[100px]"
             />
             <div className="flex gap-[2rem] items-center">
-              <Link
-                href={'/parties'}
-                className="hidden xxs:block font-medium border border-black hover:border-transparent rounded-lg px-[2rem] py-[0.5rem] my-[1rem] 
-  transition-colors duration-300 bg-soft-pink hover:bg-dark-pink hover:text-white"
-              >
-                Book a Party
-              </Link>
-
+              <ButtonLink
+                buttonText="Book a Party"
+                buttonLink="/parties"
+                buttonClass="hidden xxs:block bg-soft-pink hover:bg-dark-pink hover:text-white"
+              />
               <button
                 onClick={() => {
                   setNavOpen(!navOpen);

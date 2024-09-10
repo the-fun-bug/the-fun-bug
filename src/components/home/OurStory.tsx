@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import ButtonLink from '../common/ButtonLink';
 import Image from 'next/image';
 import bugsImg from './img/our-story.png';
 
@@ -14,13 +14,11 @@ export default function OurStory() {
           indoor play options in New Braunfels. Come join us for open play time,
           delicious coffee, and exclusive party rentals after hours!
         </p>
-        <Link
-          href={'/about'}
-          className="font-medium border border-black hover:border-transparent rounded-lg px-[2rem] py-[0.5rem] my-[1rem] 
-             transition-colors duration-300 bg-transparent hover:bg-gradient-to-r hover:from-[#B9DEFF] hover:to-[#FFC5E5]"
-        >
-          Our Story
-        </Link>
+        <ButtonLink
+          buttonText="Our Story"
+          buttonLink="/about"
+          buttonClass="bg-transparent hover:bg-gradient-to-r hover:from-dark-pink hover:to-worm-blue hover:text-white transition-all"
+        />
       </div>
       <Image
         src={bugsImg}

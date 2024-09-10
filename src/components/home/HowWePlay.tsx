@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import openPlayBg from './img/open-play.png';
 import partiesBg from './img/parties.png';
+import ButtonLink from '../common/ButtonLink';
 
 export default function HowWePlay() {
   return (
@@ -27,13 +27,11 @@ export default function HowWePlay() {
               </p>
               <p>$12 per child ages 2-12</p>
               <p>$8 per child 0-2</p>
-              <Link
-                href={'/pricing'}
-                className="w-fit font-medium border border-black hover:border-transparent rounded-lg px-[2rem] py-[0.5rem] my-[1rem] 
-             transition-colors duration-300 bg-transparent hover:bg-dark-blue hover:text-white"
-              >
-                Pricing & Memberships
-              </Link>
+              <ButtonLink
+                buttonText="Pricing & Memberships"
+                buttonLink="/pricing"
+                buttonClass="bg-transparent hover:bg-dark-blue hover:text-white"
+              />
             </div>
           </div>
           <div className="relative">
@@ -53,12 +51,11 @@ export default function HowWePlay() {
               </p>
               <p>$375 for 2 hours</p>
               <p>$75 for additional 30 minutes</p>
-              <Link
-                href={'/parties'}
-                className="w-fit font-medium border border-black hover:border-transparent rounded-lg px-[2rem] py-[0.5rem] my-[1rem] transition-colors duration-300 bg-transparent hover:bg-dark-blue hover:text-white"
-              >
-                Learn More
-              </Link>
+              <ButtonLink
+                buttonText="Learn More"
+                buttonLink="/parties"
+                buttonClass="bg-transparent hover:bg-dark-pink hover:text-white"
+              />
             </div>
           </div>
         </div>
