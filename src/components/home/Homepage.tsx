@@ -2,6 +2,7 @@ import React from 'react';
 import HomepageGallery from './Gallery';
 import OurStory from './OurStory';
 import HowWePlay from './HowWePlay';
+import Cafe from './Cafe';
 
 export default function Homepage() {
   return (
@@ -9,6 +10,7 @@ export default function Homepage() {
       <HomepageGallery />
       <OurStory />
       <HowWePlay />
+      <Cafe />
     </>
   );
 }
