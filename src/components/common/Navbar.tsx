@@ -65,6 +65,7 @@ export default function Navbar() {
                 src={navLogo}
                 alt="The Fun Bug, Play Studio & Parties Logo"
                 className="w-[100px]"
+                priority={true}
               />
             </Link>
             <div className="flex gap-[2rem] items-center">
@@ -124,6 +125,7 @@ export default function Navbar() {
                       alt="The Fun Bug, Play Studio & Parties Logo"
                       className="transition-all duration-300"
                       style={{ maxWidth: `${logoSize}px`, maxHeight: '100%' }} // Resizing logo
+                      priority={true}
                     />
                   </Link>
                 </div>
