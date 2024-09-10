@@ -2,7 +2,7 @@ import React from 'react';
 import { quicksand } from '@/app/fonts';
 
 import Navbar from './Navbar';
-// import Footer from './nav/Footer';
+import Footer from './Footer';
 
 export default function GlobalLayout({
   children,
@@ -19,7 +19,7 @@ export default function GlobalLayout({
               {children}
             </div>
           </main>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </div>
     </>
