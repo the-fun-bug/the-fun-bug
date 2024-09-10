@@ -28,7 +28,7 @@ export default function HowWePlay() {
               <p>$12 per child ages 2-12</p>
               <p>$8 per child 0-2</p>
               <ButtonLink
-                buttonText="Pricing & Memberships"
+                buttonText="Learn More"
                 buttonLink="/pricing"
                 buttonClass="bg-transparent hover:bg-dark-blue hover:text-white"
               />
