@@ -3,6 +3,7 @@ import HomepageGallery from './Gallery';
 import OurStory from './OurStory';
 import HowWePlay from './HowWePlay';
 import Cafe from './Cafe';
+import VisitUs from '../common/VisitUs';
 
 export default function Homepage() {
   return (
@@ -11,6 +12,7 @@ export default function Homepage() {
       <OurStory />
       <HowWePlay />
       <Cafe />
+      <VisitUs />
     </>
   );
 }
