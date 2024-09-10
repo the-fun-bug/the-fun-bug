@@ -5,7 +5,7 @@ import bugsImg from './img/our-story.png';
 
 export default function OurStory() {
   return (
-    <section className="py-[2rem] flex flex-col justify-center items-center p-[1rem]">
+    <section className="pt-[1rem] pb-[1.5rem] flex flex-col justify-center items-center p-[1rem]">
       <div className="max-w-[750px] text-center flex flex-col gap-[1rem] justify-center items-center">
         <h1 className="font-nickainley">A Place For Everyone To Enjoy</h1>
         <p>

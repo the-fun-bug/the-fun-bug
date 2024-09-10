@@ -5,7 +5,9 @@ import VisitUs from '@/components/common/VisitUs';
 export default function ContactPage() {
   return (
     <GlobalLayout>
-      <VisitUs />
+      <div className="py-[0.5rem]">
+        <VisitUs />
+      </div>
     </GlobalLayout>
   );
 }

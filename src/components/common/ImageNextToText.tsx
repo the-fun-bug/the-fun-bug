@@ -26,9 +26,11 @@ export default function ImageNextToTextSection({
   buttonClass,
 }: ImageNextToTextSectionProps) {
   return (
-    <section className={`flex items-center justify-center py-[2rem] px-[1rem]`}>
+    <section
+      className={`flex items-center justify-center py-[1.5rem] px-[1rem]`}
+    >
       <div
-        className={`flex gap-[3rem] ${imageSide === 'left' ? 'flex-col-reverse lg:flex-row' : 'flex-col md:flex-row-reverse'} items-center justify-between max-w-[1000px]`}
+        className={`flex gap-[1rem] md:gap-[3rem] ${imageSide === 'left' ? 'flex-col-reverse lg:flex-row' : 'flex-col md:flex-row-reverse'} items-center justify-between max-w-[1000px]`}
       >
         <div>
           <Image src={imageSrc} alt={alt} className={`${imageClass}`} />
