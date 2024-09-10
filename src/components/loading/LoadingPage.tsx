@@ -12,6 +12,7 @@ export default function LoadingPage() {
           height={350}
           width={200}
           className="w-full max-w-[350px]"
+          priority={true}
         />
         <div className="absolute top-0 left-0 h-[200px] w-[350px] flex items-center justify-center">
           <h1 className="font-nickainley ">Loading...</h1>
