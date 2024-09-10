@@ -40,6 +40,7 @@ export default function HomepageGallery() {
         className="homepage-gallery"
         autoplay={true}
         speed={800}
+        spaceBetween={50}
       >
         {slides.map((s, i) => (
           <SwiperSlide key={i} className="mx-auto">
