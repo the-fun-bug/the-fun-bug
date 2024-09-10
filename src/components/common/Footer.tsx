@@ -19,11 +19,13 @@ export default function Footer() {
       />
       <div className="grid grid-cols-1 md:grid-cols-3 w-full py-[2rem] px-[1rem] gap-[2rem] md:gap-[1rem] max-w-[1000px] mx-auto">
         <div className="flex justify-center md:justify-start items-center">
-          <Image
-            src={logo}
-            alt="The Fun Bug, Play Studio & Parties Logo"
-            className="max-w-[275px] w-full"
-          />
+          <Link href="/">
+            <Image
+              src={logo}
+              alt="The Fun Bug, Play Studio & Parties Logo"
+              className="max-w-[275px] w-full"
+            />
+          </Link>
         </div>
 
         <div className="flex flex-col justify-between items-center h-full">
