@@ -39,7 +39,7 @@ export default function Footer() {
                 alt="facebook icon"
                 width={80}
                 height={80}
-                className="w-[40px] h-[40px] hover:scale-105 transition-all duration-75"
+                className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
               />
             </Link>
             <Link href="" target="_blank">
@@ -48,7 +48,7 @@ export default function Footer() {
                 alt="instagram icon"
                 width={80}
                 height={80}
-                className="w-[40px] h-[40px] hover:scale-105 transition-all duration-75"
+                className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
               />
             </Link>
             <Link href="" target="_blank">
@@ -57,11 +57,11 @@ export default function Footer() {
                 alt="ticktok icon"
                 width={80}
                 height={80}
-                className="w-[40px] h-[40px] hover:scale-105 transition-all duration-75"
+                className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
               />
             </Link>
           </div>
-          <h2 className="font-bold text-xl text-center max-w-[240px]">
+          <h2 className="text-center max-w-[240px]">
             Let Us Take Care of Your Next Party!
           </h2>
           <ButtonLink
