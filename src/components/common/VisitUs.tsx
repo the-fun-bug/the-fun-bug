@@ -116,6 +116,11 @@ export default function VisitUs() {
                 11:00 am - 1:00 pm, 2:00 pm - 4:00 pm & 5:00 pm - 7:00 pm
               </p>
             </div>
+            <ButtonLink
+              buttonText="Book a Party"
+              buttonLink="/parties"
+              buttonClass="bg-soft-pink hover:bg-dark-pink hover:text-white"
+            />
           </div>
         </div>
       </div>
