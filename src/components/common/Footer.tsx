@@ -26,7 +26,7 @@ export default function Footer() {
           />
         </div>
 
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-between items-center h-full">
           <div className="flex gap-[0.5rem] mb-[1rem]">
             <Link
               href="https://www.facebook.com/groups/824992593033982"
