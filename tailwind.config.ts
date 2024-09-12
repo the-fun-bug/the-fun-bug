@@ -19,6 +19,8 @@ const config: Config = {
       'soft-orange': '#FFCEA0',
       'soft-yellow': '#FBFEC1',
       transparent: 'transparent',
+      cafe: '#F1D1AB',
+      'cafe-pink': '#EB96AA',
     },
     extend: {
       fontFamily: {
