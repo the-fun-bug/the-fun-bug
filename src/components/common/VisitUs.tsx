@@ -59,7 +59,7 @@ export default function VisitUs() {
             <ButtonLink
               buttonText="View Latest News"
               buttonLink="/news"
-              buttonClass="bg-soft-green hover:bg-dark-green hover:text-white"
+              buttonClass="bg-soft-green/50 hover:bg-soft-green"
             />
           </div>
           <div className="flex flex-col gap-[1rem] lg:w-[32%] mx-auto">
@@ -115,7 +115,7 @@ export default function VisitUs() {
             <ButtonLink
               buttonText="Book a Party"
               buttonLink="/parties"
-              buttonClass="bg-soft-pink hover:bg-dark-pink hover:text-white"
+              buttonClass="bg-soft-pink/50 hover:bg-soft-pink"
             />
           </div>
         </div>

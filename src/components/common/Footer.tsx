@@ -67,7 +67,7 @@ export default function Footer() {
           <ButtonLink
             buttonText="Reserve Now"
             buttonLink="/parties"
-            buttonClass="bg-soft-pink hover:bg-dark-pink hover:text-white"
+            buttonClass="bg-soft-pink/50 hover:bg-soft-pink"
           />
         </div>
 
@@ -85,8 +85,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="text-xs mb-[1rem] text-right flex md:justify-end whitespace-nowrap gap-[5px]">
-            Made with <span className="dark:hidden">&#128420;</span>
-            <span className=" hidden dark:block">&#x1F90D;</span> by{' '}
+            Made with &#128420; by{' '}
             <Link
               href="https://leighdahlin.com/"
               className="underline"

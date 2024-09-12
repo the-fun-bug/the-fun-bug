@@ -17,7 +17,7 @@ export default function OurStory() {
         <ButtonLink
           buttonText="Our Story"
           buttonLink="/about"
-          buttonClass="bg-transparent hover:bg-gradient-to-r hover:from-dark-pink hover:to-worm-blue hover:text-white transition-all"
+          buttonClass="bg-transparent hover:bg-gradient-to-r hover:from-soft-pink hover:to-soft-blue"
         />
       </div>
       <Image

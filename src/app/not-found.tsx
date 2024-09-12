@@ -12,7 +12,7 @@ export default function NotFound() {
         <ButtonLink
           buttonText="Back To Homepage"
           buttonLink="/"
-          buttonClass="bg-soft-pink hover:bg-dark-pink hover:text-white"
+          buttonClass="bg-soft-pink/50 hover:bg-soft-pink"
         />
       </div>
     </GlobalLayout>
