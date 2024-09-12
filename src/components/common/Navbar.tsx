@@ -72,20 +72,20 @@ export default function Navbar() {
               <ButtonLink
                 buttonText="Book a Party"
                 buttonLink="/parties"
-                buttonClass="hidden xxs:block bg-soft-pink hover:bg-dark-pink hover:text-white"
+                buttonClass="hidden xxs:block bg-soft-pink/50 hover:bg-soft-pink"
               />
               <button
                 onClick={() => setNavOpen(!navOpen)}
                 className="relative flex flex-col items-center justify-between w-[35px] h-[25px] p-0 mr-[0.5rem]"
               >
                 <div
-                  className={`bg-dark-blue h-[2px] w-full transition-all duration-300 ease-in-out ${navOpen ? 'rotate-45 translate-y-[16px]' : ''}`}
+                  className={`bg-black h-[2px] w-full transition-all duration-300 ease-in-out ${navOpen ? 'rotate-45 translate-y-[16px]' : ''}`}
                 />
                 <div
-                  className={`bg-dark-blue h-[2px] w-full transition-opacity duration-300 ease-in-out ${navOpen ? 'opacity-0' : 'opacity-100'}`}
+                  className={`bg-black h-[2px] w-full transition-opacity duration-300 ease-in-out ${navOpen ? 'opacity-0' : 'opacity-100'}`}
                 />
                 <div
-                  className={`bg-dark-blue h-[2px] w-full transition-all duration-300 ease-in-out ${navOpen ? '-rotate-45 -translate-y-[6px]' : ''}`}
+                  className={`bg-black h-[2px] w-full transition-all duration-300 ease-in-out ${navOpen ? '-rotate-45 -translate-y-[6px]' : ''}`}
                 />
               </button>
             </div>
@@ -114,7 +114,7 @@ export default function Navbar() {
           <nav
             className={`bg-white w-full flex items-center justify-between mx-auto py-[0.5rem]  h-[${navSize}]`}
           >
-            <div className="w-full flex max-w-[85vw] items-center justify-between mx-auto">
+            <div className="w-full flex max-w-[1000px] items-center justify-between mx-auto px-[1rem]">
               <NavLink link="/about" linkName="About" />
               <NavLink link="/pricng" linkName="Pricing" />
               <NavLink link="/parties" linkName="Parties" />
@@ -122,12 +122,12 @@ export default function Navbar() {
                 className="flex items-center justify-center"
                 style={{ height: '100%' }}
               >
-                <div className="w-[185px] flex justify-center">
+                <div className="w-[185px] lg:w-[245px] flex justify-center">
                   <Link href="/">
                     <Image
                       src={navLogo}
                       alt="The Fun Bug, Play Studio & Parties Logo"
-                      className="transition-all duration-300"
+                      className="transition-all duration-300 w-full"
                       style={{ maxWidth: `${logoSize}px`, maxHeight: '100%' }} // Resizing logo
                       priority={true}
                     />

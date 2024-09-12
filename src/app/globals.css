@@ -26,6 +26,10 @@
   }
 }
 
+html {
+  scroll-padding-top: 105px;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

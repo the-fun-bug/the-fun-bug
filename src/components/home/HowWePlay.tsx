@@ -30,7 +30,7 @@ export default function HowWePlay() {
               <ButtonLink
                 buttonText="Learn More"
                 buttonLink="/pricing"
-                buttonClass="bg-transparent hover:bg-dark-blue hover:text-white"
+                buttonClass="bg-soft-blue hover:bg-worm-blue"
               />
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function HowWePlay() {
               <ButtonLink
                 buttonText="Learn More"
                 buttonLink="/parties"
-                buttonClass="bg-transparent hover:bg-dark-pink hover:text-white"
+                buttonClass="bg-soft-pink hover:bg-worm-pink"
               />
             </div>
           </div>
