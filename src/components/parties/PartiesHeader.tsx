@@ -2,19 +2,32 @@
 
 import React from 'react';
 import Image from 'next/image';
+import useIsMobile from '@/hooks/useIsMobile';
 import partiesHeaderImg from './img/parties-header.png';
 
 export default function PartiesHeader() {
+  const isMobile = useIsMobile(768);
+
   const scrollToReservation = () => {
-    const contactSection = document.querySelector('#reserve');
-    console.log(contactSection);
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+    const scrollSection = document.querySelector('#reserve');
+    console.log(scrollSection);
+    if (scrollSection) {
+      scrollSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Use this function for buttons that scroll from the top of the page
+    // This offsets the extra padding from the large header on large screens
+    if (scrollSection && !isMobile) {
+      const yOffset = -175;
+      const y =
+        scrollSection.getBoundingClientRect().top + window.scrollY + yOffset;
+
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 
   return (
-    <section className="flex justify-center items-center py-[3rem] md:px-[1rem]">
+    <section className="flex justify-center items-center pt-[1rem] pb-[3rem] md:px-[1rem]">
       <div className="flex flex-col justify-center items-center text-center gap-[1rem] w-full max-w-[650px]">
         <h1 className="font-nickainley">Private Events & Parties</h1>
         <p>

@@ -249,9 +249,11 @@ function BuildYourOwn() {
 
 function SeasonalSpecialties() {
   return (
-    <div className="w-full">
+    <div className="w-full scroll-pt-[100px]">
       <div className="flex flex-col gap-[1rem]">
-        <h2 className="text-cafe-pink">Seasonal Specialties</h2>
+        <h2 id="seasonal" className="text-cafe-pink snap-start">
+          Seasonal Specialties
+        </h2>
         <div className="flex-flex-col gap-[0.5rem]">
           <div className="flex justify-between w-[205px]">
             <p>Hot drinks (12oz)</p>
