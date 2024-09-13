@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Button from '../common/Button';
 import aboutImage from './img/about.png';
 
 export default function HiEveryone() {
@@ -36,11 +35,11 @@ export default function HiEveryone() {
         <div className="py-[2rem] flex flex-col gap-[1rem] text-center max-w-[750px]">
           <h1 className="font-nickainley">Hi everyone!</h1>
           <p>
-            We are the Saur's. I am Kameron and my husband is Clay, or as my
-            sweet in-laws like to call it, the "vision" and the "labor". We have
-            two amazing kiddos and we are big on nicknames around here! Our
-            daughter Olivia is our Bug! And our son Levi is our worm! Thus, The
-            Fun Bug was born.
+            We are the Saur&apos;s. I am Kameron and my husband is Clay, or as
+            my sweet in-laws like to call it, the &lsquo;vision&lsquo; and the
+            &lsquo;labor&lsquo;. We have two amazing kiddos and we are big on
+            nicknames around here! Our daughter Olivia is our Bug! And our son
+            Levi is our worm! Thus, The Fun Bug was born.
           </p>
           <p>
             As a mama of two small gremlins, I noticed a lack in the amount of
@@ -64,23 +63,12 @@ export default function HiEveryone() {
             meet each and everyone of you!
           </p>
           <div className="flex flex-col xs:flex-row items-center flex-wrap justify-center xs:gap-[2rem]">
-            {/* <Button
-              buttonText="FAQs"
-              buttonFunction={scrollToFaqs}
-              buttonClass="bg-soft-yellow/50 hover:bg-soft-yellow"
-            /> */}
             <button
               onClick={scrollToFaqs}
               className={`w-fit font-medium border border-black rounded-lg px-[2rem] py-[0.5rem] my-[1rem] transition-all duration-300 bg-soft-yellow/50 hover:bg-soft-yellow`}
             >
               FAQs
             </button>
-
-            {/* <Button
-              buttonText="Rules of Play"
-              buttonFunction={scrollToRulesOfPlay}
-              buttonClass="bg-soft-orange/50 hover:bg-soft-orange"
-            /> */}
             <button
               onClick={scrollToRulesOfPlay}
               className={`w-fit font-medium border border-black rounded-lg px-[2rem] py-[0.5rem] my-[1rem] transition-all duration-300 bg-soft-orange/50 hover:bg-soft-orange`}
