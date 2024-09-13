@@ -2,8 +2,8 @@ import React from 'react';
 import PartiesHeader from './PartiesHeader';
 import PartyPackage from './PartyPackage';
 import EnhanceYourEvent from './EnhanceYourEvent';
-import PartyHours from './PartyHours';
 import BookEvent from './BookEvent';
+import MonthlyCalendar from '../about/MonthlyCalendar';
 
 export default function PartiesPage() {
   return (
@@ -11,8 +11,8 @@ export default function PartiesPage() {
       <PartiesHeader />
       <PartyPackage />
       <EnhanceYourEvent />
-      <PartyHours />
       <BookEvent />
+      <MonthlyCalendar />
     </>
   );
 }

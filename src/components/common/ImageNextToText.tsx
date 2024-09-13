@@ -12,6 +12,7 @@ type ImageNextToTextSectionProps = {
   buttonText: string;
   buttonLink: string;
   buttonClass: string;
+  allPadding?: boolean;
 };
 
 export default function ImageNextToTextSection({
@@ -24,10 +25,11 @@ export default function ImageNextToTextSection({
   buttonText,
   buttonLink,
   buttonClass,
+  allPadding,
 }: ImageNextToTextSectionProps) {
   return (
     <section
-      className={`flex items-center justify-center py-[3rem] md:px-[1rem]`}
+      className={`flex items-center justify-center ${allPadding ? 'py-[3rem]' : 'pb-[3rem]'} md:px-[1rem]`}
     >
       <div
         className={`flex gap-[1rem] lg:gap-[2rem] ${imageSide === 'left' ? 'flex-col-reverse lg:flex-row' : 'flex-col-reverse lg:flex-row-reverse'} items-center justify-between w-full max-w-[1000px]`}
