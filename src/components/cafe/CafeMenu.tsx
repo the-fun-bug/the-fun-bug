@@ -14,7 +14,7 @@ import buildYourOwnImg from './img/build-your-own.png';
 
 export default function CafeMenu() {
   return (
-    <section className="flex justify-center items-center py-[1.5rem] px-[1rem]">
+    <section className="flex justify-center items-center py-[1.5rem] md:px-[1rem]">
       <div className="flex flex-col gap-[1rem] w-full max-w-[1000px]">
         <h1 className="font-nickainley">Menu</h1>
         <p>

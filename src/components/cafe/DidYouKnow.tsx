@@ -6,7 +6,7 @@ import raindowImg from './img/rainbow.png';
 export default function DidYouKnow() {
   return (
     <section
-      className={`flex items-center justify-center pt-[1.5rem] px-[1rem]`}
+      className={`flex items-center justify-center pt-[1.5rem] md:px-[1rem]`}
     >
       <div
         className={`flex gap-[1rem] lg:gap-[2rem] flex-row items-center justify-between w-full max-w-[1000px]`}

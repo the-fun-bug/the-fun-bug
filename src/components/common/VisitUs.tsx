@@ -8,7 +8,7 @@ import ticktokIcon from './img/ticktok.png';
 
 export default function VisitUs() {
   return (
-    <section className="flex justify-center items-center py-[1.5rem] px-[1rem]">
+    <section className="flex justify-center items-center py-[1.5rem] md:px-[1rem]">
       <div className="flex flex-col justify-center items-center w-full max-w-[1000px]">
         <h1 className="font-nickainley mb-[1rem]">Visit Us</h1>
         <div className="w-full flex flex-col lg:flex-row items-center lg:items-start justify-between gap-[2rem] lg:gap-[1rem]">

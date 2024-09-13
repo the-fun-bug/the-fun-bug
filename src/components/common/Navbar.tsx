@@ -112,7 +112,7 @@ export default function Navbar() {
           </nav>
         ) : (
           <nav
-            className={`bg-white w-full flex items-center justify-between mx-auto py-[0.5rem]  h-[${navSize}] px-[1rem]`}
+            className={`bg-white w-full flex items-center justify-between mx-auto py-[0.5rem]  h-[${navSize}] md:px-[1rem]`}
           >
             <div className="w-full flex max-w-[1000px] items-center justify-between mx-auto">
               <NavLink link="/about" linkName="About" />
