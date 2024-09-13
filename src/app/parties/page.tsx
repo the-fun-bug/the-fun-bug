@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'Are you ready to party? We are! Here at The Fun Bug, we think every day should be a party. Schedule your event today!',
 };
 
-export default function ContactPage() {
+export default function Parties() {
   return (
     <GlobalLayout>
       <PartiesPage />
