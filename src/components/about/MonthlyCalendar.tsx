@@ -14,6 +14,7 @@ export default function MonthlyCalendar() {
       buttonText="View Latest News"
       buttonLink="/news"
       buttonClass="bg-soft-green/50 hover:bg-soft-green"
+      allPadding={false}
     />
   );
 }

@@ -18,7 +18,7 @@ export default function PartiesHeader() {
     // Use this function for buttons that scroll from the top of the page
     // This offsets the extra padding from the large header on large screens
     if (scrollSection && !isMobile) {
-      const yOffset = -175;
+      const yOffset = -225;
       const y =
         scrollSection.getBoundingClientRect().top + window.scrollY + yOffset;
 

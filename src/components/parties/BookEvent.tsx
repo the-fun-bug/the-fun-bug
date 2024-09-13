@@ -3,7 +3,7 @@ import Script from 'next/script';
 
 export default function BookEvent() {
   return (
-    <section className="flex justify-center items-center py-[3rem] md:px-[1rem] gap-[1rem]">
+    <section className="flex justify-center items-center pt-[3rem] md:px-[1rem] gap-[1rem]">
       <div className="flex flex-col text-center gap-[1rem] w-full max-w-[1000px]">
         <h1 id="reserve" className="font-nickainley">
           Book Your Event
