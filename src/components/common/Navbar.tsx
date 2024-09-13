@@ -101,7 +101,7 @@ export default function Navbar() {
 
                 <div className="flex flex-col">
                   <NavLink link="/about" linkName="About" />
-                  <NavLink link="/pricng" linkName="Pricing" />
+                  <NavLink link="/pricing" linkName="Pricing" />
                   <NavLink link="/parties" linkName="Parties" />
                   <NavLink link="/cafe" linkName="Cafe" />
                   <NavLink link="/news" linkName="News" />
@@ -116,7 +116,7 @@ export default function Navbar() {
           >
             <div className="w-full flex max-w-[1000px] items-center justify-between mx-auto">
               <NavLink link="/about" linkName="About" />
-              <NavLink link="/pricng" linkName="Pricing" />
+              <NavLink link="/pricing" linkName="Pricing" />
               <NavLink link="/parties" linkName="Parties" />
               <div
                 className="flex items-center justify-center"
