@@ -17,7 +17,7 @@ export default function RulesOfPlay() {
   return (
     <section
       id="rules-of-play"
-      className="scroll-pt-[88px] flex justify-center items-center py-[1.5rem] md:px-[1rem]"
+      className="scroll-pt-[88px] flex justify-center items-center py-[3rem] md:px-[1rem]"
     >
       <div className="flex flex-col gap-[1rem] w-full max-w-[1000px]">
         <h1 className="font-nickainley">The Fun Bug’sRules of Play</h1>

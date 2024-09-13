@@ -6,7 +6,7 @@ import ButtonLink from '../common/ButtonLink';
 
 export default function HowWePlay() {
   return (
-    <section className="py-[1.5rem] flex flex-col justify-center items-center p-[1rem]">
+    <section className="py-[3rem] flex flex-col justify-center items-center p-[1rem]">
       <div className="text-center flex flex-col gap-[1rem] justify-center items-center">
         <h1 className="font-nickainley">This Is How We Play</h1>
         <div className="flex flex-col lg:flex-row w-full gap-[2rem]">

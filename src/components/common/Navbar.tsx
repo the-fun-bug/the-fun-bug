@@ -71,7 +71,7 @@ export default function Navbar() {
             <div className="flex gap-[2rem] items-center">
               <ButtonLink
                 buttonText="Book a Party"
-                buttonLink="/parties"
+                buttonLink="/parties#reserve"
                 buttonClass="hidden xxs:block bg-soft-pink/50 hover:bg-soft-pink"
               />
               <button
