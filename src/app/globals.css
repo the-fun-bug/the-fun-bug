@@ -70,7 +70,7 @@ h3 {
 
 p {
   @media (max-width: 640px) {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 

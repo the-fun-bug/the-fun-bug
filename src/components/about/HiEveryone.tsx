@@ -22,7 +22,7 @@ export default function HiEveryone() {
   };
 
   return (
-    <section className="flex justify-center items-center py-[1.5rem] px-[1rem]">
+    <section className="flex justify-center items-center py-[1.5rem] md:px-[1rem]">
       <div className="flex flex-col justify-center items-center w-full max-w-[1000px]">
         <Image
           src={aboutImage}

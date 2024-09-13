@@ -53,7 +53,7 @@ export default function FrequentlyAskedQuestions() {
   return (
     <section
       id="faqs"
-      className="flex justify-center items-center pt-[1.5rem] pb-[2rem] px-[1rem]"
+      className="flex justify-center items-center pt-[1.5rem] pb-[2rem] md:px-[1rem]"
     >
       <div className="flex flex-col gap-[1rem] w-full max-w-[1000px]">
         <h1 className="font-nickainley">Frequently Asked Questions</h1>

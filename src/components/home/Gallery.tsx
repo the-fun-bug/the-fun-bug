@@ -31,7 +31,7 @@ export default function HomepageGallery() {
   ];
 
   return (
-    <section className="px-[1rem]">
+    <section className="md:px-[1rem]">
       <Swiper
         slidesPerView={1}
         loop={true}

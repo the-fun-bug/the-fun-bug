@@ -5,7 +5,7 @@ import coffeeImg from './img/cafe-header-2.png';
 
 export default function CafeHeader() {
   return (
-    <section className="flex justify-center items-center py-[1.5rem] px-[1rem]">
+    <section className="flex justify-center items-center py-[1.5rem] md:px-[1rem]">
       <div className="flex flex-col justify-center items-center text-center gap-[1rem] w-full max-w-[650px]">
         <h1 className="font-nickainley">The Fun Bug Cafe</h1>
         <p>
