@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: 'public/uploads'
+public_folder: '/uploads'
+
+collections:
+  - name: 'news'
+    label: 'News'
+    folder: 'content/news'
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - label: 'News Category'
+        name: 'category'
+        widget: 'select'
+        max: 1
+        options:
+          - { label: 'The Fun Bug Updates', value: 'updates' }
+          - { label: 'Monthly Calendar', value: 'calendar' }
+          - { label: 'Seasonal Specialties', value: 'specialties' }
+      - label: 'Date'
+        name: 'date'
+        widget: 'datetime'
+        required: true
+        format: 'MM.DD.YYYY'
+        time_format: false
+      - {
+          label: 'Article Image',
+          name: 'image',
+          widget: 'image',
+          allowMultiple: false,
+        }
+      - {
+          label: 'Description of Image',
+          name: 'imageDescription',
+          widget: 'string',
+        }
+      - { label: 'News Article Content', name: 'content', widget: 'markdown' }
