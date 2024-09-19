@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageNextToTextSection from '../common/ImageNextToText';
 import HiEveryone from './HiEveryone';
-import MonthlyCalendar from './MonthlyCalendar';
+import MonthlyCalendar from '../common/MonthlyCalendar';
 import RulesOfPlay from './RulesOfPlay';
 import FrequentlyAskedQuestions from './FrequentlyAskedQuestions';
 import saurFlowerLogo from './img/saur-flower.png';
@@ -23,7 +23,8 @@ export default function AboutPage() {
       special order—just reach out to us directly to place your order."
         buttonText="Order Cookies"
         buttonLink="mailto:thesaurflourbakery@yahoo.com"
-        buttonClass="bg-soft-blue/50 hover:bg-soft-blue"
+        buttonClass="bg-soft-pink/50 hover:bg-soft-pink"
+        allPadding={true}
       />
       <RulesOfPlay />
       <FrequentlyAskedQuestions />

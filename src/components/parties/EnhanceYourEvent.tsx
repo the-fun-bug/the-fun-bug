@@ -54,8 +54,8 @@ export default function EnhanceYourEvent() {
     },
   ];
   return (
-    <section className="flex justify-center items-center py-[3rem] md:px-[1rem]">
-      <div className="flex flex-col justify-center items-center text-center gap-[1rem] w-full max-w-[1000px]">
+    <section className="flex justify-center items-center py-[3rem] px-[1rem]">
+      <div className="flex flex-col justify-center items-center text-center gap-[1.25rem] w-full max-w-[1200px]">
         <h1 className="font-nickainley">Enhance Your Event</h1>
         <p className="pb-[1rem] md:pb-0">
           Explore our customizable add-ons to make your event truly exceptional.
@@ -64,7 +64,7 @@ export default function EnhanceYourEvent() {
           {enhancements.map((e, i) => (
             <div
               key={i}
-              className={`flex flex-col-reverse md:flex-row items-center gap-[1rem] ${i % 2 === 1 ? 'md:ml-auto' : ''}`}
+              className={`flex flex-col-reverse md:flex-row items-center ${i % 2 === 1 ? 'md:ml-auto gap-[3rem]' : 'gap-[1.5rem]'}`}
             >
               <Image
                 src={e.image}
@@ -73,7 +73,7 @@ export default function EnhanceYourEvent() {
                 width={e.imageWidth}
                 className={`w-full max-w-[60%] md:max-w-[350px]`}
               />
-              <div className="flex flex-col gap-[0rem] lg:gap-[1rem] justify-center md:max-w-[300px] text-center md:text-left">
+              <div className="flex flex-col gap-[0rem] lg:gap-[1.25rem] justify-center md:max-w-[350px] text-center md:text-left">
                 <h2>{e.title}</h2>
                 <p>{e.description}</p>
               </div>

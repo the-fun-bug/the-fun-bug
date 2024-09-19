@@ -21,23 +21,17 @@ export default function PartyPackage() {
   };
 
   return (
-    <section className="flex justify-center items-center py-[3rem] md:px-[1rem]">
-      <div className="flex flex-col gap-[1rem] justify-center items-center text-center w-full max-w-[900px]">
-        <h1 className="font-nickainley">The Fun Bug Party Package</h1>
-        <div className="flex gap-[1rem]">
+    <section className="flex justify-center items-center py-[3rem] px-[1rem]">
+      <div className="flex flex-col gap-[1.25rem] justify-center items-center text-center w-full max-w-[1200px]">
+        <h1 className="font-nickainley pb-[1rem]">The Fun Bug Party Package</h1>
+        <div className="flex gap-[1.25rem] pb-[1rem]">
           <p className="text-[1.5rem]">2 Hour Event</p>
-          <p className="text-[1.5rem]">$375</p>
+          <p className="text-[1.5rem] ]">$375</p>
         </div>
-        <button
-          onClick={scrollToReservation}
-          className={`md:hidden w-fit font-medium border border-black rounded-lg px-[2rem] py-[0.5rem] my-[1rem] transition-all duration-300 bg-soft-pink/50 hover:bg-soft-pink`}
-        >
-          Check Availability
-        </button>
-        <div className="flex flex-col md:flex-row gap-[1rem] justify-between text-left">
-          <div className="flex flex-col gap-[1rem] md:w-[45%]">
+        <div className="w-full flex flex-col md:flex-row gap-[1.25rem] justify-between text-left">
+          <div className="flex flex-col gap-[1.25rem] w-full md:w-[45%]">
             <h2>What&apos;s Included</h2>
-            <div>
+            <div className="flex flex-col gap-[1.25rem]">
               {bullets.map((r, i) => (
                 <div
                   key={i}
@@ -55,22 +49,22 @@ export default function PartyPackage() {
               ))}
             </div>
           </div>
-          <div className="flex flex-col gap-[1rem] md:w-[45%]">
+          <div className="flex flex-col gap-[1.25rem] w-full md:w-[45%]">
             <h2>Event Hours</h2>
-            <div className="flex flex-col gap-[1rem]">
-              <div className="flex gap-[1rem]">
+            <div className="flex flex-col gap-[1.5rem] pb-[1rem]">
+              <div className="flex gap-[1.25rem]">
                 <p className="w-[88.5px]">Friday</p>
                 <p className="w-[308px]">
                   3:00 pm - 5:00 pm & 6:00 pm - 8:00 pm
                 </p>
               </div>
-              <div className="flex gap-[1rem]">
+              <div className="flex gap-[1.25rem]">
                 <p className="w-[88.5px]">Saturday</p>
                 <p className="w-[308px]">
                   3:00 pm - 5:00 pm & 6:00 pm - 8:00 pm
                 </p>
               </div>
-              <div className="flex gap-[1rem]">
+              <div className="flex gap-[1.25rem]">
                 <p className="w-[88.5px]">Sunday</p>
                 <p className="w-[308px]">
                   11:00 am - 1:00 pm, 2:00 pm - 4:00 pm & 5:00 pm - 7:00 pm
@@ -79,7 +73,7 @@ export default function PartyPackage() {
             </div>
             <button
               onClick={scrollToReservation}
-              className={`hidden md:block w-fit font-medium border border-black rounded-lg px-[2rem] py-[0.5rem] my-[1rem] transition-all duration-300 bg-soft-pink/50 hover:bg-soft-pink`}
+              className={`self-center w-fit font-medium border border-black rounded-lg px-[2rem] py-[0.5rem] my-[1rem] transition-all duration-300 bg-soft-pink/50 hover:bg-soft-pink`}
             >
               Check Availability
             </button>

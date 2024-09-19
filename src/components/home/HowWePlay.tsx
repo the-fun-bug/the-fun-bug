@@ -6,11 +6,11 @@ import ButtonLink from '../common/ButtonLink';
 
 export default function HowWePlay() {
   return (
-    <section className="py-[3rem] flex flex-col justify-center items-center p-[1rem]">
-      <div className="text-center flex flex-col gap-[1rem] justify-center items-center">
-        <h1 className="font-nickainley">This Is How We Play</h1>
-        <div className="flex flex-col lg:flex-row w-full gap-[2rem]">
-          <div className="relative">
+    <section className="py-[3rem] flex flex-col justify-center items-center px-[1rem]">
+      <div className="w-full max-w-[1200px] text-center flex flex-col gap-[1rem] justify-center items-center">
+        <h1 className="font-nickainley pb-[2rem]">This Is How We Play</h1>
+        <div className="flex flex-col justify-between items-center lg:flex-row w-full gap-[3rem]">
+          <div className="relative w-fit">
             <Image
               src={openPlayBg}
               alt="blue play house"
@@ -18,7 +18,7 @@ export default function HowWePlay() {
               height={854}
               className="max-w-[460px] w-full"
             />
-            <div className="absolute top-0 left-0 pt-[100px] xs:pt-[120px] px-[2.25rem] sm:px-[2.5rem] flex flex-col justify-center items-center gap-[0.5rem] sm:gap-[1rem] max-w-[460px] w-full">
+            <div className="absolute top-0 left-0 pt-[100px] xs:pt-[120px] px-[2.25rem] sm:px-[2.5rem] flex flex-col justify-center items-center gap-[0.5rem] sm:gap-[0.75rem] max-w-[460px] w-full">
               <h2>Open Play</h2>
               <p className="hidden xs:block">
                 Kids will have a blast on our large custom-built wooden play
@@ -34,7 +34,7 @@ export default function HowWePlay() {
               />
             </div>
           </div>
-          <div className="relative">
+          <div className="relative w-fit">
             <Image
               src={partiesBg}
               alt="pink play house"
@@ -42,7 +42,7 @@ export default function HowWePlay() {
               height={854}
               className="max-w-[460px] w-full"
             />
-            <div className="absolute top-0 left-0 pt-[100px] xs:pt-[120px] px-[2.25rem] sm:px-[2.5rem] flex flex-col justify-center items-center gap-[0.5rem] sm:gap-[1rem] max-w-[460px] w-full">
+            <div className="absolute top-0 left-0 pt-[100px] xs:pt-[120px] px-[2.25rem] sm:px-[2.5rem] flex flex-col justify-center items-center gap-[0.5rem] sm:gap-[0.75rem] max-w-[460px] w-full">
               <h2>Parties & Events</h2>
               <p className="hidden xs:block">
                 Book your party with us and enjoy full, private access to our

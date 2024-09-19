@@ -17,7 +17,7 @@ export default function Footer() {
             'linear-gradient(to left, #FDD7EC 0%, #FECDA1 33%, #FBFEC1 66%, #D9EBDD 100%',
         }}
       />
-      <div className="grid grid-cols-1 md:grid-cols-3 w-full py-[2rem] md:px-[1rem] gap-[2rem] md:gap-[1rem] max-w-[1000px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 w-full py-[3rem] px-[1rem] gap-[2rem] md:gap-[1.25rem] max-w-[1400px] mx-auto">
         <div className="flex justify-center md:justify-start items-center">
           <Link href="/">
             <Image
@@ -73,12 +73,12 @@ export default function Footer() {
 
         <div className="flex flex-col justify-between h-full items-center md:items-end gap-[2rem]">
           <div className="flex gap-[3rem]">
-            <div className="flex flex-col gap-[1rem]">
+            <div className="flex flex-col gap-[1.25rem]">
               <Link href="/about">About</Link>
               <Link href="/pricing">Pricing</Link>
               <Link href="/parties">Parties</Link>
             </div>
-            <div className="flex flex-col gap-[1rem]">
+            <div className="flex flex-col gap-[1.25rem]">
               <Link href="/cafe">Cafe</Link>
               <Link href="/news">News</Link>
               <Link href="/contact">Contact</Link>

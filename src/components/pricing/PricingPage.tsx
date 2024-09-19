@@ -22,7 +22,8 @@ export default function PricingPage() {
         paragraph="Interested in a private play date reservation? Enjoy exclusive access to our space for a fun and safe playtime experience. To schedule your private play date, reach out to us directly for more details and pricing."
         buttonText="Book a Play Date"
         buttonLink="mailto:contact@thefunbug.com"
-        buttonClass="bg-soft-orange/50 hover:bg-soft-orange"
+        buttonClass="bg-soft-pink/50 hover:bg-soft-pink"
+        allPadding={true}
       />
       <ImageNextToTextSection
         imageSrc={cafeDrinksImg}
@@ -33,7 +34,8 @@ export default function PricingPage() {
         paragraph="At The Fun Bug, kick back with a delicious cup of coffee from our café while your kids have a blast in our awesome playground. Our cozy seating area is perfect for enjoying tasty snacks, so you can relax and know your little ones are having a fantastic time!"
         buttonText="View Menu"
         buttonLink="/cafe"
-        buttonClass="bg-soft-yellow/50 hover:bg-soft-yellow"
+        buttonClass="bg-cafe/50 hover:bg-cafe"
+        allPadding={true}
       />
       <RulesOfPlay />
       <FrequentlyAskedQuestions />

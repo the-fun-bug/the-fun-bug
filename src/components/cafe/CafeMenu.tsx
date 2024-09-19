@@ -11,17 +11,18 @@ import saurFlowerImg from './img/saur-flower.png';
 import saurWormImg from './img/saur-worm.png';
 import sugarMamaImg from './img/sugar-mama.png';
 import buildYourOwnImg from './img/build-your-own.png';
+import chaiThereImg from './img/chai-there.png';
 
 export default function CafeMenu() {
   return (
-    <section className="flex justify-center items-center py-[3rem] md:px-[1rem]">
-      <div className="flex flex-col gap-[1rem] w-full max-w-[1000px]">
+    <section className="flex justify-center items-center py-[3rem] px-[1rem]">
+      <div className="flex flex-col gap-[1.25rem] w-full max-w-[1200px]">
         <h1 className="font-nickainley">Menu</h1>
         <p>
           A selection of rotating snacks will also be available for purchase.
         </p>
         <Specialies />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[1rem] justify-between py-[2rem]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem] justify-between py-[2rem]">
           <BuildYourOwn />
           <SeasonalSpecialties />
         </div>
@@ -32,6 +33,7 @@ export default function CafeMenu() {
 
 function Specialies() {
   const drinks = [
+    // TO DO: UPDATE DRINK
     {
       drinkName: 'The Livie Bug',
       secondaryName: null,
@@ -112,27 +114,48 @@ function Specialies() {
       image: saurWormImg,
       alt: 'iced lemonade with a worm behind it',
     },
+    // TO DO: UPDATE DRINK
+    {
+      drinkName: 'Chai There',
+      secondaryName: 'chai tea latte',
+      drinkDescription: 'milk of choice*, chai tea',
+      icedOnly: false,
+      image: chaiThereImg,
+      alt: 'coffee cup with cardamom on the front and cinnamon',
+    },
   ];
 
   return (
     <div className="w-full">
-      <div className="flex flex-col gap-[1rem]">
+      <div className="flex flex-col gap-[1.25rem]">
         <h2 className="text-cafe-pink">Specialties</h2>
-        <div className="flex-flex-col gap-[0.5rem]">
-          <div className="flex justify-between w-[205px]">
-            <p>Hot drinks (12oz)</p>
-            <p>$4.50</p>
+        <div className="flex flex-row flex-wrap justify-between gap-[2rem] max-w-[550px]">
+          <div>
+            <div className="flex justify-between w-[205px]">
+              <p>Hot drinks (12oz)</p>
+              <p>$4.50</p>
+            </div>
+            <div className="flex justify-between w-[205px]">
+              <p>Iced drinks (20oz)</p>
+              <p>$4.95</p>
+            </div>
           </div>
-          <div className="flex justify-between w-[205px]">
-            <p>Iced drinks (20oz)</p>
-            <p>$4.95</p>
+          <div>
+            <div className="flex justify-between w-[205px]">
+              <p>Cold Foam</p>
+              <p>+ $0.75</p>
+            </div>
+            <div className="flex justify-between w-[205px]">
+              <p>Plant-based Milk</p>
+              <p>+ $0.50</p>
+            </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 justify-between gap-[2rem] py-[1rem]">
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-between gap-y-[2rem] gap-x-[4rem] py-[1rem]">
           {drinks.map((d) => (
             <div
               key={d.drinkName}
-              className="flex justify-between items-center gap-[1rem] max-w-[450px]"
+              className="flex justify-between items-center gap-[1.25rem]"
             >
               <div>
                 <div className="flex gap-[0.5rem]">
@@ -198,7 +221,7 @@ function BuildYourOwn() {
 
   return (
     <div className="w-full">
-      <div className="flex flex-col gap-[1rem]">
+      <div className="flex flex-col gap-[1.25rem]">
         <h2 className="text-cafe-pink">Build Your Own</h2>
         <div className="flex-flex-col gap-[0.5rem]">
           <div className="flex justify-between w-[205px]">
@@ -250,7 +273,7 @@ function BuildYourOwn() {
 function SeasonalSpecialties() {
   return (
     <div className="w-full scroll-pt-[100px]">
-      <div className="flex flex-col gap-[1rem]">
+      <div className="flex flex-col gap-[1.25rem]">
         <h2 id="seasonal" className="text-cafe-pink snap-start">
           Seasonal Specialties
         </h2>

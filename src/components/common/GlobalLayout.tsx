@@ -15,7 +15,7 @@ export default function GlobalLayout({
         <div className={`flex flex-col justify-between min-h-screen bg-white`}>
           <Navbar />
           <main className="block min-h-[100vh - 291px] w-full flex items-center justify-center">
-            <div className="flex flex-col justify-center w-full max-w-[85.75rem] mx-[0.625rem] md:mx-[1.5625rem]">
+            <div className="flex flex-col justify-center w-full max-w-[1200px] mx-[0.625rem] md:mx-[1.5625rem]">
               {children}
             </div>
           </main>

@@ -6,7 +6,7 @@ import plusSignImg from './img/plus.png';
 import minusSignImg from './img/minus.png';
 
 export default function FrequentlyAskedQuestions() {
-  const [openQuestion, setOpenQuestion] = useState<null | number>(0);
+  const [openQuestion, setOpenQuestion] = useState<null | number>(null);
 
   const questions = [
     {
@@ -53,10 +53,12 @@ export default function FrequentlyAskedQuestions() {
   return (
     <section
       id="faqs"
-      className="flex justify-center items-center pt-[1.5rem] pb-[3rem] md:px-[1rem]"
+      className="flex justify-center items-center py-[3rem] px-[1rem]"
     >
-      <div className="flex flex-col gap-[1rem] w-full max-w-[1000px]">
-        <h1 className="font-nickainley">Frequently Asked Questions</h1>
+      <div className="flex flex-col gap-[1.25rem] w-full max-w-[1200px]">
+        <h1 className="font-nickainley pb-[1.5rem]">
+          Frequently Asked Questions
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 items-start justify-between gap-x-[3rem] gap-y-[1rem]">
           {questions.map((q, i) => (
             <button
@@ -70,9 +72,9 @@ export default function FrequentlyAskedQuestions() {
               }}
             >
               <div
-                className={`flex flex-row sm:flex-row justify-between gap-[1rem] items-center pb-[1rem]`}
+                className={`flex flex-row sm:flex-row justify-between gap-[1.25rem] items-center pb-[1rem]`}
               >
-                <p className="font-semibold text-left text-black dark:text-off-white">
+                <p className="font-semibold text-left text-black">
                   {q.question}
                 </p>
                 <Image
@@ -84,7 +86,7 @@ export default function FrequentlyAskedQuestions() {
                 />
               </div>
               <p
-                className={`text-left text-black dark:text-off-white ${
+                className={`text-left text-black pr-[30px] ${
                   openQuestion === i ? 'block' : 'hidden'
                 }`}
               >

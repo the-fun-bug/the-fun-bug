@@ -20,12 +20,12 @@ export default function RainbowSection({
 }: RainbowSectionProps) {
   return (
     <section
-      className={`flex items-center justify-center pt-[1.5rem] md:px-[1rem]`}
+      className={`flex items-center justify-center pt-[1.5rem] px-[1rem]`}
     >
       <div
-        className={`flex gap-[1rem] lg:gap-[2rem] flex-row items-center justify-center md:justify-between w-full max-w-[1000px]`}
+        className={`flex gap-[1.25rem] lg:gap-[2rem] flex-row items-center justify-center md:justify-between w-full max-w-[1200px]`}
       >
-        <div className="flex flex-col gap-[1rem] max-w-[550px] lg:max-w-[490px] mb-[1rem] md:mb-0 text-center md:text-left items-center md:items-left">
+        <div className="flex flex-col gap-[1.25rem] max-w-[550px] lg:max-w-[490px] mb-[1rem] md:mb-0 text-center md:text-left items-center md:items-start">
           <h1 className="font-nickainley">{title}</h1>
           <p className="max-w-[490px]">{description}</p>
           <ButtonLink

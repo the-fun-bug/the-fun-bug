@@ -15,9 +15,15 @@ export default function Navbar() {
   const isMobile = useIsMobile(768);
   const [mounted, setMounted] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
+  const [currentPath, setCurrentPath] = useState(''); // Track the current path
 
   useEffect(() => {
-    setMounted(true); // Set mounted to true after component mounts
+    setMounted(true); // Set mounted to true after the component mounts
+
+    // Check the current path using window.location.pathname
+    if (typeof window !== 'undefined') {
+      setCurrentPath(window.location.pathname);
+    }
   }, []);
 
   useEffect(() => {
@@ -27,7 +33,7 @@ export default function Navbar() {
   }, [isMobile, navOpen]);
 
   useEffect(() => {
-    //prevent scrolling behind the nav on mobile
+    // Prevent scrolling behind the nav on mobile
     if (navOpen) {
       document.body.style.overflow = 'hidden';
     }
@@ -55,6 +61,11 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Check if the current path matches a link
+  const isActiveLink = (link: string) => {
+    return currentPath === link;
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full">
       {mounted &&
@@ -79,13 +90,19 @@ export default function Navbar() {
                 className="relative flex flex-col items-center justify-between w-[35px] h-[25px] p-0 mr-[0.5rem]"
               >
                 <div
-                  className={`bg-black h-[2px] w-full transition-all duration-300 ease-in-out ${navOpen ? 'rotate-45 translate-y-[16px]' : ''}`}
+                  className={`bg-black h-[2px] w-full transition-all duration-300 ease-in-out ${
+                    navOpen ? 'rotate-45 translate-y-[16px]' : ''
+                  }`}
                 />
                 <div
-                  className={`bg-black h-[2px] w-full transition-opacity duration-300 ease-in-out ${navOpen ? 'opacity-0' : 'opacity-100'}`}
+                  className={`bg-black h-[2px] w-full transition-opacity duration-300 ease-in-out ${
+                    navOpen ? 'opacity-0' : 'opacity-100'
+                  }`}
                 />
                 <div
-                  className={`bg-black h-[2px] w-full transition-all duration-300 ease-in-out ${navOpen ? '-rotate-45 -translate-y-[6px]' : ''}`}
+                  className={`bg-black h-[2px] w-full transition-all duration-300 ease-in-out ${
+                    navOpen ? '-rotate-45 -translate-y-[6px]' : ''
+                  }`}
                 />
               </button>
             </div>
@@ -100,24 +117,60 @@ export default function Navbar() {
                 />
 
                 <div className="flex flex-col">
-                  <NavLink link="/about" linkName="About" />
-                  <NavLink link="/pricing" linkName="Pricing" />
-                  <NavLink link="/parties" linkName="Parties" />
-                  <NavLink link="/cafe" linkName="Cafe" />
-                  <NavLink link="/news" linkName="News" />
-                  <NavLink link="/contact" linkName="Contact" />
+                  <NavLink
+                    link="/about"
+                    linkName="About"
+                    isActive={isActiveLink('/about')}
+                  />
+                  <NavLink
+                    link="/pricing"
+                    linkName="Pricing"
+                    isActive={isActiveLink('/pricing')}
+                  />
+                  <NavLink
+                    link="/parties"
+                    linkName="Parties"
+                    isActive={isActiveLink('/parties')}
+                  />
+                  <NavLink
+                    link="/cafe"
+                    linkName="Cafe"
+                    isActive={isActiveLink('/cafe')}
+                  />
+                  <NavLink
+                    link="/news"
+                    linkName="News"
+                    isActive={isActiveLink('/news')}
+                  />
+                  <NavLink
+                    link="/contact"
+                    linkName="Contact"
+                    isActive={isActiveLink('/contact')}
+                  />
                 </div>
               </div>
             )}
           </nav>
         ) : (
           <nav
-            className={`bg-white w-full flex items-center justify-between mx-auto py-[0.5rem]  h-[${navSize}] md:px-[1rem]`}
+            className={`bg-white w-full flex items-center justify-between mx-auto py-[0.5rem] h-[${navSize}] md:px-[1rem]`}
           >
-            <div className="w-full flex max-w-[1000px] items-center justify-between mx-auto">
-              <NavLink link="/about" linkName="About" />
-              <NavLink link="/pricing" linkName="Pricing" />
-              <NavLink link="/parties" linkName="Parties" />
+            <div className="w-full flex max-w-[1200px] items-center justify-between mx-auto">
+              <NavLink
+                link="/about"
+                linkName="About"
+                isActive={isActiveLink('/about')}
+              />
+              <NavLink
+                link="/pricing"
+                linkName="Pricing"
+                isActive={isActiveLink('/pricing')}
+              />
+              <NavLink
+                link="/parties"
+                linkName="Parties"
+                isActive={isActiveLink('/parties')}
+              />
               <div
                 className="flex items-center justify-center"
                 style={{ height: '100%' }}
@@ -134,9 +187,21 @@ export default function Navbar() {
                   </Link>
                 </div>
               </div>
-              <NavLink link="/cafe" linkName="Cafe" />
-              <NavLink link="/news" linkName="News" />
-              <NavLink link="/contact" linkName="Contact" />
+              <NavLink
+                link="/cafe"
+                linkName="Cafe"
+                isActive={isActiveLink('/cafe')}
+              />
+              <NavLink
+                link="/news"
+                linkName="News"
+                isActive={isActiveLink('/news')}
+              />
+              <NavLink
+                link="/contact"
+                linkName="Contact"
+                isActive={isActiveLink('/contact')}
+              />
             </div>
           </nav>
         ))}

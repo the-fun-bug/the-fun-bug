@@ -27,9 +27,9 @@ export default function PartiesHeader() {
   };
 
   return (
-    <section className="flex justify-center items-center pt-[1rem] pb-[3rem] md:px-[1rem]">
-      <div className="flex flex-col justify-center items-center text-center gap-[1rem] w-full max-w-[650px]">
-        <h1 className="font-nickainley">Private Events & Parties</h1>
+    <section className="flex justify-center items-center pt-[1rem] pb-[3rem] px-[1rem]">
+      <div className="flex flex-col justify-center items-center text-center gap-[1.25rem] w-full max-w-[750px]">
+        <h1 className="font-nickainley pb-[1rem]">Private Events & Parties</h1>
         <p>
           Are you ready to party? We are! Here at The Fun Bug, we think every
           day should be a party. Schedule your event today!
@@ -47,7 +47,7 @@ export default function PartiesHeader() {
           alt="Four cups of beverages that can be found in the cafe"
           width={632}
           height={432}
-          className="w-full max-w-[350px]"
+          className="w-full max-w-[450px]"
         />
       </div>
     </section>

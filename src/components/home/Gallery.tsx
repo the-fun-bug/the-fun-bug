@@ -31,7 +31,7 @@ export default function HomepageGallery() {
   ];
 
   return (
-    <section className="md:px-[1rem]">
+    <section className="px-[1rem]">
       <Swiper
         slidesPerView={1}
         loop={true}
@@ -48,7 +48,7 @@ export default function HomepageGallery() {
               <Image
                 src={s.image}
                 alt={s.alt}
-                className="rounded-lg max-w-[750px] w-full"
+                className="rounded-lg max-w-screen w-full"
                 priority={true}
               />
             </div>
