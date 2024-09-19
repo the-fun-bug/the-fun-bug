@@ -29,13 +29,17 @@ export default function ImageNextToTextSection({
 }: ImageNextToTextSectionProps) {
   return (
     <section
-      className={`flex items-center justify-center ${allPadding ? 'py-[3rem]' : 'pb-[3rem]'} md:px-[1rem]`}
+      className={`flex items-center justify-center ${allPadding ? 'py-[3rem]' : 'pb-[3rem]'} px-[1rem]`}
     >
       <div
-        className={`flex gap-[1rem] lg:gap-[2rem] ${imageSide === 'left' ? 'flex-col-reverse lg:flex-row' : 'flex-col-reverse lg:flex-row-reverse'} items-center justify-between w-full max-w-[1000px]`}
+        className={`flex gap-[1.25rem] lg:gap-[2rem] ${imageSide === 'left' ? 'flex-col-reverse lg:flex-row' : 'flex-col-reverse lg:flex-row-reverse'} items-center justify-around w-full max-w-[1200px]`}
       >
-        <Image src={imageSrc} alt={alt} className={`${imageClass}`} />
-        <div className="flex flex-col gap-[1rem] max-w-[750px] lg:max-w-[490px] text-center lg:text-left items-center lg:items-start">
+        <Image
+          src={imageSrc}
+          alt={alt}
+          className={`${imageClass} max-w-[80%] md:max-w-[35%]`}
+        />
+        <div className="flex flex-col gap-[1.25rem] max-w-[750px] lg:max-w-[490px] text-center lg:text-left items-center lg:items-start">
           <h1 className="font-nickainley">{title}</h1>
           <p>{paragraph}</p>
           <ButtonLink

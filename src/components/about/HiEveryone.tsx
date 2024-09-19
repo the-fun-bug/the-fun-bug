@@ -22,18 +22,18 @@ export default function HiEveryone() {
   };
 
   return (
-    <section className="flex justify-center items-center pt-[1rem] pb-[3rem] md:px-[1rem]">
-      <div className="flex flex-col justify-center items-center w-full max-w-[1000px]">
+    <section className="flex justify-center items-center pt-[1rem] pb-[3rem] px-[1rem]">
+      <div className="flex flex-col justify-center items-center w-full max-w-[1200px]">
         <Image
           src={aboutImage}
           priority={true}
           alt="The Saur Family"
           height={401}
           width={705}
-          className="rounded-lg"
+          className="rounded-lg w-full max-w-[1000px]"
         />
-        <div className="py-[2rem] flex flex-col gap-[1rem] text-center max-w-[750px]">
-          <h1 className="font-nickainley">Hi everyone!</h1>
+        <div className="py-[2rem] flex flex-col gap-[1.25rem] text-center">
+          <h1 className="font-nickainley pb-[1rem]">Hi everyone!</h1>
           <p>
             We are the Saur&apos;s. I am Kameron and my husband is Clay, or as
             my sweet in-laws like to call it, the &lsquo;vision&lsquo; and the

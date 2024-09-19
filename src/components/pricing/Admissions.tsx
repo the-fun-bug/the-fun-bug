@@ -11,26 +11,26 @@ export default function OpenPlayAdmissions() {
     'Snack & drink menu will be available for purchase.',
   ];
   return (
-    <section
-      className={`flex items-center justify-center py-[3rem] md:px-[1rem]`}
-    >
-      <div className={`flex flex-col gap-[1rem] w-full max-w-[1000px]`}>
-        <h1 className="font-nickainley">Open Play Admission</h1>
-        <div className="flex flex-col md:flex-row gap-[1rem] justify-between w-full">
-          <div className="flex flex-col gap-[1rem]">
-            <div className="flex-flex-col gap-[0.5rem]">
-              <div className="flex justify-between w-[205px]">
+    <section className={`flex items-center justify-center py-[3rem] px-[1rem]`}>
+      <div className={`flex flex-col gap-[1.25rem] w-full max-w-[1200px]`}>
+        <h1 className="font-nickainley pb-[1rem] text-center">
+          Open Play Admission
+        </h1>
+        <div className="flex flex-col md:flex-row gap-[1.25rem] justify-between w-full">
+          <div className="flex flex-col gap-[1.25rem] md:w-[50%] md:items-center md:justify-center">
+            <div>
+              <div className="flex justify-between w-[205px] items-center mx-auto md:mx-0">
                 <p>Ages 0-2</p>
                 <p>$8/child</p>
               </div>
-              <div className="flex justify-between w-[205px]">
+              <div className="flex justify-between w-[205px] items-center mx-auto md:mx-0">
                 <p>Ages 3-12</p>
                 <p>$12/child</p>
               </div>
             </div>
             <AdmissionsButtons />
           </div>
-          <div className="grid grid-cols-1">
+          <div className="grid grid-cols-1 gap-[1.25rem]">
             {bullets.map((r, i) => (
               <div
                 key={i}
@@ -74,7 +74,7 @@ function AdmissionsButtons() {
   };
 
   return (
-    <div className="flex flex-col xs:flex-row items-center flex-wrap justify-center xs:gap-[2rem]">
+    <div className="flex flex-col xs:flex-row items-center flex-wrap justify-center xs:gap-x-[2rem]">
       <button
         onClick={scrollToFaqs}
         className={`w-fit font-medium border border-black rounded-lg px-[2rem] py-[0.5rem] my-[1rem] transition-all duration-300 bg-soft-yellow/50 hover:bg-soft-yellow`}
