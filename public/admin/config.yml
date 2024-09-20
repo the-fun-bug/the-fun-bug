@@ -32,6 +32,17 @@ collections:
           widget: 'image',
           allowMultiple: false,
         }
+      - label: 'Image Background Color'
+        name: 'imgBgColor'
+        widget: 'select'
+        max: 1
+        options:
+          - { label: 'Pastel Blue', value: '#E7F2FE' }
+          - { label: 'Pastel Pink', value: '#FDD7EC' }
+          - { label: 'Pastel Green', value: '#D9EBDD' }
+          - { label: 'Pastel Orange', value: '#FFCEA0' }
+          - { label: 'Pastel Yellow', value: '#FBFEC1' }
+          - { label: 'Soft White', value: '#FAFAFA' }
       - {
           label: 'Description of Image',
           name: 'imageDescription',
