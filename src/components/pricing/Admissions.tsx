@@ -59,7 +59,6 @@ export default function OpenPlayAdmissions() {
 function AdmissionsButtons() {
   const scrollToFaqs = () => {
     const contactSection = document.querySelector('#faqs');
-    console.log(contactSection);
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
@@ -67,7 +66,6 @@ function AdmissionsButtons() {
 
   const scrollToRulesOfPlay = () => {
     const contactSection = document.querySelector('#rules-of-play');
-    console.log(contactSection);
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }

@@ -7,7 +7,6 @@ import aboutImage from './img/about.png';
 export default function HiEveryone() {
   const scrollToFaqs = () => {
     const contactSection = document.querySelector('#faqs');
-    console.log(contactSection);
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
@@ -15,7 +14,6 @@ export default function HiEveryone() {
 
   const scrollToRulesOfPlay = () => {
     const contactSection = document.querySelector('#rules-of-play');
-    console.log(contactSection);
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
