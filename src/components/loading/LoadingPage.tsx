@@ -11,10 +11,10 @@ export default function LoadingPage() {
           alt="pink cloud"
           height={350}
           width={200}
-          className="w-full max-w-[350px]"
+          className="w-[220px] animate-pulse-slow"
           priority={true}
         />
-        <div className="absolute top-0 left-0 h-[145px] w-[256px] flex items-center justify-center">
+        <div className="absolute top-0 left-0 h-[126px] w-[220px] flex items-center justify-center">
           <h1 className="font-nickainley p-0 ml-[1rem] text-[2.5rem]">
             Loading...
           </h1>
