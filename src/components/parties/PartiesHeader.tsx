@@ -10,7 +10,6 @@ export default function PartiesHeader() {
 
   const scrollToReservation = () => {
     const scrollSection = document.querySelector('#reserve');
-    console.log(scrollSection);
     if (scrollSection) {
       scrollSection.scrollIntoView({ behavior: 'smooth' });
     }

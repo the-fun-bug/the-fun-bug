@@ -7,7 +7,6 @@ import balloonsImg from './img/hours-balloons.png';
 export default function PartyHours() {
   const scrollToCheckAvailability = () => {
     const contactSection = document.querySelector('#reserve');
-    console.log(contactSection);
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }

@@ -10,7 +10,6 @@ export default function CafeHeader() {
 
   const scrollToSeasonalMenu = () => {
     const scrollSection = document.querySelector('#seasonal');
-    console.log(scrollSection);
     if (scrollSection) {
       scrollSection.scrollIntoView({ behavior: 'smooth' });
     }
