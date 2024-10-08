@@ -21,6 +21,9 @@ const config: Config = {
       transparent: 'transparent',
       cafe: '#F1D1AB',
       'cafe-pink': '#EB96AA',
+      'news-category': '#FFF6E9',
+      'news-highlight': '#5784BA',
+      'soft-white': '#FAFAFA',
     },
     extend: {
       fontFamily: {
@@ -29,6 +32,18 @@ const config: Config = {
       screens: {
         xxs: '375px',
         xs: '425px',
+      },
+      boxShadow: {
+        'custom-shadow': '0 4px 20px 0 rgba(0,0,0,0.15)',
+      },
+      animation: {
+        'pulse-slow': 'pulse-slow 2s ease-in-out infinite',
+      },
+      keyframes: {
+        'pulse-slow': {
+          '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+          '50%': { transform: 'scale(1.05)', opacity: '0.8' },
+        },
       },
     },
   },
