@@ -70,12 +70,14 @@ export default function PartyPackage() {
                 </p>
               </div>
             </div>
-            <button
-              onClick={scrollToReservation}
-              className={`self-center w-fit font-medium border border-black rounded-lg px-[2rem] py-[0.5rem] my-[1rem] transition-all duration-300 bg-soft-pink/50 hover:bg-soft-pink`}
-            >
-              Check Availability
-            </button>
+            <div className="w-full md:max-w-[400px] flex justify-center">
+              <button
+                onClick={scrollToReservation}
+                className={`w-fit font-medium border border-black rounded-lg px-[2rem] py-[0.5rem] my-[1rem] transition-all duration-300 bg-soft-pink/50 hover:bg-soft-pink`}
+              >
+                Check Availability
+              </button>
+            </div>
           </div>
         </div>
       </div>
