@@ -46,7 +46,7 @@ const NewsArticleCard: React.FC<NewsArticleCardProps> = ({
           )}
         </div>
       </Link>
-      <div className="flex flex-col gap-[1rem] pt-[1rem] rounded-e-xl px-[0.25rem]">
+      <div className="flex flex-col gap-[0.5rem] md:gap-[1rem] pt-[1rem] rounded-e-xl px-[0.25rem]">
         <div className="flex justify-between gap-[0.25rem] text-xs">
           <p className="text-left">{formatDate(article.date)}</p>
           <CategoryButton category={article.category} />

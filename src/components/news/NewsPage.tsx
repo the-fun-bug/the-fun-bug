@@ -24,7 +24,7 @@ export default async function NewsPage({
   return (
     <div>
       <NewsHeader />
-      <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-x-[1rem] gap-y-[2rem] px-[1rem] py-[3rem] mx-auto">
+      <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-x-[1rem] gap-y-[2rem] px-[1rem] py-[1rem] md:py-[2rem] mx-auto">
         {featuredArticles.length > 0 ? (
           featuredArticles.map((article) => (
             <FeaturedArticleCard key={article.slug} article={article} />

@@ -34,7 +34,9 @@ const FeaturedArticleCard: React.FC<FeaturedArticleCardProps> = ({
       <div className="flex flex-col gap-[1rem] py-[1rem] sm:py-[1.5rem] rounded-e-xl">
         <div className="flex flex-col-reverse gap-[1rem] sm:flex-row justify-between">
           <div className="flex flex-col gap-[1rem]">
-            <CategoryButton category={article.category} />
+            <div className="px-[1rem]">
+              <CategoryButton category={article.category} />
+            </div>
             <p className="px-[1rem] text-xs sm:text-sm">
               {formatDate(article.date)}
             </p>

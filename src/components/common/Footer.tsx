@@ -6,6 +6,7 @@ import logo from './img/logo-nav.png';
 import fbIcon from './img/facebook.png';
 import instaIcon from './img/instagram.png';
 import ticktokIcon from './img/ticktok.png';
+import NavLink from './NavLink';
 
 export default function Footer() {
   return (
@@ -72,16 +73,16 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col justify-between h-full items-center md:items-end gap-[2rem]">
-          <div className="flex gap-[3rem]">
-            <div className="flex flex-col gap-[1.25rem]">
-              <Link href="/about">About</Link>
-              <Link href="/pricing">Pricing</Link>
-              <Link href="/parties">Parties</Link>
+          <div className="flex">
+            <div className="flex flex-col">
+              <NavLink link="/about" linkName="About" footer={true} />
+              <NavLink link="/pricing" linkName="Pricing" footer={true} />
+              <NavLink link="/parties" linkName="Parties" footer={true} />
             </div>
-            <div className="flex flex-col gap-[1.25rem]">
-              <Link href="/cafe">Cafe</Link>
-              <Link href="/news">News</Link>
-              <Link href="/contact">Contact</Link>
+            <div className="flex flex-col">
+              <NavLink link="/cafe" linkName="Cafe" footer={true} />
+              <NavLink link="/news" linkName="News" footer={true} />
+              <NavLink link="/contact" linkName="Contact" footer={true} />
             </div>
           </div>
           <div className="text-xs mb-[1rem] text-right flex md:justify-end whitespace-nowrap gap-[5px]">
