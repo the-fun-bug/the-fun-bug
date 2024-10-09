@@ -39,13 +39,8 @@ export default function AllNewsArticles({
   }, [searchParams]);
 
   useEffect(() => {
-    console.log('hasMounted', hasMounted);
-    console.log(router);
-
     if (!hasMounted) return; // Exit early if component hasn't mounted yet
-    console.log(searchParams);
-    // console.log('categoryParam', searchParams.get('category'));
-    // const categoryParam = searchParams.get('category');
+
     if (categoryParam) {
       const selectedOption = categories.find(
         (category) => category.value === categoryParam
@@ -56,11 +51,7 @@ export default function AllNewsArticles({
     } else {
       setSelectedCategory(categories[0]); // Default to 'All Categories'
     }
-
-    if (topRef.current) {
-      topRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [categoryParam, hasMounted, categories, searchParams]);
+  }, [categoryParam, hasMounted, categories]);
 
   const isNewArticle = (date: string) => {
     const [month, day, year] = date.split('.');
@@ -147,7 +138,7 @@ export default function AllNewsArticles({
           </div>
         </div>
 
-        <div className="w-full justify-center md:justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[3rem] gap-y-[2rem]">
+        <div className="w-full justify-center md:justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[3rem] gap-y-[3rem] md:gap-y-[2rem]">
           {displayedArticles.length > 0 ? (
             displayedArticles.map((article) => (
               <NewsArticleCard
@@ -162,7 +153,7 @@ export default function AllNewsArticles({
           )}
         </div>
 
-        <div className="flex gap-[0.5rem] mt-[2rem]">
+        <div className="flex gap-[0.5rem] mt-[1.75rem] md:mt-0">
           {Array.from({ length: totalPages }, (_, i) => i + 1).map(
             (pageNumber) => (
               <button

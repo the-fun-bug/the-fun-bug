@@ -22,7 +22,7 @@ export default async function NewsArticlePage({
   const contentHtml = processedContent.toString();
 
   return (
-    <div className="py-[3rem] px-[1rem] flex flex-col justify-center items-center">
+    <div className="pb-[3rem] px-[1rem] flex flex-col justify-center items-center">
       <div className="max-w-[1400px] w-full text-center flex flex-col justify-center items-center">
         <Link
           href="/news"
@@ -30,8 +30,8 @@ export default async function NewsArticlePage({
         >
           &lt; Back to All News
         </Link>
-        <section className="w-full pb-[3rem] flex flex-col justify-center items-center gap-[4rem]">
-          <div className="flex flex-col md:flex-row gap-[3rem] md:justify-between w-full max-w-[1000px]">
+        <section className="w-full pb-[3rem] flex flex-col justify-center items-center gap-[2rem] md:gap-[4rem]">
+          <div className="flex flex-col md:flex-row gap-[2rem] md:gap-[3rem] md:justify-between w-full max-w-[1000px]">
             <div className="w-full flex flex-col gap-[1rem] justify-between md:max-w-[500px] text-left">
               <h1 className="font-nickainley text-center md:text-left">
                 {title}
@@ -63,7 +63,7 @@ export default async function NewsArticlePage({
         </section>
         <section className="w-full pt-[3rem] flex flex-col">
           <h1 className="font-nickainley pb-[3rem]">Recent News</h1>
-          <div className="flex flex-col md:flex-row items-center md:justify-between gap-[1rem]">
+          <div className="flex flex-col md:flex-row items-center md:justify-between gap-[3rem] md:gap-[1rem]">
             {recentArticles.map((a) => (
               <NewsArticleCard
                 key={a.title}
