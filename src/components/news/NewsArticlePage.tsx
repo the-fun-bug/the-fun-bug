@@ -4,9 +4,9 @@ import { NewsArticle } from './NewsPage';
 import Link from 'next/link';
 import Image from 'next/image';
 import formatDate from '@/utils/formatDate';
-import getFullCatName from '@/utils/getFullCatName';
 import { remark } from 'remark';
 import html from 'remark-html';
+import CategoryButton from './CategoryButton';
 
 export default async function NewsArticlePage({
   article,
@@ -33,16 +33,12 @@ export default async function NewsArticlePage({
         <section className="w-full pb-[3rem] flex flex-col justify-center items-center gap-[4rem]">
           <div className="flex flex-col md:flex-row gap-[3rem] md:justify-between w-full max-w-[1000px]">
             <div className="w-full flex flex-col gap-[1rem] justify-between md:max-w-[500px] text-left">
-              <h1 className="font-nickainley">{title}</h1>
-              <div className="flex gap-[2.5rem]">
+              <h1 className="font-nickainley text-center md:text-left">
+                {title}
+              </h1>
+              <div className="flex gap-[2.5rem] self-center justify-between md:justify-start max-w-[450px] w-full">
                 <p>{formatDate(date)}</p>
-
-                <Link
-                  href={`/news/#${article.category}`}
-                  className="underline underline-offset-2 transition-all duration-200 hover:text-news-highlight"
-                >
-                  {getFullCatName(category)}
-                </Link>
+                <CategoryButton category={category} />
               </div>
             </div>
             <div
@@ -67,9 +63,14 @@ export default async function NewsArticlePage({
         </section>
         <section className="w-full pt-[3rem] flex flex-col">
           <h1 className="font-nickainley pb-[3rem]">Recent News</h1>
-          <div className="flex flex-col md:flex-row justify-between">
+          <div className="flex flex-col md:flex-row items-center md:justify-between gap-[1rem]">
             {recentArticles.map((a) => (
-              <NewsArticleCard key={a.title} article={a} />
+              <NewsArticleCard
+                key={a.title}
+                article={a}
+                isFeatured={null}
+                isNew={null}
+              />
             ))}
           </div>
         </section>
