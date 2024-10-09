@@ -3,10 +3,9 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import { NewsArticle } from './NewsPage';
 import formatDate from '@/utils/formatDate';
-import getFullCatName from '@/utils/getFullCatName';
+import CategoryButton from './CategoryButton';
 
 type FeaturedArticleCardProps = {
   article: NewsArticle;
@@ -15,12 +14,6 @@ type FeaturedArticleCardProps = {
 const FeaturedArticleCard: React.FC<FeaturedArticleCardProps> = ({
   article,
 }) => {
-  const router = useRouter();
-
-  const handleCategoryClick = () => {
-    router.push(`/news?category=${article.category}#filters`);
-  };
-
   return (
     <div className="flex shadow-custom-shadow rounded-xl w-full sm:w-[525px] h-[240px] hover:scale-[1.03] transition-all ease-in-out">
       <Link
@@ -41,12 +34,7 @@ const FeaturedArticleCard: React.FC<FeaturedArticleCardProps> = ({
       <div className="flex flex-col gap-[1rem] py-[1rem] sm:py-[1.5rem] rounded-e-xl">
         <div className="flex flex-col-reverse gap-[1rem] sm:flex-row justify-between">
           <div className="flex flex-col gap-[1rem]">
-            <button
-              onClick={handleCategoryClick}
-              className="px-[1rem] underline underline-offset-2 transition-all duration-200 hover:text-news-highlight"
-            >
-              {getFullCatName(article.category)}
-            </button>
+            <CategoryButton category={article.category} />
             <p className="px-[1rem] text-xs sm:text-sm">
               {formatDate(article.date)}
             </p>

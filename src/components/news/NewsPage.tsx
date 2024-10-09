@@ -7,7 +7,7 @@ export type NewsArticle = {
   slug: string;
   title: string;
   date: string;
-  category: string;
+  category: 'all' | 'updates' | 'calendar' | 'specailties';
   image: string;
   imgBgColor: string;
   imageDescription: string;

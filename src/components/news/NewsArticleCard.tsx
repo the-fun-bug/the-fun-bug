@@ -1,17 +1,14 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import { NewsArticle } from './NewsPage';
 import formatDate from '@/utils/formatDate';
-import getFullCatName from '@/utils/getFullCatName';
+import CategoryButton from './CategoryButton';
 
 type NewsArticleCardProps = {
   article: NewsArticle;
-  isFeatured: boolean;
-  isNew: boolean;
+  isFeatured: boolean | null;
+  isNew: boolean | null;
 };
 
 const NewsArticleCard: React.FC<NewsArticleCardProps> = ({
@@ -19,14 +16,8 @@ const NewsArticleCard: React.FC<NewsArticleCardProps> = ({
   isFeatured,
   isNew,
 }) => {
-  const router = useRouter();
-
-  const handleCategoryClick = () => {
-    router.push(`/news?category=${article.category}#filters`);
-  };
-
   return (
-    <div className="group flex flex-col">
+    <div className="justify-self-center w-full h-full group flex flex-col max-w-[450px]">
       <Link
         key={article.slug}
         href={`/news/${article.slug}`}
@@ -55,15 +46,10 @@ const NewsArticleCard: React.FC<NewsArticleCardProps> = ({
           )}
         </div>
       </Link>
-      <div className="flex flex-col gap-[1rem] pt-[1rem] rounded-e-xl max-w-[300px] px-[0.25rem]">
-        <div className="flex justify-between gap-[1rem] text-xs">
-          <p>{formatDate(article.date)}</p>
-          <button
-            onClick={handleCategoryClick}
-            className="underline underline-offset-2 transition-all duration-200 hover:text-news-highlight"
-          >
-            {getFullCatName(article.category)}
-          </button>
+      <div className="flex flex-col gap-[1rem] pt-[1rem] rounded-e-xl px-[0.25rem]">
+        <div className="flex justify-between gap-[0.25rem] text-xs">
+          <p className="text-left">{formatDate(article.date)}</p>
+          <CategoryButton category={article.category} />
         </div>
         <Link key={article.slug} href={`/news/${article.slug}`}>
           <h2
