@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: 'Nickainley';
-  src: local('Nickainley'),
+  src:
+    local('Nickainley'),
     url('../fonts/Nickainley-Normal.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
@@ -25,6 +26,10 @@
   }
 }
 
+html {
+  scroll-padding-top: 105px;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -36,10 +41,36 @@ body {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 3.25rem;
+  line-height: 1;
+  padding-bottom: 0.5rem;
 
   @media (max-width: 640px) {
-    font-size: 30px;
+    font-size: 2.25rem;
+  }
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+
+  @media (max-width: 640px) {
+    font-size: 1.1rem;
+  }
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: bold;
+
+  @media (max-width: 640px) {
+    font-size: 0.9rem;
+  }
+}
+
+p {
+  @media (max-width: 640px) {
+    font-size: 14px;
   }
 }
 
@@ -47,4 +78,21 @@ h1 {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Swiper */
+
+/* .packages-at-a-glance .swiper-pagination {
+  bottom: 10px;
+} */
+
+.homepage-gallery .swiper-pagination-bullet-active {
+  background: #218b82 !important;
+}
+
+.homepage-gallery .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background: #d9ebdd;
+  opacity: 1;
 }
