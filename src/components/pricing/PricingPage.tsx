@@ -1,11 +1,12 @@
 import React from 'react';
 import PricingHeader from './PricingHeader';
 import OpenPlayAdmissions from './Admissions';
-import RainbowSection from '../common/RaindowSection';
+import Memberships from './Memberships';
+import RainbowSection from '../common/RainbowSection';
 import RulesOfPlay from '../about/RulesOfPlay';
 import FrequentlyAskedQuestions from '../about/FrequentlyAskedQuestions';
 import ImageNextToTextSection from '../common/ImageNextToText';
-import cafeDrinksImg from './img/cafe-drinks.png';
+import cafeDrinksImg from './img/cafe-drinks-pricing.png';
 import playDateImg from './img/play-date.png';
 
 export default function PricingPage() {
@@ -13,6 +14,7 @@ export default function PricingPage() {
     <>
       <PricingHeader />
       <OpenPlayAdmissions />
+      <Memberships />
       <ImageNextToTextSection
         imageSrc={playDateImg}
         alt="Three drinks from the cafe side by side"
@@ -30,8 +32,8 @@ export default function PricingPage() {
         alt="Three drinks from the cafe side by side"
         imageSide="left"
         imageClass="w-full max-w-[550px]"
-        title="Visit The Fun Bug’s Cafe"
-        paragraph="At The Fun Bug, kick back with a delicious cup of coffee from our café while your kids have a blast in our awesome playground. Our cozy seating area is perfect for enjoying tasty snacks, so you can relax and know your little ones are having a fantastic time!"
+        title="Visit The Fun Bug's Cafe"
+        paragraph="At The Fun Bug, kick back with a delicious cup of coffee or Lotus energy refresher from our café while your kids have a blast in our awesome playground. Our cozy seating area is perfect for enjoying tasty snacks, so you can relax and know your little ones are having a fantastic time!"
         buttonText="View Menu"
         buttonLink="/cafe"
         buttonClass="bg-cafe/50 hover:bg-cafe"

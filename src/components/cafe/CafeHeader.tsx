@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import coffeeImg from './img/cafe-header-2.png';
+import coffeeImg from './img/cafe-header-3.png';
 import useIsMobile from '@/hooks/useIsMobile';
 
 export default function CafeHeader() {
@@ -29,7 +29,7 @@ export default function CafeHeader() {
       <div className="flex flex-col justify-center items-center text-center gap-[1.25rem] w-full max-w-[750px]">
         <h1 className="font-nickainley">The Fun Bug Cafe</h1>
         <p>
-          Enjoy your favorite beverage while you’re little bugs play! Check back
+          Enjoy your favorite beverage while your little bugs play! Check back
           for our seasonal specialties.
         </p>
         <button

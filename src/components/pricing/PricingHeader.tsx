@@ -9,8 +9,8 @@ export default function PricingHeader() {
       <div className="flex flex-col justify-center items-center text-center gap-[1.25rem] w-full max-w-[1000px]">
         <h1 className="font-nickainley pb-[1rem]">Play Studio Pricing</h1>
         <p className="max-w-[750px]">
-          Come join us at our play studio where you’ll find a fun, aesthetic,
-          and clean place for both kids and parents to enjoy!
+          Come join us at our play studio where you&apos;ll find a fun,
+          aesthetic, and clean place for both kids and parents to enjoy!
         </p>
         <Image
           priority={true}

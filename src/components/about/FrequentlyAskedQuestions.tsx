@@ -35,7 +35,7 @@ export default function FrequentlyAskedQuestions() {
         'Shoes may be worn on the wood floor, but we ask that socks only are worn past and on the turf flooring and play area. Bare feet are not allowed, as we do our best to maintain the cleanest environment for our guests. If you forget your child’s socks, you may purchase a pair at our counter.',
     },
     {
-      question: 'Can I bring outside foor or snacks?',
+      question: 'Can I bring outside food or snacks?',
       answer:
         'Outside food and drinks are permitted but must stay on the wood floor area of the facility. No food or drink is allowed past or on the turf flooring and okay structures.',
     },

@@ -5,7 +5,7 @@ import ButtonLink from './ButtonLink';
 import logo from './img/logo-nav.png';
 import fbIcon from './img/facebook.png';
 import instaIcon from './img/instagram.png';
-import ticktokIcon from './img/ticktok.png';
+import tiktokIcon from './img/tiktok.png';
 import NavLink from './NavLink';
 
 export default function Footer() {
@@ -54,8 +54,8 @@ export default function Footer() {
             </Link>
             <Link href="" target="_blank">
               <Image
-                src={ticktokIcon}
-                alt="ticktok icon"
+                src={tiktokIcon}
+                alt="tiktok icon"
                 width={80}
                 height={80}
                 className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"

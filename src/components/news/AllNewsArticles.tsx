@@ -57,7 +57,7 @@ export default function AllNewsArticles({
     const [month, day, year] = date.split('.');
     const formattedDate = `${year}-${month}-${day}`;
     const sevenDaysAgo = new Date();
-    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 21);
     return new Date(formattedDate) > sevenDaysAgo;
   };
 

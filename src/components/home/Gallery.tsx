@@ -48,7 +48,7 @@ export default function HomepageGallery() {
               <Image
                 src={s.image}
                 alt={s.alt}
-                className="rounded-lg max-w-screen w-full"
+                className="rounded-lg w-full max-w-[1000px]"
                 priority={true}
               />
             </div>
