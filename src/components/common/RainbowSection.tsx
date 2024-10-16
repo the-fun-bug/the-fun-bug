@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import ButtonLink from './ButtonLink';
-import raindowImg from './img/rainbow.png';
+import rainbowImg from './img/rainbow.png';
 
 type RainbowSectionProps = {
   title: string;
@@ -35,7 +35,7 @@ export default function RainbowSection({
           />
         </div>
         <Image
-          src={raindowImg}
+          src={rainbowImg}
           alt="rainbow"
           className="hidden sm:block self-end w-full max-w-[250px] lg:max-w-[500px]"
         />

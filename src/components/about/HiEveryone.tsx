@@ -35,12 +35,12 @@ export default function HiEveryone() {
           <p>
             We are the Saur&apos;s. I am Kameron and my husband is Clay, or as
             my sweet in-laws like to call it, the &lsquo;vision&lsquo; and the
-            &lsquo;labor&lsquo;. We have two amazing kiddos and we are big on
-            nicknames around here! Our daughter Olivia is our Bug! And our son
-            Levi is our worm! Thus, The Fun Bug was born.
+            &lsquo;labor&lsquo;. We have two amazing kiddos, Olivia and Levi. We
+            are big on nicknames around here! Our daughter Olivia is our Bug!
+            And our son Levi is our worm! Thus, The Fun Bug was born.
           </p>
           <p>
-            As a mama of two small gremlins, I noticed a lack in the amount of
+            As a mama of two small wigglers, I noticed a lack in the amount of
             indoor play opportunities here in New Braunfels, and decided to take
             matters into my own hands. We want the Fun Bug to be a fun, clean,
             safe, and aesthetic place for both kiddos and parents to enjoy.

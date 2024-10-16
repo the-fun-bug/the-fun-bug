@@ -18,14 +18,14 @@ export default function OpenPlayAdmissions() {
         </h1>
         <div className="flex flex-col md:flex-row gap-[1.25rem] justify-between w-full">
           <div className="flex flex-col gap-[1.25rem] md:w-[50%] md:items-center md:justify-center">
-            <div>
-              <div className="flex justify-between w-[205px] items-center mx-auto md:mx-0">
-                <p>Ages 0-2</p>
-                <p>$8/child</p>
+            <div className="flex flex-col gap-[0.5rem]">
+              <div className="flex justify-between items-center mx-auto md:mx-0 gap-[2.5rem]">
+                <p className="text-[1rem] md:text-[1.5rem]">Ages 0-2</p>
+                <p className="text-[1rem] md:text-[1.5rem]">$8/child</p>
               </div>
-              <div className="flex justify-between w-[205px] items-center mx-auto md:mx-0">
-                <p>Ages 3-12</p>
-                <p>$12/child</p>
+              <div className="flex justify-between items-center mx-auto md:mx-0 gap-[2.5rem]">
+                <p className="text-[1rem] md:text-[1.5rem]">Ages 3-12</p>
+                <p className="text-[1rem] md:text-[1.5rem]">$12/child</p>
               </div>
             </div>
             <AdmissionsButtons />

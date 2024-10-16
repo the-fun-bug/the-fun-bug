@@ -6,11 +6,11 @@ export default function RulesOfPlay() {
   const rules = [
     'Parents and guardians – not The Fun Bug staff – are responsible for children and must remain on site at ALL times',
     'The Fun Bug Play Studio & Parties is not responsible for lost or stolen items',
-    'No shoes are permitted on the grassy turf, and children are required to wear socks',
+    'No shoes are permitted on the grassy turf, and children and adults are required to wear socks',
     'No food and drinks in the play area',
-    'Wash hands before entering the play area',
+    'Sanitize hands before entering the play area',
     'Do not tape or pin anything to the walls',
-    'All children aged 12 years old and younger are welcome! Children six and under are sure to enjoy all that we have to offer. School-aged children are welcome, but must use all equipment and toys safely and in the manner in which they are intended',
+    'All children aged 12 years old and younger are welcome! Children six and under are sure to enjoy all that we have to offer. School-aged children are welcome, but must use all equipment and toys safely and in the manner in which they are intended, and be respectful of younger children playing nearby',
     'Adults (13 years old and older) are not allowed to use play equipment',
   ];
 
@@ -25,13 +25,13 @@ export default function RulesOfPlay() {
         </h1>
         <div className="grid md:grid-cols-2 justify-center md:justify-start gap-[1.25rem]">
           {rules.map((r, i) => (
-            <div key={i} className="flex gap-[0.5rem] md:max-w-[490px]">
+            <div key={i} className="flex gap-[0.5rem] md:max-w-[500px]">
               <Image
                 src={bulletImg}
                 alt="lady bug bullet"
-                height={42}
-                width={42}
-                className="self-start"
+                height={84}
+                width={84}
+                className="self-start max-w-[30px]"
               />
               <p>{r}</p>
             </div>

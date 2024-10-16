@@ -4,7 +4,7 @@ import Image from 'next/image';
 import ButtonLink from './ButtonLink';
 import fbIcon from './img/facebook.png';
 import instaIcon from './img/instagram.png';
-import ticktokIcon from './img/ticktok.png';
+import tiktokIcon from './img/tiktok.png';
 
 export default function VisitUs() {
   return (
@@ -12,11 +12,11 @@ export default function VisitUs() {
       <div className="flex flex-col justify-center items-center w-full max-w-[1200px]">
         <h1 className="font-nickainley mb-[2rem]">Visit Us</h1>
         <div className="w-full flex flex-col lg:flex-row items-center lg:items-start justify-between gap-[3.5rem] lg:gap-[1.25rem]">
-          <div className="flex lg:w-[32%] mx-auto justify-center">
+          <div className="flex lg:w-[32%] mx-auto justify-start">
             <div className="flex flex-col gap-[1.25rem] text-center lg:text-left items-center lg:items-start w-fit">
               <h2>Where You Can Find Us</h2>
-              <Link href="http://maps.google.com/?q=2063 Central Plaza Suite 108, New Braunfels, TX, 78130">
-                2063 Central Plaza Suite 108, <br />
+              <Link href="http://maps.google.com/?q=2055 Central Plaza Suite 108, New Braunfels, TX, 78130">
+                2055 Central Plaza Suite 108, <br />
                 New Braunfels, TX, 78130
               </Link>
               <Link href="mailto:thefunbug@yahoo.com">thefunbug@yahoo.com</Link>
@@ -47,8 +47,8 @@ export default function VisitUs() {
                 </Link>
                 <Link href="" target="_blank">
                   <Image
-                    src={ticktokIcon}
-                    alt="ticktok icon"
+                    src={tiktokIcon}
+                    alt="tiktok icon"
                     width={80}
                     height={80}
                     className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
@@ -95,7 +95,7 @@ export default function VisitUs() {
               </div>
             </div>
           </div>
-          <div className="flex justify-center lg:w-[32%] mx-auto  ">
+          <div className="flex justify-end lg:w-[32%] mx-auto">
             <div className="w-fit flex flex-col gap-[1.25rem] items-center lg:items-start">
               <h2 className="text-center lg:text-left">Private Event Hours</h2>
               <h3 className="font-bold text-sm text-center lg:text-left">

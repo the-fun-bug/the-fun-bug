@@ -13,6 +13,10 @@ type ImageNextToTextSectionProps = {
   buttonLink: string;
   buttonClass: string;
   allPadding?: boolean;
+  additionalButtonText?: string;
+  additionalButtonLink?: string;
+  additionalButtonClass?: string;
+  additionalButtonExternal?: boolean;
 };
 
 export default function ImageNextToTextSection({
@@ -26,6 +30,10 @@ export default function ImageNextToTextSection({
   buttonLink,
   buttonClass,
   allPadding,
+  additionalButtonText,
+  additionalButtonLink,
+  additionalButtonClass,
+  additionalButtonExternal,
 }: ImageNextToTextSectionProps) {
   return (
     <section
@@ -37,16 +45,28 @@ export default function ImageNextToTextSection({
         <Image
           src={imageSrc}
           alt={alt}
-          className={`${imageClass} max-w-[80%] md:max-w-[35%]`}
+          className={`${imageClass} md:max-w-[750px] lg:max-w-[45%]`}
         />
         <div className="flex flex-col gap-[1.25rem] max-w-[750px] lg:max-w-[490px] text-center lg:text-left items-center lg:items-start">
           <h1 className="font-nickainley">{title}</h1>
           <p>{paragraph}</p>
-          <ButtonLink
-            buttonText={buttonText}
-            buttonLink={buttonLink}
-            buttonClass={buttonClass}
-          />
+          <div className="flex gap-[1rem]">
+            <ButtonLink
+              buttonText={buttonText}
+              buttonLink={buttonLink}
+              buttonClass={buttonClass}
+            />
+            {!!additionalButtonText &&
+              !!additionalButtonLink &&
+              !!additionalButtonClass && (
+                <ButtonLink
+                  buttonText={additionalButtonText}
+                  buttonLink={additionalButtonLink}
+                  buttonClass={additionalButtonClass}
+                  external={additionalButtonExternal}
+                />
+              )}
+          </div>
         </div>
       </div>
     </section>

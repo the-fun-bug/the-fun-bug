@@ -18,19 +18,17 @@ export default function HowWePlay() {
               height={854}
               className="max-w-[460px] w-full"
             />
-            <div className="absolute top-0 left-0 pt-[100px] xs:pt-[120px] px-[2.25rem] sm:px-[2.5rem] flex flex-col justify-center items-center gap-[0.5rem] sm:gap-[0.75rem] max-w-[460px] w-full">
-              <h2>Open Play</h2>
-              <p className="hidden xs:block">
+            <div className="absolute top-0 left-0 pt-[90px] xxs:pt-[120px] px-[2.25rem] xs:px-[3rem] flex flex-col justify-center items-center gap-[1rem] xs:gap-[1.75rem] max-w-[460px] w-full">
+              <h2 className="xs:mt-[1rem]">Play Studio</h2>
+              <p className="">
                 Kids will have a blast on our large custom-built wooden play
                 structure, climb on our soft play mats, and explore their
                 creativity with endless play opportunities *
               </p>
-              <p>$12 per child ages 2-12</p>
-              <p>$8 per child 0-2</p>
               <ButtonLink
-                buttonText="Learn More"
+                buttonText="Pricing & Memberships"
                 buttonLink="/pricing"
-                buttonClass="bg-soft-blue hover:bg-worm-blue"
+                buttonClass="bg-soft-blue hover:bg-worm-blue my-0"
               />
             </div>
           </div>
@@ -42,23 +40,24 @@ export default function HowWePlay() {
               height={854}
               className="max-w-[460px] w-full"
             />
-            <div className="absolute top-0 left-0 pt-[100px] xs:pt-[120px] px-[2.25rem] sm:px-[2.5rem] flex flex-col justify-center items-center gap-[0.5rem] sm:gap-[0.75rem] max-w-[460px] w-full">
-              <h2>Parties & Events</h2>
-              <p className="hidden xs:block">
+            <div className="absolute top-0 left-0 pt-[90px] xxs:pt-[120px] px-[2.25rem] xs:px-[3rem] flex flex-col justify-center items-center gap-[1rem] xs:gap-[1.75rem] max-w-[460px] w-full">
+              <h2 className="xs:mt-[1rem]">Parties & Events</h2>
+              <p className="">
                 Book your party with us and enjoy full, private access to our
                 facility. The venue will be exclusively yours, closed to the
                 public. Regular snack & drink menu will be available *
               </p>
-              <p>$375 for 2 hours</p>
-              <p>$75 for additional 30 minutes</p>
               <ButtonLink
-                buttonText="Learn More"
+                buttonText="Start Planning Your Event"
                 buttonLink="/parties"
-                buttonClass="bg-soft-pink hover:bg-worm-pink"
+                buttonClass="bg-soft-pink hover:bg-worm-pink my-0"
               />
             </div>
           </div>
         </div>
+        <p className="pt-[1rem]">
+          * Socks must be worn on the play turf and structures at all times.
+        </p>
       </div>
     </section>
   );

@@ -18,13 +18,17 @@ export default function AboutPage() {
         imageClass="w-full max-w-[350px]"
         title="Sweeten Your Day with Saur Flour Cookies"
         paragraph="Indulge in freshly baked delights from our owner’s passion project,
-      The Saur Flour. These homemade cookies are crafted with love and the
+      The Saur Flour. These custom royal iced sugar cookies are crafted with love and the
       finest ingredients. Perfect for any occasion, they’re available for
       special order—just reach out to us directly to place your order."
         buttonText="Order Cookies"
         buttonLink="mailto:thesaurflourbakery@yahoo.com"
         buttonClass="bg-soft-pink/50 hover:bg-soft-pink"
         allPadding={true}
+        additionalButtonText="Cookie Gallery"
+        additionalButtonLink="https://www.facebook.com/TheSaurFlourBakery/photos"
+        additionalButtonClass="bg-transparent hover:bg-soft-green"
+        additionalButtonExternal={true}
       />
       <RulesOfPlay />
       <FrequentlyAskedQuestions />
