@@ -62,7 +62,7 @@ export default function Footer() {
               />
             </Link>
           </div>
-          <h2 className="text-center max-w-[240px]">
+          <h2 className="text-center max-w-[240px] text-black">
             Let Us Take Care of Your Next Party!
           </h2>
           <ButtonLink
@@ -85,7 +85,7 @@ export default function Footer() {
               <NavLink link="/contact" linkName="Contact" footer={true} />
             </div>
           </div>
-          <div className="text-xs mb-[1rem] text-right flex md:justify-end whitespace-nowrap gap-[5px]">
+          <div className="text-xs mb-[1rem] text-right flex md:justify-end whitespace-nowrap gap-[5px] text-black">
             Made with &#128420; by{' '}
             <Link
               href="https://leighdahlin.com/"

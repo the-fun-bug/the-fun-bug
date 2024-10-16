@@ -17,7 +17,7 @@ export default function NavLink({
   return (
     <Link
       href={link}
-      className={`font-bold ${footer ? 'w-fit ' : 'border-b-[1px] border-worm-blue md:border-none'} md:rounded-lg px-[1.25rem] py-[0.75rem] transition-all duration-300 ease-in-out 
+      className={`text-black font-bold ${footer ? 'w-fit ' : 'border-b-[1px] border-worm-blue md:border-none'} md:rounded-lg px-[1.25rem] py-[0.75rem] transition-all duration-300 ease-in-out 
       ${isActive ? 'bg-soft-blue' : ''} 
       md:hover:bg-soft-blue`} // Conditionally apply active styles
     >
