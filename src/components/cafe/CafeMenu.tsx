@@ -17,7 +17,10 @@ import lotusLogo from './img/lotus-logo.png';
 
 export default function CafeMenu() {
   return (
-    <section className="flex justify-center items-center py-[3rem] px-[1rem]">
+    <section
+      id="menu"
+      className="flex justify-center items-center py-[3rem] px-[1rem]"
+    >
       <div className="flex flex-col gap-[1rem] w-full max-w-[1200px] mb-[1rem]">
         <h1 className="font-nickainley">Menu</h1>
         <Specialties />
