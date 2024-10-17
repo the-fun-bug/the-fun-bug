@@ -2,9 +2,14 @@
 
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { NewsArticle } from './NewsPage';
+import { NewsArticle, Category } from './NewsPage';
 import NewsArticleCard from './NewsArticleCard';
 import CustomDropdown, { Option } from './CustomDropdown';
+
+type FilterOption = {
+  label: string;
+  value: Category;
+};
 
 export default function AllNewsArticles({
   articles = [],
@@ -19,18 +24,24 @@ export default function AllNewsArticles({
   const articlesPerPage = 6;
   const [hasMounted, setHasMounted] = useState(false);
 
-  const categories = useMemo<Option[]>(
-    () => [
-      { label: 'All Categories', value: 'all' },
-      { label: 'The Fun Bug Updates', value: 'updates' },
-      { label: 'Monthly Calendar', value: 'calendar' },
-      { label: 'Seasonal Specialties', value: 'specialties' },
-    ],
-    []
-  );
+  // Dynamically create available categories based on articles
+  const availableCategories: FilterOption[] = useMemo(() => {
+    const articleCategories = new Set<Category>(
+      articles.map((article) => article.category)
+    );
+
+    return [
+      { label: 'All Categories', value: 'all' as Category },
+      { label: 'The Fun Bug Updates', value: 'updates' as Category },
+      { label: 'Monthly Calendar', value: 'calendar' as Category },
+      { label: 'Seasonal Specialties', value: 'specialties' as Category },
+    ].filter(
+      (category) =>
+        category.value === 'all' || articleCategories.has(category.value)
+    );
+  }, [articles]);
 
   useEffect(() => {
-    // Ensure component is mounted before checking params
     setHasMounted(true);
   }, []);
 
@@ -39,19 +50,19 @@ export default function AllNewsArticles({
   }, [searchParams]);
 
   useEffect(() => {
-    if (!hasMounted) return; // Exit early if component hasn't mounted yet
+    if (!hasMounted) return;
 
     if (categoryParam) {
-      const selectedOption = categories.find(
+      const selectedOption = availableCategories.find(
         (category) => category.value === categoryParam
       );
       if (selectedOption) {
         setSelectedCategory(selectedOption);
       }
     } else {
-      setSelectedCategory(categories[0]); // Default to 'All Categories'
+      setSelectedCategory(availableCategories[0]); // Default to 'All Categories'
     }
-  }, [categoryParam, hasMounted, categories]);
+  }, [categoryParam, hasMounted, availableCategories]);
 
   const isNewArticle = (date: string) => {
     const [month, day, year] = date.split('.');
@@ -62,6 +73,10 @@ export default function AllNewsArticles({
   };
 
   const sortedArticles = articles
+    .filter(
+      (article) =>
+        article.category === 'calendar' || article.category === 'specialties'
+    )
     .sort((a, b) => {
       const parseDate = (dateStr: string) => {
         const [month, day, year] = dateStr.split('.');
@@ -71,9 +86,23 @@ export default function AllNewsArticles({
     })
     .map((article, index) => ({
       ...article,
-      isFeatured: index < 2,
+      isFeatured: index < 2, // Only the top 2 in these categories are featured
       isNew: isNewArticle(article.date),
-    }));
+    }))
+    // Merge back the rest of the articles, with no featured flag set
+    .concat(
+      articles
+        .filter(
+          (article) =>
+            article.category !== 'calendar' &&
+            article.category !== 'specialties'
+        )
+        .map((article) => ({
+          ...article,
+          isFeatured: false,
+          isNew: isNewArticle(article.date),
+        }))
+    );
 
   const filteredArticles = sortedArticles.filter((article) =>
     selectedCategory?.value === 'all'
@@ -96,7 +125,7 @@ export default function AllNewsArticles({
 
   const handleCategoryClick = (categoryValue: string) => {
     setCurrentPage(1);
-    const selectedOption = categories.find(
+    const selectedOption = availableCategories.find(
       (category) => category.value === categoryValue
     );
     if (selectedOption) {
@@ -114,7 +143,7 @@ export default function AllNewsArticles({
           className="w-full flex flex-col items-center mb-[2rem] pt-[1rem]"
         >
           <div className="hidden md:flex gap-[1.5rem]">
-            {categories.map((category) => (
+            {availableCategories.map((category) => (
               <button
                 key={category.value}
                 onClick={() => handleCategoryClick(category.value)}
@@ -131,14 +160,16 @@ export default function AllNewsArticles({
 
           <div className="w-full max-w-[450px] md:hidden pt-[1rem]">
             <CustomDropdown
-              options={categories}
+              options={availableCategories}
               selectedOption={selectedCategory}
               onOptionSelect={(option) => setSelectedCategory(option)}
             />
           </div>
         </div>
 
-        <div className="w-full justify-center md:justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[3rem] gap-y-[3rem] md:gap-y-[2rem]">
+        <div
+          className={`w-full justify-center md:justify-between  ${displayedArticles.length > 0 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[3rem] gap-y-[3rem] md:gap-y-[2rem]' : 'w-full flex items-center justify-center'}`}
+        >
           {displayedArticles.length > 0 ? (
             displayedArticles.map((article) => (
               <NewsArticleCard
@@ -149,7 +180,9 @@ export default function AllNewsArticles({
               />
             ))
           ) : (
-            <p>No articles available</p>
+            <p className="w-full text-center">
+              We don&apos;t have any news yet. Stay tuned for updates!
+            </p>
           )}
         </div>
 
