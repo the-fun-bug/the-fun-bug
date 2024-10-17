@@ -6,6 +6,11 @@ import getNewsParam from '@/utils/getNewsParam';
 // Fetch all news articles (Markdown files)
 async function getAllNewsArticles() {
   const newsDirectory = path.join(process.cwd(), 'content/news');
+  // Check if the directory exists
+  if (!fs.existsSync(newsDirectory)) {
+    console.warn("No 'news' directory found.");
+    return []; // Return an empty array if the directory doesn't exist
+  }
   const fileNames = fs.readdirSync(newsDirectory);
 
   const articles = fileNames.map((fileName) => {
