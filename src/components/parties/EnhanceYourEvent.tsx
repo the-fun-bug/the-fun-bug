@@ -4,6 +4,7 @@ import thirtyMinutesImg from './img/30-minutes.png';
 import cookiesImg from './img/cookies.png';
 import balloonsImg from './img/baloon-arch.png';
 import discountDrinksImg from './img/discounted-drinks.png';
+import ButtonLink from '../common/ButtonLink';
 
 type Enhancement = {
   title: string;
@@ -12,6 +13,10 @@ type Enhancement = {
   imageHeight: number;
   imageWidth: number;
   alt: string;
+  buttonLink: string | null;
+  buttonLinkExternal: boolean;
+  buttonText: string | null;
+  buttonClass: string | null;
 };
 
 export default function EnhanceYourEvent() {
@@ -24,6 +29,10 @@ export default function EnhanceYourEvent() {
       imageHeight: 670,
       imageWidth: 810,
       alt: 'The Fun Bug worm and a clock with party hats',
+      buttonLink: null,
+      buttonLinkExternal: false,
+      buttonText: null,
+      buttonClass: null,
     },
     {
       title: 'Cookies from the Saur Flour Bakery',
@@ -33,6 +42,10 @@ export default function EnhanceYourEvent() {
       imageHeight: 416,
       imageWidth: 902,
       alt: 'Two bugs enjoying heart-shaped cookies',
+      buttonLink: 'https://www.facebook.com/TheSaurFlourBakery/photos',
+      buttonLinkExternal: true,
+      buttonText: 'Cookie Image Gallery',
+      buttonClass: 'bg-transparent hover:bg-soft-green',
     },
     {
       title: 'Balloon Arch',
@@ -42,6 +55,10 @@ export default function EnhanceYourEvent() {
       imageHeight: 628,
       imageWidth: 644,
       alt: 'The Fun Bug worm wearing sunglasses under a balloon arch',
+      buttonLink: null,
+      buttonLinkExternal: false,
+      buttonText: null,
+      buttonClass: null,
     },
     {
       title: 'Non-Alcoholic Open Bar with Discounted Drinks',
@@ -51,6 +68,10 @@ export default function EnhanceYourEvent() {
       imageHeight: 608,
       imageWidth: 418,
       alt: 'A snail sipping on an iced coffee drink',
+      buttonLink: '/cafe#menu',
+      buttonLinkExternal: false,
+      buttonText: 'View Cafe Menu',
+      buttonClass: 'bg-transparent hover:bg-cafe',
     },
   ];
   return (
@@ -76,6 +97,14 @@ export default function EnhanceYourEvent() {
               <div className="flex flex-col gap-[0rem] lg:gap-[1.25rem] justify-center md:max-w-[350px] text-center md:text-left">
                 <h2>{e.title}</h2>
                 <p>{e.description}</p>
+                {e.buttonLink && e.buttonText && e.buttonClass && (
+                  <ButtonLink
+                    buttonLink={e.buttonLink}
+                    buttonClass={e.buttonClass}
+                    buttonText={e.buttonText}
+                    external={e.buttonLinkExternal}
+                  />
+                )}
               </div>
             </div>
           ))}
