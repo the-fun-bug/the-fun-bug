@@ -45,7 +45,7 @@ export default function CafeHeader() {
           alt="Four cups of beverages that can be found in the cafe"
           width={1140}
           height={366}
-          className="w-full"
+          className="w-full max-w-[550px]"
         />
       </div>
     </section>
