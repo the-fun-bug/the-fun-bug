@@ -8,7 +8,7 @@ export default function Memberships() {
   const bullets = [
     'There are no fees and no contract',
     'Memberships are active for the month of purchase',
-    'Payments for memberships are drafted on the 1st of each month',
+    'Payments for memberships can be purchased in-store and drafted on the 1st of each month',
   ];
   return (
     <section className={`flex items-center justify-center py-[3rem] px-[1rem]`}>
