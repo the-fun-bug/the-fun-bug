@@ -1,3 +1,5 @@
+// src/components/Navbar.tsx
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -8,8 +10,10 @@ import navLogo from './img/logo-nav.png';
 import navBorder from './img/nav-border.png';
 import useIsMobile from '@/hooks/useIsMobile';
 import ButtonLink from './ButtonLink';
+import Banner from './Banner';
 
-export default function Navbar() {
+export default function Navbar({ bannerText }: { bannerText: string }) {
+  const hasBanner = bannerText.trim() !== '';
   const [logoSize, setLogoSize] = useState(245); // Default logo size
   const [navSize, setNavSize] = useState(250);
   const isMobile = useIsMobile(768);
@@ -18,9 +22,20 @@ export default function Navbar() {
   const [currentPath, setCurrentPath] = useState(''); // Track the current path
 
   useEffect(() => {
+    // Adjust scroll-padding-top based on the presence of a banner
+    document.documentElement.style.scrollPaddingTop = hasBanner
+      ? '145px'
+      : '105px';
+
+    // Clean up by resetting to default
+    return () => {
+      document.documentElement.style.scrollPaddingTop = '105px';
+    };
+  }, [hasBanner]);
+
+  useEffect(() => {
     setMounted(true); // Set mounted to true after the component mounts
 
-    // Check the current path using window.location.pathname
     if (typeof window !== 'undefined') {
       setCurrentPath(window.location.pathname);
     }
@@ -33,7 +48,6 @@ export default function Navbar() {
   }, [isMobile, navOpen]);
 
   useEffect(() => {
-    // Prevent scrolling behind the nav on mobile
     if (navOpen) {
       document.body.style.overflow = 'hidden';
     }
@@ -42,7 +56,6 @@ export default function Navbar() {
     };
   }, [navOpen]);
 
-  // Function to handle the scroll event
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 1) {
@@ -54,20 +67,17 @@ export default function Navbar() {
       }
     };
 
-    // Add the scroll event listener
     window.addEventListener('scroll', handleScroll);
-
-    // Clean up the event listener when the component unmounts
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Check if the current path matches a link
   const isActiveLink = (link: string) => {
     return currentPath === link;
   };
 
   return (
     <header className="sticky top-0 z-50 w-full">
+      {hasBanner && <Banner text={bannerText} />}
       {mounted &&
         (isMobile ? (
           <nav className="bg-white p-[0.5rem] sm:p-[1rem] flex justify-between">
@@ -115,7 +125,6 @@ export default function Navbar() {
                       'linear-gradient(to left, #FDD7EC 0%, #FECDA1 33%, #FBFEC1 66%, #D9EBDD 100%',
                   }}
                 />
-
                 <div className="flex flex-col">
                   <NavLink
                     link="/about"
@@ -181,7 +190,7 @@ export default function Navbar() {
                       src={navLogo}
                       alt="The Fun Bug, Play Studio & Parties Logo"
                       className="transition-all duration-300 w-full"
-                      style={{ maxWidth: `${logoSize}px`, maxHeight: '100%' }} // Resizing logo
+                      style={{ maxWidth: `${logoSize}px`, maxHeight: '100%' }}
                       priority={true}
                     />
                   </Link>
@@ -205,7 +214,6 @@ export default function Navbar() {
             </div>
           </nav>
         ))}
-      {/* Border image below the navbar */}
       <div
         className="w-full h-[40px] bg-repeat-x bg-[length:auto_20px]"
         style={{
