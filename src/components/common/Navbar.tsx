@@ -117,7 +117,9 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
               </button>
             </div>
             {navOpen && (
-              <div className="fixed top-[82px] left-0 h-screen w-screen bg-white">
+              <div
+                className={`fixed ${hasBanner ? 'top-[105px]' : 'top-[82px]'} left-0 h-screen w-screen bg-white`}
+              >
                 <div
                   className="h-[3px] w-full mt-[0.5rem]"
                   style={{
