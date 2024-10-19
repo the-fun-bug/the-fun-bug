@@ -81,11 +81,11 @@ export default function EnhanceYourEvent() {
         <p className="pb-[1rem] md:pb-0">
           Explore our customizable add-ons to make your event truly exceptional.
         </p>
-        <div className="w-full flex flex-col gap-[2.5rem] text-left">
+        <div className="w-full flex flex-col gap-[3.5rem] text-left">
           {enhancements.map((e, i) => (
             <div
               key={i}
-              className={`flex flex-col-reverse md:flex-row items-center ${i % 2 === 1 ? 'md:ml-auto gap-[3rem]' : 'gap-[1.5rem]'}`}
+              className={`flex flex-col md:flex-row items-center ${i % 2 === 1 ? 'md:ml-auto gap-[3rem]' : 'gap-[1.5rem]'}`}
             >
               <Image
                 src={e.image}
@@ -98,12 +98,14 @@ export default function EnhanceYourEvent() {
                 <h2>{e.title}</h2>
                 <p>{e.description}</p>
                 {e.buttonLink && e.buttonText && e.buttonClass && (
-                  <ButtonLink
-                    buttonLink={e.buttonLink}
-                    buttonClass={e.buttonClass}
-                    buttonText={e.buttonText}
-                    external={e.buttonLinkExternal}
-                  />
+                  <div className="flex justify-center md:justify-start">
+                    <ButtonLink
+                      buttonLink={e.buttonLink}
+                      buttonClass={e.buttonClass}
+                      buttonText={e.buttonText}
+                      external={e.buttonLinkExternal}
+                    />
+                  </div>
                 )}
               </div>
             </div>
