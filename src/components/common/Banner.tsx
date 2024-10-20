@@ -1,15 +1,14 @@
-// src/components/Banner.tsx
-
-import React from 'react';
+import React, { forwardRef } from 'react';
 import Link from 'next/link';
 
 type BannerProps = {
   text: string;
 };
 
-const Banner: React.FC<BannerProps> = ({ text }) => {
+// Use forwardRef to pass the ref down to the div element
+const Banner = forwardRef<HTMLDivElement, BannerProps>(({ text }, ref) => {
   return (
-    <div className="bg-soft-pink text-center text-black py-2 px-4">
+    <div ref={ref} className="bg-soft-pink text-center text-black py-2 px-4">
       <p>
         {text} Visit our{' '}
         <Link href="/news" className="underline hover:text-blue-600">
@@ -19,6 +18,9 @@ const Banner: React.FC<BannerProps> = ({ text }) => {
       </p>
     </div>
   );
-};
+});
+
+// Set a display name for easier debugging (optional)
+Banner.displayName = 'Banner';
 
 export default Banner;

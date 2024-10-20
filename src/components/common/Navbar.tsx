@@ -2,7 +2,7 @@
 
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import NavLink from './NavLink';
 import Image from 'next/image';
@@ -14,6 +14,8 @@ import Banner from './Banner';
 
 export default function Navbar({ bannerText }: { bannerText: string }) {
   const hasBanner = bannerText.trim() !== '';
+  const bannerRef = useRef<HTMLDivElement | null>(null);
+  const [bannerHeight, setBannerHeight] = useState(82);
   const [logoSize, setLogoSize] = useState(245); // Default logo size
   const [navSize, setNavSize] = useState(250);
   const isMobile = useIsMobile(768);
@@ -22,16 +24,24 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
   const [currentPath, setCurrentPath] = useState(''); // Track the current path
 
   useEffect(() => {
-    // Adjust scroll-padding-top based on the presence of a banner
-    document.documentElement.style.scrollPaddingTop = hasBanner
-      ? '145px'
-      : '105px';
+    console.log(hasBanner);
+    if (hasBanner && bannerRef.current) {
+      const height = bannerRef.current.offsetHeight;
+      setBannerHeight(height); // Update state after the banner is rendered
+    }
+  }, [hasBanner]); // Recalculate height only when hasBanner changes
+
+  useEffect(() => {
+    // Adjust scroll-padding-top based on the banner's actual height
+    if (hasBanner) {
+      document.documentElement.style.scrollPaddingTop = `${bannerHeight + 82}px`;
+    }
 
     // Clean up by resetting to default
     return () => {
-      document.documentElement.style.scrollPaddingTop = '105px';
+      document.documentElement.style.scrollPaddingTop = '82px';
     };
-  }, [hasBanner]);
+  }, [bannerHeight, hasBanner]);
 
   useEffect(() => {
     setMounted(true); // Set mounted to true after the component mounts
@@ -77,7 +87,7 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
 
   return (
     <header className="sticky top-0 z-50 w-full">
-      {hasBanner && <Banner text={bannerText} />}
+      {hasBanner && <Banner ref={bannerRef} text={bannerText} />}
       {mounted &&
         (isMobile ? (
           <nav className="bg-white p-[0.5rem] sm:p-[1rem] flex justify-between">
@@ -118,7 +128,10 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
             </div>
             {navOpen && (
               <div
-                className={`fixed ${hasBanner ? 'top-[105px]' : 'top-[82px]'} left-0 h-screen w-screen bg-white`}
+                className="fixed left-0 h-screen w-screen bg-white"
+                style={{
+                  top: hasBanner ? `${bannerHeight + 82}px` : '82px',
+                }}
               >
                 <div
                   className="h-[3px] w-full mt-[0.5rem]"
