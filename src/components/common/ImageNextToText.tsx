@@ -45,7 +45,7 @@ export default function ImageNextToTextSection({
         <Image
           src={imageSrc}
           alt={alt}
-          className={`${imageClass} md:max-w-[750px] lg:max-w-[45%]`}
+          className={`lg:w-[45%] ${imageClass}`}
         />
         <div className="flex flex-col gap-[1.25rem] max-w-[750px] lg:max-w-[490px] text-center lg:text-left items-center lg:items-start">
           <h1 className="font-nickainley">{title}</h1>
