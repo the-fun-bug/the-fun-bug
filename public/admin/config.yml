@@ -49,3 +49,149 @@ collections:
           widget: 'string',
         }
       - { label: 'News Article Content', name: 'content', widget: 'markdown' }
+  - name: 'info'
+    label: 'Website Information'
+    files:
+      - label: 'Seasonal Drinks'
+        name: 'seasonal'
+        file: 'content/website-info/seasonal_drinks.yml'
+        fields:
+          - label: 'List of Seasonal Drinks'
+            name: 'seasonalDrinks'
+            widget: 'list'
+            fields:
+              - {
+                  label: 'Drink Name',
+                  name: 'drinkName',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Drink Secondary Name (Ex: name is Chai There and secondary name is chai tea latter)',
+                  name: 'secondaryName',
+                  widget: 'string',
+                  required: false,
+                }
+              - {
+                  label: 'Drink Description',
+                  name: 'drinkDescription',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Iced Only? (Will Show Ice Cube)',
+                  name: 'icedOnly',
+                  widget: 'boolean',
+                  required: true,
+                }
+              - {
+                  label: 'Drink Image',
+                  hint: 'Short Drink Dimension (190w x 156h), Tall Drink Dimensions (178w x 200h)',
+                  name: 'drinkImage',
+                  widget: 'image',
+                  allowMultiple: false,
+                  required: true,
+                }
+              - {
+                  label: 'Drink Image Description',
+                  name: 'drinkImageAlt',
+                  widget: 'string',
+                  required: true,
+                }
+              - label: 'Drink Image Type'
+                name: 'drinkImageType'
+                widget: 'select'
+                required: true
+                max: 1
+                options:
+                  - label: 'Tall Drink (Iced)'
+                    value: 'tall'
+                  - label: 'Short Drink (Tall)'
+                    value: 'short'
+      - label: 'Hours'
+        name: 'hours'
+        file: 'content/website-info/hours.yml'
+        fields:
+          - label: 'Open Play Hours'
+            name: 'openPlayHours'
+            widget: 'object'
+            fields:
+              - label: 'Monday'
+                name: 'monday'
+                widget: 'string'
+                required: true
+              - label: 'Tuesday'
+                name: 'tuesday'
+                widget: 'string'
+                required: true
+              - label: 'Wednesday'
+                name: 'wednesday'
+                widget: 'string'
+                required: true
+              - label: 'Thursday'
+                name: 'thursday'
+                widget: 'string'
+                required: true
+              - label: 'Friday'
+                name: 'friday'
+                widget: 'string'
+                required: true
+              - label: 'Saturday'
+                name: 'saturday'
+                widget: 'string'
+                required: true
+              - label: 'Sunday'
+                name: 'sunday'
+                widget: 'string'
+                required: true
+          - label: 'Party Hours'
+            name: 'partyHours'
+            widget: 'object'
+            fields:
+              - label: 'Monday'
+                name: 'monday'
+                widget: 'string'
+                required: false
+              - label: 'Tuesday'
+                name: 'tuesday'
+                widget: 'string'
+                required: false
+              - label: 'Wednesday'
+                name: 'wednesday'
+                widget: 'string'
+                required: false
+              - label: 'Thursday'
+                name: 'thursday'
+                widget: 'string'
+                required: false
+              - label: 'Friday'
+                name: 'friday'
+                widget: 'string'
+                required: false
+              - label: 'Saturday'
+                name: 'saturday'
+                widget: 'string'
+                required: false
+              - label: 'Sunday'
+                name: 'sunday'
+                widget: 'string'
+                required: false
+      - label: 'Photos'
+        name: 'photos'
+        file: 'content/website-info/photos.yml'
+        fields:
+          - label: 'Homepage Photos'
+            name: 'homepagePhotos'
+            widget: 'image'
+            allowMultiple: true
+          - label: 'About Page Photo'
+            name: 'aboutPhoto'
+            widget: 'image'
+            allowMultiple: false
+      - label: 'Website Banner'
+        name: 'banner'
+        file: 'content/website-info/banner.yml'
+        fields:
+          - label: 'Website Banner Text'
+            name: 'websiteBanner'
+            widget: 'string'
