@@ -15,7 +15,11 @@ export default function VisitUs() {
           <div className="flex lg:w-[32%] mx-auto justify-start">
             <div className="flex flex-col gap-[1.25rem] text-center lg:text-left items-center lg:items-start w-fit">
               <h2>Where You Can Find Us</h2>
-              <Link href="http://maps.google.com/?q=2055 Central Plaza Suite 108, New Braunfels, TX, 78130">
+              <Link
+                href="http://maps.google.com/?q=2055 Central Plaza Suite 108, New Braunfels, TX, 78130"
+                rel="noreferrer"
+                target="_blank"
+              >
                 2055 Central Plaza Suite 108, <br />
                 New Braunfels, TX, 78130
               </Link>
@@ -28,6 +32,7 @@ export default function VisitUs() {
                 <Link
                   href="https://www.facebook.com/groups/824992593033982"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <Image
                     src={fbIcon}
@@ -38,7 +43,11 @@ export default function VisitUs() {
                   />
                 </Link>
                 {/* TO DO: REPLACE WITH LINKS */}
-                <Link href="" target="_blank">
+                <Link
+                  href="https://www.instagram.com/thefunbugplaystudio/profilecard/?igsh=c3I0MW41ZHMxNTEx"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image
                     src={instaIcon}
                     alt="instagram icon"
@@ -47,7 +56,11 @@ export default function VisitUs() {
                     className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
                   />
                 </Link>
-                <Link href="" target="_blank">
+                <Link
+                  href="https://www.tiktok.com/@thefunbugplaystudio?_t=8qjMNalXXYs&_r=1"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image
                     src={tiktokIcon}
                     alt="tiktok icon"
