@@ -19,7 +19,9 @@ export default function VisitUs() {
                 2055 Central Plaza Suite 108, <br />
                 New Braunfels, TX, 78130
               </Link>
-              <Link href="mailto:thefunbug@yahoo.com">thefunbug@yahoo.com</Link>
+              <Link href="mailto:contact@thefunbug.com">
+                contact@thefunbug.com
+              </Link>
               <Link href="tel:+12814550896">281-455-0896</Link>
               <h2 className="mt-[1rem]">Stay Up to Date</h2>
               <div className="flex gap-[0.5rem]">
