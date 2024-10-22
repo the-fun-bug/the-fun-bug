@@ -3,9 +3,9 @@ import PartiesPage from '@/components/parties/PartiesPage';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Parties | The Fun Bug, Play Studio & Parties',
+  title: 'The Fun Bug - Private Party Rentals | Exclusive Indoor Venue',
   description:
-    'Are you ready to party? We are! Here at The Fun Bug, we think every day should be a party. Schedule your event today!',
+    'Host a memorable private party at The Fun Bug in New Braunfels, with exclusive access to our indoor play space—perfect for birthdays and special events.',
 };
 
 export default function Parties() {

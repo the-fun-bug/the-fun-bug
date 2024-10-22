@@ -4,9 +4,9 @@ import type { Metadata } from 'next';
 import getHoursData from '../../../../lib/getHours';
 
 export const metadata: Metadata = {
-  title: 'Contact | The Fun Bug, Play Studio & Parties',
+  title: 'The Fun Bug - Contact Us | Get in Touch',
   description:
-    'Contact The Fun Bug and learn where to visit us, our hours for open play & private events and how to stay up to date with our latest news',
+    'Contact The Fun Bug in New Braunfels for more information about our indoor play studio, open play pricing, memberships, and private event rentals.',
 };
 
 export default function ContactPage() {

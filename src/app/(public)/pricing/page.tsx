@@ -3,9 +3,9 @@ import PricingPage from '@/components/pricing/PricingPage';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Pricing | The Fun Bug, Play Studio & Parties',
+  title: 'The Fun Bug - Open Play & Membership Pricing',
   description:
-    'Come join us at our play studio where you’ll find a fun, aesthetic, and clean place for both kids and parents to enjoy!',
+    'Explore pricing for open play sessions and membership plans at The Fun Bug, New Braunfels’ top choice for affordable indoor play options for kids.',
 };
 
 export default function Pricing() {

@@ -3,9 +3,9 @@ import CafePage from '@/components/cafe/CafePage';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Cafe | The Fun Bug, Play Studio & Parties',
+  title: 'The Fun Bug Cafe | Relax with Drinks & Free Wi-Fi',
   description:
-    'Enjoy your favorite beverage while you’re little bugs play! Check back for our seasonal specialties.',
+    'Unwind at The Fun Bug Cafe in New Braunfels, where parents can enjoy coffee, refreshments, and free Wi-Fi while their kids play in a fun, safe environment.',
 };
 
 export default function ContactPage() {

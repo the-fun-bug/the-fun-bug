@@ -4,9 +4,9 @@ import type { Metadata } from 'next';
 import getHoursData from '../../../lib/getHours';
 
 export const metadata: Metadata = {
-  title: 'The Fun Bug, Play Studio & Parties',
+  title: 'The Fun Bug - Play Studio & Parties | Indoor Fun in New Braunfels',
   description:
-    'Welcome to The Fun Bug, where playtime meets relaxation for both kids and parents! Inspired by our own children, we saw a need for more indoor play options in New Braunfels. Come join us for open play time, delicious coffee, and exclusive party rentals after hours!',
+    ' Discover The Fun Bug in New Braunfels, an indoor play space offering fun and safe activities for kids while parents relax with delicious drinks and free Wi-Fi.',
 };
 
 export default function Home() {
