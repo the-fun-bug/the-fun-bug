@@ -49,7 +49,7 @@ export default function HomepageGallery() {
                 src={s.image}
                 alt={s.alt}
                 className="rounded-lg w-full max-w-[1000px]"
-                priority={true}
+                priority={i === 0}
                 width={1000}
                 height={600}
                 placeholder="blur"
