@@ -5,8 +5,9 @@ import HowWePlay from './HowWePlay';
 import ImageNextToTextSection from '../common/ImageNextToText';
 import VisitUs from '../common/VisitUs';
 import cafeDrinksImg from './img/cafe-drinks.png';
+import { Hours } from '@/types/types';
 
-export default function Homepage() {
+export default function Homepage({ hours }: { hours: Hours }) {
   return (
     <>
       <HomepageGallery />
@@ -24,7 +25,7 @@ export default function Homepage() {
         buttonClass="bg-cafe/50 hover:bg-cafe"
         allPadding={true}
       />
-      <VisitUs />
+      <VisitUs hours={hours} />
     </>
   );
 }

@@ -5,8 +5,11 @@ import ButtonLink from './ButtonLink';
 import fbIcon from './img/facebook.png';
 import instaIcon from './img/instagram.png';
 import tiktokIcon from './img/tiktok.png';
+import { Hours } from '@/types/types';
 
-export default function VisitUs() {
+export default function VisitUs({ hours }: { hours: Hours }) {
+  const { openPlayHours, partyHours } = hours;
+
   return (
     <section className="flex justify-center items-center py-[3rem] px-[1rem]">
       <div className="flex flex-col justify-center items-center w-full max-w-[1200px]">
@@ -82,31 +85,31 @@ export default function VisitUs() {
               <h2 className="text-center lg:text-left">Open Play Hours</h2>
               <div className="flex gap-[1.25rem]">
                 <p className="w-[88.5px]">Monday</p>
-                <p className="w-[142px]">9:00 am - 4:00 pm</p>
+                <p className="w-[142px]">{openPlayHours.monday}</p>
               </div>
               <div className="flex gap-[1.25rem]">
                 <p className="w-[88.5px]">Tuesday</p>
-                <p className="w-[142px]">9:00 am - 4:00 pm</p>
+                <p className="w-[142px]">{openPlayHours.tuesday}</p>
               </div>
               <div className="flex gap-[1.25rem]">
                 <p className="w-[88.5px]">Wednesday</p>
-                <p className="w-[142px]">9:00 am - 4:00 pm</p>
+                <p className="w-[142px]">{openPlayHours.wednesday}</p>
               </div>
               <div className="flex gap-[1.25rem]">
                 <p className="w-[88.5px]">Thursday</p>
-                <p className="w-[142px]">9:00 am - 4:00 pm</p>
+                <p className="w-[142px]">{openPlayHours.thursday}</p>
               </div>
               <div className="flex gap-[1.25rem]">
                 <p className="w-[88.5px]">Friday</p>
-                <p className="w-[142px]">9:00 am - 4:00 pm</p>
+                <p className="w-[142px]">{openPlayHours.friday}</p>
               </div>
               <div className="flex gap-[1.25rem]">
                 <p className="w-[88.5px]">Saturday</p>
-                <p className="w-[142px]">9:00 am - 2:00 pm</p>
+                <p className="w-[142px]">{openPlayHours.saturday}</p>
               </div>
               <div className="flex gap-[1.25rem]">
                 <p className="w-[88.5px]">Sunday</p>
-                <p className="w-[142px]">Closed for private parties only</p>
+                <p className="w-[142px]">{openPlayHours.sunday}</p>
               </div>
             </div>
           </div>
@@ -118,21 +121,15 @@ export default function VisitUs() {
               </h3>
               <div className="flex gap-[1.25rem]">
                 <p className="w-[88.5px]">Friday</p>
-                <p className="w-[162px]">
-                  3:00 pm - 5:00 pm & 6:00 pm - 8:00 pm
-                </p>
+                <p className="w-[150px] sm:w-[162px]">{partyHours.friday}</p>
               </div>
               <div className="flex gap-[1.25rem]">
                 <p className="w-[88.5px]">Saturday</p>
-                <p className="w-[162px]">
-                  3:00 pm - 5:00 pm & 6:00 pm - 8:00 pm
-                </p>
+                <p className="w-[150px] sm:w-[162px]">{partyHours.saturday}</p>
               </div>
               <div className="flex gap-[1.25rem]">
                 <p className="w-[88.5px]">Sunday</p>
-                <p className="w-[162px]">
-                  11:00 am - 1:00 pm, 2:00 pm - 4:00 pm & 5:00 pm - 7:00 pm
-                </p>
+                <p className="w-[150px] sm:w-[162px]">{partyHours.sunday}</p>
               </div>
               <ButtonLink
                 buttonText="Book a Party"

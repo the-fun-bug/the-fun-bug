@@ -2,6 +2,7 @@ import React from 'react';
 import GlobalLayout from '@/components/common/GlobalLayout';
 import Homepage from '@/components/home/Homepage';
 import type { Metadata } from 'next';
+import getHoursData from '../../lib/getHours';
 
 export const metadata: Metadata = {
   title: 'The Fun Bug, Play Studio & Parties',
@@ -10,9 +11,11 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const hours = getHoursData();
+
   return (
     <GlobalLayout>
-      <Homepage />
+      <Homepage hours={hours} />
     </GlobalLayout>
   );
 }
