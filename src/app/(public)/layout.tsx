@@ -1,5 +1,6 @@
 import React from 'react';
 import '../globals.css';
+import getBannerText from '../../../lib/getBannerText';
 
 import { quicksand } from '../fonts';
 
@@ -56,7 +57,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const bannerText = "We're not open yet.";
+  const banner = getBannerText();
 
   return (
     <html lang="en">
@@ -65,7 +66,7 @@ export default function RootLayout({
           <div
             className={`flex flex-col justify-between min-h-screen bg-white`}
           >
-            <Navbar bannerText={bannerText} />
+            <Navbar bannerText={banner.websiteBanner} />
             <main className="block min-h-[100vh - 291px] w-full flex items-center justify-center">
               <div className="flex flex-col justify-center w-full max-w-[1200px] text-black">
                 {children}

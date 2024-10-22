@@ -18,3 +18,7 @@ export type Hours = {
   openPlayHours: OpenPlayHours;
   partyHours: PartyHours;
 };
+
+export type BannerType = {
+  websiteBanner: string;
+};
