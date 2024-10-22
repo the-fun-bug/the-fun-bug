@@ -76,7 +76,7 @@ function Specialties() {
           drinkName: 'Sugar Mama',
           secondaryName: 'iced brown sugar latte',
           drinkDescription:
-            'milk of choice*, brown sugar, water, vanilla, espresso, cinnamon',
+            'milk of choice*, brown sugar, vanilla, espresso, cinnamon',
           icedOnly: true,
           image: sugarMamaImg,
           drinkType: 'tall',
@@ -84,7 +84,7 @@ function Specialties() {
         },
         {
           drinkName: 'Hello Caramello',
-          secondaryName: 'caramel machiatto',
+          secondaryName: 'caramel machiatto (hot or iced)',
           drinkDescription:
             'milk of choice*, espresso, vanilla syrup, caramel sauce',
           icedOnly: false,
@@ -109,7 +109,7 @@ function Specialties() {
         },
         {
           drinkName: 'Chai There',
-          secondaryName: 'chai tea latte',
+          secondaryName: 'chai tea latte (hot or iced)',
           drinkDescription: 'milk of choice*, chai tea',
           icedOnly: false,
           image: chaiThereImg,
@@ -461,23 +461,23 @@ function LightBites() {
         <div className="">
           <div className="flex justify-between w-full max-w-[400px]">
             <p>Gold Fish</p>
-            <p>$1.25</p>
+            <p>$1.50</p>
           </div>
           <div className="flex justify-between w-full max-w-[400px]">
             <p>Veggie Straws</p>
-            <p>$1.25</p>
+            <p>$1.75</p>
           </div>
           <div className="flex justify-between w-full max-w-[400px]">
             <p>Chips</p>
-            <p>$1.25</p>
+            <p>$1.50</p>
           </div>
           <div className="flex justify-between w-full max-w-[400px]">
             <p>Applesauce</p>
-            <p>$1.50</p>
+            <p>$1.99</p>
           </div>
           <div className="flex justify-between w-full max-w-[400px]">
             <p>Yogurt Pouch</p>
-            <p>$1.50</p>
+            <p>$1.99</p>
           </div>
         </div>
       </div>
