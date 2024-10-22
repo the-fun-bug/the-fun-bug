@@ -24,12 +24,6 @@ export const metadata = {
         sizes: '180x180',
         url: '/apple-touch-icon.png',
       },
-      { rel: 'icon', type: 'image/x-icon', url: '/favicon.ico' },
-    ],
-  },
-  manifest: '/site.webmanifest',
-  iconsForAndroid: {
-    androidChrome: [
       {
         rel: 'icon',
         type: 'image/png',
@@ -42,8 +36,14 @@ export const metadata = {
         sizes: '512x512',
         url: '/android-chrome-512x512.png',
       },
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        url: '/favicon.ico',
+      },
     ],
   },
+  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({
