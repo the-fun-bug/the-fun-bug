@@ -78,7 +78,7 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
     if (navOpen) {
       setNavOpen(false);
     }
-  }, [pathname]); // Close menu on route change
+  }, [pathname, navOpen]); // Close menu on route change
 
   useEffect(() => {
     if (navOpen && !isMobile) {
@@ -126,6 +126,10 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
                 alt="The Fun Bug, Play Studio & Parties Logo"
                 className="w-[100px]"
                 priority={true}
+                height={341}
+                width={485}
+                sizes="100px"
+                placeholder="blur"
               />
             </Link>
             <div className="flex gap-[2rem] items-center">
@@ -203,10 +207,13 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
                   <Link href="/">
                     <Image
                       src={navLogo}
+                      height={341}
+                      width={485}
                       alt="The Fun Bug, Play Studio & Parties Logo"
                       className="transition-all duration-300 w-full"
                       style={{ maxWidth: `${logoSize}px`, maxHeight: '100%' }}
                       priority={true}
+                      placeholder="blur"
                     />
                   </Link>
                 </div>

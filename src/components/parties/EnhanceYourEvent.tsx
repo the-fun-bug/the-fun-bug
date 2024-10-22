@@ -93,6 +93,7 @@ export default function EnhanceYourEvent() {
                 height={e.imageHeight}
                 width={e.imageWidth}
                 className={`w-full max-w-[60%] md:max-w-[350px]`}
+                placeholder="blur"
               />
               <div className="flex flex-col gap-[0rem] lg:gap-[1.25rem] justify-center md:max-w-[350px] text-center md:text-left">
                 <h2>{e.title}</h2>

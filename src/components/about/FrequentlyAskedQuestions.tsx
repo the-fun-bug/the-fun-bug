@@ -83,6 +83,7 @@ export default function FrequentlyAskedQuestions() {
                   width={40}
                   height={40}
                   className="w-[15px] h-[15px]"
+                  placeholder="blur"
                 />
               </div>
               <p

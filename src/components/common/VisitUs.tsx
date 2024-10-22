@@ -43,6 +43,7 @@ export default function VisitUs({ hours }: { hours: Hours }) {
                     width={80}
                     height={80}
                     className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
+                    placeholder="blur"
                   />
                 </Link>
                 {/* TO DO: REPLACE WITH LINKS */}
@@ -57,6 +58,7 @@ export default function VisitUs({ hours }: { hours: Hours }) {
                     width={80}
                     height={80}
                     className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
+                    placeholder="blur"
                   />
                 </Link>
                 <Link
@@ -70,6 +72,7 @@ export default function VisitUs({ hours }: { hours: Hours }) {
                     width={80}
                     height={80}
                     className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
+                    placeholder="blur"
                   />
                 </Link>
               </div>

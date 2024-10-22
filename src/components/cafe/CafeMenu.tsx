@@ -195,6 +195,7 @@ function Specialties() {
                 height={80}
                 width={80}
                 className="w-[25px]"
+                placeholder="blur"
               />
               <p>this drink only comes iced</p>
             </div>
@@ -227,13 +228,22 @@ function Specialties() {
                             height={80}
                             width={80}
                             className="w-[25px]"
+                            placeholder="blur"
                           />
                         )}
                       </div>
                       {d.secondaryName && <p>{d.secondaryName}</p>}
                       <p>{d.drinkDescription}</p>
                     </div>
-                    <Image src={d.image} alt={d.alt} className="max-w-[96px]" />
+                    <Image
+                      src={d.image}
+                      alt={d.alt}
+                      className="max-w-[96px]"
+                      placeholder="blur"
+                      {...(d.drinkType === 'short'
+                        ? { height: 156, width: 190 }
+                        : { height: 200, width: 178 })}
+                    />
                   </div>
                 ))}
               </div>
@@ -257,6 +267,7 @@ function Specialties() {
                       height={105}
                       className="max-w-[75px]"
                       alt="Lotus energy drinks logo"
+                      placeholder="blur"
                     />
                     <p>
                       We proudly use{' '}
@@ -287,6 +298,7 @@ function Specialties() {
                             height={80}
                             width={80}
                             className="w-[25px]"
+                            placeholder="blur"
                           />
                         )}
                       </div>
@@ -300,6 +312,7 @@ function Specialties() {
                       {...(d.drinkType === 'short'
                         ? { height: 156, width: 190 }
                         : { height: 200, width: 178 })}
+                      placeholder="blur"
                     />
                   </div>
                 ))}
@@ -330,7 +343,7 @@ function BuildYourOwn() {
   const milks = [
     'whole milk',
     '2% milk',
-    'lactose free millk',
+    'lactose free milk',
     'almond milk',
     'oat milk',
   ];
@@ -373,6 +386,9 @@ function BuildYourOwn() {
           src={buildYourOwnImg}
           alt="Fun Bug worm behind iced drink"
           className="max-w-[96px]"
+          width={178}
+          height={200}
+          placeholder="blur"
         />
       </div>
     </div>

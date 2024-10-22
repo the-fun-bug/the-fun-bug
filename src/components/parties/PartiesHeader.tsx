@@ -47,6 +47,7 @@ export default function PartiesHeader() {
           width={632}
           height={432}
           className="w-full max-w-[450px]"
+          placeholder="blur"
         />
       </div>
     </section>

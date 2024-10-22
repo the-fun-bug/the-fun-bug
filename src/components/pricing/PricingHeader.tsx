@@ -19,6 +19,7 @@ export default function PricingHeader() {
           width={2524}
           height={618}
           className="hidden md:block w-full max-w-[1000px]"
+          placeholder="blur"
         />
         <Image
           priority={true}
@@ -27,6 +28,7 @@ export default function PricingHeader() {
           width={1020}
           height={474}
           className="md:hidden w-full max-w-[300px]"
+          placeholder="blur"
         />
       </div>
     </section>

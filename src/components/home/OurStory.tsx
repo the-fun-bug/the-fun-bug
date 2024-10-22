@@ -28,6 +28,7 @@ export default function OurStory() {
         className="max-w-[1000px] w-full"
         height={362}
         width={2090}
+        placeholder="blur"
       />
     </section>
   );

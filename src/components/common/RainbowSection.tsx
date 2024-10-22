@@ -38,6 +38,9 @@ export default function RainbowSection({
           src={rainbowImg}
           alt="rainbow"
           className="hidden sm:block self-end w-full max-w-[250px] lg:max-w-[500px]"
+          width={1040}
+          height={758}
+          placeholder="blur"
         />
       </div>
     </section>

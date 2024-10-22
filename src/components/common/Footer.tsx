@@ -25,6 +25,9 @@ export default function Footer() {
               src={logo}
               alt="The Fun Bug, Play Studio & Parties Logo"
               className="max-w-[275px] w-full"
+              height={341}
+              width={485}
+              placeholder="blur"
             />
           </Link>
         </div>
@@ -40,6 +43,7 @@ export default function Footer() {
                 alt="facebook icon"
                 width={80}
                 height={80}
+                placeholder="blur"
                 className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
               />
             </Link>
@@ -50,6 +54,7 @@ export default function Footer() {
                 width={80}
                 height={80}
                 className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
+                placeholder="blur"
               />
             </Link>
             <Link href="" target="_blank">
@@ -59,6 +64,7 @@ export default function Footer() {
                 width={80}
                 height={80}
                 className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
+                placeholder="blur"
               />
             </Link>
           </div>

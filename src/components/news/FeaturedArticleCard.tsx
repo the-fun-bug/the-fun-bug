@@ -29,6 +29,7 @@ const FeaturedArticleCard: React.FC<FeaturedArticleCardProps> = ({
           height={420}
           className="w-full max-w-[165px]"
           priority={true}
+          placeholder="blur"
         />
       </Link>
       <div className="flex flex-col gap-[1rem] py-[1rem] sm:py-[1.5rem] rounded-e-xl">

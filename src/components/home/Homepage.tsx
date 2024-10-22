@@ -18,6 +18,8 @@ export default function Homepage({ hours }: { hours: Hours }) {
         alt="Three drinks from the cafe side by side"
         imageSide="left"
         imageClass="w-full max-w-[550px]"
+        imageWidth={1188}
+        imageHeight={381}
         title="The Fun Bug Cafe"
         paragraph="At The Fun Bug, kick back with a delicious cup of coffee from our café while your kids have a blast in our awesome playground. Our cozy seating area is perfect for enjoying tasty snacks, so you can relax and know your little ones are having a fantastic time!"
         buttonText="View Menu"
