@@ -24,7 +24,6 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
   const [currentPath, setCurrentPath] = useState(''); // Track the current path
 
   useEffect(() => {
-    console.log(hasBanner);
     if (hasBanner && bannerRef.current) {
       const height = bannerRef.current.offsetHeight;
       setBannerHeight(height); // Update state after the banner is rendered
