@@ -47,7 +47,10 @@ export default function Footer() {
                 className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
               />
             </Link>
-            <Link href="" target="_blank">
+            <Link
+              href="https://www.instagram.com/thefunbugplaystudio/profilecard/?igsh=c3I0MW41ZHMxNTEx"
+              target="_blank"
+            >
               <Image
                 src={instaIcon}
                 alt="instagram icon"
@@ -57,7 +60,10 @@ export default function Footer() {
                 placeholder="blur"
               />
             </Link>
-            <Link href="" target="_blank">
+            <Link
+              href="https://www.tiktok.com/@thefunbugplaystudio?_t=8qjMNalXXYs&_r=1"
+              target="_blank"
+            >
               <Image
                 src={tiktokIcon}
                 alt="tiktok icon"
