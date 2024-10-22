@@ -1,5 +1,4 @@
 import React from 'react';
-import GlobalLayout from '@/components/common/GlobalLayout';
 import PartiesPage from '@/components/parties/PartiesPage';
 import type { Metadata } from 'next';
 
@@ -10,9 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function Parties() {
-  return (
-    <GlobalLayout>
-      <PartiesPage />
-    </GlobalLayout>
-  );
+  return <PartiesPage />;
 }

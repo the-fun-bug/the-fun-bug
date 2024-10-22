@@ -1,8 +1,7 @@
 import React from 'react';
-import GlobalLayout from '@/components/common/GlobalLayout';
 import NewsPage from '@/components/news/NewsPage';
 import type { Metadata } from 'next';
-import getAllNewsArticles from '../../../lib/getAllNewsArticles';
+import getAllNewsArticles from '../../../../lib/getAllNewsArticles';
 
 export const metadata: Metadata = {
   title: 'The Fun Bug News',
@@ -12,9 +11,5 @@ export const metadata: Metadata = {
 
 export default async function Parties() {
   const articles = await getAllNewsArticles();
-  return (
-    <GlobalLayout>
-      <NewsPage articles={articles} />
-    </GlobalLayout>
-  );
+  return <NewsPage articles={articles} />;
 }

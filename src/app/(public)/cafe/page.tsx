@@ -1,5 +1,4 @@
 import React from 'react';
-import GlobalLayout from '@/components/common/GlobalLayout';
 import CafePage from '@/components/cafe/CafePage';
 import type { Metadata } from 'next';
 
@@ -10,9 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  return (
-    <GlobalLayout>
-      <CafePage />
-    </GlobalLayout>
-  );
+  return <CafePage />;
 }
