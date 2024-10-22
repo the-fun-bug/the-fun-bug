@@ -31,7 +31,6 @@ const NewsArticleCard: React.FC<NewsArticleCardProps> = ({
           height={420}
           className="max-h-[175px] w-auto"
           priority={true}
-          placeholder="blur"
         />
         {/* Tags Layered in the Top-Left of the Image */}
         <div className="absolute top-2 left-2 flex flex-col gap-2 p-2">

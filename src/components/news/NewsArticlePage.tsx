@@ -52,7 +52,6 @@ export default async function NewsArticlePage({
                 height={420}
                 className="max-h-[250px] w-auto"
                 priority={true}
-                placeholder="blur"
               />
             </div>
           </div>
