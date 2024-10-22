@@ -1,4 +1,4 @@
-\import { Metadata } from 'next';
+import { Metadata } from 'next';
 import NewsArticlePage from '@/components/news/NewsArticlePage';
 import getNewsParam from '@/utils/getNewsParam';
 import getAllNewsArticles from '../../../../../lib/getAllNewsArticles';
@@ -53,15 +53,15 @@ export default async function NewsDetailPage({
 
   if (article) {
     return (
-        <NewsArticlePage article={article} recentArticles={recentArticles} />
+      <NewsArticlePage article={article} recentArticles={recentArticles} />
     );
   } else {
     return (
-        <div className="bg-white dark:bg-navySmoke">
-          <p className="font-visbyBold text-mauvelous dark:text-softOpal min-h-[250px] h-full w-full flex items-center justify-center">
-            Oops! News article not found.
-          </p>
-        </div>
+      <div className="bg-white dark:bg-navySmoke">
+        <p className="font-visbyBold text-mauvelous dark:text-softOpal min-h-[250px] h-full w-full flex items-center justify-center">
+          Oops! News article not found.
+        </p>
+      </div>
     );
   }
 }
