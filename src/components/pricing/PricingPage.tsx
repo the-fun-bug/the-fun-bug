@@ -20,6 +20,8 @@ export default function PricingPage() {
         alt="Three drinks from the cafe side by side"
         imageSide="right"
         imageClass="w-full max-w-[550px]"
+        imageHeight={688}
+        imageWidth={1188}
         title="Private Play Dates"
         paragraph="Interested in a private play date reservation? Enjoy exclusive access to our space for a fun and safe playtime experience. To schedule your private play date, reach out to us directly for more details and pricing."
         buttonText="Book a Play Date"
@@ -32,6 +34,8 @@ export default function PricingPage() {
         alt="Three drinks from the cafe side by side"
         imageSide="left"
         imageClass="w-full max-w-[550px]"
+        imageHeight={460}
+        imageWidth={1100}
         title="Visit The Fun Bug's Cafe"
         paragraph="At The Fun Bug, kick back with a delicious cup of coffee or Lotus energy refresher from our café while your kids have a blast in our awesome playground. Our cozy seating area is perfect for enjoying tasty snacks, so you can relax and know your little ones are having a fantastic time!"
         buttonText="View Menu"

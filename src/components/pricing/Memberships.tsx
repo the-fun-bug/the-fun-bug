@@ -43,6 +43,7 @@ export default function Memberships() {
                   height={42}
                   width={42}
                   className="self-start"
+                  placeholder="blur"
                 />
                 <p>{r}</p>
               </div>

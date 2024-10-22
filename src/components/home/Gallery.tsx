@@ -49,7 +49,11 @@ export default function HomepageGallery() {
                 src={s.image}
                 alt={s.alt}
                 className="rounded-lg w-full max-w-[1000px]"
-                priority={true}
+                priority={i === 0}
+                width={1000}
+                height={600}
+                placeholder="blur"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
           </SwiperSlide>

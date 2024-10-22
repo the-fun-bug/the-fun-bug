@@ -7,6 +7,8 @@ type ImageNextToTextSectionProps = {
   alt: string;
   imageSide: 'left' | 'right';
   imageClass: string;
+  imageWidth: number;
+  imageHeight: number;
   title: string;
   paragraph: string;
   buttonText: string;
@@ -24,6 +26,8 @@ export default function ImageNextToTextSection({
   alt,
   imageSide,
   imageClass,
+  imageWidth,
+  imageHeight,
   title,
   paragraph,
   buttonText,
@@ -46,6 +50,9 @@ export default function ImageNextToTextSection({
           src={imageSrc}
           alt={alt}
           className={`lg:w-[45%] ${imageClass}`}
+          width={imageWidth}
+          height={imageHeight}
+          placeholder="blur"
         />
         <div className="flex flex-col gap-[1.25rem] max-w-[750px] lg:max-w-[490px] text-center lg:text-left items-center lg:items-start">
           <h1 className="font-nickainley">{title}</h1>

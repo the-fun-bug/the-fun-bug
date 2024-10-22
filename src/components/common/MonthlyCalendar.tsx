@@ -9,6 +9,8 @@ export default function MonthlyCalendar() {
       alt="calendar graphic"
       imageSide="left"
       imageClass="w-full max-w-[350px]"
+      imageHeight={600}
+      imageWidth={900}
       title="Check out The Fun Bug’s Monthly Calendar"
       paragraph="Stay up-to-date with all the activities that we offer by checking out our newsletter. We update it with new events every month."
       buttonText="View Latest News"

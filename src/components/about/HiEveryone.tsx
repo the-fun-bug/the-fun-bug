@@ -29,6 +29,7 @@ export default function HiEveryone() {
           height={401}
           width={705}
           className="rounded-lg w-full max-w-[1000px]"
+          placeholder="blur"
         />
         <div className="py-[2rem] flex flex-col gap-[1.25rem] text-center">
           <h1 className="font-nickainley pb-[1rem]">Hi everyone!</h1>

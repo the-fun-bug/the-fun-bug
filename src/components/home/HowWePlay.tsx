@@ -18,6 +18,7 @@ export default function HowWePlay() {
                 height={206}
                 className="absolute top-[-15%] max-w-[460px] w-full"
                 alt="scalloped play house top"
+                placeholder="blur"
               />
               <div className="flex justify-center">
                 <div className="bg-soft-blue pt-[3rem] pb-[1.5rem] sm:pb-[2.75rem] px-[1rem] sm:px-[1.75rem] flex flex-col justify-center items-center gap-[1.5rem] rounded-b-xl max-w-[90%]">
@@ -50,6 +51,7 @@ export default function HowWePlay() {
                   height={206}
                   className="absolute top-[-15%] max-w-[460px] w-full"
                   alt="scalloped play house top"
+                  placeholder="blur"
                 />
                 <div className="flex justify-center">
                   <div className="bg-soft-pink pt-[3rem] pb-[1.5rem] sm:py-[2.75rem] px-[1rem] sm:px-[1.75rem] flex flex-col justify-center items-center gap-[1.5rem] rounded-b-xl max-w-[90%]">

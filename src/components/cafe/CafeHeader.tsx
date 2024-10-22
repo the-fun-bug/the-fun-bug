@@ -46,6 +46,7 @@ export default function CafeHeader() {
           width={1140}
           height={366}
           className="w-full max-w-[550px]"
+          placeholder="blur"
         />
       </div>
     </section>

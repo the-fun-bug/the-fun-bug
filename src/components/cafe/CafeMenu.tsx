@@ -76,7 +76,7 @@ function Specialties() {
           drinkName: 'Sugar Mama',
           secondaryName: 'iced brown sugar latte',
           drinkDescription:
-            'milk of choice*, brown sugar, water, vanilla, espresso, cinnamon',
+            'milk of choice*, brown sugar, vanilla, espresso, cinnamon',
           icedOnly: true,
           image: sugarMamaImg,
           drinkType: 'tall',
@@ -84,7 +84,7 @@ function Specialties() {
         },
         {
           drinkName: 'Hello Caramello',
-          secondaryName: 'caramel machiatto',
+          secondaryName: 'caramel machiatto (hot or iced)',
           drinkDescription:
             'milk of choice*, espresso, vanilla syrup, caramel sauce',
           icedOnly: false,
@@ -109,7 +109,7 @@ function Specialties() {
         },
         {
           drinkName: 'Chai There',
-          secondaryName: 'chai tea latte',
+          secondaryName: 'chai tea latte (hot or iced)',
           drinkDescription: 'milk of choice*, chai tea',
           icedOnly: false,
           image: chaiThereImg,
@@ -195,6 +195,7 @@ function Specialties() {
                 height={80}
                 width={80}
                 className="w-[25px]"
+                placeholder="blur"
               />
               <p>this drink only comes iced</p>
             </div>
@@ -227,13 +228,22 @@ function Specialties() {
                             height={80}
                             width={80}
                             className="w-[25px]"
+                            placeholder="blur"
                           />
                         )}
                       </div>
                       {d.secondaryName && <p>{d.secondaryName}</p>}
                       <p>{d.drinkDescription}</p>
                     </div>
-                    <Image src={d.image} alt={d.alt} className="max-w-[96px]" />
+                    <Image
+                      src={d.image}
+                      alt={d.alt}
+                      className="max-w-[96px]"
+                      placeholder="blur"
+                      {...(d.drinkType === 'short'
+                        ? { height: 156, width: 190 }
+                        : { height: 200, width: 178 })}
+                    />
                   </div>
                 ))}
               </div>
@@ -257,6 +267,7 @@ function Specialties() {
                       height={105}
                       className="max-w-[75px]"
                       alt="Lotus energy drinks logo"
+                      placeholder="blur"
                     />
                     <p>
                       We proudly use{' '}
@@ -287,6 +298,7 @@ function Specialties() {
                             height={80}
                             width={80}
                             className="w-[25px]"
+                            placeholder="blur"
                           />
                         )}
                       </div>
@@ -300,6 +312,7 @@ function Specialties() {
                       {...(d.drinkType === 'short'
                         ? { height: 156, width: 190 }
                         : { height: 200, width: 178 })}
+                      placeholder="blur"
                     />
                   </div>
                 ))}
@@ -330,7 +343,7 @@ function BuildYourOwn() {
   const milks = [
     'whole milk',
     '2% milk',
-    'lactose free millk',
+    'lactose free milk',
     'almond milk',
     'oat milk',
   ];
@@ -373,6 +386,9 @@ function BuildYourOwn() {
           src={buildYourOwnImg}
           alt="Fun Bug worm behind iced drink"
           className="max-w-[96px]"
+          width={178}
+          height={200}
+          placeholder="blur"
         />
       </div>
     </div>
@@ -445,23 +461,23 @@ function LightBites() {
         <div className="">
           <div className="flex justify-between w-full max-w-[400px]">
             <p>Gold Fish</p>
-            <p>$1.25</p>
+            <p>$1.50</p>
           </div>
           <div className="flex justify-between w-full max-w-[400px]">
             <p>Veggie Straws</p>
-            <p>$1.25</p>
+            <p>$1.75</p>
           </div>
           <div className="flex justify-between w-full max-w-[400px]">
             <p>Chips</p>
-            <p>$1.25</p>
+            <p>$1.50</p>
           </div>
           <div className="flex justify-between w-full max-w-[400px]">
             <p>Applesauce</p>
-            <p>$1.50</p>
+            <p>$1.99</p>
           </div>
           <div className="flex justify-between w-full max-w-[400px]">
             <p>Yogurt Pouch</p>
-            <p>$1.50</p>
+            <p>$1.99</p>
           </div>
         </div>
       </div>

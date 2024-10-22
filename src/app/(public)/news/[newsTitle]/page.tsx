@@ -1,8 +1,7 @@
-import GlobalLayout from '@/components/common/GlobalLayout';
 import { Metadata } from 'next';
 import NewsArticlePage from '@/components/news/NewsArticlePage';
 import getNewsParam from '@/utils/getNewsParam';
-import getAllNewsArticles from '../../../../lib/getAllNewsArticles';
+import getAllNewsArticles from '../../../../../lib/getAllNewsArticles';
 
 // Dynamically generate metadata for the news article
 export async function generateMetadata({
@@ -54,19 +53,15 @@ export default async function NewsDetailPage({
 
   if (article) {
     return (
-      <GlobalLayout>
-        <NewsArticlePage article={article} recentArticles={recentArticles} />
-      </GlobalLayout>
+      <NewsArticlePage article={article} recentArticles={recentArticles} />
     );
   } else {
     return (
-      <GlobalLayout>
-        <div className="bg-white dark:bg-navySmoke">
-          <p className="font-visbyBold text-mauvelous dark:text-softOpal min-h-[250px] h-full w-full flex items-center justify-center">
-            Oops! News article not found.
-          </p>
-        </div>
-      </GlobalLayout>
+      <div className="bg-white dark:bg-navySmoke">
+        <p className="font-visbyBold text-mauvelous dark:text-softOpal min-h-[250px] h-full w-full flex items-center justify-center">
+          Oops! News article not found.
+        </p>
+      </div>
     );
   }
 }
