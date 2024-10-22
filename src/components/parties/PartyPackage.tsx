@@ -25,7 +25,7 @@ export default function PartyPackage() {
         <h1 className="font-nickainley pb-[1rem]">The Fun Bug Party Package</h1>
         <div className="flex gap-[1.25rem] pb-[1rem]">
           <p className="text-[1.5rem]">2 Hour Event</p>
-          <p className="text-[1.5rem] ]">$375</p>
+          <p className="text-[1.5rem] ]">$375*</p>
         </div>
         <div className="w-full flex flex-col md:flex-row gap-[1.25rem] justify-between text-left">
           <div className="flex flex-col gap-[1.25rem] w-full md:w-[45%]">
@@ -47,6 +47,10 @@ export default function PartyPackage() {
                   <p>{r}</p>
                 </div>
               ))}
+              <p className="md:max-w-[490px] pl-[42px]">
+                *A 6.25% sales tax on the total party amount will be due on the
+                day of your event.
+              </p>
             </div>
           </div>
           <div className="flex flex-col gap-[1.25rem] w-full md:w-[45%]">
