@@ -15,10 +15,10 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
   const hasBanner = bannerText.trim() !== '';
   const bannerRef = useRef<HTMLDivElement | null>(null);
   const [bannerHeight, setBannerHeight] = useState(82);
-  const [logoSize, setLogoSize] = useState(245); // Default logo size
-  const [navSize, setNavSize] = useState(250);
+  const [logoWidth, setLogoWidth] = useState(245); // Default logo size
+  const [navHeight, setNavHeight] = useState(0); //Default nav height
   const [mounted, setMounted] = useState(false);
-  const isMobile = useIsMobile(768);
+  const isMobile = useIsMobile(1024);
   const [navOpen, setNavOpen] = useState(false);
   const pathname = usePathname(); // Track the current path using the `usePathname` hook
 
@@ -78,7 +78,7 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
     if (navOpen) {
       setNavOpen(false);
     }
-  }, [pathname, navOpen]); // Close menu on route change
+  }, [pathname]); // Close menu on route change
 
   useEffect(() => {
     if (navOpen && !isMobile) {
@@ -98,17 +98,29 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 1) {
-        setLogoSize(125); // Shrink logo size when scrolling
-        setNavSize(130);
+        setLogoWidth(125); // Shrink logo size when scrolling
+        setNavHeight(104);
       } else {
-        setLogoSize(245); // Restore original size at top
-        setNavSize(250);
+        setLogoWidth(245); // Restore original size at top
+        setNavHeight(186.5);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (isMobile && navHeight !== 90) {
+      setNavHeight(90);
+    }
+  }, [isMobile, navHeight]);
+
+  useEffect(() => {
+    if (!isMobile) {
+      setNavHeight(186.5);
+    }
+  }, [isMobile]);
 
   const isActiveLink = (link: string) => {
     return pathname === link;
@@ -117,118 +129,130 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
   return (
     <header className="sticky top-0 z-50 w-full">
       {hasBanner && <Banner ref={bannerRef} text={bannerText} />}
-      {mounted && // Ensure that the component is only rendered after mounting
-        (isMobile ? (
-          <nav className="bg-white p-[0.5rem] sm:p-[1rem] flex justify-between">
-            <Link href="/">
-              <Image
-                src={navLogo}
-                alt="The Fun Bug, Play Studio & Parties Logo"
-                className="w-[100px]"
-                priority={true}
-                height={341}
-                width={485}
-                sizes="100px"
-                placeholder="blur"
-              />
-            </Link>
-            <div className="flex gap-[2rem] items-center">
-              <ButtonLink
-                buttonText="Book a Party"
-                buttonLink="/parties#reserve"
-                buttonClass="hidden xxs:block bg-soft-pink/50 hover:bg-soft-pink"
-              />
-              <button
-                onClick={() => setNavOpen(!navOpen)}
-                className="relative flex flex-col items-center justify-between w-[35px] h-[25px] p-0 mr-[0.5rem]"
-              >
-                <div
-                  className={`bg-black h-[2px] w-full transition-all duration-300 ease-in-out ${
-                    navOpen ? 'rotate-45 translate-y-[16px]' : ''
-                  }`}
+      <div
+        id="fixed-height"
+        className="min-h-[90px] lg:min-h-[186px] h-fit"
+        style={{
+          height: `${navHeight}px`,
+          minHeight: `${navHeight ? `${navHeight}px` : ''}`,
+        }}
+      >
+        {mounted && // Ensure that the component is only rendered after mounting
+          (isMobile ? (
+            <nav className="bg-white p-[0.5rem] flex justify-between">
+              <Link href="/">
+                <Image
+                  src={navLogo}
+                  alt="The Fun Bug, Play Studio & Parties Logo"
+                  className="w-[100px]"
+                  priority={true}
+                  height={341}
+                  width={485}
+                  sizes="100px"
+                  placeholder="blur"
                 />
-                <div
-                  className={`bg-black h-[2px] w-full transition-opacity duration-300 ease-in-out ${
-                    navOpen ? 'opacity-0' : 'opacity-100'
-                  }`}
+              </Link>
+              <div className="flex gap-[2rem] items-center">
+                <ButtonLink
+                  buttonText="Book a Party"
+                  buttonLink="/parties#reserve"
+                  buttonClass="hidden xxs:block bg-soft-pink/50 hover:bg-soft-pink"
                 />
+                <button
+                  onClick={() => setNavOpen(!navOpen)}
+                  className="relative flex flex-col items-center justify-between w-[35px] h-[25px] p-0 mr-[0.5rem]"
+                >
+                  <div
+                    className={`bg-black h-[2px] w-full transition-all duration-300 ease-in-out ${
+                      navOpen ? 'rotate-45 translate-y-[16px]' : ''
+                    }`}
+                  />
+                  <div
+                    className={`bg-black h-[2px] w-full transition-opacity duration-300 ease-in-out ${
+                      navOpen ? 'opacity-0' : 'opacity-100'
+                    }`}
+                  />
+                  <div
+                    className={`bg-black h-[2px] w-full transition-all duration-300 ease-in-out ${
+                      navOpen ? '-rotate-45 -translate-y-[6px]' : ''
+                    }`}
+                  />
+                </button>
+              </div>
+              {navOpen && (
                 <div
-                  className={`bg-black h-[2px] w-full transition-all duration-300 ease-in-out ${
-                    navOpen ? '-rotate-45 -translate-y-[6px]' : ''
-                  }`}
-                />
-              </button>
-            </div>
-            {navOpen && (
-              <div
-                className="fixed left-0 h-screen w-screen bg-white"
-                style={{
-                  top: hasBanner ? `${bannerHeight + 82}px` : '82px',
-                }}
-              >
-                <div
-                  className="h-[3px] w-full mt-[0.5rem]"
+                  className="fixed left-0 h-screen w-screen bg-white"
                   style={{
-                    background:
-                      'linear-gradient(to left, #FDD7EC 0%, #FECDA1 33%, #FBFEC1 66%, #D9EBDD 100%',
+                    top: hasBanner ? `${bannerHeight + 82}px` : '82px',
                   }}
-                />
-                <div className="flex flex-col">
-                  {navLinks.map((l) => (
-                    <NavLink
-                      key={l.linkName}
-                      link={l.link}
-                      linkName={l.linkName}
-                      isActive={isActiveLink(l.link)}
-                    />
-                  ))}
+                >
+                  <div
+                    className="h-[3px] w-full mt-[0.5rem]"
+                    style={{
+                      background:
+                        'linear-gradient(to left, #FDD7EC 0%, #FECDA1 33%, #FBFEC1 66%, #D9EBDD 100%',
+                    }}
+                  />
+                  <div className="flex flex-col">
+                    {navLinks.map((l) => (
+                      <NavLink
+                        key={l.linkName}
+                        link={l.link}
+                        linkName={l.linkName}
+                        isActive={isActiveLink(l.link)}
+                      />
+                    ))}
+                  </div>
                 </div>
-              </div>
-            )}
-          </nav>
-        ) : (
-          <nav
-            className={`bg-white w-full flex items-center justify-between mx-auto py-[0.5rem] h-[${navSize}] md:px-[1rem]`}
-          >
-            <div className="w-full flex max-w-[1200px] items-center justify-between mx-auto">
-              {firstHalfLinks.map(({ link, linkName }) => (
-                <NavLink
-                  key={link}
-                  link={link}
-                  linkName={linkName}
-                  isActive={isActiveLink(link)}
-                />
-              ))}
-              <div
-                className="flex items-center justify-center"
-                style={{ height: '100%' }}
-              >
-                <div className="w-[185px] lg:w-[245px] flex justify-center">
-                  <Link href="/">
-                    <Image
-                      src={navLogo}
-                      height={341}
-                      width={485}
-                      alt="The Fun Bug, Play Studio & Parties Logo"
-                      className="transition-all duration-300 w-full"
-                      style={{ maxWidth: `${logoSize}px`, maxHeight: '100%' }}
-                      priority={true}
-                      placeholder="blur"
-                    />
-                  </Link>
+              )}
+            </nav>
+          ) : (
+            <nav
+              className={`bg-white w-full flex items-center justify-between mx-auto py-[0.5rem] md:px-[1rem]`}
+            >
+              <div className="w-full flex max-w-[1200px] items-center justify-between mx-auto">
+                {firstHalfLinks.map(({ link, linkName }) => (
+                  <NavLink
+                    key={link}
+                    link={link}
+                    linkName={linkName}
+                    isActive={isActiveLink(link)}
+                  />
+                ))}
+                <div
+                  className="flex items-center justify-center"
+                  style={{ height: '100%' }}
+                >
+                  <div className="w-[185px] lg:w-[245px] flex justify-center">
+                    <Link href="/">
+                      <Image
+                        src={navLogo}
+                        height={341}
+                        width={485}
+                        alt="The Fun Bug, Play Studio & Parties Logo"
+                        className="transition-all duration-100 w-full"
+                        style={{
+                          maxWidth: `${logoWidth}px`,
+                          maxHeight: '100%',
+                        }}
+                        priority={true}
+                        placeholder="blur"
+                      />
+                    </Link>
+                  </div>
                 </div>
+                {secondHalfLinks.map(({ link, linkName }) => (
+                  <NavLink
+                    key={link}
+                    link={link}
+                    linkName={linkName}
+                    isActive={isActiveLink(link)}
+                  />
+                ))}
               </div>
-              {secondHalfLinks.map(({ link, linkName }) => (
-                <NavLink
-                  key={link}
-                  link={link}
-                  linkName={linkName}
-                  isActive={isActiveLink(link)}
-                />
-              ))}
-            </div>
-          </nav>
-        ))}
+            </nav>
+          ))}
+      </div>
       <div
         className="w-full h-[40px] bg-repeat-x bg-[length:auto_20px]"
         style={{
