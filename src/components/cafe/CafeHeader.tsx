@@ -43,10 +43,11 @@ export default function CafeHeader() {
           priority={true}
           src={coffeeImg}
           alt="Four cups of beverages that can be found in the cafe"
-          width={1140}
-          height={366}
+          width={1100}
+          height={460}
           className="w-full max-w-[550px]"
           placeholder="blur"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
       </div>
     </section>
