@@ -156,7 +156,7 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
                 <div className="h-[56px] flex items-center">
                   <ButtonLink
                     buttonText="Book a Party"
-                    buttonLink="/parties#reserve"
+                    buttonLink="/parties"
                     buttonClass="hidden xxs:block bg-soft-pink/50 hover:bg-soft-pink"
                   />
                 </div>
