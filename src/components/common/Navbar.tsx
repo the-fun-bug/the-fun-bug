@@ -6,6 +6,7 @@ import NavLink from './NavLink';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation'; // Use the new `usePathname` hook instead
 import navLogo from './img/logo-nav.png';
+import navLogoMobile from './img/logo-nav-mobile.png';
 import navBorder from './img/nav-border.png';
 import useIsMobile from '@/hooks/useIsMobile';
 import ButtonLink from './ButtonLink';
@@ -142,12 +143,12 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
             <nav className="bg-white p-[0.5rem] flex justify-between">
               <Link href="/">
                 <Image
-                  src={navLogo}
+                  src={navLogoMobile}
                   alt="The Fun Bug, Play Studio & Parties Logo"
                   className="w-[100px]"
                   priority={true}
-                  height={341}
-                  width={485}
+                  height={171}
+                  width={243}
                   sizes="100px"
                   placeholder="blur"
                 />
