@@ -131,7 +131,7 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
       {hasBanner && <Banner ref={bannerRef} text={bannerText} />}
       <div
         id="fixed-height"
-        className="min-h-[90px] lg:min-h-[186px] h-fit"
+        className="min-h-[90px] lg:min-h-[186px] h-fit bg-white"
         style={{
           height: `${navHeight}px`,
           minHeight: `${navHeight ? `${navHeight}px` : ''}`,
@@ -153,14 +153,20 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
                 />
               </Link>
               <div className="flex gap-[2rem] items-center">
-                <ButtonLink
-                  buttonText="Book a Party"
-                  buttonLink="/parties#reserve"
-                  buttonClass="hidden xxs:block bg-soft-pink/50 hover:bg-soft-pink"
-                />
+                <div className="h-[56px] flex items-center">
+                  <ButtonLink
+                    buttonText="Book a Party"
+                    buttonLink="/parties#reserve"
+                    buttonClass="hidden xxs:block bg-soft-pink/50 hover:bg-soft-pink"
+                  />
+                </div>
                 <button
                   onClick={() => setNavOpen(!navOpen)}
                   className="relative flex flex-col items-center justify-between w-[35px] h-[25px] p-0 mr-[0.5rem]"
+                  aria-label={
+                    navOpen ? 'Close navigation menu' : 'Open navigation menu'
+                  }
+                  aria-expanded={navOpen}
                 >
                   <div
                     className={`bg-black h-[2px] w-full transition-all duration-300 ease-in-out ${
