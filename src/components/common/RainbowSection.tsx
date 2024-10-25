@@ -41,6 +41,7 @@ export default function RainbowSection({
           width={1040}
           height={758}
           placeholder="blur"
+          loading="lazy"
         />
       </div>
     </section>

@@ -79,7 +79,7 @@ export default function Footer() {
           </h2>
           <ButtonLink
             buttonText="Reserve Now"
-            buttonLink="/parties#reserve"
+            buttonLink="/parties"
             buttonClass="bg-soft-pink/50 hover:bg-soft-pink"
           />
         </div>

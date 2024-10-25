@@ -54,6 +54,7 @@ export default function HomepageGallery() {
                 height={600}
                 placeholder="blur"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                loading={i === 0 ? 'eager' : 'lazy'}
               />
             </div>
           </SwiperSlide>

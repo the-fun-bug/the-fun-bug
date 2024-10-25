@@ -15,10 +15,12 @@ export default function BookEvent() {
           width="100%"
           height="800"
           frameBorder="0"
+          loading="lazy"
         ></iframe>
         <Script
           src="https://embed.acuityscheduling.com/js/embed.js"
           type="text/javascript"
+          strategy="lazyOnload"
         ></Script>
       </div>
     </section>

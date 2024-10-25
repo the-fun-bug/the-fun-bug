@@ -1,13 +1,19 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import PricingHeader from './PricingHeader';
 import OpenPlayAdmissions from './Admissions';
 import Memberships from './Memberships';
-import RainbowSection from '../common/RainbowSection';
-import RulesOfPlay from '../about/RulesOfPlay';
-import FrequentlyAskedQuestions from '../about/FrequentlyAskedQuestions';
-import ImageNextToTextSection from '../common/ImageNextToText';
 import cafeDrinksImg from './img/cafe-drinks-pricing.png';
 import playDateImg from './img/play-date.png';
+
+const RulesOfPlay = dynamic(() => import('../about/RulesOfPlay'));
+const FrequentlyAskedQuestions = dynamic(
+  () => import('../about/FrequentlyAskedQuestions')
+);
+const RainbowSection = dynamic(() => import('../common/RainbowSection'));
+const ImageNextToTextSection = dynamic(
+  () => import('../common/ImageNextToText')
+);
 
 export default function PricingPage() {
   return (

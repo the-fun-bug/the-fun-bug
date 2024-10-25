@@ -42,7 +42,7 @@ export default function OpenPlayAdmissions() {
                   height={42}
                   width={42}
                   className="self-start"
-                  placeholder="blur"
+                  loading="lazy"
                 />
                 <p>{r}</p>
               </div>

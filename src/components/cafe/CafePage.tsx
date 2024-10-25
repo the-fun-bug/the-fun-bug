@@ -1,7 +1,11 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import CafeHeader from './CafeHeader';
 import CafeMenu from './CafeMenu';
-import RainbowSection from '../common/RainbowSection';
+
+const RainbowSection = dynamic(() => import('../common/RainbowSection'), {
+  ssr: false,
+});
 
 export default function CafePage() {
   return (

@@ -18,7 +18,11 @@ export async function generateMetadata({
   if (article) {
     const title = `${article.title} | The Fun Bug News`;
     const description = `Read the latest updates about ${article.title}`;
-    const url = `/news/${params.newsTitle}`;
+    const url = new URL(
+      `/news/${params.newsTitle}`,
+      'https://thefunbug.com'
+    ).toString();
+
     return {
       title: title,
       description: description,

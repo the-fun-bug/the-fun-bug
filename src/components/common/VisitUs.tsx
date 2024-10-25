@@ -29,7 +29,7 @@ export default function VisitUs({ hours }: { hours: Hours }) {
               <Link href="mailto:contact@thefunbug.com">
                 contact@thefunbug.com
               </Link>
-              <Link href="tel:+12814550896">281-455-0896</Link>
+              {/* <Link href="tel:+12814550896">281-455-0896</Link> */}
               <h2 className="mt-[1rem]">Stay Up to Date</h2>
               <div className="flex gap-[0.5rem]">
                 <Link
