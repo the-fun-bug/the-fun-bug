@@ -79,6 +79,7 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
     if (navOpen) {
       setNavOpen(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]); // Close menu on route change
 
   useEffect(() => {
