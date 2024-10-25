@@ -32,7 +32,6 @@ export default function RulesOfPlay() {
                 height={84}
                 width={84}
                 className="self-start max-w-[30px]"
-                placeholder="blur"
               />
               <p>{r}</p>
             </div>
