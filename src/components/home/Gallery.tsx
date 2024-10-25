@@ -53,7 +53,7 @@ export default function HomepageGallery() {
                 width={1000}
                 height={600}
                 placeholder="blur"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 1000px"
                 loading={i === 0 ? 'eager' : 'lazy'}
               />
             </div>
