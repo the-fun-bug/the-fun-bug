@@ -53,6 +53,7 @@ export default function ImageNextToTextSection({
           width={imageWidth}
           height={imageHeight}
           placeholder="blur"
+          loading="lazy"
         />
         <div className="flex flex-col gap-[1.25rem] max-w-[750px] lg:max-w-[490px] text-center lg:text-left items-center lg:items-start">
           <h1 className="font-nickainley">{title}</h1>
