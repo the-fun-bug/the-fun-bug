@@ -35,45 +35,47 @@ export default function VisitUs({ hours }: { hours: Hours }) {
                 <Link
                   href="https://www.facebook.com/groups/824992593033982"
                   target="_blank"
-                  rel="noreferrer"
                 >
-                  <Image
-                    src={fbIcon}
-                    alt="facebook icon"
-                    width={80}
-                    height={80}
-                    className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
-                    placeholder="blur"
-                  />
+                  <div className="w-[30px] h-[30px] flex items-center justify-center transition-transform duration-75 hover:scale-105 overflow-hidden">
+                    <Image
+                      src={fbIcon}
+                      alt="facebook icon"
+                      width={30}
+                      height={30}
+                      placeholder="blur"
+                      className="w-full h-full" // Keep the image at fixed size
+                    />
+                  </div>
                 </Link>
-                {/* TO DO: REPLACE WITH LINKS */}
                 <Link
                   href="https://www.instagram.com/thefunbugplaystudio/profilecard/?igsh=c3I0MW41ZHMxNTEx"
                   target="_blank"
-                  rel="noreferrer"
                 >
-                  <Image
-                    src={instaIcon}
-                    alt="instagram icon"
-                    width={80}
-                    height={80}
-                    className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
-                    placeholder="blur"
-                  />
+                  <div className="w-[30px] h-[30px] flex items-center justify-center transition-transform duration-75 hover:scale-105 overflow-hidden">
+                    <Image
+                      src={instaIcon}
+                      alt="instagram icon"
+                      width={80}
+                      height={80}
+                      className="w-full h-full" // Keep the image at fixed size
+                      placeholder="blur"
+                    />
+                  </div>
                 </Link>
                 <Link
                   href="https://www.tiktok.com/@thefunbugplaystudio?_t=8qjMNalXXYs&_r=1"
                   target="_blank"
-                  rel="noreferrer"
                 >
-                  <Image
-                    src={tiktokIcon}
-                    alt="tiktok icon"
-                    width={80}
-                    height={80}
-                    className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
-                    placeholder="blur"
-                  />
+                  <div className="w-[30px] h-[30px] flex items-center justify-center transition-transform duration-75 hover:scale-105 overflow-hidden">
+                    <Image
+                      src={tiktokIcon}
+                      alt="tiktok icon"
+                      width={80}
+                      height={80}
+                      className="w-full h-full" // Keep the image at fixed size
+                      placeholder="blur"
+                    />
+                  </div>
                 </Link>
               </div>
               <ButtonLink
