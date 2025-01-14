@@ -151,7 +151,6 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
                   height={171}
                   width={243}
                   sizes="100px"
-                  placeholder="blur"
                 />
               </Link>
               <div className="flex gap-[2rem] items-center">
@@ -244,7 +243,6 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
                           maxHeight: '100%',
                         }}
                         priority={true}
-                        placeholder="blur"
                       />
                     </Link>
                   </div>

@@ -9,6 +9,14 @@ export default function BookEvent() {
     >
       <div className="flex flex-col text-center gap-[1.25rem] w-full max-w-[1000px]">
         <h1 className="font-nickainley">Book Your Event</h1>
+
+        {/* Preload the script for faster execution */}
+        <link
+          rel="preload"
+          href="https://embed.acuityscheduling.com/js/embed.js"
+          as="script"
+        />
+
         <iframe
           src="https://app.acuityscheduling.com/schedule.php?owner=33135518&ref=embedded_csp"
           title="Schedule Appointment"
@@ -20,8 +28,8 @@ export default function BookEvent() {
         <Script
           src="https://embed.acuityscheduling.com/js/embed.js"
           type="text/javascript"
-          strategy="lazyOnload"
-        ></Script>
+          strategy="afterInteractive"
+        />
       </div>
     </section>
   );
