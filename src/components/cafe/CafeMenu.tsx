@@ -200,8 +200,8 @@ function Specialties() {
               <p>this drink only comes iced</p>
             </div>
             <p className="max-w-[450px]">
-              * whole milk, 2% milk, lactose free milk, almond milk and oat milk
-              are available upon request
+              * whole milk, 2% milk, almond milk and oat milk are available upon
+              request
             </p>
           </div>
         </div>
@@ -340,13 +340,7 @@ function BuildYourOwn() {
     'rose',
     'strawberry',
   ];
-  const milks = [
-    'whole milk',
-    '2% milk',
-    'lactose free milk',
-    'almond milk',
-    'oat milk',
-  ];
+  const milks = ['whole milk', '2% milk', 'almond milk', 'oat milk'];
 
   return (
     <div className="w-full">
