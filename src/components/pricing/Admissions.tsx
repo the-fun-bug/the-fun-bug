@@ -21,11 +21,11 @@ export default function OpenPlayAdmissions() {
             <div className="flex flex-col gap-[0.5rem]">
               <div className="flex justify-between items-center mx-auto md:mx-0 gap-[2.5rem]">
                 <p className="text-[1rem] md:text-[1.5rem]">Ages 0-2</p>
-                <p className="text-[1rem] md:text-[1.5rem]">$8/child</p>
+                <p className="text-[1rem] md:text-[1.5rem]">$10/child</p>
               </div>
               <div className="flex justify-between items-center mx-auto md:mx-0 gap-[2.5rem]">
                 <p className="text-[1rem] md:text-[1.5rem]">Ages 3-12</p>
-                <p className="text-[1rem] md:text-[1.5rem]">$12/child</p>
+                <p className="text-[1rem] md:text-[1.5rem]">$14/child</p>
               </div>
             </div>
             <AdmissionsButtons />
