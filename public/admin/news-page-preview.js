@@ -9,7 +9,6 @@ var NewsPagePreview = createClass({
     var imgBgColor = entry.getIn(['data', 'imgBgColor']);
     var imageDescription = entry.getIn(['data', 'imageDescription']);
     var content = entry.getIn(['data', 'content']);
-    console.log(content)
 
     const formatDate = (date) => {
       return new Date(date).toLocaleDateString('en-US', {
@@ -177,7 +176,6 @@ var NewsPagePreview = createClass({
             },
             dangerouslySetInnerHTML: { __html: content },
           })
-          
         )
       )
     );

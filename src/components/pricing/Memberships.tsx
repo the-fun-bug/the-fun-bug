@@ -3,8 +3,13 @@
 import React from 'react';
 import Image from 'next/image';
 import bulletImg from './img/bullet.png';
+import { MembershipPricing } from './PricingPage';
 
-export default function Memberships() {
+export default function Memberships({
+  membershipPricing,
+}: {
+  membershipPricing: MembershipPricing;
+}) {
   const bullets = [
     'There are no fees and no contract',
     'Memberships are active for the month of purchase',
@@ -19,15 +24,21 @@ export default function Memberships() {
             <div className="flex flex-col gap-[0.5rem]">
               <div className="flex justify-between items-center mx-auto md:mx-0 gap-[2.5rem]">
                 <p className="text-[1rem] md:text-[1.5rem]">1 Child</p>
-                <p className="text-[1rem] md:text-[1.5rem]">$45/month</p>
+                <p className="text-[1rem] md:text-[1.5rem]">
+                  ${membershipPricing.one}/month
+                </p>
               </div>
               <div className="flex justify-between items-center mx-auto md:mx-0 gap-[2.5rem]">
                 <p className="text-[1rem] md:text-[1.5rem]">2 Children</p>
-                <p className="text-[1rem] md:text-[1.5rem]">$85/month</p>
+                <p className="text-[1rem] md:text-[1.5rem]">
+                  ${membershipPricing.two}/month
+                </p>
               </div>
               <div className="flex justify-between items-center mx-auto md:mx-0 gap-[2.5rem]">
                 <p className="text-[1rem] md:text-[1.5rem]">3+ Children</p>
-                <p className="text-[1rem] md:text-[1.5rem]">$120/month</p>
+                <p className="text-[1rem] md:text-[1.5rem]">
+                  ${membershipPricing.three}/month
+                </p>
               </div>
             </div>
           </div>
