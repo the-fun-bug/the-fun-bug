@@ -3,8 +3,13 @@
 import React from 'react';
 import Image from 'next/image';
 import bulletImg from './img/bullet.png';
+import { AdmissionsPricing } from './PricingPage';
 
-export default function OpenPlayAdmissions() {
+export default function OpenPlayAdmissions({
+  admissionsPricing,
+}: {
+  admissionsPricing: AdmissionsPricing;
+}) {
   const bullets = [
     'Admission is good for the entire day. Families are welcome to leave and re-enter the same day! *',
     'You may bring in food and beverages.',
@@ -21,11 +26,15 @@ export default function OpenPlayAdmissions() {
             <div className="flex flex-col gap-[0.5rem]">
               <div className="flex justify-between items-center mx-auto md:mx-0 gap-[2.5rem]">
                 <p className="text-[1rem] md:text-[1.5rem]">Ages 0-2</p>
-                <p className="text-[1rem] md:text-[1.5rem]">$10/child</p>
+                <p className="text-[1rem] md:text-[1.5rem]">
+                  ${admissionsPricing.young}/child
+                </p>
               </div>
               <div className="flex justify-between items-center mx-auto md:mx-0 gap-[2.5rem]">
                 <p className="text-[1rem] md:text-[1.5rem]">Ages 3-12</p>
-                <p className="text-[1rem] md:text-[1.5rem]">$14/child</p>
+                <p className="text-[1rem] md:text-[1.5rem]">
+                  ${admissionsPricing.older}/child
+                </p>
               </div>
             </div>
             <AdmissionsButtons />

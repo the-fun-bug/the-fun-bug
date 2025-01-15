@@ -15,12 +15,29 @@ const ImageNextToTextSection = dynamic(
   () => import('../common/ImageNextToText')
 );
 
-export default function PricingPage() {
+export interface AdmissionsPricing {
+  young: number;
+  older: number;
+}
+
+export interface MembershipPricing {
+  one: number;
+  two: number;
+  three: number;
+}
+
+export default function PricingPage({
+  admissionsPricing,
+  membershipPricing,
+}: {
+  admissionsPricing: AdmissionsPricing;
+  membershipPricing: MembershipPricing;
+}) {
   return (
     <>
       <PricingHeader />
-      <OpenPlayAdmissions />
-      <Memberships />
+      <OpenPlayAdmissions admissionsPricing={admissionsPricing} />
+      <Memberships membershipPricing={membershipPricing} />
       <ImageNextToTextSection
         imageSrc={playDateImg}
         alt="Three drinks from the cafe side by side"
