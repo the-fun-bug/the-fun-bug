@@ -195,3 +195,36 @@ collections:
           - label: 'Website Banner Text'
             name: 'websiteBanner'
             widget: 'string'
+      - label: 'Admissions pricing'
+        name: 'admissions'
+        file: 'content/website-info/admissions.yml'
+        fields:
+          - label: 'Admission price for Ages 0-2'
+            name: 'young'
+            widget: 'number'
+            value_type: 'int'
+            min: 1
+          - label: 'Admission price for Ages 3-12'
+            name: 'older'
+            widget: 'number'
+            value_type: 'int'
+            min: 1
+      - label: 'Membership pricing'
+        name: 'memberships'
+        file: 'content/website-info/memberships.yml'
+        fields:
+          - label: 'Membership Price for 1 Child'
+            name: 'one'
+            widget: 'number'
+            value_type: 'int'
+            min: 1
+          - label: 'Membership Price for 2 Children'
+            name: 'two'
+            widget: 'number'
+            value_type: 'int'
+            min: 1
+          - label: 'Membership Price for 3+ Children'
+            name: 'three'
+            widget: 'number'
+            value_type: 'int'
+            min: 1
