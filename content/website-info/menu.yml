@@ -1,0 +1,36 @@
+specialtiesPricing:
+  hot: $5.00
+  iced: $5.25
+  coldFoam: $0.75
+  plantMilk: $0.50
+specialtiesDrinks: []
+buildYourOwnPricing:
+  hot: $5.00
+  iced: $5.25
+flavors: []
+milks:
+  - milk: whole milk
+  - milk: 2% milk
+  - milk: almond milk
+  - milk: oat milk
+seasonalPricing:
+  hot: $5.25
+  iced: $5.50
+beverages:
+  - name: Water
+    price: $1.00
+  - name: Soda (Regular or Diet)
+    price: $1.99
+  - name: Juice Box
+    price: $1.50
+bites:
+  - name: Gold Fish
+    price: $1.50
+  - name: Veggie Straws
+    price: $1.75
+  - name: Chips
+    price: $1.50
+  - name: Applesauce
+    price: $1.99
+  - name: Yogurt Pouch
+    price: $1.99
