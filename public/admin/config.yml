@@ -201,8 +201,112 @@ collections:
               - label: 'Plant-based Milk'
                 name: 'plantMilk'
                 widget: 'string'
-          - label: 'House Specialties - Drinks'
-            name: 'specialtiesDrinks'
+          - label: 'House Specialties - Coffee Drinks'
+            name: 'coffeeDrinks'
+            widget: 'list'
+            fields:
+              - {
+                  label: 'Drink Name',
+                  name: 'drinkName',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Drink Secondary Name (Ex: name is Chai There and secondary name is chai tea latter)',
+                  name: 'secondaryName',
+                  widget: 'string',
+                  required: false,
+                }
+              - {
+                  label: 'Drink Description',
+                  name: 'drinkDescription',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Iced Only? (Will Show Ice Cube)',
+                  name: 'icedOnly',
+                  widget: 'boolean',
+                  required: true,
+                }
+              - {
+                  label: 'Drink Image',
+                  hint: 'Short Drink Dimension (190w x 156h), Tall Drink Dimensions (178w x 200h)',
+                  name: 'drinkImage',
+                  widget: 'image',
+                  allowMultiple: false,
+                  required: true,
+                }
+              - {
+                  label: 'Drink Image Description',
+                  name: 'drinkImageAlt',
+                  widget: 'string',
+                  required: true,
+                }
+              - label: 'Drink Image Type'
+                name: 'drinkImageType'
+                widget: 'select'
+                required: true
+                max: 1
+                options:
+                  - label: 'Tall Drink (Iced)'
+                    value: 'tall'
+                  - label: 'Short Drink'
+                    value: 'short'
+          - label: 'House Specialties - Tea Drinks'
+            name: 'teaDrinks'
+            widget: 'list'
+            fields:
+              - {
+                  label: 'Drink Name',
+                  name: 'drinkName',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Drink Secondary Name (Ex: name is Chai There and secondary name is chai tea latter)',
+                  name: 'secondaryName',
+                  widget: 'string',
+                  required: false,
+                }
+              - {
+                  label: 'Drink Description',
+                  name: 'drinkDescription',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Iced Only? (Will Show Ice Cube)',
+                  name: 'icedOnly',
+                  widget: 'boolean',
+                  required: true,
+                }
+              - {
+                  label: 'Drink Image',
+                  hint: 'Short Drink Dimension (190w x 156h), Tall Drink Dimensions (178w x 200h)',
+                  name: 'drinkImage',
+                  widget: 'image',
+                  allowMultiple: false,
+                  required: true,
+                }
+              - {
+                  label: 'Drink Image Description',
+                  name: 'drinkImageAlt',
+                  widget: 'string',
+                  required: true,
+                }
+              - label: 'Drink Image Type'
+                name: 'drinkImageType'
+                widget: 'select'
+                required: true
+                max: 1
+                options:
+                  - label: 'Tall Drink (Iced)'
+                    value: 'tall'
+                  - label: 'Short Drink'
+                    value: 'short'
+          - label: 'House Specialties - Refreshers'
+            name: 'refreshers'
             widget: 'list'
             fields:
               - {
@@ -272,6 +376,7 @@ collections:
                   label: 'Sugar Free Available',
                   name: 'sugarFree',
                   widget: 'boolean',
+                  required: false,
                 }
           - label: 'Build Your Own Latte - Milks'
             name: 'milks'
