@@ -52,62 +52,6 @@ collections:
   - name: 'info'
     label: 'Website Information'
     files:
-      - label: 'Seasonal Drinks'
-        name: 'seasonal'
-        file: 'content/website-info/seasonal_drinks.yml'
-        fields:
-          - label: 'List of Seasonal Drinks'
-            name: 'seasonalDrinks'
-            widget: 'list'
-            fields:
-              - {
-                  label: 'Drink Name',
-                  name: 'drinkName',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  label: 'Drink Secondary Name (Ex: name is Chai There and secondary name is chai tea latter)',
-                  name: 'secondaryName',
-                  widget: 'string',
-                  required: false,
-                }
-              - {
-                  label: 'Drink Description',
-                  name: 'drinkDescription',
-                  widget: 'string',
-                  required: true,
-                }
-              - {
-                  label: 'Iced Only? (Will Show Ice Cube)',
-                  name: 'icedOnly',
-                  widget: 'boolean',
-                  required: true,
-                }
-              - {
-                  label: 'Drink Image',
-                  hint: 'Short Drink Dimension (190w x 156h), Tall Drink Dimensions (178w x 200h)',
-                  name: 'drinkImage',
-                  widget: 'image',
-                  allowMultiple: false,
-                  required: true,
-                }
-              - {
-                  label: 'Drink Image Description',
-                  name: 'drinkImageAlt',
-                  widget: 'string',
-                  required: true,
-                }
-              - label: 'Drink Image Type'
-                name: 'drinkImageType'
-                widget: 'select'
-                required: true
-                max: 1
-                options:
-                  - label: 'Tall Drink (Iced)'
-                    value: 'tall'
-                  - label: 'Short Drink (Tall)'
-                    value: 'short'
       - label: 'Hours'
         name: 'hours'
         file: 'content/website-info/hours.yml'
@@ -180,20 +124,29 @@ collections:
         name: 'photos'
         file: 'content/website-info/photos.yml'
         fields:
-          - label: 'Homepage Photos'
-            name: 'homepagePhotos'
-            widget: 'image'
-            allowMultiple: true
           - label: 'About Page Photo'
             name: 'aboutPhoto'
             widget: 'image'
             allowMultiple: false
+          - label: 'Homepage Photos'
+            name: 'homepagePhotos'
+            widget: 'list'
+            fields:
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'Description of Image', name: 'alt', widget: 'string' }
       - label: 'Website Banner'
         name: 'banner'
         file: 'content/website-info/banner.yml'
         fields:
           - label: 'Website Banner Text'
             name: 'websiteBanner'
+            widget: 'string'
+      - label: 'Party package pricing'
+        name: 'partyPricing'
+        file: 'content/website-info/party-pricing.yml'
+        fields:
+          - label: 'Party package pricing'
+            name: 'partyPricing'
             widget: 'string'
       - label: 'Admissions pricing'
         name: 'admissions'
@@ -228,3 +181,178 @@ collections:
             widget: 'number'
             value_type: 'int'
             min: 1
+      - label: 'Cafe Menu'
+        name: 'menu'
+        file: 'content/website-info/menu.yml'
+        fields:
+          - label: 'House Specialties - Pricing'
+            name: 'specialtiesPricing'
+            widget: 'object'
+            fields:
+              - label: 'Hot drinks (16oz)'
+                name: 'hot'
+                widget: 'string'
+              - label: 'Iced drinks (20oz)'
+                name: 'iced'
+                widget: 'string'
+              - label: 'Cold Foam'
+                name: 'coldFoam'
+                widget: 'string'
+              - label: 'Plant-based Milk'
+                name: 'plantMilk'
+                widget: 'string'
+          - label: 'House Specialties - Drinks'
+            name: 'specialtiesDrinks'
+            widget: 'list'
+            fields:
+              - {
+                  label: 'Drink Name',
+                  name: 'drinkName',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Drink Secondary Name (Ex: name is Chai There and secondary name is chai tea latter)',
+                  name: 'secondaryName',
+                  widget: 'string',
+                  required: false,
+                }
+              - {
+                  label: 'Drink Description',
+                  name: 'drinkDescription',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Iced Only? (Will Show Ice Cube)',
+                  name: 'icedOnly',
+                  widget: 'boolean',
+                  required: true,
+                }
+              - {
+                  label: 'Drink Image',
+                  hint: 'Short Drink Dimension (190w x 156h), Tall Drink Dimensions (178w x 200h)',
+                  name: 'drinkImage',
+                  widget: 'image',
+                  allowMultiple: false,
+                  required: true,
+                }
+              - {
+                  label: 'Drink Image Description',
+                  name: 'drinkImageAlt',
+                  widget: 'string',
+                  required: true,
+                }
+              - label: 'Drink Image Type'
+                name: 'drinkImageType'
+                widget: 'select'
+                required: true
+                max: 1
+                options:
+                  - label: 'Tall Drink (Iced)'
+                    value: 'tall'
+                  - label: 'Short Drink'
+                    value: 'short'
+          - label: 'Build Your Own Latte - Pricing'
+            name: 'buildYourOwnPricing'
+            widget: 'object'
+            fields:
+              - label: 'Hot drinks (16oz)'
+                name: 'hot'
+                widget: 'string'
+              - label: 'Iced drinks (20oz)'
+                name: 'iced'
+                widget: 'string'
+          - label: 'Build Your Own Latte - Flavors'
+            name: 'flavors'
+            widget: 'list'
+            fields:
+              - { label: 'Flavor', name: 'flavor', widget: 'string' }
+              - {
+                  label: 'Sugar Free Available',
+                  name: 'sugarFree',
+                  widget: 'boolean',
+                }
+          - label: 'Build Your Own Latte - Milks'
+            name: 'milks'
+            widget: 'list'
+            fields:
+              - { label: 'Milk Type', name: 'milk', widget: 'string' }
+          - label: 'Seasonal Specialties - Pricing'
+            name: 'seasonalPricing'
+            widget: 'object'
+            fields:
+              - label: 'Hot drinks (16oz)'
+                name: 'hot'
+                widget: 'string'
+              - label: 'Iced drinks (20oz)'
+                name: 'iced'
+                widget: 'string'
+          - label: 'Seasonal Specialties - Drinks'
+            name: 'seasonal'
+            widget: 'list'
+            fields:
+              - label: 'List of Seasonal Drinks'
+                name: 'seasonalDrinks'
+                widget: 'list'
+                fields:
+                  - {
+                      label: 'Drink Name',
+                      name: 'drinkName',
+                      widget: 'string',
+                      required: true,
+                    }
+                  - {
+                      label: 'Drink Secondary Name (Ex: name is Chai There and secondary name is chai tea latter)',
+                      name: 'secondaryName',
+                      widget: 'string',
+                      required: false,
+                    }
+                  - {
+                      label: 'Drink Description',
+                      name: 'drinkDescription',
+                      widget: 'string',
+                      required: true,
+                    }
+                  - {
+                      label: 'Iced Only? (Will Show Ice Cube)',
+                      name: 'icedOnly',
+                      widget: 'boolean',
+                      required: true,
+                    }
+                  - {
+                      label: 'Drink Image',
+                      hint: 'Short Drink Dimension (190w x 156h), Tall Drink Dimensions (178w x 200h)',
+                      name: 'drinkImage',
+                      widget: 'image',
+                      allowMultiple: false,
+                      required: true,
+                    }
+                  - {
+                      label: 'Drink Image Description',
+                      name: 'drinkImageAlt',
+                      widget: 'string',
+                      required: true,
+                    }
+                  - label: 'Drink Image Type'
+                    name: 'drinkImageType'
+                    widget: 'select'
+                    required: true
+                    max: 1
+                    options:
+                      - label: 'Tall Drink (Iced)'
+                        value: 'tall'
+                      - label: 'Short Drink'
+                        value: 'short'
+          - label: 'Beverages'
+            name: 'beverages'
+            widget: 'list'
+            fields:
+              - { label: 'Name of Beverage', name: 'name', widget: 'string' }
+              - { label: 'Price', name: 'price', widget: 'string' }
+          - label: 'Light Bites'
+            name: 'bites'
+            widget: 'list'
+            fields:
+              - { label: 'Name of Food Item', name: 'name', widget: 'string' }
+              - { label: 'Price', name: 'price', widget: 'string' }
