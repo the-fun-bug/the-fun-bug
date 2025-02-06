@@ -77,11 +77,12 @@ buildYourOwnPricing:
   iced: $5.25
 flavors:
   - flavor: almond
-    sugarFree: true
+    sugarFree: false
   - flavor: blueberry
   - flavor: caramel
     sugarFree: true
   - flavor: cinnamon
+    sugarFree: false
   - flavor: french vanilla
     sugarFree: true
   - flavor: hazelnut
@@ -92,9 +93,10 @@ flavors:
   - flavor: peach
     sugarFree: true
   - flavor: raspberry
-    sugarFree: true
+    sugarFree: false
   - flavor: rose
   - flavor: strawberry
+    sugarFree: true
 milks:
   - milk: whole milk
   - milk: 2% milk
