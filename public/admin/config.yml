@@ -218,8 +218,8 @@ collections:
                   required: false,
                 }
               - {
-                  label: 'Drink Description',
-                  name: 'drinkDescription',
+                  label: 'Drink Ingredients',
+                  name: 'drinkIngredients',
                   widget: 'string',
                   required: true,
                 }
@@ -227,7 +227,7 @@ collections:
                   label: 'Iced Only? (Will Show Ice Cube)',
                   name: 'icedOnly',
                   widget: 'boolean',
-                  required: true,
+                  required: false,
                 }
               - {
                   label: 'Drink Image',
@@ -264,14 +264,14 @@ collections:
                   required: true,
                 }
               - {
-                  label: 'Drink Secondary Name (Ex: name is Chai There and secondary name is chai tea latter)',
+                  label: 'Drink Secondary Name (Ex: name is Chai There and secondary name is chai tea latte)',
                   name: 'secondaryName',
                   widget: 'string',
                   required: false,
                 }
               - {
-                  label: 'Drink Description',
-                  name: 'drinkDescription',
+                  label: 'Drink Ingredients',
+                  name: 'drinkIngredients',
                   widget: 'string',
                   required: true,
                 }
@@ -279,7 +279,7 @@ collections:
                   label: 'Iced Only? (Will Show Ice Cube)',
                   name: 'icedOnly',
                   widget: 'boolean',
-                  required: true,
+                  required: false,
                 }
               - {
                   label: 'Drink Image',
@@ -322,8 +322,8 @@ collections:
                   required: false,
                 }
               - {
-                  label: 'Drink Description',
-                  name: 'drinkDescription',
+                  label: 'Drink Ingredients',
+                  name: 'drinkIngredients',
                   widget: 'string',
                   required: true,
                 }
@@ -331,7 +331,7 @@ collections:
                   label: 'Iced Only? (Will Show Ice Cube)',
                   name: 'icedOnly',
                   widget: 'boolean',
-                  required: true,
+                  required: false,
                 }
               - {
                   label: 'Drink Image',
@@ -414,8 +414,8 @@ collections:
                       required: false,
                     }
                   - {
-                      label: 'Drink Description',
-                      name: 'drinkDescription',
+                      label: 'Drink Ingredients',
+                      name: 'drinkIngredients',
                       widget: 'string',
                       required: true,
                     }
@@ -423,7 +423,7 @@ collections:
                       label: 'Iced Only? (Will Show Ice Cube)',
                       name: 'icedOnly',
                       widget: 'boolean',
-                      required: true,
+                      required: false,
                     }
                   - {
                       label: 'Drink Image',
