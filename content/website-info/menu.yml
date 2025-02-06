@@ -18,6 +18,60 @@ coffeeDrinks:
     drinkImageType: tall
     drinkImageAlt: iced coffee drink
     drinkImage: /uploads/buddy.png
+  - drinkName: The Saur Flower
+    secondaryName: lavender latte (hot or iced)
+    drinkIngredients: milk of choice*, lavender syrup, vanilla extract, espresso,
+      lavender cold foam (iced drinks only)
+    drinkImage: /uploads/saur-flower.png
+    drinkImageAlt: coffee cup with flower on it
+    drinkImageType: short
+  - drinkName: Sugar Mama
+    secondaryName: iced brown sugar latte
+    drinkIngredients: milk of choice*, brown sugar, vanilla, espresso, cinnamon
+    icedOnly: true
+    drinkImage: /uploads/sugar-mama.png
+    drinkImageAlt: iced coffee in a pink glass
+    drinkImageType: tall
+  - drinkName: Hello Caramello
+    secondaryName: caramel macchiato (hot or iced)
+    drinkIngredients: milk of choice*, espresso, vanilla syrup, caramel sauce
+    drinkImage: /uploads/hello-caramello.png
+    drinkImageAlt: latte in a light blue cup
+    drinkImageType: short
+teaDrinks:
+  - drinkName: Go Gruene
+    secondaryName: matcha tea latte (hot or iced)
+    drinkIngredients: milk of choice*, matcha powder, and optional flavor add in
+    drinkImage: /uploads/go-gruene.png
+    drinkImageAlt: match tea latte in a cup
+    drinkImageType: short
+  - drinkName: Chai There
+    secondaryName: chai tea latte (hot or iced)
+    drinkIngredients: milk of choice*, chai tea
+    drinkImage: /uploads/chai-there.png
+    drinkImageAlt: coffee cup with cardamom on the front and cinnamon
+    drinkImageType: short
+refreshers:
+  - drinkName: The Livie Bug
+    secondaryName: pink Lotus energy refresher infused with red raspberry and tart cherry
+    drinkIngredients: available in sugar free upon request
+    icedOnly: true
+    drinkImage: /uploads/livie-bug.png
+    drinkImageAlt: iced pink drink with a caterpillar behind it
+    drinkImageType: tall
+  - drinkName: Brother Blue
+    drinkIngredients: blue Lotus energy refresher infused with blueberry and acai super fruits
+    icedOnly: true
+    drinkImage: /uploads/brother-blue-tea.png
+    drinkImageAlt: iced blue drink with an ant behind it
+    drinkImageType: tall
+  - drinkName: The Saur Worm
+    secondaryName: Lotus energy lemonade
+    drinkIngredients: available in sugar free or caffeine free upon request
+    icedOnly: true
+    drinkImage: /uploads/saur-worm.png
+    drinkImageAlt: iced lemonade with a worm behind it
+    drinkImageType: tall
 buildYourOwnPricing:
   hot: $5.00
   iced: $5.25
@@ -41,14 +95,6 @@ flavors:
   - flavor: raspberry
     sugarFree: true
   - flavor: strawberry
-beverages:
-  - name: Water
-    price: $1.00
-  - name: Soda (Regular or Diet)
-    price: $1.99
-  - name: Juice Box
-    price: $1.50
-specialtiesDrinks: []
 milks:
   - milk: whole milk
   - milk: 2% milk
@@ -57,6 +103,14 @@ milks:
 seasonalPricing:
   hot: $5.25
   iced: $5.50
+beverages:
+  - name: Water
+    price: $1.00
+  - name: Soda (Regular or Diet)
+    price: $1.99
+  - name: Juice Box
+    price: $1.50
+specialtiesDrinks: []
 bites:
   - name: Gold Fish
     price: $1.50
