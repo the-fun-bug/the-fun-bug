@@ -1,6 +1,7 @@
 import React from 'react';
 import AboutPage from '@/components/about/AboutPage';
 import type { Metadata } from 'next';
+import { getAboutPhoto } from '../../../../lib/getPhotosData';
 
 export const metadata: Metadata = {
   title: 'About The Fun Bug | Family-Owned Play Studio & Party Venue',
@@ -9,5 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  return <AboutPage />;
+  const photo = getAboutPhoto();
+
+  return <AboutPage photo={photo} />;
 }

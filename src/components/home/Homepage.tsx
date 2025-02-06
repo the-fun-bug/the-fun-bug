@@ -5,15 +5,21 @@ import HowWePlay from './HowWePlay';
 import ImageNextToTextSection from '../common/ImageNextToText';
 import VisitUs from '../common/VisitUs';
 import cafeDrinksImg from './img/cafe-drinks.png';
-import { Hours } from '@/types/types';
+import { Hours, HomePagePhoto } from '@/types/types';
 
 const HomepageGallery = dynamic(() => import('./Gallery'), { ssr: false });
 
-export default function Homepage({ hours }: { hours: Hours }) {
+export default function Homepage({
+  hours,
+  galleryImages,
+}: {
+  hours: Hours;
+  galleryImages: HomePagePhoto[];
+}) {
   return (
     <>
       <div className="w-full aspect-[5/3] bg-gray-200 mb-6">
-        <HomepageGallery />
+        <HomepageGallery images={galleryImages} />
       </div>
       <OurStory />
       <HowWePlay />

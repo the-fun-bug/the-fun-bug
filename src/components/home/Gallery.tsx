@@ -5,31 +5,13 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, A11y } from 'swiper/modules';
 import 'swiper/css/bundle';
-import slide1 from './img/g-1.png';
-import slide2 from './img/g-2.png';
-import slide3 from './img/g-3.png';
-import slide4 from './img/g-4.png';
+import { HomePagePhoto } from '@/types/types';
 
-export default function HomepageGallery() {
-  const slides = [
-    {
-      image: slide1,
-      alt: 'children playing',
-    },
-    {
-      image: slide2,
-      alt: 'children playing',
-    },
-    {
-      image: slide3,
-      alt: 'children playing',
-    },
-    {
-      image: slide4,
-      alt: 'children playing',
-    },
-  ];
-
+export default function HomepageGallery({
+  images,
+}: {
+  images: HomePagePhoto[];
+}) {
   return (
     <section className="px-[1rem]">
       <Swiper
@@ -42,7 +24,7 @@ export default function HomepageGallery() {
         speed={800}
         spaceBetween={50}
       >
-        {slides.map((s, i) => (
+        {images.map((s, i) => (
           <SwiperSlide key={i} className="mx-auto">
             <div className="flex justify-center items-center mb-[40px]">
               <Image
@@ -52,7 +34,6 @@ export default function HomepageGallery() {
                 priority={i === 0}
                 width={1000}
                 height={600}
-                placeholder="blur"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 loading={i === 0 ? 'eager' : 'lazy'}
               />

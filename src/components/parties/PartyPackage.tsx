@@ -3,8 +3,15 @@
 import React from 'react';
 import Image from 'next/image';
 import bulletImg from './img/bullet.png';
+import { Hours, PartyPricing } from '@/types/types';
 
-export default function PartyPackage() {
+export default function PartyPackage({
+  hours,
+  pricing,
+}: {
+  hours: Hours;
+  pricing: PartyPricing;
+}) {
   const bullets = [
     'The venue will be exclusively yours, closed to the public for 2 hours.',
     'You may bring in food and beverages.',
@@ -25,7 +32,7 @@ export default function PartyPackage() {
         <h1 className="font-nickainley pb-[1rem]">The Fun Bug Party Package</h1>
         <div className="flex gap-[1.25rem] pb-[1rem]">
           <p className="text-[1.5rem]">2 Hour Event</p>
-          <p className="text-[1.5rem] ]">$375*</p>
+          <p className="text-[1.5rem] ]">{pricing.partyPricing}*</p>
         </div>
         <div className="w-full flex flex-col md:flex-row gap-[1.25rem] justify-between text-left">
           <div className="flex flex-col gap-[1.25rem] w-full md:w-[45%]">
@@ -57,21 +64,15 @@ export default function PartyPackage() {
             <div className="flex flex-col gap-[1.5rem] pb-[1rem]">
               <div className="flex gap-[1.25rem]">
                 <p className="w-[88.5px]">Friday</p>
-                <p className="w-[308px]">
-                  3:00 pm - 5:00 pm & 6:00 pm - 8:00 pm
-                </p>
+                <p className="w-[308px]">{hours.partyHours.friday}</p>
               </div>
               <div className="flex gap-[1.25rem]">
                 <p className="w-[88.5px]">Saturday</p>
-                <p className="w-[308px]">
-                  3:00 pm - 5:00 pm & 6:00 pm - 8:00 pm
-                </p>
+                <p className="w-[308px]">{hours.partyHours.saturday}</p>
               </div>
               <div className="flex gap-[1.25rem]">
                 <p className="w-[88.5px]">Sunday</p>
-                <p className="w-[308px]">
-                  11:00 am - 1:00 pm, 2:00 pm - 4:00 pm & 5:00 pm - 7:00 pm
-                </p>
+                <p className="w-[308px]">{hours.partyHours.sunday}</p>
               </div>
             </div>
             <div className="w-full md:max-w-[400px] flex justify-center">

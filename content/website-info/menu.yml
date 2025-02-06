@@ -20,7 +20,8 @@ coffeeDrinks:
     drinkImage: /uploads/buddy.png
   - drinkName: The Saur Flower
     secondaryName: lavender latte (hot or iced)
-    drinkIngredients: milk of choice*, lavender syrup, vanilla extract, espresso,
+    drinkIngredients:
+      milk of choice*, lavender syrup, vanilla extract, espresso,
       lavender cold foam (iced drinks only)
     drinkImage: /uploads/saur-flower.png
     drinkImageAlt: coffee cup with flower on it
@@ -78,22 +79,22 @@ buildYourOwnPricing:
 flavors:
   - flavor: almond
     sugarFree: true
+  - flavor: blueberry
   - flavor: caramel
     sugarFree: true
+  - flavor: cinnamon
   - flavor: french vanilla
     sugarFree: true
-  - flavor: honey
-  - flavor: peach
-    sugarFree: true
-  - flavor: rose
-  - flavor: blueberry
-  - flavor: cinnamon
   - flavor: hazelnut
     sugarFree: true
+  - flavor: honey
   - flavor: lavender
+    sugarFree: true
+  - flavor: peach
     sugarFree: true
   - flavor: raspberry
     sugarFree: true
+  - flavor: rose
   - flavor: strawberry
 milks:
   - milk: whole milk

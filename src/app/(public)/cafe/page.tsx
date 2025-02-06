@@ -1,6 +1,7 @@
 import React from 'react';
 import CafePage from '@/components/cafe/CafePage';
 import type { Metadata } from 'next';
+import getMenuData from '../../../../lib/getMenuData';
 
 export const metadata: Metadata = {
   title: 'The Fun Bug Cafe | Relax with Drinks & Free Wi-Fi',
@@ -9,5 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  return <CafePage />;
+  const menuData = getMenuData();
+
+  return <CafePage menuData={menuData} />;
 }

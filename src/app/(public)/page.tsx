@@ -2,6 +2,7 @@ import React from 'react';
 import Homepage from '@/components/home/Homepage';
 import type { Metadata } from 'next';
 import getHoursData from '../../../lib/getHours';
+import { getHomepagePhotos } from '../../../lib/getPhotosData';
 
 export const metadata: Metadata = {
   title: 'The Fun Bug - Play Studio & Parties | Indoor Fun in New Braunfels',
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const hours = getHoursData();
+  const photos = getHomepagePhotos();
 
-  return <Homepage hours={hours} />;
+  return <Homepage hours={hours} galleryImages={photos} />;
 }

@@ -6,10 +6,10 @@ import RulesOfPlay from './RulesOfPlay';
 import FrequentlyAskedQuestions from './FrequentlyAskedQuestions';
 import saurFlowerLogo from './img/saur-flower.png';
 
-export default function AboutPage() {
+export default function AboutPage({ photo }: { photo: string }) {
   return (
     <div className="scroll-pt-[88px]">
-      <HiEveryone />
+      <HiEveryone photo={photo} />
       <MonthlyCalendar />
       <ImageNextToTextSection
         imageSrc={saurFlowerLogo}
