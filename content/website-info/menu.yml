@@ -3,11 +3,52 @@ specialtiesPricing:
   iced: $5.25
   coldFoam: $0.75
   plantMilk: $0.50
-specialtiesDrinks: []
+coffeeDrinks:
+  - drinkName: The Ladybug
+    secondaryName: iced strawberry latte
+    drinkDescription: milk of choice*, strawberry syrup, espresso, strawberry cold foam
+    icedOnly: true
+    drinkImageType: tall
+    drinkImageAlt: iced coffee drink with a ladybug behind it
+    drinkImage: /uploads/ladybug.png
+  - drinkName: The Buddy
+    secondaryName: iced mocha latte
+    drinkDescription: cold brew, milk of choice*, mocha sauce, whipped cream, mocha sauce topping
+    icedOnly: true
+    drinkImageType: tall
+    drinkImageAlt: iced coffee drink
+    drinkImage: /uploads/buddy.png
 buildYourOwnPricing:
   hot: $5.00
   iced: $5.25
-flavors: []
+flavors:
+  - flavor: almond
+    sugarFree: true
+  - flavor: caramel
+    sugarFree: true
+  - flavor: french vanilla
+    sugarFree: true
+  - flavor: honey
+  - flavor: peach
+    sugarFree: true
+  - flavor: rose
+  - flavor: blueberry
+  - flavor: cinnamon
+  - flavor: hazelnut
+    sugarFree: true
+  - flavor: lavender
+    sugarFree: true
+  - flavor: raspberry
+    sugarFree: true
+  - flavor: strawberry
+beverages:
+  - name: Water
+    price: $1.00
+  - name: Soda (Regular or Diet)
+    price: $1.99
+  - name: Juice Box
+    price: $1.50
+specialtiesDrinks: []
 milks:
   - milk: whole milk
   - milk: 2% milk
@@ -16,13 +57,6 @@ milks:
 seasonalPricing:
   hot: $5.25
   iced: $5.50
-beverages:
-  - name: Water
-    price: $1.00
-  - name: Soda (Regular or Diet)
-    price: $1.99
-  - name: Juice Box
-    price: $1.50
 bites:
   - name: Gold Fish
     price: $1.50
