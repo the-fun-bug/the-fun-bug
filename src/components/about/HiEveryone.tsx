@@ -2,9 +2,8 @@
 
 import React from 'react';
 import Image from 'next/image';
-import aboutImage from './img/about.png';
 
-export default function HiEveryone() {
+export default function HiEveryone({ photo }: { photo: string }) {
   const scrollToFaqs = () => {
     const contactSection = document.querySelector('#faqs');
     if (contactSection) {
@@ -23,13 +22,12 @@ export default function HiEveryone() {
     <section className="flex justify-center items-center pt-[1rem] pb-[3rem] px-[1rem]">
       <div className="flex flex-col justify-center items-center w-full max-w-[1200px]">
         <Image
-          src={aboutImage}
+          src={photo}
           priority={true}
           alt="The Saur Family"
-          height={401}
-          width={705}
-          className="rounded-lg w-full max-w-[1000px]"
-          placeholder="blur"
+          height={721}
+          width={1000}
+          className="rounded-lg w-full max-w-[750px]"
         />
         <div className="py-[2rem] flex flex-col gap-[1.25rem] text-center">
           <h1 className="font-nickainley pb-[1rem]">Hi everyone!</h1>
