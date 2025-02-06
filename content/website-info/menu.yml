@@ -80,7 +80,6 @@ flavors:
   - flavor: almond
     sugarFree: true
   - flavor: blueberry
-    sugarFree: true
   - flavor: caramel
     sugarFree: true
   - flavor: cinnamon
