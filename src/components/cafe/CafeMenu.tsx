@@ -27,6 +27,7 @@ export default function CafeMenu({ menuData }: { menuData: MenuType }) {
           coffeeDrinks={menuData.coffeeDrinks}
           teaDrinks={menuData.teaDrinks}
           refreshers={menuData.refreshers}
+          milks={menuData.milks}
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem] justify-between py-[2rem]">
           <BuildYourOwn
@@ -53,11 +54,13 @@ function Specialties({
   coffeeDrinks,
   teaDrinks,
   refreshers,
+  milks,
 }: {
   specialtiesPricing: SpecialtiesPrice;
   coffeeDrinks: DrinkType[];
   teaDrinks: DrinkType[];
   refreshers: DrinkType[];
+  milks: Milk[];
 }) {
   const houseSpecialties = [
     {
@@ -73,6 +76,14 @@ function Specialties({
       drinks: refreshers,
     },
   ];
+
+  const displayMilks = milks.map((m) => m.milk);
+  const formattedMilks =
+    displayMilks.length > 1
+      ? displayMilks.slice(0, -1).join(', ') +
+        ' and ' +
+        displayMilks[displayMilks.length - 1]
+      : displayMilks[0] || '';
 
   const colOne = houseSpecialties.filter((s) => s.type === 'coffee');
   const colTwo = houseSpecialties.filter(
@@ -118,8 +129,7 @@ function Specialties({
               <p>this drink only comes iced</p>
             </div>
             <p className="max-w-[450px]">
-              * whole milk, 2% milk, almond milk and oat milk are available upon
-              request
+              * {formattedMilks} are available upon request
             </p>
           </div>
         </div>
