@@ -1,6 +1,8 @@
 import React from 'react';
 import PartiesPage from '@/components/parties/PartiesPage';
 import type { Metadata } from 'next';
+import getHoursData from '../../../../lib/getHours';
+import getPartyPricing from '../../../../lib/getPartyPricing';
 
 export const metadata: Metadata = {
   title: 'The Fun Bug - Private Party Rentals | Exclusive Indoor Venue',
@@ -9,5 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default function Parties() {
-  return <PartiesPage />;
+  const hours = getHoursData();
+  const pricing = getPartyPricing();
+
+  return <PartiesPage hours={hours} pricing={pricing} />;
 }

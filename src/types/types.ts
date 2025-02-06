@@ -14,6 +14,10 @@ type PartyHours = {
   friday: string;
 };
 
+export interface PartyPricing {
+  partyPricing: string;
+}
+
 export type Hours = {
   openPlayHours: OpenPlayHours;
   partyHours: PartyHours;
