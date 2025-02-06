@@ -113,12 +113,12 @@ beverages:
 specialtiesDrinks: []
 bites:
   - name: Gold Fish
-    price: $1.50
+    price: "2.00"
   - name: Veggie Straws
-    price: $1.75
+    price: "2.00"
   - name: Chips
-    price: $1.50
+    price: "2.00"
   - name: Applesauce
-    price: $1.99
+    price: $2.50
   - name: Yogurt Pouch
-    price: $1.99
+    price: $2.50
