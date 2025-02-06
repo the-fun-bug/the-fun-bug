@@ -105,11 +105,11 @@ seasonalPricing:
   iced: $5.50
 beverages:
   - name: Water
-    price: $1.00
-  - name: Soda (Regular or Diet)
-    price: $1.99
-  - name: Juice Box
     price: $1.50
+  - name: Soda (Regular or Diet)
+    price: $2.50
+  - name: Juice Box
+    price: "2.00"
 specialtiesDrinks: []
 bites:
   - name: Gold Fish
