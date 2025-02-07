@@ -11,5 +11,9 @@ export const metadata: Metadata = {
 
 export default async function Parties() {
   const articles = await getAllNewsArticles();
-  return <NewsPage articles={articles} />;
+  return (
+    <div className="min-h-screen">
+      <NewsPage articles={articles} />
+    </div>
+  );
 }

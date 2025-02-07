@@ -180,9 +180,7 @@ export default function AllNewsArticles({
               />
             ))
           ) : (
-            <p className="w-full text-center">
-              We don&apos;t have any news yet. Stay tuned for updates!
-            </p>
+            <p className="w-full text-center h-[200px]">Loading...</p>
           )}
         </div>
 
