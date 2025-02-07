@@ -55,8 +55,13 @@ export type HomePagePhoto = {
   alt: string;
 };
 
-export interface PartyPricing {
+export type Bullet = {
+  bullet: string;
+};
+
+export interface PartyPageData {
   partyPricing: string;
+  partyBullets: Bullet[];
 }
 
 export type Hours = {

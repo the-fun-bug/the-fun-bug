@@ -3,22 +3,15 @@
 import React from 'react';
 import Image from 'next/image';
 import bulletImg from './img/bullet.png';
-import { Hours, PartyPricing } from '@/types/types';
+import { Hours, PartyPageData } from '@/types/types';
 
 export default function PartyPackage({
   hours,
-  pricing,
+  partyData,
 }: {
   hours: Hours;
-  pricing: PartyPricing;
+  partyData: PartyPageData;
 }) {
-  const bullets = [
-    'The venue will be exclusively yours, closed to the public for 2 hours.',
-    'You may bring in food and beverages.',
-    'Regular snack & drink menu will be available for purchase.',
-    '30 minute set up time prior to the start of the party.',
-  ];
-
   const scrollToReservation = () => {
     const scrollSection = document.querySelector('#reserve');
     if (scrollSection) {
@@ -32,13 +25,13 @@ export default function PartyPackage({
         <h1 className="font-nickainley pb-[1rem]">The Fun Bug Party Package</h1>
         <div className="flex gap-[1.25rem] pb-[1rem]">
           <p className="text-[1.5rem]">2 Hour Event</p>
-          <p className="text-[1.5rem] ]">{pricing.partyPricing}*</p>
+          <p className="text-[1.5rem] ]">{partyData.partyPricing}*</p>
         </div>
         <div className="w-full flex flex-col md:flex-row gap-[1.25rem] justify-between text-left">
           <div className="flex flex-col gap-[1.25rem] w-full md:w-[45%]">
             <h2>What&apos;s Included</h2>
             <div className="flex flex-col gap-[1.25rem]">
-              {bullets.map((r, i) => (
+              {partyData.partyBullets.map((r, i) => (
                 <div
                   key={i}
                   className="flex gap-[0.5rem] md:max-w-[490px] items-center"
@@ -50,7 +43,7 @@ export default function PartyPackage({
                     width={42}
                     className="self-start"
                   />
-                  <p>{r}</p>
+                  <p>{r.bullet}</p>
                 </div>
               ))}
               <p className="md:max-w-[490px] pl-[42px]">

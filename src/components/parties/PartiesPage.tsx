@@ -4,21 +4,21 @@ import PartiesHeader from './PartiesHeader';
 import PartyPackage from './PartyPackage';
 import EnhanceYourEvent from './EnhanceYourEvent';
 import MonthlyCalendar from '../common/MonthlyCalendar';
-import { Hours, PartyPricing } from '@/types/types';
+import { Hours, PartyPageData } from '@/types/types';
 
 const BookEvent = dynamic(() => import('./BookEvent'), { ssr: false });
 
 export default function PartiesPage({
   hours,
-  pricing,
+  partyData,
 }: {
   hours: Hours;
-  pricing: PartyPricing;
+  partyData: PartyPageData;
 }) {
   return (
     <>
       <PartiesHeader />
-      <PartyPackage hours={hours} pricing={pricing} />
+      <PartyPackage hours={hours} partyData={partyData} />
       <EnhanceYourEvent />
       <BookEvent />
       <MonthlyCalendar />

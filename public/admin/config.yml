@@ -141,13 +141,23 @@ collections:
           - label: 'Website Banner Text'
             name: 'websiteBanner'
             widget: 'string'
-      - label: 'Party package pricing'
-        name: 'partyPricing'
+      - label: 'Party Page'
+        name: 'PartyPageData'
         file: 'content/website-info/party-pricing.yml'
         fields:
-          - label: 'Party package pricing'
-            name: 'partyPricing'
+          - label: 'Party package price (include $)'
+            name: 'PartyPageData'
             widget: 'string'
+          - label: 'Party bullets'
+            name: 'partyBullets'
+            widget: 'list'
+            fields:
+              - {
+                  label: 'Bullet',
+                  name: 'bullet',
+                  widget: 'string',
+                  required: true,
+                }
       - label: 'Admissions pricing'
         name: 'admissions'
         file: 'content/website-info/admissions.yml'
