@@ -6,7 +6,10 @@ import EnhanceYourEvent from './EnhanceYourEvent';
 import MonthlyCalendar from '../common/MonthlyCalendar';
 import { Hours, PartyPageData } from '@/types/types';
 
-const BookEvent = dynamic(() => import('./BookEvent'), { ssr: false });
+const BookEvent = dynamic(() => import('./BookEvent'), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
 
 export default function PartiesPage({
   hours,
