@@ -47,8 +47,8 @@ export default function PartyPackage({
                 </div>
               ))}
               <p className="md:max-w-[490px] pl-[42px]">
-                *A 6.25% sales tax on the total party amount will be due on the
-                day of your event.
+                *A {partyData.tax} sales tax on the total party amount will be
+                due on the day of your event.
               </p>
             </div>
           </div>
