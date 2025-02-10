@@ -61,6 +61,7 @@ export type Bullet = {
 
 export interface PartyPageData {
   partyPricing: string;
+  tax: string;
   partyBullets: Bullet[];
 }
 
