@@ -111,15 +111,15 @@ beverages:
   - name: Soda (Regular or Diet)
     price: $2.50
   - name: Juice Box
-    price: "2.00"
+    price: $2.00
 specialtiesDrinks: []
 bites:
   - name: Gold Fish
-    price: "2.00"
+    price: $2.00
   - name: Veggie Straws
-    price: "2.00"
+    price: $2.00
   - name: Chips
-    price: "2.00"
+    price: $2.00
   - name: Applesauce
     price: $2.50
   - name: Yogurt Pouch
