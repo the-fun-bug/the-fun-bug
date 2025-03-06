@@ -6,7 +6,7 @@ export default function RulesOfPlay() {
   const rules = [
     'Parents and guardians – not The Fun Bug staff – are responsible for children and must remain on site at ALL times',
     'The Fun Bug Play Studio & Parties is not responsible for lost or stolen items',
-    'No shoes are permitted on the grassy turf, and children and adults are required to wear socks',
+    'No shoes are permitted on the grassy turf, and children and adults are required to wear socks. If you forget your child’s socks, you may purchase a pair at our counter for $3.',
     'No food and drinks in the play area',
     'Sanitize hands before entering the play area',
     'Do not tape or pin anything to the walls',

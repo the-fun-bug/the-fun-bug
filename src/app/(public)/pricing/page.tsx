@@ -7,7 +7,7 @@ import getMembershipPricing from '../../../../lib/getMembershipPricing';
 export const metadata: Metadata = {
   title: 'The Fun Bug - Open Play & Membership Pricing',
   description:
-    'Explore pricing for open play sessions and membership plans at The Fun Bug, New Braunfels’ top choice for affordable indoor play options for kids.',
+    'Explore pricing for our indoor playground and membership plans at The Fun Bug, New Braunfels’ top choice for affordable indoor play options for kids.',
 };
 
 export default function Pricing() {

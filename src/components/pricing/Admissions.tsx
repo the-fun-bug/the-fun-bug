@@ -58,6 +58,7 @@ export default function OpenPlayAdmissions({
             ))}
             <p className="pt-[1rem] pl-[42px]">
               * Socks must be worn on the play turf and structures at all times.
+              If needed, socks are available for purchase for $3.
             </p>
           </div>
         </div>
