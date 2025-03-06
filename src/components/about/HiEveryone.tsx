@@ -49,7 +49,7 @@ export default function HiEveryone({ photo }: { photo: string }) {
             for everyone.
           </p>
           <p>
-            During open hours, we will have a delicious drinks, comfortable
+            During open hours, we will have delicious drinks, comfortable
             lounging, free wifi, and plenty of work space. Oh, and did I mention
             we are a party rental space after hours?! Host your event with full
             access to our entire facility, reserved just for your party—closed
