@@ -93,44 +93,63 @@ function Specialties({
   return (
     <div className="w-full">
       <div className="flex flex-col gap-[1.25rem]">
-        <h2 className="text-cafe-pink">House Specialties</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[2rem] items-center justify-between">
-          <div className="flex flex-row flex-wrap md:justify-between gap-[2rem] md:max-w-[85%]">
-            <div>
-              <div className="flex justify-between w-[205px]">
-                <p>Hot drinks (16oz)</p>
-                <p>{specialtiesPricing.hot}</p>
-              </div>
-              <div className="flex justify-between w-[205px]">
-                <p>Iced drinks (20oz)</p>
-                <p>{specialtiesPricing.iced}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div>
+            <h2 className="text-cafe-pink">House Specialties</h2>
+            <div className="flex flex-row flex-wrap md:justify-between gap-[2rem] md:max-w-[85%] my-[1.5rem]">
+              <div>
+                <div className="flex justify-between w-[205px]">
+                  <p>Hot drinks (16oz)</p>
+                  <p>{specialtiesPricing.hot}</p>
+                </div>
+                <div className="flex justify-between w-[205px]">
+                  <p>Iced drinks (20oz)</p>
+                  <p>{specialtiesPricing.iced}</p>
+                </div>
               </div>
             </div>
-            <div>
-              <div className="flex justify-between w-[205px]">
-                <p>Cold Foam</p>
-                <p>+ {specialtiesPricing.coldFoam}</p>
-              </div>
-              <div className="flex justify-between w-[205px]">
-                <p>Plant-based Milk</p>
-                <p>+ {specialtiesPricing.plantMilk}</p>
+            <div className="flex flex-col gap-[1rem] md:max-w-[85%]">
+              <div className="flex gap-[0.75rem]">
+                <Image
+                  src={iceCubeImg}
+                  alt="ice cube"
+                  height={80}
+                  width={80}
+                  className="w-[25px]"
+                />
+                <p>this drink only comes iced</p>
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-[1rem] md:max-w-[85%]">
-            <div className="flex gap-[0.75rem]">
-              <Image
-                src={iceCubeImg}
-                alt="ice cube"
-                height={80}
-                width={80}
-                className="w-[25px]"
-              />
-              <p>this drink only comes iced</p>
+          <div>
+            <h3 className="text-cafe-pink mt-[1.5rem] mb-[1rem]">Extras</h3>
+            <div className="flex flex-row flex-wrap justify-between md:max-w-[85%] mt-[1rem] mb-[1.5rem]">
+              <div className="mr-[1rem]">
+                <div className="flex justify-between w-[205px]">
+                  <p>Cold Foam</p>
+                  <p>+ {specialtiesPricing.coldFoam}</p>
+                </div>
+                <div className="flex justify-between w-[205px]">
+                  <p>Plant-based Milk</p>
+                  <p>+ {specialtiesPricing.plantMilk}</p>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between w-[205px]">
+                  <p>Espresso Shot</p>
+                  <p>+ $0.75</p>
+                </div>
+                <div className="flex justify-between w-[205px]">
+                  <p>Extra Flavor Add-in</p>
+                  <p>+ $0.25</p>
+                </div>
+              </div>
             </div>
-            <p className="max-w-[450px]">
-              * {formattedMilks} are available upon request
-            </p>
+            <div className="flex flex-col gap-[1rem] md:max-w-[85%]">
+              <p className="max-w-[450px]">
+                * {formattedMilks} are available upon request
+              </p>
+            </div>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[2rem]">
