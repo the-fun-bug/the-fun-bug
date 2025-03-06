@@ -6,7 +6,7 @@ import getHoursData from '../../../../lib/getHours';
 export const metadata: Metadata = {
   title: 'The Fun Bug - Contact Us | Get in Touch',
   description:
-    'Contact The Fun Bug in New Braunfels for more information about our indoor play studio, open play pricing, memberships, and private event rentals.',
+    'Contact The Fun Bug in New Braunfels for more information about our indoor ground, open play pricing, memberships, and private event rentals.',
 };
 
 export default function ContactPage() {
