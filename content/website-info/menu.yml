@@ -81,6 +81,7 @@ flavors:
   - flavor: blueberry
   - flavor: caramel
     sugarFree: true
+  - flavor: coconut
   - flavor: cinnamon
     sugarFree: false
   - flavor: french vanilla
