@@ -32,7 +32,7 @@ export default function BookEvent() {
         <h1 className="font-nickainley">Book Your Event</h1>
         <iframe
           id="booking-iframe"
-          src="https://app.acuityscheduling.com/schedule.php?owner=33135518&ref=embedded_csp"
+          src="https://app.acuityscheduling.com/schedule.php?owner=33135518&calendarID=10617343&ref=embedded_csp"
           title="Schedule Appointment"
           width="100%"
           height="800"
