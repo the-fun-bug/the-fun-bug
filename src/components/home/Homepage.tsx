@@ -1,5 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
+import ButtonLink from '../common/ButtonLink';
 import OurStory from './OurStory';
 import HowWePlay from './HowWePlay';
 import ImageNextToTextSection from '../common/ImageNextToText';
@@ -18,8 +19,34 @@ export default function Homepage({
 }) {
   return (
     <>
-      <div className="w-full aspect-[5/3] bg-gray-200 mb-6">
-        <HomepageGallery images={galleryImages} />
+      <div className="flex flex-col lg:flex-row gap-6 pt-[1rem] px-[1rem] lg:items-center">
+        <div className="lg:w-[45%] flex flex-col gap-4 text-center lg:text-left">
+          <h1 className="font-nickainley pb-[1rem]">
+            Welcome to The Fun Bug! Play, Laugh, and Explore.
+          </h1>
+          <p className="mb-2">
+            Our play studio is designed for kids to unleash their energy and
+            creativity while parents relax in a clean, comfortable space.
+            Whether you&apos;re planning a fun day of play or a special party,
+            we&apos;ve got you covered.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+            <ButtonLink
+              buttonText="Reserve Play Time"
+              buttonLink="https://thefunbug.as.me/?calendarID=11786092"
+              buttonClass="bg-soft-blue hover:bg-worm-blue my-0"
+              external={true}
+            />
+            <ButtonLink
+              buttonText="Book A Party"
+              buttonLink="/parties"
+              buttonClass="bg-soft-pink hover:bg-worm-pink my-0"
+            />
+          </div>
+        </div>
+        <div className="lg:w-[55%] bg-gray-200">
+          <HomepageGallery images={galleryImages} />
+        </div>
       </div>
       <OurStory />
       <HowWePlay />
