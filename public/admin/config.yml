@@ -60,24 +60,12 @@ collections:
             name: 'openPlayHours'
             widget: 'object'
             fields:
-              - label: 'Monday'
-                name: 'monday'
+              - label: 'Monday, Tuesday and Thursday'
+                name: 'mtt'
                 widget: 'string'
                 required: true
-              - label: 'Tuesday'
-                name: 'tuesday'
-                widget: 'string'
-                required: true
-              - label: 'Wednesday'
-                name: 'wednesday'
-                widget: 'string'
-                required: true
-              - label: 'Thursday'
-                name: 'thursday'
-                widget: 'string'
-                required: true
-              - label: 'Friday'
-                name: 'friday'
+              - label: 'Wednesday and Friday'
+                name: 'wf'
                 widget: 'string'
                 required: true
               - label: 'Saturday'
