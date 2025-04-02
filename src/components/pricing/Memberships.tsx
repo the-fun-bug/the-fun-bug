@@ -24,20 +24,20 @@ export default function Memberships({
           <div className="flex flex-col gap-[1.25rem] md:w-[50%] md:items-center md:justify-center">
             <div className="flex flex-col gap-[0.5rem]">
               <div className="flex justify-between items-center mx-auto md:mx-0 gap-[2.5rem]">
-                <p className="text-[1rem] md:text-[1.5rem]">1 Child</p>
-                <p className="text-[1rem] md:text-[1.5rem]">
+                <p className="text-[1rem] lg:text-[1.5rem]">1 Child</p>
+                <p className="text-[1rem] lg:text-[1.5rem]">
                   ${membershipPricing.one}/month
                 </p>
               </div>
               <div className="flex justify-between items-center mx-auto md:mx-0 gap-[2.5rem]">
-                <p className="text-[1rem] md:text-[1.5rem]">2 Children</p>
-                <p className="text-[1rem] md:text-[1.5rem]">
+                <p className="text-[1rem] lg:text-[1.5rem]">2 Children</p>
+                <p className="text-[1rem] lg:text-[1.5rem]">
                   ${membershipPricing.two}/month
                 </p>
               </div>
               <div className="flex justify-between items-center mx-auto md:mx-0 gap-[2.5rem]">
-                <p className="text-[1rem] md:text-[1.5rem]">3+ Children</p>
-                <p className="text-[1rem] md:text-[1.5rem]">
+                <p className="text-[1rem] lg:text-[1.5rem]">3+ Children</p>
+                <p className="text-[1rem] lg:text-[1.5rem]">
                   ${membershipPricing.three}/month
                 </p>
               </div>

@@ -25,14 +25,14 @@ export default function OpenPlayAdmissions({
           <div className="flex flex-col gap-[1.25rem] md:w-[50%] md:items-center md:justify-center">
             <div className="flex flex-col gap-[0.5rem]">
               <div className="flex justify-between items-center mx-auto md:mx-0 gap-[2.5rem]">
-                <p className="text-[1rem] md:text-[1.5rem]">Ages 0-2</p>
-                <p className="text-[1rem] md:text-[1.5rem]">
+                <p className="text-[1rem] lg:text-[1.5rem]">Ages 0-2</p>
+                <p className="text-[1rem] lg:text-[1.5rem]">
                   ${admissionsPricing.young}/child
                 </p>
               </div>
               <div className="flex justify-between items-center mx-auto md:mx-0 gap-[2.5rem]">
-                <p className="text-[1rem] md:text-[1.5rem]">Ages 3-12</p>
-                <p className="text-[1rem] md:text-[1.5rem]">
+                <p className="text-[1rem] lg:text-[1.5rem]">Ages 3-12</p>
+                <p className="text-[1rem] lg:text-[1.5rem]">
                   ${admissionsPricing.older}/child
                 </p>
               </div>
@@ -53,7 +53,7 @@ export default function OpenPlayAdmissions({
                 <p className="lg:max-w-[460px]">{r}</p>
               </div>
             ))}
-            <p className="pt-[1rem] pl-[42px] max-w-[460px]">
+            <p className="pt-[1rem] pl-[42px] lg:max-w-[460px]">
               * Socks must be worn on the play turf and structures at all times
               by children and adults. If needed, socks are available for
               purchase for $3.
