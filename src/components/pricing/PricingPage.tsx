@@ -1,6 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import PricingHeader from './PricingHeader';
+import PlanYourVisit from './PlanYourVisit';
 import OpenPlayAdmissions from './Admissions';
 import Memberships from './Memberships';
 import cafeDrinksImg from './img/cafe-drinks-pricing.png';
@@ -36,6 +37,7 @@ export default function PricingPage({
   return (
     <>
       <PricingHeader />
+      <PlanYourVisit />
       <OpenPlayAdmissions admissionsPricing={admissionsPricing} />
       <Memberships membershipPricing={membershipPricing} />
       <ImageNextToTextSection

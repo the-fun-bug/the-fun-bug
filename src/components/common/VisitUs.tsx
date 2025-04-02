@@ -18,17 +18,27 @@ export default function VisitUs({ hours }: { hours: Hours }) {
           <div className="flex lg:w-[32%] mx-auto justify-start">
             <div className="flex flex-col gap-[1.25rem] text-center lg:text-left items-center lg:items-start w-fit">
               <h2>Where You Can Find Us</h2>
-              <Link
-                href="http://maps.google.com/?q=2055 Central Plaza Suite 108, New Braunfels, TX, 78130"
-                rel="noreferrer"
-                target="_blank"
-              >
-                2055 Central Plaza Suite 108, <br />
-                New Braunfels, TX, 78130
-              </Link>
-              <Link href="mailto:contact@thefunbug.com">
-                contact@thefunbug.com
-              </Link>
+              <div>
+                <h3 className="font-bold text-sm text-center lg:text-left mb-[12px]">
+                  Address
+                </h3>
+                <Link
+                  href="http://maps.google.com/?q=2055 Central Plaza Suite 108, New Braunfels, TX, 78130"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  2055 Central Plaza Suite 108, <br />
+                  New Braunfels, TX, 78130
+                </Link>
+              </div>
+              <div>
+                <h3 className="font-bold text-sm text-center lg:text-left mb-2">
+                  Email
+                </h3>
+                <Link href="mailto:contact@thefunbug.com">
+                  contact@thefunbug.com
+                </Link>
+              </div>
               {/* <Link href="tel:+12814550896">281-455-0896</Link> */}
               <h2 className="mt-[1rem]">Stay Up to Date</h2>
               <div className="flex gap-[0.5rem]">
@@ -46,7 +56,6 @@ export default function VisitUs({ hours }: { hours: Hours }) {
                     placeholder="blur"
                   />
                 </Link>
-                {/* TO DO: REPLACE WITH LINKS */}
                 <Link
                   href="https://www.instagram.com/thefunbugplaystudio/profilecard/?igsh=c3I0MW41ZHMxNTEx"
                   target="_blank"
@@ -84,36 +93,33 @@ export default function VisitUs({ hours }: { hours: Hours }) {
             </div>
           </div>
           <div className="flex justify-center lg:w-[32%] mx-auto">
-            <div className="w-fit flex flex-col gap-[1.25rem]">
-              <h2 className="text-center lg:text-left">Open Play Hours</h2>
+            <div className="w-fit flex flex-col gap-[1.25rem] items-center lg:items-start">
+              <h2 className="text-center lg:text-left">Play Studio Hours</h2>
+              <h3 className="font-bold text-sm text-center lg:text-left">
+                Reservation Recommended
+              </h3>
               <div className="flex gap-[1.25rem]">
-                <p className="w-[88.5px]">Monday</p>
-                <p className="w-[142px]">{openPlayHours.monday}</p>
+                <p className="w-[150px]">Monday, Tuesday and Thursday</p>
+                <p className="w-[150px]">{openPlayHours.mtt}</p>
               </div>
               <div className="flex gap-[1.25rem]">
-                <p className="w-[88.5px]">Tuesday</p>
-                <p className="w-[142px]">{openPlayHours.tuesday}</p>
+                <p className="w-[150px]">Wednesday and Friday</p>
+                <p className="w-[150px]">{openPlayHours.wf}</p>
               </div>
               <div className="flex gap-[1.25rem]">
-                <p className="w-[88.5px]">Wednesday</p>
-                <p className="w-[142px]">{openPlayHours.wednesday}</p>
+                <p className="w-[150px]">Saturday</p>
+                <p className="w-[150px]">{openPlayHours.saturday}</p>
               </div>
               <div className="flex gap-[1.25rem]">
-                <p className="w-[88.5px]">Thursday</p>
-                <p className="w-[142px]">{openPlayHours.thursday}</p>
+                <p className="w-[150px]">Sunday</p>
+                <p className="w-[150px]">{openPlayHours.sunday}</p>
               </div>
-              <div className="flex gap-[1.25rem]">
-                <p className="w-[88.5px]">Friday</p>
-                <p className="w-[142px]">{openPlayHours.friday}</p>
-              </div>
-              <div className="flex gap-[1.25rem]">
-                <p className="w-[88.5px]">Saturday</p>
-                <p className="w-[142px]">{openPlayHours.saturday}</p>
-              </div>
-              <div className="flex gap-[1.25rem]">
-                <p className="w-[88.5px]">Sunday</p>
-                <p className="w-[142px]">{openPlayHours.sunday}</p>
-              </div>
+              <ButtonLink
+                buttonText="Reserve Now!"
+                buttonLink="https://thefunbug.as.me/?calendarID=11786092"
+                buttonClass="bg-soft-blue hover:bg-worm-blue my-0"
+                external={true}
+              />
             </div>
           </div>
           <div className="flex justify-end lg:w-[32%] mx-auto">

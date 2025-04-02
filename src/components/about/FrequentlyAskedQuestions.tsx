@@ -10,9 +10,9 @@ export default function FrequentlyAskedQuestions() {
 
   const questions = [
     {
-      question: 'How long can we stay and play?',
+      question: 'Why are reservations recommended? Can I just walk in instead?',
       answer:
-        'There is no time limit for playing during our open play hours. Admission is good for the day! Just let our team know if you plan to leave and return in the same day.',
+        'Reservations help us manage capacity to ensure a safe and enjoyable experience for everyone. Our space is subject to fire code regulations, which limit the number of guests we can accommodate at one time. By reserving your spot, you can guarantee entry and avoid potential disappointment if we reach capacity. While we welcome walk-ins, availability is not guaranteed, so a reservation is the best way to secure your visit.',
     },
     {
       question: 'Is there an age limit for playing?',
@@ -32,7 +32,7 @@ export default function FrequentlyAskedQuestions() {
     {
       question: 'What is your shoe policy?',
       answer:
-        'Shoes may be worn on the wood floor, but we ask that socks only are worn past and on the turf flooring and play area. Bare feet are not allowed, as we do our best to maintain the cleanest environment for our guests. If you forget your child’s socks, you may purchase a pair at our counter for $3.',
+        'Shoes may be worn on the wood floor, but we ask that socks only are worn past and on the turf flooring and play area (children and adults). Bare feet are not allowed, as we do our best to maintain the cleanest environment for our guests. If you forget socks, we have adult and children socks available for $3.',
     },
     {
       question: 'Can I bring outside food or snacks?',

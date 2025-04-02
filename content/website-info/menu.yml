@@ -60,14 +60,15 @@ refreshers:
     drinkImageAlt: iced pink drink with a caterpillar behind it
     drinkImageType: tall
   - drinkName: Brother Blue
-    drinkIngredients: blue Lotus energy refresher infused with blueberry and acai super fruits
+    secondaryName: blue Lotus energy refresher infused with blueberry and acai super fruits
+    drinkIngredients: available in sugar free upon request
     icedOnly: true
     drinkImage: /uploads/brother-blue-tea.png
     drinkImageAlt: iced blue drink with an ant behind it
     drinkImageType: tall
   - drinkName: The Saur Worm
     secondaryName: Lotus energy lemonade
-    drinkIngredients: available in sugar free or caffeine free upon request
+    drinkIngredients: available in caffeine free upon request
     icedOnly: true
     drinkImage: /uploads/saur-worm.png
     drinkImageAlt: iced lemonade with a worm behind it

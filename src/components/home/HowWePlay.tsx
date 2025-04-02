@@ -26,7 +26,9 @@ export default function HowWePlay() {
                   <p className="max-w-[350px]">
                     Kids will have a blast on our large custom-built wooden play
                     structure, climb on our soft play mats, and explore their
-                    creativity with endless play opportunities *
+                    creativity with endless play opportunities. * Reservations
+                    recommended to secure your spot. Walk-ins welcome as space
+                    allows.
                   </p>
                   <ButtonLink
                     buttonText="Pricing & Memberships"
@@ -57,10 +59,11 @@ export default function HowWePlay() {
                   <div className="bg-soft-pink pt-[3rem] pb-[1.5rem] sm:py-[2.75rem] px-[1rem] sm:px-[1.75rem] flex flex-col justify-center items-center gap-[1.5rem] rounded-b-xl max-w-[90%]">
                     <h2 className="xs:mt-[1rem]">Parties & Events</h2>
                     <p className="max-w-[350px]">
-                      Book your party with us and enjoy full, private access to
-                      our facility. The venue will be exclusively yours, closed
-                      to the public. Regular snack & drink menu will be
-                      available *
+                      Celebrate your special occasion with private access to our
+                      entire facility! Enjoy exclusive use of our space, closed
+                      to the public for your event. Our regular snack and drink
+                      menu will be available, and you’re welcome to bring your
+                      own decorations to make the space your own.*
                     </p>
                     <ButtonLink
                       buttonText="Start Planning Your Event"
@@ -79,8 +82,9 @@ export default function HowWePlay() {
           </div>
         </div>
         <p className="pt-[1rem]">
-          * Socks must be worn on the play turf and structures at all times. If
-          needed, socks are available for purchase for $3.
+          * Socks must be worn on the play turf and structures at all times by
+          children and adults. If needed, socks are available for purchase for
+          $3.
         </p>
       </div>
     </section>

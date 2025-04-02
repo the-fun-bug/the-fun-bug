@@ -22,6 +22,7 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
   const isMobile = useIsMobile(1024);
   const [navOpen, setNavOpen] = useState(false);
   const pathname = usePathname(); // Track the current path using the `usePathname` hook
+  const [showButton, setShowButton] = useState(false);
 
   const navLinks = [
     {
@@ -102,9 +103,11 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
       if (window.scrollY > 1) {
         setLogoWidth(125); // Shrink logo size when scrolling
         setNavHeight(104);
+        setShowButton(true); //Show booking button when logo shrinks
       } else {
         setLogoWidth(245); // Restore original size at top
         setNavHeight(186.5);
+        setShowButton(false); //hide booking button when logo is large
       }
     };
 
@@ -141,7 +144,7 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
       >
         {mounted && // Ensure that the component is only rendered after mounting
           (isMobile ? (
-            <nav className="bg-white p-[0.5rem] flex justify-between">
+            <nav className="bg-white p-[0.5rem] flex justify-between h-full">
               <Link href="/">
                 <Image
                   src={navLogoMobile}
@@ -154,11 +157,20 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
                 />
               </Link>
               <div className="flex gap-[2rem] items-center">
-                <div className="h-[56px] flex items-center">
+                <div className="hidden h-[56px] xs:flex items-center">
                   <ButtonLink
-                    buttonText="Book a Party"
-                    buttonLink="/parties"
-                    buttonClass="hidden xxs:block bg-soft-pink/50 hover:bg-soft-pink"
+                    buttonText="Reserve Play Time"
+                    buttonLink="https://thefunbug.as.me/?calendarID=11786092"
+                    buttonClass="bg-soft-blue hover:bg-worm-blue"
+                    external={true}
+                  />
+                </div>
+                <div className="xs:hidden h-[56px] flex items-center">
+                  <ButtonLink
+                    buttonText="Reserve"
+                    buttonLink="https://thefunbug.as.me/?calendarID=11786092"
+                    buttonClass="bg-soft-blue hover:bg-worm-blue"
+                    external={true}
                   />
                 </div>
                 <button
@@ -215,7 +227,7 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
             </nav>
           ) : (
             <nav
-              className={`bg-white w-full flex items-center justify-between mx-auto py-[0.5rem] md:px-[1rem]`}
+              className={`relative bg-white w-full flex items-center justify-between mx-auto py-[0.5rem] md:px-[1rem]`}
             >
               <div className="w-full flex max-w-[1200px] items-center justify-between mx-auto">
                 {firstHalfLinks.map(({ link, linkName }) => (
@@ -255,6 +267,14 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
                     isActive={isActiveLink(link)}
                   />
                 ))}
+                <div className={`${showButton ? 'block' : 'hidden'}`}>
+                  <ButtonLink
+                    buttonText="Reserve"
+                    buttonLink="https://thefunbug.as.me/?calendarID=11786092"
+                    buttonClass="bg-soft-blue hover:bg-worm-blue"
+                    external={true}
+                  />
+                </div>
               </div>
             </nav>
           ))}
