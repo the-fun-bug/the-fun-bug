@@ -48,20 +48,25 @@ export default function PlanYourVisit() {
             <div className="flex gap-[1.25rem]">
               <p className="w-[160px]">Monday, Tuesday and Thursday</p>
               <p className="w-[160px]">
-                10:15 am - 12:15 pm 12:15pm - 2:15pm 2:15pm - 4:15pm
+                10:15am - 12:15pm <br />
+                12:15pm - 2:15pm <br />
+                2:15pm - 4:15pm
               </p>
             </div>
             <div className="flex gap-[1.25rem]">
               <p className="w-[160px]">Wednesday and Friday</p>
               <p className="w-[160px]">
-                9:15 am - 11:15am 11:15 am - 1:15pm 1:15pm - 3:15pm 3:15pm -
-                5:15pm
+                9:15am - 11:15am <br />
+                11:15am - 1:15pm <br />
+                1:15pm - 3:15pm <br />
+                3:15pm - 5:15pm
               </p>
             </div>
             <div className="flex gap-[1.25rem]">
               <p className="w-[160px]">Saturday</p>
               <p className="w-[160px]">
-                10:00 am - 12:00 pm 12:00 pm - 2:00 pm
+                10:00am - 12:00pm <br />
+                12:00pm - 2:00pm
               </p>
             </div>
           </div>
