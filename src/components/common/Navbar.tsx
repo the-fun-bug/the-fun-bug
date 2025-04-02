@@ -144,7 +144,7 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
       >
         {mounted && // Ensure that the component is only rendered after mounting
           (isMobile ? (
-            <nav className="bg-white p-[0.5rem] flex justify-between">
+            <nav className="bg-white p-[0.5rem] flex justify-between h-full">
               <Link href="/">
                 <Image
                   src={navLogoMobile}
