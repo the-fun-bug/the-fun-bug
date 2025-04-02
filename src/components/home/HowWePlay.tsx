@@ -82,8 +82,9 @@ export default function HowWePlay() {
           </div>
         </div>
         <p className="pt-[1rem]">
-          * Socks must be worn on the play turf and structures at all times. If
-          needed, socks are available for purchase for $3.
+          * Socks must be worn on the play turf and structures at all times by
+          children and adults. If needed, socks are available for purchase for
+          $3.
         </p>
       </div>
     </section>
