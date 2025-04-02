@@ -11,9 +11,9 @@ export default function OpenPlayAdmissions({
   admissionsPricing: AdmissionsPricing;
 }) {
   const bullets = [
-    'Admission is good for the entire day. Families are welcome to leave and re-enter the same day! *',
+    'Admission is good for a 2 hour reservation.',
     'You may bring in food and beverages.',
-    'Snack & drink menu will be available for purchase.',
+    'Snack & drink menu will be available for purchase from the cafe.',
   ];
   return (
     <section className={`flex items-center justify-center py-[3rem] px-[1rem]`}>
@@ -37,14 +37,11 @@ export default function OpenPlayAdmissions({
                 </p>
               </div>
             </div>
-            <AdmissionsButtons />
+            {/* <AdmissionsButtons /> */}
           </div>
-          <div className="grid grid-cols-1 gap-[1.25rem]">
+          <div className="grid grid-cols-1">
             {bullets.map((r, i) => (
-              <div
-                key={i}
-                className="flex gap-[0.5rem] md:max-w-[490px] items-center"
-              >
+              <div key={i} className="flex gap-[0.5rem] items-center">
                 <Image
                   src={bulletImg}
                   alt="lady bug bullet"
@@ -53,12 +50,13 @@ export default function OpenPlayAdmissions({
                   className="self-start"
                   loading="lazy"
                 />
-                <p>{r}</p>
+                <p className="lg:max-w-[460px]">{r}</p>
               </div>
             ))}
-            <p className="pt-[1rem] pl-[42px]">
-              * Socks must be worn on the play turf and structures at all times.
-              If needed, socks are available for purchase for $3.
+            <p className="pt-[1rem] pl-[42px] max-w-[460px]">
+              * Socks must be worn on the play turf and structures at all times
+              by children and adults. If needed, socks are available for
+              purchase for $3.
             </p>
           </div>
         </div>
@@ -67,35 +65,35 @@ export default function OpenPlayAdmissions({
   );
 }
 
-function AdmissionsButtons() {
-  const scrollToFaqs = () => {
-    const contactSection = document.querySelector('#faqs');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+// function AdmissionsButtons() {
+//   const scrollToFaqs = () => {
+//     const contactSection = document.querySelector('#faqs');
+//     if (contactSection) {
+//       contactSection.scrollIntoView({ behavior: 'smooth' });
+//     }
+//   };
 
-  const scrollToRulesOfPlay = () => {
-    const contactSection = document.querySelector('#rules-of-play');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+//   const scrollToRulesOfPlay = () => {
+//     const contactSection = document.querySelector('#rules-of-play');
+//     if (contactSection) {
+//       contactSection.scrollIntoView({ behavior: 'smooth' });
+//     }
+//   };
 
-  return (
-    <div className="flex flex-col xs:flex-row items-center flex-wrap justify-center xs:gap-x-[2rem]">
-      <button
-        onClick={scrollToFaqs}
-        className={`w-fit font-medium border border-black rounded-lg px-[2rem] py-[0.5rem] my-[1rem] transition-all duration-300 bg-soft-yellow/50 hover:bg-soft-yellow`}
-      >
-        FAQs
-      </button>
-      <button
-        onClick={scrollToRulesOfPlay}
-        className={`w-fit font-medium border border-black rounded-lg px-[2rem] py-[0.5rem] my-[1rem] transition-all duration-300 bg-soft-orange/50 hover:bg-soft-orange`}
-      >
-        Rules of Play
-      </button>
-    </div>
-  );
-}
+//   return (
+//     <div className="flex flex-col xs:flex-row items-center flex-wrap justify-center xs:gap-x-[2rem]">
+//       <button
+//         onClick={scrollToFaqs}
+//         className={`w-fit font-medium border border-black rounded-md px-[2rem] py-[0.5rem] my-[1rem] transition-all duration-300 bg-soft-yellow/50 hover:bg-soft-yellow`}
+//       >
+//         FAQs
+//       </button>
+//       <button
+//         onClick={scrollToRulesOfPlay}
+//         className={`w-fit font-medium border border-black rounded-md px-[2rem] py-[0.5rem] my-[1rem] transition-all duration-300 bg-soft-orange/50 hover:bg-soft-orange`}
+//       >
+//         Rules of Play
+//       </button>
+//     </div>
+//   );
+// }

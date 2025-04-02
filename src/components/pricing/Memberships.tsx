@@ -14,6 +14,7 @@ export default function Memberships({
     'There are no fees and no contract',
     'Memberships are active for the month of purchase',
     'Payments for memberships can be purchased in-store and drafted on the 1st of each month',
+    'Memberships include 1 reservation per day for each child',
   ];
   return (
     <section className={`flex items-center justify-center py-[3rem] px-[1rem]`}>
@@ -42,12 +43,9 @@ export default function Memberships({
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-[1.25rem]">
+          <div className="grid grid-cols-1">
             {bullets.map((r, i) => (
-              <div
-                key={i}
-                className="flex gap-[0.5rem] md:max-w-[490px] items-center"
-              >
+              <div key={i} className="flex gap-[0.5rem] items-center">
                 <Image
                   src={bulletImg}
                   alt="lady bug bullet"
@@ -55,7 +53,7 @@ export default function Memberships({
                   width={42}
                   className="self-start"
                 />
-                <p>{r}</p>
+                <p className="lg:max-w-[460px]">{r}</p>
               </div>
             ))}
           </div>
