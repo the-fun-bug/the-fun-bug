@@ -157,9 +157,17 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
                 />
               </Link>
               <div className="flex gap-[2rem] items-center">
-                <div className="h-[56px] flex items-center">
+                <div className="hidden h-[56px] xs:flex items-center">
                   <ButtonLink
                     buttonText="Reserve Play Time"
+                    buttonLink="https://thefunbug.as.me/?calendarID=11786092"
+                    buttonClass="bg-soft-blue hover:bg-worm-blue"
+                    external={true}
+                  />
+                </div>
+                <div className="xs:hidden h-[56px] flex items-center">
+                  <ButtonLink
+                    buttonText="Reserve"
                     buttonLink="https://thefunbug.as.me/?calendarID=11786092"
                     buttonClass="bg-soft-blue hover:bg-worm-blue"
                     external={true}
