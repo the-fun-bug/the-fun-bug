@@ -1,9 +1,6 @@
 type OpenPlayHours = {
-  monday: string;
-  tuesday: string;
-  wednesday: string;
-  thursday: string;
-  friday: string;
+  mtt: string;
+  wf: string;
   saturday: string;
   sunday: string;
 };
