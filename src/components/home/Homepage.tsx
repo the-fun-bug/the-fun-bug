@@ -30,17 +30,19 @@ export default function Homepage({
             Whether you&apos;re planning a fun day of play or a special party,
             we&apos;ve got you covered.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+          <div className="flex flex-wrap gap-2 md:gap-4 justify-center lg:justify-start">
             <ButtonLink
               buttonText="Reserve Play Time"
               buttonLink="https://thefunbug.as.me/?calendarID=11786092"
-              buttonClass="bg-soft-blue hover:bg-worm-blue my-0"
+              buttonClass="bg-soft-blue hover:bg-worm-blue"
               external={true}
+              excludeMargin={true}
             />
             <ButtonLink
               buttonText="Book A Party"
               buttonLink="/parties"
-              buttonClass="bg-soft-pink hover:bg-worm-pink my-0"
+              buttonClass="bg-soft-pink hover:bg-worm-pink"
+              excludeMargin={true}
             />
           </div>
         </div>
