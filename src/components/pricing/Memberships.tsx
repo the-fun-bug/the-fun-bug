@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import ButtonLink from '../common/ButtonLink';
 import Image from 'next/image';
 import bulletImg from './img/bullet.png';
 import { MembershipPricing } from './PricingPage';
@@ -42,6 +43,13 @@ export default function Memberships({
                 </p>
               </div>
             </div>
+            <ButtonLink
+              buttonText="Buy Membership"
+              buttonLink="https://app.acuityscheduling.com/catalog.php?owner=33135518"
+              buttonClass="bg-soft-blue hover:bg-worm-blue"
+              external={true}
+              excludeMargin={true}
+            />
           </div>
           <div className="grid grid-cols-1">
             {bullets.map((r, i) => (
