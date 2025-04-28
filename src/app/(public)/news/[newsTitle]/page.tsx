@@ -3,13 +3,36 @@ import NewsArticlePage from '@/components/news/NewsArticlePage';
 import getNewsParam from '@/utils/getNewsParam';
 import getAllNewsArticles from '../../../../../lib/getAllNewsArticles';
 
-// Dynamically generate metadata for the news article
-export async function generateMetadata({
-  params,
-}: {
-  params: { newsTitle: string };
-}): Promise<Metadata> {
+// TODO: Temporary use of `any` for `params` due to a Next.js 15.3.1 typing issue.
+//
+// Next.js 15.3.1 incorrectly infers `params` as `Promise<any>` internally,
+// which causes build errors when strongly typing route params.
+//
+// Current workaround:
+// - Type `params` as `any` to allow build to succeed.
+// - Treat `params.newsTitle` as a normal string inside the component.
+//
+// When to fix:
+// - Once Next.js 15.4 (or later stable release) is available
+//   and provides proper `PageProps` typing (or corrects internal inference),
+//   replace `params: any` with a strong type:
+//
+//   ```tsx
+//   type NewsPageProps = { params: { newsTitle: string } };
+//   ```
+//
+//   and update function signatures:
+//
+//   ```tsx
+//   export default async function NewsDetailPage({ params }: NewsPageProps) { ... }
+//   export async function generateMetadata({ params }: NewsPageProps): Promise<Metadata> { ... }
+//   ```
+//
+// Related Issue: [Consider linking to GitHub Next.js issue if one exists later]
+
+export async function generateMetadata({ params }: any): Promise<Metadata> {
   const decodedUrlParam = decodeURIComponent(params.newsTitle);
+
   const allArticles = await getAllNewsArticles();
   const article = allArticles.find(
     (a) => getNewsParam(a.title) === decodedUrlParam
@@ -24,12 +47,12 @@ export async function generateMetadata({
     ).toString();
 
     return {
-      title: title,
-      description: description,
+      title,
+      description,
       openGraph: {
-        title: title,
-        description: description,
-        url: url,
+        title,
+        description,
+        url,
         siteName: 'The Fun Bug',
         type: 'website',
       },
@@ -41,13 +64,9 @@ export async function generateMetadata({
   }
 }
 
-// Main component that renders the news article
-export default async function NewsDetailPage({
-  params,
-}: {
-  params: { newsTitle: string };
-}) {
+export default async function NewsDetailPage({ params }: any) {
   const decodedUrlParam = decodeURIComponent(params.newsTitle);
+
   const allArticles = await getAllNewsArticles();
   const article = allArticles.find(
     (a) => getNewsParam(a.slug) === decodedUrlParam
@@ -70,8 +89,9 @@ export default async function NewsDetailPage({
   }
 }
 
-// Generate static params for each news article based on its slug
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<
+  Array<{ newsTitle: string }>
+> {
   const allArticles = await getAllNewsArticles();
 
   if (!allArticles || allArticles.length === 0) {

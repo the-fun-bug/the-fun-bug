@@ -1,14 +1,12 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
 import ButtonLink from '../common/ButtonLink';
+import HomepageGallery from './Gallery';
 import OurStory from './OurStory';
 import HowWePlay from './HowWePlay';
 import ImageNextToTextSection from '../common/ImageNextToText';
 import VisitUs from '../common/VisitUs';
 import cafeDrinksImg from './img/cafe-drinks.png';
 import { Hours, HomePagePhoto } from '@/types/types';
-
-const HomepageGallery = dynamic(() => import('./Gallery'), { ssr: false });
 
 export default function Homepage({
   hours,
