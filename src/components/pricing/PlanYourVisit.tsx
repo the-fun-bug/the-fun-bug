@@ -35,7 +35,7 @@ export default function PlanYourVisit() {
             </ul>
             <ButtonLink
               buttonText="Reserve Your Spot"
-              buttonLink="https://thefunbug.as.me/?calendarID=11786092"
+              buttonLink="https://thefunbug.as.me/play-studio-reservations"
               buttonClass="bg-soft-blue hover:bg-worm-blue my-0"
               external={true}
             />

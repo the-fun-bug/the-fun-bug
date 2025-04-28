@@ -160,7 +160,7 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
                 <div className="hidden h-[56px] xs:flex items-center">
                   <ButtonLink
                     buttonText="Reserve Play Time"
-                    buttonLink="https://thefunbug.as.me/?calendarID=11786092"
+                    buttonLink="https://thefunbug.as.me/play-studio-reservations"
                     buttonClass="bg-soft-blue hover:bg-worm-blue"
                     external={true}
                   />
@@ -168,7 +168,7 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
                 <div className="xs:hidden h-[56px] flex items-center">
                   <ButtonLink
                     buttonText="Reserve"
-                    buttonLink="https://thefunbug.as.me/?calendarID=11786092"
+                    buttonLink="https://thefunbug.as.me/play-studio-reservations"
                     buttonClass="bg-soft-blue hover:bg-worm-blue"
                     external={true}
                   />
@@ -270,7 +270,7 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
                 <div className={`${showButton ? 'block' : 'hidden'}`}>
                   <ButtonLink
                     buttonText="Reserve"
-                    buttonLink="https://thefunbug.as.me/?calendarID=11786092"
+                    buttonLink="https://thefunbug.as.me/play-studio-reservations"
                     buttonClass="bg-soft-blue hover:bg-worm-blue"
                     external={true}
                   />

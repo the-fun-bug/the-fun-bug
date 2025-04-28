@@ -33,7 +33,7 @@ export default function Homepage({
           <div className="flex flex-wrap gap-2 md:gap-4 justify-center lg:justify-start">
             <ButtonLink
               buttonText="Reserve Play Time"
-              buttonLink="https://thefunbug.as.me/?calendarID=11786092"
+              buttonLink="https://thefunbug.as.me/play-studio-reservations"
               buttonClass="bg-soft-blue hover:bg-worm-blue"
               external={true}
               excludeMargin={true}
