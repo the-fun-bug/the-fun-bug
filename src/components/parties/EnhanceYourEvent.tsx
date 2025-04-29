@@ -77,7 +77,7 @@ export default function EnhanceYourEvent() {
   return (
     <section className="flex justify-center items-center py-[3rem] px-[1rem]">
       <div className="flex flex-col justify-center items-center text-center gap-[1.25rem] w-full max-w-[1200px]">
-        <h1 className="font-nickainley">Enhance Your Event</h1>
+        <h2 className="font-nickainley">Enhance Your Event</h2>
         <p className="pb-[1rem] md:pb-0">
           Explore our customizable add-ons to make your event truly exceptional.
         </p>
@@ -96,7 +96,7 @@ export default function EnhanceYourEvent() {
                 placeholder="blur"
               />
               <div className="flex flex-col gap-[0rem] lg:gap-[1.25rem] justify-center md:max-w-[350px] text-center md:text-left">
-                <h2>{e.title}</h2>
+                <h3>{e.title}</h3>
                 <p>{e.description}</p>
                 {e.buttonLink && e.buttonText && e.buttonClass && (
                   <div className="flex justify-center md:justify-start">

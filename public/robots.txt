@@ -1,2 +1,13 @@
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# *
+User-agent: *
+Disallow: /admin
+
+# Host
+Host: https://thefunbug.com
+
+# Sitemaps
+Sitemap: https://thefunbug.com/sitemap.xml

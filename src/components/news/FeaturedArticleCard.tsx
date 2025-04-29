@@ -51,7 +51,7 @@ const FeaturedArticleCard: React.FC<FeaturedArticleCardProps> = ({
           href={`/news/${article.slug}`}
           className="px-[1rem]"
         >
-          <h2
+          <h3
             className="sm:mt-[1rem] overflow-hidden"
             style={{
               display: '-webkit-box',
@@ -60,7 +60,7 @@ const FeaturedArticleCard: React.FC<FeaturedArticleCardProps> = ({
             }}
           >
             {article.title}
-          </h2>
+          </h3>
         </Link>
       </div>
     </div>

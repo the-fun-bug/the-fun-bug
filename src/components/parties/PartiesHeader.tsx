@@ -8,7 +8,7 @@ export default function PartiesHeader() {
     <section className="flex justify-center items-center pt-[1rem] pb-[3rem] px-[1rem]">
       <div className="flex flex-col justify-center items-center text-center gap-[1.25rem] w-full max-w-[750px]">
         <h1 className="font-nickainley pb-[1rem]">Private Events & Parties</h1>
-        <p>
+        <p className="max-w-[600px]">
           Every day should be a party — and at The Fun Bug, it can be! Ready to
           celebrate? Book your private event today, or scroll down to see what’s
           included in your party package and how you can customize your day!

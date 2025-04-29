@@ -56,9 +56,9 @@ export default function FrequentlyAskedQuestions() {
       className="flex justify-center items-center py-[3rem] px-[1rem]"
     >
       <div className="flex flex-col gap-[1.25rem] w-full max-w-[1200px]">
-        <h1 className="font-nickainley pb-[1.5rem]">
+        <h2 className="font-nickainley pb-[1.5rem]">
           Frequently Asked Questions
-        </h1>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 items-start justify-between gap-x-[3rem] gap-y-[1rem]">
           {questions.map((q, i) => (
             <button

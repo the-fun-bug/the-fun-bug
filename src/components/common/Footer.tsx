@@ -74,9 +74,9 @@ export default function Footer() {
               />
             </Link>
           </div>
-          <h2 className="text-center max-w-[240px] text-black">
+          <h3 className="text-center max-w-[240px] text-black">
             Let Us Take Care of Your Next Party!
-          </h2>
+          </h3>
           <ButtonLink
             buttonText="Reserve Now"
             buttonLink="/parties"

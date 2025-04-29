@@ -56,7 +56,7 @@ export default function ImageNextToTextSection({
           loading="lazy"
         />
         <div className="flex flex-col gap-[1.25rem] max-w-[750px] lg:max-w-[490px] text-center lg:text-left items-center lg:items-start">
-          <h1 className="font-nickainley">{title}</h1>
+          <h2 className="font-nickainley">{title}</h2>
           <p>{paragraph}</p>
           <div className="flex gap-[1rem]">
             <ButtonLink

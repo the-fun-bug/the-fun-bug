@@ -23,10 +23,11 @@ export default function Homepage({
             Welcome to The Fun Bug! Play, Laugh, and Explore.
           </h1>
           <p className="mb-2">
-            Our play studio is designed for kids to unleash their energy and
-            creativity while parents relax in a clean, comfortable space.
-            Whether you&apos;re planning a fun day of play or a special party,
-            we&apos;ve got you covered.
+            Our indoor playground in New Braunfels is designed for kids to
+            unleash their energy and creativity while parents relax in a clean,
+            comfortable space. Whether you&apos;re planning a fun day of play, a
+            private party, or just looking for the best indoor playground
+            experience, we&aspos;ve got you covered!
           </p>
           <div className="flex flex-wrap gap-2 md:gap-4 justify-center lg:justify-start">
             <ButtonLink
@@ -58,13 +59,20 @@ export default function Homepage({
         imageWidth={1188}
         imageHeight={381}
         title="The Fun Bug Cafe"
-        paragraph="At The Fun Bug, kick back with a delicious cup of coffee from our café while your kids have a blast in our awesome playground. Our cozy seating area is perfect for enjoying tasty snacks, so you can relax and know your little ones are having a fantastic time!"
+        paragraph="Recharge with a fresh-brewed coffee while your kids explore our indoor playground! The Fun Bug Café offers a cozy seating area, delicious snacks, and a relaxing spot for parents to unwind while little ones enjoy endless playtime."
         buttonText="View Menu"
         buttonLink="/cafe#menu"
         buttonClass="bg-cafe/50 hover:bg-cafe"
         allPadding={true}
       />
-      <VisitUs hours={hours} />
+      <section className="flex justify-center items-center py-[3rem] px-[1rem]">
+        <div className="flex flex-col justify-center items-center w-full max-w-[1200px]">
+          <h2 className="text-center font-nickainley pb-[1rem] max-w-[640px] mb-[2rem]">
+            Visit Us
+          </h2>
+          <VisitUs hours={hours} />
+        </div>
+      </section>
     </>
   );
 }

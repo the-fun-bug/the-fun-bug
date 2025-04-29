@@ -14,14 +14,14 @@ export default function PartyPackage({
   return (
     <section className="flex justify-center items-center py-[3rem] px-[1rem]">
       <div className="flex flex-col gap-[1.25rem] justify-center items-center text-center w-full max-w-[1200px]">
-        <h1 className="font-nickainley pb-[1rem]">The Fun Bug Party Package</h1>
+        <h2 className="font-nickainley pb-[1rem]">The Fun Bug Party Package</h2>
         <div className="flex gap-[1.25rem] pb-[1rem]">
           <p className="text-[1.5rem]">2 Hour Event</p>
           <p className="text-[1.5rem] ]">{partyData.partyPricing}*</p>
         </div>
         <div className="w-full flex flex-col md:flex-row gap-[1.25rem] justify-between text-left">
           <div className="flex flex-col gap-[1.25rem] w-full md:w-[45%]">
-            <h2>What&apos;s Included</h2>
+            <h3>What&apos;s Included</h3>
             <div className="flex flex-col gap-[1.25rem]">
               {partyData.partyBullets.map((r, i) => (
                 <div
@@ -45,7 +45,7 @@ export default function PartyPackage({
             </div>
           </div>
           <div className="flex flex-col gap-[1.25rem] w-full md:w-[45%]">
-            <h2>Event Hours</h2>
+            <h3>Event Hours</h3>
             <div className="flex flex-col gap-[1.5rem] pb-[1rem]">
               <div className="flex gap-[1.25rem]">
                 <p className="w-[88.5px]">Friday</p>

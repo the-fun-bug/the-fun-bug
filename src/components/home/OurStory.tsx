@@ -7,14 +7,14 @@ export default function OurStory() {
   return (
     <section className="py-[3rem] px-[1rem] flex flex-col justify-center items-center">
       <div className="max-w-[1200px] text-center flex flex-col gap-[1.25rem] justify-center items-center">
-        <h1 className="font-nickainley pb-[1rem]">
-          A Place For Everyone To Enjoy
-        </h1>
-        <p>
-          Welcome to The Fun Bug, where playtime meets relaxation for both kids
-          and parents! Inspired by our own children, we saw a need for more
-          indoor play options in New Braunfels. Come join us for open play time,
-          delicious coffee, and exclusive party rentals after hours!
+        <h2 className="font-nickainley pb-[1rem]">
+          An Indoor Playground in New Braunfels
+        </h2>
+        <p className="max-w-[700px]">
+          Inspired by our own kids, we built a space where families can enjoy
+          safe, active play and parents can relax with a great coffee in hand.
+          From open play sessions to private party rentals, The Fun Bug is where
+          fun and connection come together.
         </p>
         <ButtonLink
           buttonText="Our Story"

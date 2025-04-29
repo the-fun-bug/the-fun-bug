@@ -18,9 +18,9 @@ export default function OpenPlayAdmissions({
   return (
     <section className={`flex items-center justify-center py-[3rem] px-[1rem]`}>
       <div className={`flex flex-col gap-[1.25rem] w-full max-w-[1200px]`}>
-        <h1 className="font-nickainley pb-[1rem] text-center">
+        <h2 className="font-nickainley pb-[1rem] text-center">
           Open Play Admission
-        </h1>
+        </h2>
         <div className="flex flex-col md:flex-row gap-[1.25rem] justify-between w-full">
           <div className="flex flex-col gap-[1.25rem] md:w-[50%] md:items-center md:justify-center">
             <div className="flex flex-col gap-[0.5rem]">
@@ -53,7 +53,7 @@ export default function OpenPlayAdmissions({
                 <p className="lg:max-w-[460px]">{r}</p>
               </div>
             ))}
-            <p className="pt-[1rem] pl-[42px] lg:max-w-[460px]">
+            <p className="pt-[1rem] pl-[42px] lg:max-w-[460px] italic">
               * Socks must be worn on the play turf and structures at all times
               by children and adults. If needed, socks are available for
               purchase for $3.

@@ -20,7 +20,7 @@ export default function Memberships({
   return (
     <section className={`flex items-center justify-center py-[3rem] px-[1rem]`}>
       <div className={`flex flex-col gap-[1.25rem] w-full max-w-[1200px]`}>
-        <h1 className="font-nickainley pb-[1rem] text-center">Memberships</h1>
+        <h2 className="font-nickainley pb-[1rem] text-center">Memberships</h2>
         <div className="flex flex-col md:flex-row gap-[1.25rem] justify-between w-full">
           <div className="flex flex-col gap-[1.25rem] md:w-[50%] md:items-center md:justify-center">
             <div className="flex flex-col gap-[0.5rem]">

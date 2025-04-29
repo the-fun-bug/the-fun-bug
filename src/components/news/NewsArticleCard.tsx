@@ -52,7 +52,7 @@ const NewsArticleCard: React.FC<NewsArticleCardProps> = ({
           <CategoryButton category={article.category} />
         </div>
         <Link key={article.slug} href={`/news/${article.slug}`}>
-          <h2
+          <h3
             className="overflow-hidden text-left sm:h-[60px]"
             style={{
               display: '-webkit-box',
@@ -61,7 +61,7 @@ const NewsArticleCard: React.FC<NewsArticleCardProps> = ({
             }}
           >
             {article.title}
-          </h2>
+          </h3>
         </Link>
       </div>
     </div>
