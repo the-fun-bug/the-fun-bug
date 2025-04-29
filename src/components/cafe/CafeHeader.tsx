@@ -29,11 +29,14 @@ export default function CafeHeader() {
       <div className="flex flex-col justify-center items-center text-center gap-[1.25rem] w-full max-w-[750px]">
         <h1 className="font-nickainley">The Fun Bug Cafe</h1>
         <p>
-          Enjoy your favorite beverage while your little bugs play! For the
-          safety and comfort of our youngest guests (and due to limited space),
-          café items are only available to-go for those visiting without
-          littles. The indoor seating surrounding our play area is reserved for
-          guests visiting our play space.
+          Enjoy your favorite beverage while your little bugs play! The Fun Bug
+          Cafe offers delicious coffee, tasty treats, and a cozy space for
+          parents to relax while kids explore the playground.
+        </p>
+        <p>
+          For the safety and comfort of our youngest guests, café items are
+          available to-go for visitors without children. Indoor seating around
+          the play area is reserved for families enjoying our play space.
         </p>
         <button
           onClick={scrollToSeasonalMenu}

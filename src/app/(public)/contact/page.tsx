@@ -1,5 +1,5 @@
 import React from 'react';
-import VisitUs from '@/components/common/VisitUs';
+import ContactPage from '@/components/contact/ContactPage';
 import type { Metadata } from 'next';
 import getHoursData from '../../../../lib/getHours';
 
@@ -9,12 +9,12 @@ export const metadata: Metadata = {
     'Contact The Fun Bug in New Braunfels for more information about our indoor ground, open play pricing, memberships, and private event rentals.',
 };
 
-export default function ContactPage() {
+export default function Contact() {
   const hours = getHoursData();
 
   return (
     <div className="py-[0.5rem]">
-      <VisitUs hours={hours} />
+      <ContactPage hours={hours} />
     </div>
   );
 }

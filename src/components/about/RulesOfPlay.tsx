@@ -21,9 +21,9 @@ export default function RulesOfPlay() {
       className="flex justify-center items-center py-[3rem] px-[1rem]"
     >
       <div className="flex flex-col gap-[1.25rem] w-full max-w-[1200px]">
-        <h1 className="font-nickainley pb-[1.5rem]">
+        <h2 className="font-nickainley pb-[1.5rem]">
           The Fun Bug’sRules of Play
-        </h1>
+        </h2>
         <div className="grid md:grid-cols-2 justify-center md:justify-start gap-[1.25rem]">
           {rules.map((r, i) => (
             <div key={i} className="flex gap-[0.5rem] md:max-w-[500px]">

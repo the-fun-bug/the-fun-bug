@@ -21,7 +21,7 @@ export default function CafeMenu({ menuData }: { menuData: MenuType }) {
       className="flex justify-center items-center py-[3rem] px-[1rem]"
     >
       <div className="flex flex-col gap-[1rem] w-full max-w-[1200px] mb-[1rem]">
-        <h1 className="font-nickainley">Menu</h1>
+        <h2 className="font-nickainley">Menu</h2>
         <Specialties
           specialtiesPricing={menuData.specialtiesPricing}
           coffeeDrinks={menuData.coffeeDrinks}
@@ -95,7 +95,7 @@ function Specialties({
       <div className="flex flex-col gap-[1.25rem]">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div>
-            <h2 className="text-cafe-pink">House Specialties</h2>
+            <h3 className="text-cafe-pink">House Specialties</h3>
             <div className="flex flex-row flex-wrap md:justify-between gap-[2rem] md:max-w-[85%] my-[1.5rem]">
               <div>
                 <div className="flex justify-between w-[205px]">
@@ -122,7 +122,7 @@ function Specialties({
             </div>
           </div>
           <div>
-            <h3 className="text-cafe-pink mt-[1.5rem] mb-[1rem]">Extras</h3>
+            <h4 className="text-cafe-pink mt-[1.5rem] mb-[1rem]">Extras</h4>
             <div className="flex flex-row flex-wrap justify-between md:max-w-[85%] mt-[1rem] mb-[1.5rem]">
               <div className="mr-[1rem]">
                 <div className="flex justify-between w-[205px]">
@@ -157,9 +157,9 @@ function Specialties({
           <div className="md:max-w-[85%] sm:max-w-[80%]">
             {colOne.map((s) => (
               <div key={s.type}>
-                <h3 className="uppercase text-cafe-pink mt-[1rem] mb-[1rem]">
+                <h4 className="uppercase text-cafe-pink mt-[1rem] mb-[1rem]">
                   {s.type}
-                </h3>
+                </h4>
                 {s.drinks.map((d) => (
                   <div
                     key={d.drinkName}
@@ -167,7 +167,7 @@ function Specialties({
                   >
                     <div>
                       <div className="flex gap-[0.75rem]">
-                        <h2>{d.drinkName}</h2>
+                        <h3>{d.drinkName}</h3>
                         {d.icedOnly && (
                           <Image
                             src={iceCubeImg}
@@ -199,11 +199,11 @@ function Specialties({
           <div className="md:max-w-[85%] sm:max-w-[80%]">
             {colTwo.map((s) => (
               <div key={s.type}>
-                <h3
+                <h4
                   className={`uppercase text-cafe-pink mb-[1rem] ${s.type === 'refreshers' ? 'mt-[2rem]' : 'mt-[1rem]'}`}
                 >
                   {s.type}
-                </h3>
+                </h4>
                 {s.type === 'refreshers' && (
                   <div className="flex items-center gap-[1rem] mb-[1rem]">
                     <Image
@@ -234,7 +234,7 @@ function Specialties({
                   >
                     <div>
                       <div className="flex gap-[1rem]">
-                        <h2>{d.drinkName}</h2>
+                        <h3>{d.drinkName}</h3>
                         {d.icedOnly && (
                           <Image
                             src={iceCubeImg}
@@ -279,7 +279,7 @@ function BuildYourOwn({
   return (
     <div className="w-full">
       <div className="flex flex-col gap-[1.25rem]">
-        <h2 className="text-cafe-pink">Build Your Own Latte</h2>
+        <h3 className="text-cafe-pink">Build Your Own Latte</h3>
         <div className="flex justify-between w-[205px]">
           <div>
             <div className="flex justify-between w-[205px]">
@@ -293,7 +293,7 @@ function BuildYourOwn({
           </div>{' '}
         </div>
         <div>
-          <h3>Step 1 - Select your flavor(s)</h3>
+          <h4>Step 1 - Select your flavor(s)</h4>
           <p>*Sugar free available</p>
         </div>
         <div className="grid grid-cols-2">
@@ -301,7 +301,7 @@ function BuildYourOwn({
             <p key={f.flavor}>{`${f.flavor}${f.sugarFree ? '*' : ''}`}</p>
           ))}
         </div>
-        <h3>Step 2 - Select your milk</h3>
+        <h4>Step 2 - Select your milk</h4>
         <div>
           {milk.map((f) => (
             <p key={f.milk}>{f.milk}</p>
@@ -309,7 +309,7 @@ function BuildYourOwn({
         </div>
       </div>
       <div className="flex gap-[2rem] items-center">
-        <h3>Step 3 - Enjoy!</h3>
+        <h4>Step 3 - Enjoy!</h4>
         <Image
           src={buildYourOwnImg}
           alt="Fun Bug worm behind iced drink"
@@ -332,9 +332,9 @@ function SeasonalSpecialties({
   return (
     <div className="w-full scroll-pt-[100px]">
       <div className="flex flex-col gap-[1.25rem]">
-        <h2 id="seasonal" className="text-cafe-pink snap-start">
+        <h3 id="seasonal" className="text-cafe-pink snap-start">
           Seasonal Specialties
-        </h2>
+        </h3>
         <div>
           <div className="flex justify-between w-[205px]">
             <p>Hot drinks (12oz)</p>
@@ -353,7 +353,7 @@ function SeasonalSpecialties({
             >
               <div>
                 <div className="flex gap-[0.75rem]">
-                  <h2>{d.drinkName}</h2>
+                  <h3>{d.drinkName}</h3>
                   {d.icedOnly && (
                     <Image
                       src={iceCubeImg}
@@ -393,9 +393,9 @@ function Beverages({ beverages }: { beverages: Item[] }) {
   return (
     <div className="w-full scroll-pt-[100px]">
       <div className="flex flex-col gap-[1.25rem]">
-        <h2 id="seasonal" className="text-cafe-pink snap-start">
+        <h3 id="seasonal" className="text-cafe-pink snap-start">
           Beverages
-        </h2>
+        </h3>
         <div>
           {beverages.map((b) => (
             <div
@@ -416,9 +416,9 @@ function LightBites({ bites }: { bites: Item[] }) {
   return (
     <div className="w-full scroll-pt-[100px]">
       <div className="flex flex-col gap-[1.25rem]">
-        <h2 id="seasonal" className="text-cafe-pink snap-start">
+        <h3 id="seasonal" className="text-cafe-pink snap-start">
           Light Bites
-        </h2>
+        </h3>
         <div>
           {bites.map((b) => (
             <div

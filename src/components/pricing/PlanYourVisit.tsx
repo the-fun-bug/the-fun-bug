@@ -5,12 +5,12 @@ export default function PlanYourVisit() {
   return (
     <section className={`flex items-center justify-center py-[3rem] px-[1rem]`}>
       <div className={`flex flex-col gap-[1.25rem] w-full max-w-[1200px]`}>
-        <h1 className="font-nickainley pb-[1rem] text-center">
+        <h2 className="font-nickainley pb-[1rem] text-center">
           Plan Your Visit
-        </h1>
+        </h2>
         <div className="flex flex-col md:flex-row lg:justify-between gap-[1.5rem]">
           <div className="lg:w-[45%] flex flex-col gap-[1.25rem] max-w-[1000px]">
-            <h2>How to Reserve & Play</h2>
+            <h3>How to Reserve & Play</h3>
             <ul className="flex flex-col gap-[1.15rem]">
               <li>
                 1. <strong>Reserve Your Spot.</strong> Book your time slot
@@ -35,16 +35,16 @@ export default function PlanYourVisit() {
             </ul>
             <ButtonLink
               buttonText="Reserve Your Spot"
-              buttonLink="https://thefunbug.as.me/?calendarID=11786092"
+              buttonLink="https://thefunbug.as.me/play-studio-reservations"
               buttonClass="bg-soft-blue hover:bg-worm-blue my-0"
               external={true}
             />
           </div>
           <div className="lg:w-[45%] flex flex-col gap-[1.25rem]">
-            <h2>Our Reservation Schedule</h2>
-            <h3 className="font-bold text-sm">
+            <h3>Our Reservation Schedule</h3>
+            <h4 className="font-bold text-sm">
               Reservations are always recommended to ensure availability.
-            </h3>
+            </h4>
             <div className="flex gap-[1.25rem]">
               <p className="w-[160px]">Monday, Tuesday and Thursday</p>
               <p className="w-[160px]">

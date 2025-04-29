@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import ButtonLink from '../common/ButtonLink';
 import Image from 'next/image';
 import bulletImg from './img/bullet.png';
 import { MembershipPricing } from './PricingPage';
@@ -19,7 +20,7 @@ export default function Memberships({
   return (
     <section className={`flex items-center justify-center py-[3rem] px-[1rem]`}>
       <div className={`flex flex-col gap-[1.25rem] w-full max-w-[1200px]`}>
-        <h1 className="font-nickainley pb-[1rem] text-center">Memberships</h1>
+        <h2 className="font-nickainley pb-[1rem] text-center">Memberships</h2>
         <div className="flex flex-col md:flex-row gap-[1.25rem] justify-between w-full">
           <div className="flex flex-col gap-[1.25rem] md:w-[50%] md:items-center md:justify-center">
             <div className="flex flex-col gap-[0.5rem]">
@@ -42,6 +43,13 @@ export default function Memberships({
                 </p>
               </div>
             </div>
+            <ButtonLink
+              buttonText="Buy Membership"
+              buttonLink="https://app.acuityscheduling.com/catalog.php?owner=33135518"
+              buttonClass="bg-soft-blue hover:bg-worm-blue"
+              external={true}
+              excludeMargin={true}
+            />
           </div>
           <div className="grid grid-cols-1">
             {bullets.map((r, i) => (

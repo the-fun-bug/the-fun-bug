@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'Learn about The Fun Bug, a family-owned indoor playground in New Braunfels, offering creative indoor play opportunities for kids, delicious drinks, and private party rentals.',
 };
 
-export default function ContactPage() {
+export default function About() {
   const photo = getAboutPhoto();
 
   return <AboutPage photo={photo} />;

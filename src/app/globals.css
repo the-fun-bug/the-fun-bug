@@ -40,7 +40,8 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-h1 {
+h1,
+h2 {
   font-size: 3.25rem;
   line-height: 1;
   padding-bottom: 0.5rem;
@@ -50,7 +51,7 @@ h1 {
   }
 }
 
-h2 {
+h3 {
   font-size: 1.25rem;
   font-weight: bold;
 
@@ -59,7 +60,7 @@ h2 {
   }
 }
 
-h3 {
+h4 {
   font-size: 1rem;
   font-weight: bold;
 

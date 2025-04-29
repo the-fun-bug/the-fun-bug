@@ -62,7 +62,7 @@ export default async function NewsArticlePage({
           />
         </section>
         <section className="w-full pt-[3rem] flex flex-col">
-          <h1 className="font-nickainley pb-[3rem]">Recent News</h1>
+          <h2 className="font-nickainley pb-[3rem]">Recent News</h2>
           <div className="flex flex-col md:flex-row items-center md:justify-between gap-[3rem] md:gap-[1rem]">
             {recentArticles.map((a) => (
               <NewsArticleCard

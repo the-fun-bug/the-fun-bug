@@ -21,6 +21,7 @@ export default function HiEveryone({ photo }: { photo: string }) {
   return (
     <section className="flex justify-center items-center pt-[1rem] pb-[3rem] px-[1rem]">
       <div className="flex flex-col justify-center items-center w-full max-w-[1200px]">
+        <h1 className="font-nickainley mb-[2rem]">About The Fun Bug</h1>
         <Image
           src={photo}
           priority={true}
@@ -30,7 +31,7 @@ export default function HiEveryone({ photo }: { photo: string }) {
           className="rounded-lg w-full max-w-[750px]"
         />
         <div className="py-[2rem] flex flex-col gap-[1.25rem] text-center">
-          <h1 className="font-nickainley pb-[1rem]">Hi everyone!</h1>
+          <h2 className="font-nickainley pb-[1rem]">Hi everyone!</h2>
           <p>
             We are the Saur&apos;s. I am Kameron and my husband is Clay, or as
             my sweet in-laws like to call it, the &lsquo;vision&lsquo; and the

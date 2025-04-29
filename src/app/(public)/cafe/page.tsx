@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'Unwind at The Fun Bug Cafe in New Braunfels, where parents can enjoy coffee, refreshments, and free Wi-Fi while their kids play in a fun, safe environment in our indoor playground.',
 };
 
-export default function ContactPage() {
+export default function Cafe() {
   const menuData = getMenuData();
 
   return <CafePage menuData={menuData} />;
