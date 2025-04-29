@@ -74,11 +74,11 @@ export default function Footer() {
               />
             </Link>
           </div>
-          <h3 className="text-center max-w-[240px] text-black">
-            Let Us Take Care of Your Next Party!
+          <h3 className="text-center max-w-[200px] text-black">
+            Your Next Party, Made Easy!
           </h3>
           <ButtonLink
-            buttonText="Reserve Now"
+            buttonText="Start Planning"
             buttonLink="/parties"
             buttonClass="bg-soft-pink/50 hover:bg-soft-pink"
           />
