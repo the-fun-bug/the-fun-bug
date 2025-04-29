@@ -1,6 +1,5 @@
-'use client';
-
 import React from 'react';
+import ButtonLink from '../common/ButtonLink';
 import Image from 'next/image';
 import bulletImg from './img/bullet.png';
 import { Hours, PartyPageData } from '@/types/types';
@@ -12,13 +11,6 @@ export default function PartyPackage({
   hours: Hours;
   partyData: PartyPageData;
 }) {
-  const scrollToReservation = () => {
-    const scrollSection = document.querySelector('#reserve');
-    if (scrollSection) {
-      scrollSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section className="flex justify-center items-center py-[3rem] px-[1rem]">
       <div className="flex flex-col gap-[1.25rem] justify-center items-center text-center w-full max-w-[1200px]">
@@ -68,13 +60,14 @@ export default function PartyPackage({
                 <p className="w-[308px]">{hours.partyHours.sunday}</p>
               </div>
             </div>
-            <div className="w-full md:max-w-[400px] flex justify-center">
-              <button
-                onClick={scrollToReservation}
-                className={`w-fit font-medium border border-black rounded-lg px-[2rem] py-[0.5rem] my-[1rem] transition-all duration-300 bg-soft-pink/50 hover:bg-soft-pink`}
-              >
-                Check Availability
-              </button>
+            <div className="w-full md:max-w-[400px] flex">
+              <ButtonLink
+                buttonText="View Available Party Times"
+                buttonLink="https://thefunbug.as.me/book-party"
+                buttonClass="bg-soft-pink hover:bg-worm-pink"
+                excludeMargin={true}
+                external={true}
+              />
             </div>
           </div>
         </div>
