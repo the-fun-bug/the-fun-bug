@@ -53,14 +53,14 @@ export default function Homepage({
       <HowWePlay />
       <ImageNextToTextSection
         imageSrc={cafeDrinksImg}
-        alt="Three drinks from the cafe side by side"
+        alt="Three drinks from the café side by side"
         imageSide="left"
         imageClass="w-full max-w-[550px]"
         imageWidth={1188}
         imageHeight={381}
-        title="The Fun Bug Cafe"
+        title="The Fun Bug Café"
         paragraph="Recharge with a fresh-brewed coffee while your kids explore our indoor playground! The Fun Bug Café offers a cozy seating area, delicious snacks, and a relaxing spot for parents to unwind while little ones enjoy endless playtime."
-        buttonText="View Menu"
+        buttonText="View Café Menu"
         buttonLink="/cafe#menu"
         buttonClass="bg-cafe/50 hover:bg-cafe"
         allPadding={true}

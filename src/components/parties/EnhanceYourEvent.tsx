@@ -35,9 +35,9 @@ export default function EnhanceYourEvent() {
       buttonClass: null,
     },
     {
-      title: 'Cookies from the Saur Flour Bakery',
+      title: 'Cookies from Saur Flour Bakery',
       description:
-        'The Saur Flour’s customized creations are just the thing you need to elevate your event, customized to your party’s theme!',
+        'Saur Flour’s customized creations are just the thing you need to elevate your event — perfectly tailored to your party’s theme!',
       image: cookiesImg,
       imageHeight: 416,
       imageWidth: 902,
@@ -50,7 +50,7 @@ export default function EnhanceYourEvent() {
     {
       title: 'Balloon Arch',
       description:
-        'Want to add your own flare to the party but you’re not sure how? Look no further, our beautiful balloon arch will “wow” all your guests.',
+        'Want to add your own flair to the party but not sure how? Look no further — our beautiful balloon arch will “wow” all your guests.',
       image: balloonsImg,
       imageHeight: 628,
       imageWidth: 644,
@@ -63,14 +63,14 @@ export default function EnhanceYourEvent() {
     {
       title: 'Non-Alcoholic Open Bar with Discounted Drinks',
       description:
-        'Enjoy a non-alcoholic open bar featuring unlimited beverages from our cafe at a 10% discount, with the tab covered by the host.',
+        'Enjoy a non-alcoholic open bar featuring unlimited beverages from our café at a 10% discount — with the tab covered by the host.',
       image: discountDrinksImg,
       imageHeight: 608,
       imageWidth: 418,
       alt: 'A snail sipping on an iced coffee drink',
       buttonLink: '/cafe#menu',
       buttonLinkExternal: false,
-      buttonText: 'View Cafe Menu',
+      buttonText: 'View Café Menu',
       buttonClass: 'bg-transparent hover:bg-cafe',
     },
   ];

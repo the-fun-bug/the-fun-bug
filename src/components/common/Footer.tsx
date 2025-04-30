@@ -92,7 +92,7 @@ export default function Footer() {
               <NavLink link="/parties" linkName="Parties" footer={true} />
             </div>
             <div className="flex flex-col">
-              <NavLink link="/cafe" linkName="Cafe" footer={true} />
+              <NavLink link="/cafe" linkName="Café" footer={true} />
               <NavLink link="/news" linkName="News" footer={true} />
               <NavLink link="/contact" linkName="Contact" footer={true} />
             </div>

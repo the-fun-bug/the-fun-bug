@@ -13,7 +13,7 @@ export default function OpenPlayAdmissions({
   const bullets = [
     'Admission is good for a 2 hour reservation.',
     'You may bring in food and beverages.',
-    'Snack & drink menu will be available for purchase from the cafe.',
+    'Snack & drink menu will be available for purchase from the café.',
   ];
   return (
     <section className={`flex items-center justify-center py-[3rem] px-[1rem]`}>
@@ -21,16 +21,16 @@ export default function OpenPlayAdmissions({
         <h2 className="font-nickainley pb-[1rem] text-center">
           Open Play Admission
         </h2>
-        <div className="flex flex-col md:flex-row gap-[1.25rem] justify-between w-full">
-          <div className="flex flex-col gap-[1.25rem] md:w-[50%] md:items-center md:justify-center">
+        <div className="flex flex-col lg:flex-row gap-[1.25rem] justify-between w-full">
+          <div className="flex flex-col gap-[1.25rem] lg:w-[50%] lg:items-center lg:justify-center lg:pb-[88px]">
             <div className="flex flex-col gap-[0.5rem]">
-              <div className="flex justify-between items-center mx-auto md:mx-0 gap-[2.5rem]">
+              <div className="flex justify-between items-center mx-auto lg:mx-0 gap-[2.5rem]">
                 <p className="text-[1rem] lg:text-[1.5rem]">Ages 0-2</p>
                 <p className="text-[1rem] lg:text-[1.5rem]">
                   ${admissionsPricing.young}/child
                 </p>
               </div>
-              <div className="flex justify-between items-center mx-auto md:mx-0 gap-[2.5rem]">
+              <div className="flex justify-between items-center mx-auto lg:mx-0 gap-[2.5rem]">
                 <p className="text-[1rem] lg:text-[1.5rem]">Ages 3-12</p>
                 <p className="text-[1rem] lg:text-[1.5rem]">
                   ${admissionsPricing.older}/child
@@ -39,9 +39,9 @@ export default function OpenPlayAdmissions({
             </div>
             {/* <AdmissionsButtons /> */}
           </div>
-          <div className="grid grid-cols-1">
+          <ul className="grid grid-cols-1 gap-[1rem]">
             {bullets.map((r, i) => (
-              <div key={i} className="flex gap-[0.5rem] items-center">
+              <li key={i} className="flex gap-[0.5rem] items-center">
                 <Image
                   src={bulletImg}
                   alt="lady bug bullet"
@@ -51,14 +51,14 @@ export default function OpenPlayAdmissions({
                   loading="lazy"
                 />
                 <p className="lg:max-w-[460px]">{r}</p>
-              </div>
+              </li>
             ))}
             <p className="pt-[1rem] pl-[42px] lg:max-w-[460px] italic">
               * Socks must be worn on the play turf and structures at all times
               by children and adults. If needed, socks are available for
               purchase for $3.
             </p>
-          </div>
+          </ul>
         </div>
       </div>
     </section>

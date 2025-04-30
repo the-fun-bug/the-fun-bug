@@ -16,7 +16,7 @@ export default function PartyPackage({
       <div className="flex flex-col gap-[1.25rem] justify-center items-center text-center w-full max-w-[1200px]">
         <h2 className="font-nickainley pb-[1rem]">The Fun Bug Party Package</h2>
         <div className="flex gap-[1.25rem] pb-[1rem]">
-          <p className="text-[1.5rem]">2 Hour Event</p>
+          <p className="text-[1.5rem]">2-Hour Event</p>
           <p className="text-[1.5rem] ]">{partyData.partyPricing}*</p>
         </div>
         <div className="w-full flex flex-col md:flex-row gap-[1.25rem] justify-between text-left">
@@ -39,7 +39,7 @@ export default function PartyPackage({
                 </div>
               ))}
               <p className="md:max-w-[490px] pl-[42px]">
-                *A {partyData.tax} sales tax on the total party amount will be
+                *An {partyData.tax} sales tax on the total party amount will be
                 due on the day of your event.
               </p>
             </div>

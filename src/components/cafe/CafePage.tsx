@@ -11,9 +11,8 @@ export default function CafePage({ menuData }: { menuData: MenuType }) {
       <CafeMenu menuData={menuData} />
       <RainbowSection
         title="Did You Know?"
-        description="Our full menu is available for all private events! Reserve your spot
-            now and don’t miss out on all the fun."
-        buttonText="Book Private Event"
+        description="Our full café menu is available for all private events! Reserve your spot now and don’t miss out on the fun."
+        buttonText="Book a Private Event"
         buttonLink="/parties"
         buttonClass="bg-soft-pink/50 hover:bg-soft-pink"
       />

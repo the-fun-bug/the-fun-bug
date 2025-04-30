@@ -5,7 +5,7 @@ import Image from 'next/image';
 import coffeeImg from './img/cafe-header-3.png';
 import useIsMobile from '@/hooks/useIsMobile';
 
-export default function CafeHeader() {
+export default function CaféHeader() {
   const isMobile = useIsMobile(768);
 
   const scrollToSeasonalMenu = () => {
@@ -27,10 +27,10 @@ export default function CafeHeader() {
   return (
     <section className="flex justify-center items-center pt-[1rem] pb-[3rem] px-[1rem]">
       <div className="flex flex-col justify-center items-center text-center gap-[1.25rem] w-full max-w-[750px]">
-        <h1 className="font-nickainley">The Fun Bug Cafe</h1>
+        <h1 className="font-nickainley">The Fun Bug Café</h1>
         <p>
           Enjoy your favorite beverage while your little bugs play! The Fun Bug
-          Cafe offers delicious coffee, tasty treats, and a cozy space for
+          Café offers delicious coffee, tasty treats, and a cozy space for
           parents to relax while kids explore the playground.
         </p>
         <p>

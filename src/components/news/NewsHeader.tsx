@@ -8,7 +8,7 @@ export default function NewsHeader() {
         <p>
           Stay in the loop with all the buzz at The Fun Bug! Our monthly
           newsletter features upcoming events, indoor playground updates,
-          seasonal drinks, and everything happening in our play studio and cafe.
+          seasonal drinks, and everything happening in our play studio and café.
         </p>
       </div>
     </section>

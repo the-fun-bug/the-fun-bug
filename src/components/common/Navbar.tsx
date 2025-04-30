@@ -39,7 +39,7 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
     },
     {
       link: '/cafe',
-      linkName: 'Cafe',
+      linkName: 'Café',
     },
     {
       link: '/news',

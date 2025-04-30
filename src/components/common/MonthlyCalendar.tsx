@@ -11,9 +11,9 @@ export default function MonthlyCalendar() {
       imageClass="w-full max-w-[350px]"
       imageHeight={600}
       imageWidth={900}
-      title="Check out The Fun Bug’s Monthly Calendar"
-      paragraph="Stay up-to-date with all the activities that we offer by checking out our newsletter. We update it with new events every month."
-      buttonText="View Latest News"
+      title="Check Out The Fun Bug’s Monthly Calendar"
+      paragraph="Stay up to date with all the activities we offer by visiting our News page. We update the calendar with new events every month!"
+      buttonText="See What’s New"
       buttonLink="/news"
       buttonClass="bg-soft-green/50 hover:bg-soft-green"
       allPadding={true}
