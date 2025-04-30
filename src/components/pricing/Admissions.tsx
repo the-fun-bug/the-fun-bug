@@ -13,7 +13,7 @@ export default function OpenPlayAdmissions({
   const bullets = [
     'Admission is good for a 2 hour reservation.',
     'You may bring in food and beverages.',
-    'Snack & drink menu will be available for purchase from the cafe.',
+    'Snack & drink menu will be available for purchase from the café.',
   ];
   return (
     <section className={`flex items-center justify-center py-[3rem] px-[1rem]`}>

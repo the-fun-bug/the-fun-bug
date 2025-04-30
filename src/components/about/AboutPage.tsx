@@ -19,7 +19,7 @@ export default function AboutPage({ photo }: { photo: string }) {
         imageHeight={600}
         imageWidth={900}
         title="Sweeten Your Day with Saur Flour Cookies"
-        paragraph="Treat your guests to freshly baked delights from our owner’s passion project, The Saur Flour. These custom royal iced sugar cookies, crafted with love and the finest ingredients, are available as an add-on option when you book your party with us. Let us know if you’d like to include them in your celebration!"
+        paragraph="Treat your guests to freshly baked delights from our owner’s passion project, Saur Flour. These custom royal-iced sugar cookies — crafted with love and the finest ingredients — are available as an add-on when you book your party with us. Let us know if you’d like to include them in your celebration!"
         buttonText="Book a Party"
         buttonLink="/parties"
         buttonClass="bg-soft-pink/50 hover:bg-soft-pink"

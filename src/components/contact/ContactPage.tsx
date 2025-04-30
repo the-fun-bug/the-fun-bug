@@ -10,7 +10,7 @@ export default function ContactPage({ hours }: { hours: Hours }) {
           Contact The Fun Bug
         </h1>
         <p className="max-w-[700px] text-center mb-[2rem]">
-          Have a question about our play studio, party packages, or cafe? We’re
+          Have a question about our play studio, party packages, or café? We’re
           here to help! Reach out using the info below or connect with us on
           social — we’d love to hear from you.
         </p>
