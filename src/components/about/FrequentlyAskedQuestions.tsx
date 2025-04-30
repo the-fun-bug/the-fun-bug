@@ -12,41 +12,42 @@ export default function FrequentlyAskedQuestions() {
     {
       question: 'Why are reservations recommended? Can I just walk in instead?',
       answer:
-        'Reservations help us manage capacity to ensure a safe and enjoyable experience for everyone. Our space is subject to fire code regulations, which limit the number of guests we can accommodate at one time. By reserving your spot, you can guarantee entry and avoid potential disappointment if we reach capacity. While we welcome walk-ins, availability is not guaranteed, so a reservation is the best way to secure your visit.',
+        'Reservations help us manage capacity to ensure a safe and enjoyable experience for everyone. Our space is subject to fire code regulations, which limit the number of guests we can accommodate at one time. By reserving your spot, you guarantee entry and avoid potential disappointment if we reach capacity. While we welcome walk-ins, availability is not guaranteed — a reservation is the best way to secure your visit.',
     },
     {
       question: 'Is there an age limit for playing?',
       answer:
-        'Our play studio is open to all children ages 12 and younger. We just ask that older children are careful around our younger children, and avoid rough playing.',
+        'Our play studio is open to all children ages 12 and under. We just ask that older children are mindful of younger ones and avoid rough play.',
     },
     {
       question: 'Can we drop off our kids to let them play?',
       answer:
-        'Parents must remain with their children for the duration of the visit, and are responsible for watching them as well.',
+        'Parents or guardians must remain with their children for the duration of the visit and are responsible for supervising them.',
     },
     {
       question: 'Do you have high chairs and booster seats for use?',
       answer:
-        'Yes! We have several high chairs and booster seats for our guests to utilize.',
+        'Yes! We have several high chairs and booster seats available for our guests to use.',
     },
     {
       question: 'What is your shoe policy?',
       answer:
-        'Shoes may be worn on the wood floor, but we ask that socks only are worn past and on the turf flooring and play area (children and adults). Bare feet are not allowed, as we do our best to maintain the cleanest environment for our guests. If you forget socks, we have adult and children socks available for $3.',
+        'Shoes may be worn on the wood floor, but only socks are allowed on the turf flooring and play area (for both children and adults). Bare feet are not permitted, as we strive to maintain a clean environment for all guests. If you forget socks, we have both adult and children’s socks available for $3.',
     },
     {
       question: 'Can I bring outside food or snacks?',
       answer:
-        'Outside food and drinks are permitted but must stay on the wood floor area of the facility. No food or drink is allowed past or on the turf flooring and okay structures.',
+        'Outside food and drinks are permitted but must remain on the wood floor area of the facility. No food or drink is allowed on or past the turf flooring and play structures.',
     },
     {
-      question: 'What is your policy is sick children?',
+      question: 'What is your policy on sick children?',
       answer:
-        'We kindly ask that if your child or children are sick or not feeling well, you keep them home and wait until they are well to come and play. The health and safety of all of our friends is our top priority.',
+        'We kindly ask that if your child is sick or not feeling well, you keep them home until they have fully recovered. The health and safety of all our guests is our top priority.',
     },
     {
       question: 'Do you accept cash and credit cards?',
-      answer: 'Cash and all major debit/credit cards are accepted for payment.',
+      answer:
+        'Yes, we accept cash and all major debit and credit cards for payment.',
     },
   ];
 
