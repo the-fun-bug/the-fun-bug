@@ -12,10 +12,10 @@ export default function Memberships({
   membershipPricing: MembershipPricing;
 }) {
   const bullets = [
-    'No fees, no contracts—cancel anytime',
-    'Memberships are valid for the month of purchase',
-    'Enjoy one play session per day, per child with your membership',
-    'After purchasing a membership, you’ll receive a coupon code to use when reserving play sessions — so you won’t pay at checkout every time',
+    'No fees, no contracts—cancel anytime.',
+    'Memberships are valid for the month of purchase.',
+    'Enjoy one play session per day, per child with your membership.',
+    'After purchasing a membership, you’ll receive a coupon code to use when reserving play sessions — so you won’t pay at checkout every time.',
   ];
   return (
     <section className={`flex items-center justify-center py-[3rem] px-[1rem]`}>
