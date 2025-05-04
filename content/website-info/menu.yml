@@ -6,7 +6,7 @@ specialtiesPricing:
 coffeeDrinks:
   - drinkName: The Ladybug
     secondaryName: iced strawberry latte
-    drinkIngredients: milk of choice*, strawberry syrup, espresso, strawberry cold foam
+    drinkIngredients: espresso, milk of choice*, strawberry syrup, strawberry cold foam
     icedOnly: true
     drinkImageType: tall
     drinkImageAlt: iced coffee drink with a ladybug behind it
@@ -20,34 +20,34 @@ coffeeDrinks:
     drinkImage: /uploads/buddy.png
   - drinkName: The Saur Flower
     secondaryName: lavender latte (hot or iced)
-    drinkIngredients: milk of choice*, lavender syrup, vanilla syrup, espresso,
+    drinkIngredients: espresso, milk of choice*, lavender syrup, vanilla syrup,
       lavender cold foam (iced drinks only)
     drinkImage: /uploads/saur-flower.png
     drinkImageAlt: coffee cup with flower on it
     drinkImageType: short
   - drinkName: Sugar Mama
     secondaryName: iced brown sugar latte
-    drinkIngredients: milk of choice*, brown sugar, vanilla, espresso, cinnamon
+    drinkIngredients: espresso, milk of choice*, brown sugar, vanilla, cinnamon
     icedOnly: true
     drinkImage: /uploads/sugar-mama.png
     drinkImageAlt: iced coffee in a pink glass
     drinkImageType: tall
   - drinkName: Hello Caramello
     secondaryName: caramel macchiato (hot or iced)
-    drinkIngredients: milk of choice*, espresso, vanilla syrup, caramel sauce
+    drinkIngredients: espresso, milk of choice*, vanilla syrup, caramel sauce
     drinkImage: /uploads/hello-caramello.png
     drinkImageAlt: latte in a light blue cup
     drinkImageType: short
 teaDrinks:
   - drinkName: Go Gruene
     secondaryName: matcha tea latte (hot or iced)
-    drinkIngredients: milk of choice*, matcha powder, and optional flavor add in
+    drinkIngredients: matcha, milk of choice*, and optional flavor add in
     drinkImage: /uploads/go-gruene.png
     drinkImageAlt: match tea latte in a cup
     drinkImageType: short
   - drinkName: Chai There
     secondaryName: chai tea latte (hot or iced)
-    drinkIngredients: milk of choice*, chai tea
+    drinkIngredients: chai tea, and milk of choice*
     drinkImage: /uploads/chai-there.png
     drinkImageAlt: coffee cup with cardamom on the front and cinnamon
     drinkImageType: short
