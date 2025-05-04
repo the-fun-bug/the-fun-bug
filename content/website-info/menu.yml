@@ -13,7 +13,7 @@ coffeeDrinks:
     drinkImage: /uploads/ladybug.png
   - drinkName: The Buddy
     secondaryName: iced mocha latte
-    drinkIngredients: cold brew, milk of choice*, mocha sauce, whipped cream, mocha sauce topping
+    drinkIngredients: espresso, milk of choice*, mocha sauce, whipped cream, mocha sauce topping
     icedOnly: true
     drinkImageType: tall
     drinkImageAlt: iced coffee drink
