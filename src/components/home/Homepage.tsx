@@ -27,7 +27,7 @@ export default function Homepage({
             unleash their energy and creativity while parents relax in a clean,
             comfortable space. Whether you&apos;re planning a fun day of play, a
             private party, or just looking for the best indoor playground
-            experience, we&aspos;ve got you covered!
+            experience, we&apos;ve got you covered!
           </p>
           <div className="flex flex-wrap gap-2 md:gap-4 justify-center lg:justify-start">
             <ButtonLink
