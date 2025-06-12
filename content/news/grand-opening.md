@@ -18,10 +18,10 @@ content: >-
   **What you can expect-**
 
 
-  Our large custom build play set is ready for your kids, along with many creative play opportunities. These include, but not even close to limited to, our custom build giant lite brite, giant legos, play kitchen and toys, doll strollers, infant push carts, and magnet tile wall.
+  Our large custom built play set is ready for your kids, along with many creative play opportunities. These include, but not even close to limited to, our custom built giant lite brite, giant legos, play kitchen and toys, doll strollers, infant push carts, and magnet tile wall.
 
 
-  For the adults, we have a full coffee and specialty drink at the front! You can browse our menu now on our website 'cafe' tab. 
+  For the adults, we have a full coffee and specialty drink shop at the front! You can browse our menu now on our website 'cafe' tab. 
 
 
   We can't wait to welcome you all in! We know you'll love it just as much as we do. Reserve your spots now!!
