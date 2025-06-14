@@ -7,7 +7,7 @@ export default function RulesOfPlay() {
     'Parents and guardians — not The Fun Bug staff — are responsible for their children and must remain on site at ALL times.',
     'The Fun Bug Play Studio & Parties is not responsible for lost or stolen items.',
     'No shoes are permitted on the grassy turf. Children and adults are required to wear socks. If you forget your child’s socks, you may purchase a pair at our counter for $3.',
-    'Adults (13 years and older) are not allowed to use the play equipment.',
+    'Play equipment is designed for children 10 and under; use by older children or adults is not permitted.',
     'Please sanitize hands before entering the play area.',
     'Do not tape or pin anything to the walls.',
     'All children aged 10 and under are welcome! Children six and under are sure to enjoy everything we offer. School-aged children are welcome but must use all equipment and toys safely, as intended, and be respectful of younger children playing nearby.',
