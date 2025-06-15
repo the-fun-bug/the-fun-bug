@@ -2,7 +2,7 @@
 title: "All About our Reservation System "
 category: updates
 date: 05.19.2025
-image: /uploads/1.png
+image: /uploads/wormbow.png
 imgBgColor: "#E7F2FE"
 imageDescription: "Calendar "
 content: >-
