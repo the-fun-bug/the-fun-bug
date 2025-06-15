@@ -3,7 +3,7 @@ title: Welcome to The Fun Bug!
 category: updates
 date: 01.10.2025
 image: /uploads/1.png
-imgBgColor: "#FAFAFA"
+imgBgColor: "#E7F2FE"
 imageDescription: the Fun bug, play studio & parties
 content: >-
   Exciting news for parents and kids alike in New Braunfels! The Fun Bug Play
