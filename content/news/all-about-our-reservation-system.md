@@ -3,7 +3,7 @@ title: "All About our Reservation System "
 category: updates
 date: 05.19.2025
 image: /uploads/wormbow.png
-imgBgColor: "#E7F2FE"
+imgBgColor: "#D9EBDD"
 imageDescription: "Calendar "
 content: >-
   Hey Fun Buggers! 
