@@ -2,10 +2,13 @@
 title: July 2025 at The Fun Bug
 category: calendar
 date: 06.15.2025
-image: /uploads/new-page-july-calendar.jpg
-imgBgColor: "#FAFAFA"
+image: /uploads/calendar.png
+imgBgColor: "#FDD7EC"
 imageDescription: July Calendar
 content: >-
+  ![](/uploads/july-calendar.jpg)
+
+
   The Fun Bug has SO many fun things planned for the month of July! 
 
 
