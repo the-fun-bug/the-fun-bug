@@ -1,10 +1,6 @@
 aboutPhoto: /uploads/about.webp
 homepagePhotos:
-  - image: /uploads/g-1.webp
-    alt: children playing
-  - image: /uploads/g-2.webp
-    alt: child playing with blocks
-  - image: /uploads/g-3.webp
-    alt: children running outside
-  - image: /uploads/g-4.webp
-    alt: children playing with blocks
+  - image: /uploads/img_5765.jpeg
+    alt: Play Structure
+  - image: /uploads/img_5777.jpeg
+    alt: Facility
