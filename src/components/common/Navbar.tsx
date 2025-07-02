@@ -13,7 +13,7 @@ import ButtonLink from './ButtonLink';
 import Banner from './Banner';
 
 export default function Navbar({ bannerText }: { bannerText: string }) {
-  const hasBanner = bannerText.trim() !== '';
+  const hasBanner = bannerText !== null;
   const bannerRef = useRef<HTMLDivElement | null>(null);
   const [bannerHeight, setBannerHeight] = useState(82);
   const [logoWidth, setLogoWidth] = useState(245); // Default logo size
