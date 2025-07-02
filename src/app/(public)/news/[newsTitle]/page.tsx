@@ -31,7 +31,8 @@ import getAllNewsArticles from '../../../../../lib/getAllNewsArticles';
 // Related Issue: [Consider linking to GitHub Next.js issue if one exists later]
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
-  const decodedUrlParam = decodeURIComponent(params.newsTitle);
+  const getParams = await params;
+  const decodedUrlParam = decodeURIComponent(getParams.newsTitle);
 
   const allArticles = await getAllNewsArticles();
   const article = allArticles.find(
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
     const title = `${article.title} | The Fun Bug News`;
     const description = `Read the latest updates about ${article.title}`;
     const url = new URL(
-      `/news/${params.newsTitle}`,
+      `/news/${getParams.newsTitle}`,
       'https://thefunbug.com'
     ).toString();
 
@@ -65,7 +66,8 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 }
 
 export default async function NewsDetailPage({ params }: any) {
-  const decodedUrlParam = decodeURIComponent(params.newsTitle);
+  const getParams = await params;
+  const decodedUrlParam = decodeURIComponent(getParams.newsTitle);
 
   const allArticles = await getAllNewsArticles();
   const article = allArticles.find(
