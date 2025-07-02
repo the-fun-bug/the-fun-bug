@@ -1,12 +1,12 @@
 aboutPhoto: /uploads/about.webp
 homepagePhotos:
-  - image: /uploads/img_5765.jpg
+  - image: /uploads/5765.webp
     alt: Play Structure
-  - image: /uploads/img_5777.jpg
+  - image: /uploads/5777.webp
     alt: The Fun Bug
-  - image: /uploads/img_5930.jpg
+  - image: /uploads/5930.webp
     alt: Party
-  - image: /uploads/img_5911.jpg
+  - image: /uploads/5911.webp
     alt: Play
-  - image: /uploads/img_5894.jpg
+  - image: /uploads/5894.webp
     alt: Light bright
