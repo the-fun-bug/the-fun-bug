@@ -54,7 +54,7 @@ export default async function NewsPage({
     <div className="min-h-screen">
       <NewsHeader />
       {featuredArticles.length > 0 && (
-        <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-x-[1rem] gap-y-[2rem] px-[1rem] py-[1rem] md:py-[2rem] mx-auto">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-x-[1rem] gap-y-[2rem] px-[1rem] py-[1rem] md:py-[2rem] mx-auto">
           {featuredArticles.map((article) => (
             <FeaturedArticleCard key={article.slug} article={article} />
           ))}
