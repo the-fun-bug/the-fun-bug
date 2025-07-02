@@ -36,7 +36,7 @@ export default async function NewsArticlePage({
               <h1 className="font-nickainley text-center md:text-left">
                 {title}
               </h1>
-              <div className="flex gap-[2.5rem] self-center justify-between md:justify-start max-w-[450px] w-full">
+              <div className="flex gap-[2.5rem] self-center md:self-start justify-between md:justify-start max-w-[450px] w-full">
                 <p>{formatDate(date)}</p>
                 <CategoryButton category={category} />
               </div>
