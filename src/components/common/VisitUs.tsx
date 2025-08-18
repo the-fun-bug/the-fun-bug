@@ -36,7 +36,7 @@ export default function VisitUs({ hours }: { hours: Hours }) {
               contact@thefunbug.com
             </Link>
           </div>
-          {/* <Link href="tel:+12814550896">281-455-0896</Link> */}
+          <Link href="tel:+12814550896">281-455-0896</Link>
           <h4 className="mt-[1rem]">Stay Up to Date</h4>
           <div className="flex gap-[0.5rem]">
             <Link
