@@ -1,8 +1,8 @@
-aboutPhoto: /uploads/8.jpg
+aboutPhoto: /uploads/8.webp
 homepagePhotos:
-  - image: /uploads/28.jpg
+  - image: /uploads/28.webp
     alt: Play Structure
-  - image: /uploads/15.jpg
+  - image: /uploads/15.webp
     alt: The Fun Bug
   - image: /uploads/5930.webp
     alt: Party
@@ -10,7 +10,7 @@ homepagePhotos:
     alt: Play
   - image: /uploads/5894.webp
     alt: Light bright
-  - image: /uploads/2.jpg
+  - image: /uploads/2.webp
     alt: cookies
-  - image: /uploads/23.jpg
+  - image: /uploads/23.webp
     alt: rainbow
