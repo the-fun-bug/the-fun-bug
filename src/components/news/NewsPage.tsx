@@ -3,7 +3,7 @@ import NewsHeader from './NewsHeader';
 // import FeaturedArticleCard from './FeaturedArticleCard';
 import AllNewsArticles from './AllNewsArticles';
 
-export type Category = 'all' | 'updates' | 'calendar' | 'specialties';
+export type Category = 'all' | 'updates' | 'calendar';
 
 export type NewsArticle = {
   slug: string;
@@ -44,7 +44,7 @@ export default async function NewsPage({
   //   return Object.values(mostRecentArticles);
   // };
 
-  const categories = ['specialties', 'calendar'];
+  // const categories = ['calendar'];
   // const featuredArticles = getMostRecentArticlesByCategory(
   //   articles,
   //   categories

@@ -34,7 +34,6 @@ export default function AllNewsArticles({
       { label: 'All Categories', value: 'all' as Category },
       { label: 'The Fun Bug Updates', value: 'updates' as Category },
       { label: 'Monthly Calendar', value: 'calendar' as Category },
-      { label: 'Seasonal Specialties', value: 'specialties' as Category },
     ].filter(
       (category) =>
         category.value === 'all' || articleCategories.has(category.value)
@@ -73,10 +72,7 @@ export default function AllNewsArticles({
   };
 
   const sortedArticles = articles
-    .filter(
-      (article) =>
-        article.category === 'calendar' || article.category === 'specialties'
-    )
+    .filter((article) => article.category === 'calendar')
     .sort((a, b) => {
       const parseDate = (dateStr: string) => {
         const [month, day, year] = dateStr.split('.');
@@ -92,11 +88,7 @@ export default function AllNewsArticles({
     // Merge back the rest of the articles, with no featured flag set
     .concat(
       articles
-        .filter(
-          (article) =>
-            article.category !== 'calendar' &&
-            article.category !== 'specialties'
-        )
+        .filter((article) => article.category !== 'calendar')
         .map((article) => ({
           ...article,
           isFeatured: false,

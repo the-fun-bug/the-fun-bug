@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import getAllNewsArticles from '../../../../lib/getAllNewsArticles';
 
 export const metadata: Metadata = {
-  title: 'The Fun Bug News | Seasonal Specials, Monthly Calendar & Updates',
+  title: 'The Fun Bug News | Monthly Calendar & Updates',
   description:
     'Stay updated with The Fun Bug News! Discover our monthly events calendar and the latest business updates from New Braunfels’ favorite indoor playground.',
 };
