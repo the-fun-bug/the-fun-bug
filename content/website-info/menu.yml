@@ -104,9 +104,6 @@ milks:
   - milk: 2% milk
   - milk: almond milk
   - milk: oat milk
-seasonalPricing:
-  hot: $5.25
-  iced: $5.50
 beverages:
   - name: Water
     price: $1.50
@@ -114,7 +111,6 @@ beverages:
     price: $2.50
   - name: Juice Box
     price: $2.00
-specialtiesDrinks: []
 bites:
   - name: Gold Fish
     price: $2.00

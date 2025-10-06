@@ -19,7 +19,6 @@ collections:
         options:
           - { label: 'The Fun Bug Updates', value: 'updates' }
           - { label: 'Monthly Calendar', value: 'calendar' }
-          - { label: 'Seasonal Specialties', value: 'specialties' }
       - label: 'Date'
         name: 'date'
         widget: 'datetime'
@@ -384,72 +383,46 @@ collections:
             widget: 'list'
             fields:
               - { label: 'Milk Type', name: 'milk', widget: 'string' }
-          - label: 'Seasonal Specialties - Pricing'
-            name: 'seasonalPricing'
+          - label: 'Dirty Sodas - Pricing'
+            name: 'dirtySodasPricing'
             widget: 'object'
             fields:
-              - label: 'Hot drinks (16oz)'
-                name: 'hot'
+              - label: 'Kids (12oz)'
+                name: 'kids'
                 widget: 'string'
-              - label: 'Iced drinks (20oz)'
-                name: 'iced'
+              - label: 'Adults (20oz)'
+                name: 'adults'
                 widget: 'string'
-          - label: 'Seasonal Specialties - Drinks'
-            name: 'seasonal'
+          - label: 'Dirty Sodas - Coffee Drinks'
+            name: 'dirtySodas'
             widget: 'list'
             fields:
-              - label: 'List of Seasonal Drinks'
-                name: 'seasonalDrinks'
-                widget: 'list'
-                fields:
-                  - {
-                      label: 'Drink Name',
-                      name: 'drinkName',
-                      widget: 'string',
-                      required: true,
-                    }
-                  - {
-                      label: 'Drink Secondary Name (Ex: name is Chai There and secondary name is chai tea latter)',
-                      name: 'secondaryName',
-                      widget: 'string',
-                      required: false,
-                    }
-                  - {
-                      label: 'Drink Ingredients',
-                      name: 'drinkIngredients',
-                      widget: 'string',
-                      required: true,
-                    }
-                  - {
-                      label: 'Iced Only? (Will Show Ice Cube)',
-                      name: 'icedOnly',
-                      widget: 'boolean',
-                      required: false,
-                    }
-                  - {
-                      label: 'Drink Image',
-                      hint: 'Short Drink Dimension (190w x 156h), Tall Drink Dimensions (178w x 200h)',
-                      name: 'drinkImage',
-                      widget: 'image',
-                      allowMultiple: false,
-                      required: true,
-                    }
-                  - {
-                      label: 'Drink Image Description',
-                      name: 'drinkImageAlt',
-                      widget: 'string',
-                      required: true,
-                    }
-                  - label: 'Drink Image Type'
-                    name: 'drinkImageType'
-                    widget: 'select'
-                    required: true
-                    max: 1
-                    options:
-                      - label: 'Tall Drink (Iced)'
-                        value: 'tall'
-                      - label: 'Short Drink'
-                        value: 'short'
+              - {
+                  label: 'Drink Name',
+                  name: 'drinkName',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Drink Description',
+                  name: 'drinkDescription',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Drink Image',
+                  hint: 'Short Drink Dimension (190w x 156h), Tall Drink Dimensions (178w x 200h)',
+                  name: 'drinkImage',
+                  widget: 'image',
+                  allowMultiple: false,
+                  required: true,
+                }
+              - {
+                  label: 'Drink Image Description',
+                  name: 'drinkImageAlt',
+                  widget: 'string',
+                  required: true,
+                }
           - label: 'Beverages'
             name: 'beverages'
             widget: 'list'
@@ -461,4 +434,10 @@ collections:
             widget: 'list'
             fields:
               - { label: 'Name of Food Item', name: 'name', widget: 'string' }
+              - { label: 'Price', name: 'price', widget: 'string' }
+          - label: 'Kids'
+            name: 'kids'
+            widget: 'list'
+            fields:
+              - { label: 'Name of Item', name: 'name', widget: 'string' }
               - { label: 'Price', name: 'price', widget: 'string' }
