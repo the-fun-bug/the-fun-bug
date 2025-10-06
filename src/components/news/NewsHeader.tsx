@@ -15,7 +15,7 @@ export default function NewsHeader() {
           up-to-date news and a peek behind the scenes, join us on
           social—there’s always something fun happening.
         </p>
-        <div className="flex gap-[1rem]">
+        <div className="flex gap-[2rem] md:gap-[1rem] pt-[2rem] md:pt-[1rem]">
           <Link
             href="https://www.facebook.com/groups/824992593033982"
             target="_blank"
@@ -27,7 +27,7 @@ export default function NewsHeader() {
               alt="facebook icon"
               width={80}
               height={80}
-              className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
+              className="w-[40px] h-[40px] md:w-[30px] md:h-[30px] hover:scale-105 transition-all duration-75"
               placeholder="blur"
             />
           </Link>
@@ -42,7 +42,7 @@ export default function NewsHeader() {
               alt="instagram icon"
               width={80}
               height={80}
-              className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
+              className="w-[40px] h-[40px] md:w-[30px] md:h-[30px] hover:scale-105 transition-all duration-75"
               placeholder="blur"
             />
           </Link>
@@ -57,7 +57,7 @@ export default function NewsHeader() {
               alt="tiktok icon"
               width={80}
               height={80}
-              className="w-[30px] h-[30px] hover:scale-105 transition-all duration-75"
+              className="w-[40px] h-[40px] md:w-[30px] md:h-[30px] hover:scale-105 transition-all duration-75"
               placeholder="blur"
             />
           </Link>
