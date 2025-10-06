@@ -36,10 +36,6 @@ export default function CafeMenu({ menuData }: { menuData: MenuType }) {
             milk={menuData.milks}
           />
           <div className="flex flex-col gap-[3rem]">
-            <SeasonalSpecialties
-              pricing={menuData.seasonalPricing}
-              drinks={menuData.seasonalDrinks}
-            />
             <Beverages beverages={menuData.beverages} />
             <LightBites bites={menuData.bites} />
           </div>
@@ -322,80 +318,11 @@ function BuildYourOwn({
   );
 }
 
-function SeasonalSpecialties({
-  pricing,
-  drinks,
-}: {
-  pricing: Pricing;
-  drinks: DrinkType[] | null;
-}) {
-  return (
-    <div className="w-full scroll-pt-[100px]">
-      <div className="flex flex-col gap-[1.25rem]">
-        <h3 id="seasonal" className="text-cafe-pink snap-start">
-          Seasonal Specialties
-        </h3>
-        <div>
-          <div className="flex justify-between w-[205px]">
-            <p>Hot drinks (12oz)</p>
-            <p>{pricing.hot}</p>
-          </div>
-          <div className="flex justify-between w-[205px]">
-            <p>Iced drinks (20oz)</p>
-            <p>{pricing.iced}</p>
-          </div>
-        </div>
-        {drinks && drinks.length ? (
-          drinks.map((d) => (
-            <div
-              key={d.drinkName}
-              className="flex justify-between items-center gap-[1.25rem] mb-[2.5rem]"
-            >
-              <div>
-                <div className="flex gap-[0.75rem]">
-                  <h3>{d.drinkName}</h3>
-                  {d.icedOnly && (
-                    <Image
-                      src={iceCubeImg}
-                      alt="ice cube"
-                      height={80}
-                      width={80}
-                      className="w-[25px]"
-                    />
-                  )}
-                </div>
-                {d.secondaryName && <p>{d.secondaryName}</p>}
-                <p>{d.drinkIngredients}</p>
-              </div>
-              <Image
-                src={d.drinkImage}
-                alt={d.drinkImageAlt}
-                className="max-w-[96px]"
-                {...(d.drinkImageType === 'short'
-                  ? { height: 156, width: 190 }
-                  : { height: 200, width: 178 })}
-              />
-            </div>
-          ))
-        ) : (
-          <p className="italic">
-            New seasonal flavors are on the way! We have a rotating selection of
-            drinks for each season. Check back soon or follow our news page for
-            the latest on our menu updates.
-          </p>
-        )}
-      </div>
-    </div>
-  );
-}
-
 function Beverages({ beverages }: { beverages: Item[] }) {
   return (
     <div className="w-full scroll-pt-[100px]">
       <div className="flex flex-col gap-[1.25rem]">
-        <h3 id="seasonal" className="text-cafe-pink snap-start">
-          Beverages
-        </h3>
+        <h3 className="text-cafe-pink snap-start">Beverages</h3>
         <div>
           {beverages.map((b) => (
             <div
@@ -416,9 +343,7 @@ function LightBites({ bites }: { bites: Item[] }) {
   return (
     <div className="w-full scroll-pt-[100px]">
       <div className="flex flex-col gap-[1.25rem]">
-        <h3 id="seasonal" className="text-cafe-pink snap-start">
-          Light Bites
-        </h3>
+        <h3 className="text-cafe-pink snap-start">Light Bites</h3>
         <div>
           {bites.map((b) => (
             <div
