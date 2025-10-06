@@ -10,7 +10,6 @@ import {
   Pricing,
   Flavor,
 } from '@/types/types';
-import iceCubeImg from './img/ice-cube.png';
 import buildYourOwnImg from './img/build-your-own.png';
 import lotusLogo from './img/lotus-logo.png';
 
