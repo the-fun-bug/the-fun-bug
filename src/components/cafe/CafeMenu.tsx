@@ -237,7 +237,7 @@ function DirtySodas({
   drinks: DirtySodaDrinkType[] | null;
 }) {
   return (
-    <div className="w-full">
+    <div className="w-full" id="dirty-sodas">
       <div className="flex flex-col gap-[1.25rem]">
         <div className="grid grid-cols-1">
           <div>
