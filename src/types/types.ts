@@ -14,8 +14,8 @@ type PartyHours = {
 export type SpecialtiesPrice = {
   hot: string;
   iced: string;
-  coldFoam: string;
-  plantMilk: string;
+  shot: string;
+  flavor: string;
 };
 
 export type Flavor = {
@@ -27,7 +27,6 @@ export type DrinkType = {
   drinkName: string;
   secondaryName: string;
   drinkIngredients: string;
-  icedOnly: boolean;
   drinkImageType: 'tall' | 'short';
   drinkImageAlt: string;
   drinkImage: string;

@@ -1,40 +1,37 @@
 specialtiesPricing:
   hot: $6.00
   iced: $7.00
-  coldFoam: $0.75
-  plantMilk: $0.50
+  shot: $2.00
+  flavor: $0.50
 coffeeDrinks:
   - drinkName: The Saur Flower
-    secondaryName: lavender latte (hot or iced)
+    secondaryName: lavender latte
     drinkIngredients: espresso, milk of choice*, lavender syrup, vanilla syrup,
       lavender cold foam (iced drinks only)
     drinkImage: /uploads/saur-flower.png
     drinkImageAlt: coffee cup with flower on it
     drinkImageType: short
   - drinkName: The Buddy
-    secondaryName: iced mocha latte
+    secondaryName: mocha latte
     drinkIngredients: espresso, milk of choice*, mocha sauce, whipped cream, mocha sauce topping
-    icedOnly: true
     drinkImageType: tall
     drinkImageAlt: iced coffee drink
     drinkImage: /uploads/buddy.png
   - drinkName: Sugar Mama
-    secondaryName: iced brown sugar latte
+    secondaryName: brown sugar latte
     drinkIngredients: espresso, milk of choice*, brown sugar, vanilla, cinnamon
-    icedOnly: true
     drinkImage: /uploads/sugar-mama.png
     drinkImageAlt: iced coffee in a pink glass
     drinkImageType: tall
   - drinkName: Hello Caramello
-    secondaryName: caramel macchiato (hot or iced)
+    secondaryName: caramel macchiato
     drinkIngredients: espresso, milk of choice*, vanilla syrup, caramel sauce
     drinkImage: /uploads/hello-caramello.png
     drinkImageAlt: latte in a light blue cup
     drinkImageType: short
   - drinkName: The Ladybug
-    secondaryName: iced strawberry latte
+    secondaryName: strawberry latte
     drinkIngredients: espresso, milk of choice*, strawberry syrup, strawberry cold foam
-    icedOnly: true
     drinkImageType: tall
     drinkImageAlt: iced coffee drink with a ladybug behind it
     drinkImage: /uploads/ladybug.png
@@ -46,20 +43,21 @@ coffeeDrinks:
     drinkImageType: tall
     drinkImageAlt: Latte with vanilla wafers
   - drinkName: The Honey Bee
-    drinkIngredients: milk of choice*, espresso, honey, vanilla syrup, vanilla cold
+    drinkIngredients:
+      milk of choice*, espresso, honey, vanilla syrup, vanilla cold
       foam (iced only)
     drinkImage: /uploads/honey-bee.png
     drinkImageAlt: a bee next to a latte
     drinkImageType: tall
 teaDrinks:
   - drinkName: Go Gruene
-    secondaryName: matcha tea latte (hot or iced)
+    secondaryName: matcha tea latte
     drinkIngredients: matcha, milk of choice*, and optional flavor add in
     drinkImage: /uploads/go-gruene.png
     drinkImageAlt: match tea latte in a cup
     drinkImageType: short
   - drinkName: Chai There
-    secondaryName: chai tea latte (hot or iced)
+    secondaryName: chai tea latte
     drinkIngredients: chai tea, and milk of choice*
     drinkImage: /uploads/chai-there.png
     drinkImageAlt: coffee cup with cardamom on the front and cinnamon
@@ -68,21 +66,18 @@ refreshers:
   - drinkName: The Livie Bug
     secondaryName: pink Lotus energy refresher infused with red raspberry and tart cherry
     drinkIngredients: available in sugar free upon request
-    icedOnly: true
     drinkImage: /uploads/livie-bug.png
     drinkImageAlt: iced pink drink with a caterpillar behind it
     drinkImageType: tall
   - drinkName: Brother Blue
     secondaryName: blue Lotus energy refresher infused with blueberry and acai super fruits
     drinkIngredients: available in sugar free upon request
-    icedOnly: true
     drinkImage: /uploads/brother-blue-tea.png
     drinkImageAlt: iced blue drink with an ant behind it
     drinkImageType: tall
   - drinkName: The Saur Worm
     secondaryName: Lotus energy lemonade
     drinkIngredients: available in caffeine free upon request
-    icedOnly: true
     drinkImage: /uploads/saur-worm.png
     drinkImageAlt: iced lemonade with a worm behind it
     drinkImageType: tall
