@@ -38,13 +38,12 @@ export default function CaféHeader() {
           available to-go for visitors without children. Indoor seating around
           the play area is reserved for families enjoying our play space.
         </p>
-        <button
+        {/* <button
           onClick={scrollToSeasonalMenu}
           className={`w-fit font-medium border border-black rounded-lg px-[2rem] py-[0.5rem] my-[1rem] transition-all duration-300 bg-cafe/50 hover:bg-cafe`}
         >
           Seasonal Menu
-        </button>
-
+        </button> */}
         <Image
           priority={true}
           src={coffeeImg}
