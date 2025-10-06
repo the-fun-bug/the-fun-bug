@@ -121,13 +121,6 @@ collections:
             fields:
               - { label: 'Image', name: 'image', widget: 'image' }
               - { label: 'Description of Image', name: 'alt', widget: 'string' }
-      - label: 'Website Banner'
-        name: 'banner'
-        file: 'content/website-info/banner.yml'
-        fields:
-          - label: 'Website Banner Text'
-            name: 'websiteBanner'
-            widget: 'string'
       - label: 'Party Page'
         name: 'PartyPageData'
         file: 'content/website-info/party-pricing.yml'
@@ -195,11 +188,11 @@ collections:
               - label: 'Iced drinks (20oz)'
                 name: 'iced'
                 widget: 'string'
-              - label: 'Cold Foam'
-                name: 'coldFoam'
+              - label: 'Extra Espresso Shot'
+                name: 'shot'
                 widget: 'string'
-              - label: 'Plant-based Milk'
-                name: 'plantMilk'
+              - label: 'Flavor Add-In'
+                name: 'flavor'
                 widget: 'string'
           - label: 'House Specialties - Coffee Drinks'
             name: 'coffeeDrinks'
@@ -222,12 +215,6 @@ collections:
                   name: 'drinkIngredients',
                   widget: 'string',
                   required: true,
-                }
-              - {
-                  label: 'Iced Only? (Will Show Ice Cube)',
-                  name: 'icedOnly',
-                  widget: 'boolean',
-                  required: false,
                 }
               - {
                   label: 'Drink Image',
@@ -276,12 +263,6 @@ collections:
                   required: true,
                 }
               - {
-                  label: 'Iced Only? (Will Show Ice Cube)',
-                  name: 'icedOnly',
-                  widget: 'boolean',
-                  required: false,
-                }
-              - {
                   label: 'Drink Image',
                   hint: 'Short Drink Dimension (190w x 156h), Tall Drink Dimensions (178w x 200h)',
                   name: 'drinkImage',
@@ -326,12 +307,6 @@ collections:
                   name: 'drinkIngredients',
                   widget: 'string',
                   required: true,
-                }
-              - {
-                  label: 'Iced Only? (Will Show Ice Cube)',
-                  name: 'icedOnly',
-                  widget: 'boolean',
-                  required: false,
                 }
               - {
                   label: 'Drink Image',

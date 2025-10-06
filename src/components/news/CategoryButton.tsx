@@ -7,7 +7,7 @@ import getFullCatName from '@/utils/getFullCatName';
 export default function CategoryButton({
   category,
 }: {
-  category: 'all' | 'updates' | 'calendar' | 'specialties';
+  category: 'all' | 'updates' | 'calendar';
 }) {
   const router = useRouter();
 

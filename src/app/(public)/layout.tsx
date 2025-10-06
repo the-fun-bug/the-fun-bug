@@ -1,6 +1,5 @@
 import React from 'react';
 import '../globals.css';
-import getBannerText from '../../../lib/getBannerText';
 
 import { quicksand } from '../fonts';
 
@@ -40,8 +39,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const banner = getBannerText();
-
   return (
     <html lang="en">
       <body className="bg-white">
@@ -49,7 +46,7 @@ export default function RootLayout({
           <div
             className={`flex flex-col justify-between min-h-screen bg-white`}
           >
-            <Navbar bannerText={banner.websiteBanner} />
+            <Navbar />
             <main className="min-h-[calc(100vh-291px)] w-full flex items-center justify-center">
               <div className="flex flex-col justify-center w-full max-w-[1200px] text-black">
                 {children}
