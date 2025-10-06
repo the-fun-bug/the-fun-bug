@@ -78,10 +78,6 @@ export type Photos = {
   homepagePhotos: HomePagePhoto[];
 };
 
-export type BannerType = {
-  websiteBanner: string;
-};
-
 export type MenuType = {
   specialtiesPricing: SpecialtiesPrice;
   coffeeDrinks: DrinkType[];

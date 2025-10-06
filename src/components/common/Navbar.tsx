@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import NavLink from './NavLink';
 import Image from 'next/image';
@@ -10,12 +10,8 @@ import navLogoMobile from './img/logo-nav-mobile.png';
 import navBorder from './img/nav-border.png';
 import useIsMobile from '@/hooks/useIsMobile';
 import ButtonLink from './ButtonLink';
-import Banner from './Banner';
 
-export default function Navbar({ bannerText }: { bannerText: string }) {
-  const hasBanner = bannerText !== null;
-  const bannerRef = useRef<HTMLDivElement | null>(null);
-  const [bannerHeight, setBannerHeight] = useState(82);
+export default function Navbar() {
   const [logoWidth, setLogoWidth] = useState(245); // Default logo size
   const [navHeight, setNavHeight] = useState(0); //Default nav height
   const [mounted, setMounted] = useState(false);
@@ -55,25 +51,8 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
   const secondHalfLinks = navLinks.slice(3);
 
   useEffect(() => {
-    if (hasBanner && bannerRef.current) {
-      const height = bannerRef.current.offsetHeight;
-      setBannerHeight(height); // Update state after the banner is rendered
-    }
-  }, [hasBanner]); // Recalculate height only when hasBanner changes
-
-  useEffect(() => {
     setMounted(true); // Set mounted to true after the component mounts
   }, []);
-
-  useEffect(() => {
-    if (hasBanner) {
-      document.documentElement.style.scrollPaddingTop = `${bannerHeight + 82}px`;
-    }
-
-    return () => {
-      document.documentElement.style.scrollPaddingTop = '82px';
-    };
-  }, [bannerHeight, hasBanner]);
 
   // Close the mobile menu when the route changes
   useEffect(() => {
@@ -133,7 +112,6 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
 
   return (
     <header className="sticky top-0 z-50 w-full">
-      {hasBanner && <Banner ref={bannerRef} text={bannerText} />}
       <div
         id="fixed-height"
         className="min-h-[90px] lg:min-h-[186px] h-fit bg-white"
@@ -191,12 +169,7 @@ export default function Navbar({ bannerText }: { bannerText: string }) {
                 </button>
               </div>
               {navOpen && (
-                <div
-                  className="fixed left-0 h-screen w-screen bg-white"
-                  style={{
-                    top: hasBanner ? `${bannerHeight + 82}px` : '82px',
-                  }}
-                >
+                <div className="fixed left-0 h-screen w-screen bg-white top-[82px]">
                   <div
                     className="h-[3px] w-full mt-[0.5rem]"
                     style={{

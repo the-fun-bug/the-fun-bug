@@ -121,13 +121,6 @@ collections:
             fields:
               - { label: 'Image', name: 'image', widget: 'image' }
               - { label: 'Description of Image', name: 'alt', widget: 'string' }
-      - label: 'Website Banner'
-        name: 'banner'
-        file: 'content/website-info/banner.yml'
-        fields:
-          - label: 'Website Banner Text'
-            name: 'websiteBanner'
-            widget: 'string'
       - label: 'Party Page'
         name: 'PartyPageData'
         file: 'content/website-info/party-pricing.yml'
