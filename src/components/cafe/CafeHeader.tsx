@@ -3,27 +3,27 @@
 import React from 'react';
 import Image from 'next/image';
 import coffeeImg from './img/cafe-header-3.png';
-import useIsMobile from '@/hooks/useIsMobile';
+// import useIsMobile from '@/hooks/useIsMobile';
 
 export default function CaféHeader() {
-  const isMobile = useIsMobile(768);
+  // const isMobile = useIsMobile(768);
 
-  const scrollToSeasonalMenu = () => {
-    const scrollSection = document.querySelector('#seasonal');
-    if (scrollSection) {
-      scrollSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  // const scrollToSeasonalMenu = () => {
+  //   const scrollSection = document.querySelector('#seasonal');
+  //   if (scrollSection) {
+  //     scrollSection.scrollIntoView({ behavior: 'smooth' });
+  //   }
 
-    // Use this function for buttons that scroll from the top of the page
-    // This offsets the extra padding from the large header on large screens
-    if (scrollSection && !isMobile) {
-      const yOffset = -225;
-      const y =
-        scrollSection.getBoundingClientRect().top + window.scrollY + yOffset;
+  //   // Use this function for buttons that scroll from the top of the page
+  //   // This offsets the extra padding from the large header on large screens
+  //   if (scrollSection && !isMobile) {
+  //     const yOffset = -225;
+  //     const y =
+  //       scrollSection.getBoundingClientRect().top + window.scrollY + yOffset;
 
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
+  //     window.scrollTo({ top: y, behavior: 'smooth' });
+  //   }
+  // };
   return (
     <section className="flex justify-center items-center pt-[1rem] pb-[3rem] px-[1rem]">
       <div className="flex flex-col justify-center items-center text-center gap-[1.25rem] w-full max-w-[750px]">
