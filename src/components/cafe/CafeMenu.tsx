@@ -8,6 +8,8 @@ import {
   Milk,
   Item,
   Pricing,
+  DirtySodaPricing,
+  DirtySodaDrinkType,
   Flavor,
 } from '@/types/types';
 import buildYourOwnImg from './img/build-your-own.png';
@@ -27,6 +29,10 @@ export default function CafeMenu({ menuData }: { menuData: MenuType }) {
           teaDrinks={menuData.teaDrinks}
           refreshers={menuData.refreshers}
           milks={menuData.milks}
+        />
+        <DirtySodas
+          pricing={menuData.dirtySodasPricing}
+          drinks={menuData.dirtySodas}
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem] justify-between py-[2rem]">
           <BuildYourOwn
@@ -217,6 +223,60 @@ function Specialties({
               </div>
             ))}
           </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DirtySodas({
+  pricing,
+  drinks,
+}: {
+  pricing: DirtySodaPricing;
+  drinks: DirtySodaDrinkType[] | null;
+}) {
+  return (
+    <div className="w-full">
+      <div className="flex flex-col gap-[1.25rem]">
+        <div className="grid grid-cols-1">
+          <div>
+            <h3 className="text-cafe-pink">Dirty Sodas</h3>
+            <div className="flex flex-row flex-wrap md:justify-between gap-[2rem] md:max-w-[85%] my-[1.5rem]">
+              <div>
+                <div className="flex justify-between w-[205px]">
+                  <p>Kids (12oz)</p>
+                  <p>{pricing.kids}</p>
+                </div>
+                <div className="flex justify-between w-[205px]">
+                  <p>Adults (20oz)</p>
+                  <p>{pricing.adults}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[2rem]">
+          {drinks?.map((d) => (
+            <div
+              key={d.drinkName}
+              className="flex justify-between items-center gap-[1.25rem] md:max-w-[85%] sm:max-w-[80%]"
+            >
+              <div>
+                <div className="flex gap-[0.75rem]">
+                  <h3>{d.drinkName}</h3>
+                </div>
+                <p>{d.drinkDescription}</p>
+              </div>
+              <Image
+                src={d.drinkImage}
+                alt={d.drinkImageAlt}
+                className="max-w-[96px]"
+                height={200}
+                width={178}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>

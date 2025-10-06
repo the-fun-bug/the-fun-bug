@@ -34,7 +34,7 @@ export type DrinkType = {
 
 export type DirtySodaDrinkType = {
   drinkName: string;
-  description: string;
+  drinkDescription: string;
   drinkImageAlt: string;
   drinkImage: string;
 };
@@ -47,6 +47,11 @@ export type Item = {
 export type Pricing = {
   hot: string;
   iced: string;
+};
+
+export type DirtySodaPricing = {
+  kids: string;
+  adults: string;
 };
 
 export type Milk = {
@@ -84,7 +89,7 @@ export type MenuType = {
   teaDrinks: DrinkType[];
   refreshers: DrinkType[];
   specialtyDrinks: DrinkType[] | null;
-  dirtySodasPricing: Pricing;
+  dirtySodasPricing: DirtySodaPricing;
   dirtySodas: DirtySodaDrinkType[] | null;
   buildYourOwnPricing: Pricing;
   flavors: Flavor[];
