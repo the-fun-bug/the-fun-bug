@@ -22,7 +22,6 @@ var NewsPagePreview = createClass({
       const categories = {
         updates: 'The Fun Bug Updates',
         calendar: 'Monthly Calendar',
-        specialties: 'Seasonal Specialties',
       };
       return h(
         'a',

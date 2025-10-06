@@ -7,8 +7,8 @@ export default function NewsHeader() {
         <h1 className="font-nickainley pb-[1rem]">The Fun Bug News</h1>
         <p>
           Stay in the loop with all the buzz at The Fun Bug! Our monthly
-          newsletter features upcoming events, indoor playground updates,
-          seasonal drinks, and everything happening in our play studio and café.
+          newsletter features upcoming events, indoor playground updates, and
+          everything happening in our play studio and café.
         </p>
       </div>
     </section>
