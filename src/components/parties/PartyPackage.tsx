@@ -65,8 +65,16 @@ export default function PartyPackage({
                 buttonText="View Available Party Times"
                 buttonLink="https://thefunbug.as.me/book-party"
                 buttonClass="bg-soft-pink hover:bg-worm-pink"
-                excludeMargin={true}
-                external={true}
+                excludeMargin
+                external
+              />
+            </div>
+            <div className="w-full md:max-w-[400px] flex">
+              <ButtonLink
+                buttonText="Review Our Policies"
+                buttonLink="#policies"
+                buttonClass="bg-soft-blue hover:bg-worm-blue"
+                excludeMargin
               />
             </div>
           </div>
