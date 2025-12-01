@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageNextToTextSection from '../common/ImageNextToText';
 import HiEveryone from './HiEveryone';
-import MonthlyCalendar from '../common/MonthlyCalendar';
+// import MonthlyCalendar from '../common/MonthlyCalendar';
 import RulesOfPlay from './RulesOfPlay';
 import FrequentlyAskedQuestions from './FrequentlyAskedQuestions';
 import saurFlowerLogo from './img/saur-flower.png';
@@ -10,7 +10,7 @@ export default function AboutPage({ photo }: { photo: string }) {
   return (
     <div className="scroll-pt-[88px]">
       <HiEveryone photo={photo} />
-      <MonthlyCalendar />
+      {/* <MonthlyCalendar /> */}
       <ImageNextToTextSection
         imageSrc={saurFlowerLogo}
         alt="The Saur Flower's logo"
