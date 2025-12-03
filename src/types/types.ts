@@ -14,8 +14,8 @@ type PartyHours = {
 export type SpecialtiesPrice = {
   hot: string;
   iced: string;
-  coldFoam: string;
-  plantMilk: string;
+  shot: string;
+  flavor: string;
 };
 
 export type Flavor = {
@@ -27,7 +27,6 @@ export type DrinkType = {
   drinkName: string;
   secondaryName: string;
   drinkIngredients: string;
-  icedOnly: boolean;
   drinkImageType: 'tall' | 'short';
   drinkImageAlt: string;
   drinkImage: string;
@@ -35,7 +34,7 @@ export type DrinkType = {
 
 export type DirtySodaDrinkType = {
   drinkName: string;
-  description: string;
+  drinkDescription: string;
   drinkImageAlt: string;
   drinkImage: string;
 };
@@ -48,6 +47,11 @@ export type Item = {
 export type Pricing = {
   hot: string;
   iced: string;
+};
+
+export type DirtySodaPricing = {
+  kids: string;
+  adults: string;
 };
 
 export type Milk = {
@@ -79,17 +83,13 @@ export type Photos = {
   homepagePhotos: HomePagePhoto[];
 };
 
-export type BannerType = {
-  websiteBanner: string;
-};
-
 export type MenuType = {
   specialtiesPricing: SpecialtiesPrice;
   coffeeDrinks: DrinkType[];
   teaDrinks: DrinkType[];
   refreshers: DrinkType[];
   specialtyDrinks: DrinkType[] | null;
-  dirtySodasPricing: Pricing;
+  dirtySodasPricing: DirtySodaPricing;
   dirtySodas: DirtySodaDrinkType[] | null;
   buildYourOwnPricing: Pricing;
   flavors: Flavor[];

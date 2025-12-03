@@ -4,8 +4,6 @@ const getFullCatName = (category: string) => {
       return 'The Fun Bug Updates';
     case 'calendar':
       return 'Monthly Calendar';
-    case 'specialties':
-      return 'Seasonal Specialties';
   }
 };
 

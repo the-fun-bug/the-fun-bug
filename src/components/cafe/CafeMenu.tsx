@@ -8,9 +8,10 @@ import {
   Milk,
   Item,
   Pricing,
+  DirtySodaPricing,
+  DirtySodaDrinkType,
   Flavor,
 } from '@/types/types';
-import iceCubeImg from './img/ice-cube.png';
 import buildYourOwnImg from './img/build-your-own.png';
 import lotusLogo from './img/lotus-logo.png';
 
@@ -29,6 +30,10 @@ export default function CafeMenu({ menuData }: { menuData: MenuType }) {
           refreshers={menuData.refreshers}
           milks={menuData.milks}
         />
+        <DirtySodas
+          pricing={menuData.dirtySodasPricing}
+          drinks={menuData.dirtySodas}
+        />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem] justify-between py-[2rem]">
           <BuildYourOwn
             pricing={menuData.buildYourOwnPricing}
@@ -36,8 +41,9 @@ export default function CafeMenu({ menuData }: { menuData: MenuType }) {
             milk={menuData.milks}
           />
           <div className="flex flex-col gap-[3rem]">
-            <Beverages beverages={menuData.beverages} />
-            <LightBites bites={menuData.bites} />
+            <SmallMenu title="Beverages" items={menuData.beverages} />
+            <SmallMenu title="Light Bites" items={menuData.bites} />
+            <SmallMenu title="Kids" items={menuData.kids} />
           </div>
         </div>
       </div>
@@ -105,46 +111,24 @@ function Specialties({
               </div>
             </div>
             <div className="flex flex-col gap-[1rem] md:max-w-[85%]">
-              <div className="flex gap-[0.75rem]">
-                <Image
-                  src={iceCubeImg}
-                  alt="ice cube"
-                  height={80}
-                  width={80}
-                  className="w-[25px]"
-                />
-                <p>this drink only comes iced</p>
-              </div>
+              <p className="max-w-[450px]">
+                * {formattedMilks} are available upon request
+              </p>
             </div>
           </div>
           <div>
             <h4 className="text-cafe-pink mt-[1.5rem] mb-[1rem]">Extras</h4>
             <div className="flex flex-row flex-wrap justify-between md:max-w-[85%] mt-[1rem] mb-[1.5rem]">
-              <div className="mr-[1rem]">
-                <div className="flex justify-between w-[205px]">
-                  <p>Cold Foam</p>
-                  <p>+ {specialtiesPricing.coldFoam}</p>
-                </div>
-                <div className="flex justify-between w-[205px]">
-                  <p>Plant-based Milk</p>
-                  <p>+ {specialtiesPricing.plantMilk}</p>
-                </div>
-              </div>
               <div>
                 <div className="flex justify-between w-[205px]">
                   <p>Espresso Shot</p>
-                  <p>+ $0.75</p>
+                  <p>+ {specialtiesPricing.shot}</p>
                 </div>
                 <div className="flex justify-between w-[205px]">
                   <p>Extra Flavor Add-in</p>
-                  <p>+ $0.25</p>
+                  <p>+ {specialtiesPricing.flavor}</p>
                 </div>
               </div>
-            </div>
-            <div className="flex flex-col gap-[1rem] md:max-w-[85%]">
-              <p className="max-w-[450px]">
-                * {formattedMilks} are available upon request
-              </p>
             </div>
           </div>
         </div>
@@ -164,15 +148,6 @@ function Specialties({
                     <div>
                       <div className="flex gap-[0.75rem]">
                         <h3>{d.drinkName}</h3>
-                        {d.icedOnly && (
-                          <Image
-                            src={iceCubeImg}
-                            alt="ice cube"
-                            height={80}
-                            width={80}
-                            className="w-[25px]"
-                          />
-                        )}
                       </div>
                       {d.secondaryName && <p>{d.secondaryName}</p>}
                       <p>{d.drinkIngredients}</p>
@@ -231,15 +206,6 @@ function Specialties({
                     <div>
                       <div className="flex gap-[1rem]">
                         <h3>{d.drinkName}</h3>
-                        {d.icedOnly && (
-                          <Image
-                            src={iceCubeImg}
-                            alt="ice cube"
-                            height={80}
-                            width={80}
-                            className="w-[25px]"
-                          />
-                        )}
                       </div>
                       {d.secondaryName && <p>{d.secondaryName}</p>}
                       <p>{d.drinkIngredients}</p>
@@ -263,6 +229,60 @@ function Specialties({
   );
 }
 
+function DirtySodas({
+  pricing,
+  drinks,
+}: {
+  pricing: DirtySodaPricing;
+  drinks: DirtySodaDrinkType[] | null;
+}) {
+  return (
+    <div className="w-full" id="dirty-sodas">
+      <div className="flex flex-col gap-[1.25rem]">
+        <div className="grid grid-cols-1">
+          <div>
+            <h3 className="text-cafe-pink">Dirty Sodas</h3>
+            <div className="flex flex-row flex-wrap md:justify-between gap-[2rem] md:max-w-[85%] my-[1.5rem]">
+              <div>
+                <div className="flex justify-between w-[205px]">
+                  <p>Kids (12oz)</p>
+                  <p>{pricing.kids}</p>
+                </div>
+                <div className="flex justify-between w-[205px]">
+                  <p>Adults (20oz)</p>
+                  <p>{pricing.adults}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[2rem]">
+          {drinks?.map((d) => (
+            <div
+              key={d.drinkName}
+              className="flex justify-between items-center gap-[1.25rem] md:max-w-[85%] sm:max-w-[80%]"
+            >
+              <div>
+                <div className="flex gap-[0.75rem]">
+                  <h3>{d.drinkName}</h3>
+                </div>
+                <p>{d.drinkDescription}</p>
+              </div>
+              <Image
+                src={d.drinkImage}
+                alt={d.drinkImageAlt}
+                className="max-w-[96px]"
+                height={200}
+                width={178}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function BuildYourOwn({
   pricing,
   flavors,
@@ -275,7 +295,7 @@ function BuildYourOwn({
   return (
     <div className="w-full">
       <div className="flex flex-col gap-[1.25rem]">
-        <h3 className="text-cafe-pink">Build Your Own Latte</h3>
+        <h3 className="text-cafe-pink">Build Your Own</h3>
         <div className="flex justify-between w-[205px]">
           <div>
             <div className="flex justify-between w-[205px]">
@@ -318,34 +338,13 @@ function BuildYourOwn({
   );
 }
 
-function Beverages({ beverages }: { beverages: Item[] }) {
+function SmallMenu({ title, items }: { title: string; items: Item[] }) {
   return (
     <div className="w-full scroll-pt-[100px]">
       <div className="flex flex-col gap-[1.25rem]">
-        <h3 className="text-cafe-pink snap-start">Beverages</h3>
+        <h3 className="text-cafe-pink snap-start">{title}</h3>
         <div>
-          {beverages.map((b) => (
-            <div
-              key={b.name}
-              className="flex justify-between w-full max-w-[400px]"
-            >
-              <p>{b.name}</p>
-              <p>{b.price}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function LightBites({ bites }: { bites: Item[] }) {
-  return (
-    <div className="w-full scroll-pt-[100px]">
-      <div className="flex flex-col gap-[1.25rem]">
-        <h3 className="text-cafe-pink snap-start">Light Bites</h3>
-        <div>
-          {bites.map((b) => (
+          {items.map((b) => (
             <div
               key={b.name}
               className="flex justify-between w-full max-w-[400px]"
