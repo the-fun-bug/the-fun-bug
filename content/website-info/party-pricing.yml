@@ -1,4 +1,4 @@
-PartyPageData:
+PartyPageData: "400"
 partyPricing: $400
 tax: 8.25%
 partyBullets:
@@ -6,9 +6,9 @@ partyBullets:
   - bullet: You may bring in food and beverages.
   - bullet: Our regular snack & drink menu will be available for purchase.
   - bullet: Includes a 30-minute setup time prior to the start of the party.
-  - bullet:
-      Includes up to 15 children; each additional child is $10. Play limited
+  - bullet: Includes up to 15 children; each additional child is $10. Play limited
       to ages 10 and under.
-  - bullet: We kindly ask that all guests review our party policies prior to
+  - bullet: "We kindly ask that all guests review our party policies prior to
       booking. Please note that The Fun Bug does not send reminders regarding
-      party policies.
+      party policies and absolutely no refunds will be issued for fees charged
+      in result of not reviewing policies. "
