@@ -107,7 +107,29 @@ collections:
                 name: 'sunday'
                 widget: 'string'
                 required: false
-      - label: 'Photos'
+      - label: 'Gallery Page Photos'
+        name: 'gallery'
+        file: 'content/website-info/gallery.yml'
+        fields:
+          - label: 'Parties'
+            name: 'parties'
+            widget: 'list'
+            fields:
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'Description of Image', name: 'alt', widget: 'string' }
+          - label: 'Open Play'
+            name: 'openPlay'
+            widget: 'list'
+            fields:
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'Description of Image', name: 'alt', widget: 'string' }
+          - label: 'Events'
+            name: 'events'
+            widget: 'list'
+            fields:
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'Description of Image', name: 'alt', widget: 'string' }
+      - label: 'Photos (Homepage, About, Parties, Cafe)'
         name: 'photos'
         file: 'content/website-info/photos.yml'
         fields:
@@ -117,6 +139,18 @@ collections:
             allowMultiple: false
           - label: 'Homepage Photos'
             name: 'homepagePhotos'
+            widget: 'list'
+            fields:
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'Description of Image', name: 'alt', widget: 'string' }
+          - label: 'Parties Page Photos'
+            name: 'partiesPhotos'
+            widget: 'list'
+            fields:
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'Description of Image', name: 'alt', widget: 'string' }
+          - label: 'Cafe Page Photos'
+            name: 'cafePhotos'
             widget: 'list'
             fields:
               - { label: 'Image', name: 'image', widget: 'image' }
