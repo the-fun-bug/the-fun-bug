@@ -6,19 +6,46 @@ import { quicksand } from '../fonts';
 import Navbar from '@/components/common/Navbar';
 import Footer from '@/components/common/Footer';
 
-export const metadata = {
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
   metadataBase: new URL('https://thefunbug.com'),
   title: 'The Fun Bug, Play Studio & Parties',
   description:
     'Welcome to The Fun Bug, where playtime meets relaxation for both kids and parents!',
+
+  openGraph: {
+    type: 'website',
+    siteName: 'The Fun Bug',
+    title: 'The Fun Bug, Play Studio & Parties',
+    description:
+      'Welcome to The Fun Bug, where playtime meets relaxation for both kids and parents!',
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'The Fun Bug, Play Studio & Parties',
+      },
+    ],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'The Fun Bug, Play Studio & Parties',
+    description:
+      'Welcome to The Fun Bug, where playtime meets relaxation for both kids and parents!',
+    images: ['/opengraph-image.png'],
+  },
+
   icons: {
     icon: [
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       { url: '/favicon.ico', type: 'image/x-icon' },
     ],
-    appleTouchIcon: { url: '/apple-touch-icon.png', sizes: '180x180' },
-    shortcutIcon: [
+    apple: { url: '/apple-touch-icon.png', sizes: '180x180' },
+    shortcut: [
       {
         url: '/android-chrome-192x192.png',
         sizes: '192x192',
@@ -31,6 +58,7 @@ export const metadata = {
       },
     ],
   },
+
   manifest: '/site.webmanifest',
 };
 
