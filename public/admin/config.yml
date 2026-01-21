@@ -129,7 +129,13 @@ collections:
             fields:
               - { label: 'Image', name: 'image', widget: 'image' }
               - { label: 'Description of Image', name: 'alt', widget: 'string' }
-      - label: 'Photos (Homepage, About, Parties, Cafe)'
+          - label: 'Cafe'
+            name: 'cafe'
+            widget: 'list'
+            fields:
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'Description of Image', name: 'alt', widget: 'string' }
+      - label: 'Photos (Homepage, About)'
         name: 'photos'
         file: 'content/website-info/photos.yml'
         fields:
@@ -139,18 +145,6 @@ collections:
             allowMultiple: false
           - label: 'Homepage Photos'
             name: 'homepagePhotos'
-            widget: 'list'
-            fields:
-              - { label: 'Image', name: 'image', widget: 'image' }
-              - { label: 'Description of Image', name: 'alt', widget: 'string' }
-          - label: 'Parties Page Photos'
-            name: 'partiesPhotos'
-            widget: 'list'
-            fields:
-              - { label: 'Image', name: 'image', widget: 'image' }
-              - { label: 'Description of Image', name: 'alt', widget: 'string' }
-          - label: 'Cafe Page Photos'
-            name: 'cafePhotos'
             widget: 'list'
             fields:
               - { label: 'Image', name: 'image', widget: 'image' }
