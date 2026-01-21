@@ -111,14 +111,20 @@ collections:
         name: 'gallery'
         file: 'content/website-info/gallery.yml'
         fields:
+          - label: 'Open Play'
+            name: 'play'
+            widget: 'list'
+            fields:
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'Description of Image', name: 'alt', widget: 'string' }
           - label: 'Parties'
             name: 'parties'
             widget: 'list'
             fields:
               - { label: 'Image', name: 'image', widget: 'image' }
               - { label: 'Description of Image', name: 'alt', widget: 'string' }
-          - label: 'Open Play'
-            name: 'openPlay'
+          - label: 'Cafe'
+            name: 'cafe'
             widget: 'list'
             fields:
               - { label: 'Image', name: 'image', widget: 'image' }
@@ -129,7 +135,7 @@ collections:
             fields:
               - { label: 'Image', name: 'image', widget: 'image' }
               - { label: 'Description of Image', name: 'alt', widget: 'string' }
-      - label: 'Photos (Homepage, About, Parties, Cafe)'
+      - label: 'Photos (Home Page, About Page)'
         name: 'photos'
         file: 'content/website-info/photos.yml'
         fields:
@@ -139,18 +145,6 @@ collections:
             allowMultiple: false
           - label: 'Homepage Photos'
             name: 'homepagePhotos'
-            widget: 'list'
-            fields:
-              - { label: 'Image', name: 'image', widget: 'image' }
-              - { label: 'Description of Image', name: 'alt', widget: 'string' }
-          - label: 'Parties Page Photos'
-            name: 'partiesPhotos'
-            widget: 'list'
-            fields:
-              - { label: 'Image', name: 'image', widget: 'image' }
-              - { label: 'Description of Image', name: 'alt', widget: 'string' }
-          - label: 'Cafe Page Photos'
-            name: 'cafePhotos'
             widget: 'list'
             fields:
               - { label: 'Image', name: 'image', widget: 'image' }
