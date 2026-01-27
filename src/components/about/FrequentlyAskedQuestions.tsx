@@ -17,7 +17,7 @@ export default function FrequentlyAskedQuestions() {
     {
       question: 'Is there an age limit for playing?',
       answer:
-        'Our play studio is open to all children ages 10 and under. We just ask that older children are mindful of younger ones and avoid rough play.',
+        'Our play studio is open to all children ages 6 and under. We just ask that older children are mindful of younger ones and avoid rough play.',
     },
     {
       question: 'Can we drop off our kids to let them play?',
