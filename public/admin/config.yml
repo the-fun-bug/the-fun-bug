@@ -117,6 +117,12 @@ collections:
             fields:
               - { label: 'Image', name: 'image', widget: 'image' }
               - { label: 'Description of Image', name: 'alt', widget: 'string' }
+              - {
+                  label: 'Include in Parties Page?',
+                  name: 'page',
+                  widget: 'boolean',
+                  default: false,
+                }
           - label: 'Open Play'
             name: 'openPlay'
             widget: 'list'
@@ -135,6 +141,12 @@ collections:
             fields:
               - { label: 'Image', name: 'image', widget: 'image' }
               - { label: 'Description of Image', name: 'alt', widget: 'string' }
+              - {
+                  label: 'Include in Cafe Page?',
+                  name: 'page',
+                  widget: 'boolean',
+                  default: false,
+                }
       - label: 'Photos (Homepage, About)'
         name: 'photos'
         file: 'content/website-info/photos.yml'
@@ -178,7 +190,7 @@ collections:
             widget: 'number'
             value_type: 'int'
             min: 1
-          - label: 'Admission price for Ages 3-10'
+          - label: 'Admission price for Ages 3-6'
             name: 'older'
             widget: 'number'
             value_type: 'int'
