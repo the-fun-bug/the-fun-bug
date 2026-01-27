@@ -11,7 +11,7 @@ export default function RulesOfPlay() {
     'Please sanitize hands before entering the play area.',
     'Do not tape or pin anything to the walls.',
     'All children aged 6 and under are welcome! Children six and under are sure to enjoy everything we offer. School-aged children are welcome but must use all equipment and toys safely, as intended, and be respectful of younger children playing nearby.',
-    'A Fun Bug staff member will announce when there are 6 minutes left in your play session. Please use this time to gather your belongings and prepare to exit so we can welcome the next group on time.',
+    'A Fun Bug staff member will announce when there are 10 minutes left in your play session. Please use this time to gather your belongings and prepare to exit so we can welcome the next group on time.',
     'No food or drinks are allowed in the play area.',
   ];
 
