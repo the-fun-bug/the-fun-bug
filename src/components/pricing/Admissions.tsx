@@ -31,7 +31,7 @@ export default function OpenPlayAdmissions({
                 </p>
               </div>
               <div className="flex justify-between items-center mx-auto lg:mx-0 gap-[2.5rem]">
-                <p className="text-[1rem] lg:text-[1.5rem]">Ages 3-10</p>
+                <p className="text-[1rem] lg:text-[1.5rem]">Ages 3-6</p>
                 <p className="text-[1rem] lg:text-[1.5rem]">
                   ${admissionsPricing.older}/child
                 </p>
