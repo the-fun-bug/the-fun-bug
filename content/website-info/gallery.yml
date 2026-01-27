@@ -1,38 +1,55 @@
 parties:
   - image: /uploads/img_2562.webp
     alt: birthday party banner
+    page: true
   - image: /uploads/img_2788.webp
     alt: birthday party banner
+    page: true
   - image: /uploads/img_0873.webp
     alt: birthday party banner
+    page: true
   - image: /uploads/img_0146.webp
     alt: birthday party banner
+    page: true
   - image: /uploads/img_0486.webp
     alt: birthday party banner
+    page: true
   - alt: birthday party banner
     image: /uploads/img_0801.webp
+    page: true
   - alt: birthday party banner
     image: /uploads/img_1468.webp
+    page: true
   - alt: birthday party banner
     image: /uploads/img_7668.webp
+    page: true
   - alt: birthday party cookies
     image: /uploads/parties-cookies.webp
+    page: true
   - alt: birthday party cookies
     image: /uploads/parties-cookies-6.webp
+    page: true
   - alt: birthday party cookies
     image: /uploads/parties-cookies-5.webp
+    page: true
   - alt: birthday party cookies
     image: /uploads/parties-cookies-4.webp
+    page: true
   - alt: birthday party cookies
     image: /uploads/parties-cookies-3.webp
+    page: true
   - alt: birthday party cookies
     image: /uploads/parties-cookies-2.webp
+    page: true
   - alt: birthday party
     image: /uploads/parties-3.webp
+    page: true
   - alt: birthday party
     image: /uploads/parties-2.webp
+    page: false
   - alt: birthday party
     image: /uploads/parties-1.webp
+    page: true
 openPlay:
   - image: /uploads/open-play.webp
     alt: open play
@@ -86,21 +103,31 @@ events:
 cafe:
   - image: /uploads/cafe-working.webp
     alt: cafe drinks
+    page: false
   - image: /uploads/cafe-slide.webp
     alt: cafe drinks
+    page: false
   - image: /uploads/cafe-pink-drink.webp
     alt: cafe drinks
+    page: false
   - image: /uploads/cafe-menu.webp
     alt: cafe drinks
+    page: false
   - image: /uploads/cafe-drinks-rings.webp
     alt: cafe drinks
+    page: false
   - alt: cafe drinks
     image: /uploads/cafe-christmas-drinks.webp
+    page: false
   - alt: cafe drinks
     image: /uploads/cafe-christmas-drinks-2.webp
+    page: false
   - alt: cafe drinks
     image: /uploads/cafe-blue-drink.webp
+    page: false
   - alt: cafe drinks
     image: /uploads/cafe-banana.webp
+    page: false
   - alt: cafe drinks
     image: /uploads/cafe-3.webp
+    page: false
