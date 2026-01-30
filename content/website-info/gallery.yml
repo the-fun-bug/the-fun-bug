@@ -106,6 +106,24 @@ events:
     image: /uploads/events-fourth-5.webp
   - alt: july fourth event
     image: /uploads/events-fourth-6.webp
+  - image: /uploads/img_6906.jpeg
+    alt: "parrot event "
+  - image: /uploads/img_8205.jpeg
+    alt: "grandparents day "
+  - image: /uploads/img_8207.jpeg
+    alt: "grandparents day "
+  - image: /uploads/img_8214.jpeg
+    alt: "grandparents day "
+  - image: /uploads/img_1093.jpeg
+    alt: "halloween moms night out event "
+  - image: /uploads/img_0940.jpeg
+    alt: "music class "
+  - image: /uploads/dsc_9587.jpeg
+    alt: "cocoa and claus for a cause event "
+  - image: /uploads/img_0398.jpeg
+    alt: "parrot event "
+  - image: /uploads/dsc_9200-2.jpeg
+    alt: "cocoa and claus for a cause event "
 cafe:
   - image: /uploads/cafe-slide.webp
     alt: cafe drinks
