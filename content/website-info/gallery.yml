@@ -5,23 +5,14 @@ parties:
   - image: /uploads/img_2788.webp
     alt: birthday party banner
     page: true
-  - image: /uploads/img_0873.webp
+  - image: /uploads/img_0876.jpeg
     alt: birthday party banner
     page: true
   - image: /uploads/img_0247.jpeg
     alt: birthday party banner
     page: true
-  - image: /uploads/img_0486.webp
-    alt: birthday party banner
-    page: true
   - alt: birthday party banner
-    image: /uploads/img_0801.webp
-    page: true
-  - alt: birthday party banner
-    image: /uploads/img_1468.webp
-    page: true
-  - alt: birthday party banner
-    image: /uploads/img_7668.webp
+    image: /uploads/img_1472.jpeg
     page: true
   - alt: birthday party cookies
     image: /uploads/parties-cookies.webp
@@ -50,6 +41,12 @@ parties:
   - alt: birthday party
     image: /uploads/parties-1.webp
     page: true
+  - page: false
+    image: /uploads/img_3206.jpeg
+    alt: photo
+  - page: true
+    image: /uploads/img_3012.jpeg
+    alt: photo
 openPlay:
   - image: /uploads/open-play.webp
     alt: open play
