@@ -85,9 +85,6 @@ events:
   - alt: july fourth event
     image: /uploads/events-fourth-6.webp
 cafe:
-  - image: /uploads/cafe-working.webp
-    alt: cafe drinks
-    page: false
   - image: /uploads/cafe-slide.webp
     alt: cafe drinks
     page: true
