@@ -40,6 +40,7 @@ export default function PricingPage({
       <PlanYourVisit />
       <OpenPlayAdmissions admissionsPricing={admissionsPricing} />
       <Memberships membershipPricing={membershipPricing} />
+      <RulesOfPlay />
       <ImageNextToTextSection
         imageSrc={playDateImg}
         alt="Three drinks from the café side by side"
@@ -68,7 +69,6 @@ export default function PricingPage({
         buttonClass="bg-cafe/50 hover:bg-cafe"
         allPadding={true}
       />
-      <RulesOfPlay />
       <FrequentlyAskedQuestions />
       <RainbowSection
         title="Have You Heard?"

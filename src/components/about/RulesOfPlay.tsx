@@ -9,6 +9,8 @@ export default function RulesOfPlay() {
     'No shoes are permitted on the grassy turf. Children and adults are required to wear socks. If you forget your child’s socks, you may purchase a pair at our counter for $3.',
     'A Fun Bug staff member will announce when there are 10 minutes left in your play session. Please use this time to gather your belongings and prepare to exit so we can welcome the next group on time.',
     'Parents and guardians — not The Fun Bug staff — are responsible for their children and must remain on site at ALL times.',
+    'Each paying child may be accompanied by up to two adults at no additional cost. Any extra adults are welcome for $8 each.',
+    'The Fun Bug Play Studio & Parties is not responsible for lost or stolen items.',
     'The Fun Bug Play Studio & Parties is not responsible for lost or stolen items.',
     'Please sanitize hands before entering the play area.',
     'Do not tape or pin anything to the walls.',
