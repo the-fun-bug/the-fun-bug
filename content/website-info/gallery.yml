@@ -108,10 +108,10 @@ cafe:
     page: false
   - alt: cafe drinks
     image: /uploads/cafe-blue-drink.webp
-    page: false
+    page: true
   - alt: cafe drinks
     image: /uploads/cafe-banana.webp
-    page: false
+    page: true
   - alt: cafe drinks
     image: /uploads/cafe-3.webp
-    page: false
+    page: true
