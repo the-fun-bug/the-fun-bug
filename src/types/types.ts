@@ -106,3 +106,20 @@ export type GalleryPhotos = {
   events: Photo[];
   cafe: Photo[];
 };
+
+export interface GalleryImageGroup {
+  eventType: GalleryEventType;
+  images: ImageType[];
+}
+
+export type GalleryEventType =
+  | 'parties'
+  | 'openPlay'
+  | 'cafe'
+  | 'events'
+  | 'all'
+  | null;
+
+export interface ImageType {
+  image: string;
+}

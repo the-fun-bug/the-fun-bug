@@ -1,7 +1,7 @@
 import path from 'path';
 import fs from 'fs';
 import yaml from 'js-yaml';
-import { GalleryPhotos, Photo } from '@/types/types';
+import { GalleryPhotos, Photo, GalleryImageGroup } from '@/types/types';
 
 // Helper function to load the YAML data
 function loadPhotosData(): GalleryPhotos {
@@ -37,4 +37,36 @@ export function getPartiesPhotos(): Photo[] {
   }
 
   return photos;
+}
+
+export default async function getAllGalleryImages(): Promise<
+  GalleryImageGroup[]
+> {
+  const data = loadPhotosData();
+
+  const shuffleArray = <T>(array: T[]): T[] => {
+    return array
+      .map((item) => ({ ...item, sortKey: Math.random() })) // Add a random key
+      .sort((a, b) => a.sortKey - b.sortKey) // Sort by random key
+      .map(({ sortKey, ...item }) => item as T); // Explicitly cast back to T
+  };
+
+  return [
+    {
+      eventType: 'parties',
+      images: shuffleArray(data.parties),
+    },
+    {
+      eventType: 'openPlay',
+      images: shuffleArray(data.openPlay),
+    },
+    {
+      eventType: 'cafe',
+      images: shuffleArray(data.cafe),
+    },
+    {
+      eventType: 'events',
+      images: shuffleArray(data.events),
+    },
+  ];
 }
