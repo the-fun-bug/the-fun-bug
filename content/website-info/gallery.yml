@@ -37,23 +37,23 @@ parties:
     page: true
   - alt: birthday party
     image: /uploads/parties-2.webp
-    page: false
+    page: true
   - alt: birthday party
     image: /uploads/parties-1.webp
     page: true
-  - page: false
+  - page: true
     image: /uploads/img_3206.jpeg
     alt: photo
   - page: true
     image: /uploads/img_3012.jpeg
     alt: photo
-  - page: false
+  - page: true
     image: /uploads/img_3099.jpeg
     alt: photo
-  - page: false
+  - page: true
     image: /uploads/img_2702.jpeg
     alt: party
-  - page: false
+  - page: true
     image: /uploads/img_1033.jpeg
     alt: party
 openPlay:
@@ -138,8 +138,8 @@ cafe:
     alt: cafe drinks
     page: true
   - alt: cafe drinks
-    image: /uploads/cafe-christmas-drinks.webp
-    page: false
+    image: /uploads/img_3363.jpeg
+    page: true
   - alt: cafe drinks
     image: /uploads/cafe-christmas-drinks-2.webp
     page: false
@@ -152,3 +152,12 @@ cafe:
   - alt: cafe drinks
     image: /uploads/cafe-3.webp
     page: true
+  - page: true
+    image: /uploads/img_9565.jpeg
+    alt: "halloween "
+  - page: true
+    image: /uploads/img_0639.jpeg
+    alt: turkey cookies
+  - page: true
+    image: /uploads/events-shark-3.webp
+    alt: shark cookies
