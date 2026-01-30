@@ -2,12 +2,18 @@ import React from 'react';
 import CafeHeader from './CafeHeader';
 import CafeMenu from './CafeMenu';
 import RainbowSection from '../common/RainbowSection';
-import { MenuType } from '@/types/types';
+import { MenuType, Photo } from '@/types/types';
 
-export default function CafePage({ menuData }: { menuData: MenuType }) {
+export default function CafePage({
+  menuData,
+  carouselImages,
+}: {
+  menuData: MenuType;
+  carouselImages: Photo[];
+}) {
   return (
     <>
-      <CafeHeader />
+      <CafeHeader images={carouselImages} />
       <CafeMenu menuData={menuData} />
       <RainbowSection
         title="Did You Know?"

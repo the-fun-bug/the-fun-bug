@@ -3,6 +3,7 @@ import PartiesPage from '@/components/parties/PartiesPage';
 import type { Metadata } from 'next';
 import getHoursData from '../../../../lib/getHours';
 import getPartyPageData from '../../../../lib/getPartyPageData';
+import { getPartiesPhotos } from '../../../../lib/getGalleryData';
 
 export const metadata: Metadata = {
   title:
@@ -14,6 +15,9 @@ export const metadata: Metadata = {
 export default function Parties() {
   const hours = getHoursData();
   const partyData = getPartyPageData();
+  const photos = getPartiesPhotos();
 
-  return <PartiesPage hours={hours} partyData={partyData} />;
+  return (
+    <PartiesPage hours={hours} partyData={partyData} carouselPhotos={photos} />
+  );
 }

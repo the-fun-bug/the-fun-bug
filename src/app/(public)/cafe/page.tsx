@@ -2,6 +2,7 @@ import React from 'react';
 import CafePage from '@/components/cafe/CafePage';
 import type { Metadata } from 'next';
 import getMenuData from '../../../../lib/getMenuData';
+import { getCafePhotos } from '../../../../lib/getGalleryData';
 
 export const metadata: Metadata = {
   title: 'The Fun Bug Cafe | Relax with Drinks & Free Wi-Fi',
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 
 export default function Cafe() {
   const menuData = getMenuData();
+  const carouselPhotos = getCafePhotos();
 
-  return <CafePage menuData={menuData} />;
+  return <CafePage menuData={menuData} carouselImages={carouselPhotos} />;
 }

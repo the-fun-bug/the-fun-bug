@@ -1,7 +1,7 @@
 import path from 'path';
 import fs from 'fs';
 import yaml from 'js-yaml';
-import { Photos, HomePagePhoto } from '@/types/types';
+import { Photos, Photo } from '@/types/types';
 
 // Helper function to load the YAML data
 function loadPhotosData(): Photos {
@@ -17,7 +17,7 @@ export function getAboutPhoto(): string {
 }
 
 // Function to get the homepage photos
-export function getHomepagePhotos(): HomePagePhoto[] {
+export function getHomepagePhotos(): Photo[] {
   const data = loadPhotosData();
   return data.homepagePhotos;
 }
