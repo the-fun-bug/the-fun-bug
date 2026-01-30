@@ -67,6 +67,22 @@ openPlay:
     alt: open play
   - alt: open play
     image: /uploads/open-play-14.webp
+  - image: /uploads/img_6729.jpeg
+    alt: kids
+  - image: /uploads/img_2004.jpeg
+    alt: kids
+  - image: /uploads/att.muguly-fjxjd6nivorg9vhqmcr0zu-cr7exkgls0awc.jpeg
+    alt: mom group
+  - image: /uploads/img_8369.jpeg
+    alt: soft play
+  - image: /uploads/img_5525.jpeg
+    alt: cookies
+  - image: /uploads/img_6324.jpeg
+    alt: "legos "
+  - image: /uploads/1b1893e6-d816-4838-a1dc-e095844e006e.jpeg
+    alt: "mom with twins "
+  - image: /uploads/img_6553.jpeg
+    alt: "girl with cookie "
 events:
   - image: /uploads/events-shark.webp
     alt: shark event
