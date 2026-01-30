@@ -181,15 +181,13 @@ export default function GalleryPage({
       if (filterOption === 'all') {
         setSelectedEventType(null);
       } else {
-        setSelectedEventType(
-          filterOption === selectedEventType ? null : filterOption
-        );
+        setSelectedEventType(filterOption);
       }
 
       setPage(1);
 
-      // Check if the user has scrolled below the sticky menu
-      const stickyMenuOffset = 95; // Adjust this value if needed
+      const stickyMenuOffset = 95;
+
       if (window.scrollY > stickyMenuOffset) {
         window.scrollTo({
           top: 0,
@@ -197,7 +195,7 @@ export default function GalleryPage({
         });
       }
     },
-    [selectedEventType, setSelectedEventType, setPage]
+    [setSelectedEventType, setPage]
   );
 
   useEffect(() => {
@@ -220,52 +218,106 @@ export default function GalleryPage({
   };
 
   return (
-    <div className="bg-softOpal py-12 md:py-18 flex justify-center">
-      <div className="max-w-[85.75rem] flex flex-col gap-[1.5rem] mx-[0.625rem] lg:mx-[1.5625rem]">
-        <h1 className="font-nickainley text-center mb-[1rem]">
+    <div className="px-[1rem] flex justify-center">
+      <div className="flex flex-col gap-[1.5rem]">
+        <h1 className="font-nickainley text-center">
           Fun Times at The Fun Bug
         </h1>
         <p className="max-w-[600px] text-center mx-auto">
           Explore all the things we do here. From daily play to great events, we
           have it all!
         </p>
-        {/* Event Type Filter Buttons */}
-        <div className="sticky top-[135px] z-20">
-          <div className="flex flex-wrap justify-center md:gap-4 bg-softOpal px-[1rem] py-[1rem] rounded-[30px] w-fit mx-auto bg-white">
+        {/* Filter Controls */}
+        <div className="w-full flex justify-center">
+          {/* Mobile: Dropdown */}
+          <div className="md:hidden flex justify-center">
+            <label htmlFor="eventType" className="sr-only">
+              Filter events
+            </label>
+
+            <div className="relative">
+              <select
+                id="eventType"
+                value={selectedEventType ?? 'all'}
+                onChange={(e) => handleFilterButtonClick(e.target.value)}
+                className="
+                  appearance-none
+                  rounded-2xl
+                  bg-white
+                  px-6
+                  py-2
+                  pr-10
+                  text-center
+                  font-semibold
+                  shadow-sm
+                  ring-1 ring-soft-blue
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-worm-blue
+                  inline-block
+                  min-w-[120px]
+                "
+              >
+                <option value="all">All</option>
+                {filterOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+
+              {/* Chevron */}
+              <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+                <svg
+                  className="h-5 w-5 opacity-60"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop: Buttons */}
+          <div className="hidden md:flex flex-wrap justify-center md:gap-4 px-[1rem] py-[1rem] rounded-[30px] w-fit mx-auto bg-white">
             <button
-              onClick={() => {
-                handleFilterButtonClick('all');
-              }}
-              className={`px-2 md:px-4 z-7 ${
-                selectedEventType === null
-                  ? 'opacity-100 underline underline-offset-8'
-                  : 'opacity-70'
+              onClick={() => handleFilterButtonClick('all')}
+              className={`z-7 font-semibold px-[2rem] py-[0.5rem] ${
+                selectedEventType === null ? 'bg-soft-blue rounded-lg' : ''
               }`}
             >
               All
             </button>
+
             {filterOptions.map((option) => (
               <button
                 key={option.value}
-                onClick={() => {
-                  handleFilterButtonClick(option.value);
-                }}
-                className={`px-2 md:px-4 ${
+                onClick={() => handleFilterButtonClick(option.value)}
+                className={`font-semibold px-[2rem] py-[0.5rem] ${
                   selectedEventType === option.value
-                    ? 'opacity-100 underline underline-offset-8'
-                    : 'opacity-70'
+                    ? 'bg-soft-blue rounded-lg'
+                    : ''
                 }`}
               >
                 {option.label}
               </button>
             ))}
           </div>
+        </div>
+
+        <div className="sticky top-[120px] z-20">
           {showScrollTopButton && (
             <button
               onClick={scrollToTop}
               className="bg-worm-blue absolute left-1/2 transform -translate-x-1/2 mt-[7px] px-4 py-2 rounded-full shadow-lg transition-opacity duration-300 flex items-center gap-[0.5rem] cursor-pointer"
             >
-              <p>Scroll to Top</p>
+              <p>Back to Top</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
