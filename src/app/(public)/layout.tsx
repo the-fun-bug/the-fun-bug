@@ -10,7 +10,10 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://thefunbug.com'),
-  title: 'The Fun Bug, Play Studio & Parties',
+  title: {
+    default: 'The Fun Bug, Play Studio & Parties',
+    template: '%s | The Fun Bug, Play Studio & Parties',
+  },
   description:
     'Welcome to The Fun Bug, where playtime meets relaxation for both kids and parents!',
 
