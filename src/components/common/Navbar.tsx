@@ -18,7 +18,6 @@ export default function Navbar() {
   const isMobile = useIsMobile(1024);
   const [navOpen, setNavOpen] = useState(false);
   const pathname = usePathname(); // Track the current path using the `usePathname` hook
-  const [showButton, setShowButton] = useState(false);
 
   const navLinks = [
     {
@@ -34,6 +33,10 @@ export default function Navbar() {
       linkName: 'About',
     },
     {
+      link: '/gallery',
+      linkName: 'Gallery',
+    },
+    {
       link: '/cafe',
       linkName: 'Café',
     },
@@ -47,8 +50,8 @@ export default function Navbar() {
     },
   ];
 
-  const firstHalfLinks = navLinks.slice(0, 3);
-  const secondHalfLinks = navLinks.slice(3);
+  const firstHalfLinks = navLinks.slice(0, 4);
+  const secondHalfLinks = navLinks.slice(4);
 
   useEffect(() => {
     setMounted(true); // Set mounted to true after the component mounts
@@ -82,11 +85,9 @@ export default function Navbar() {
       if (window.scrollY > 1) {
         setLogoWidth(125); // Shrink logo size when scrolling
         setNavHeight(104);
-        setShowButton(true); //Show booking button when logo shrinks
       } else {
         setLogoWidth(245); // Restore original size at top
         setNavHeight(186.5);
-        setShowButton(false); //hide booking button when logo is large
       }
     };
 
@@ -232,14 +233,12 @@ export default function Navbar() {
                     isActive={isActiveLink(link)}
                   />
                 ))}
-                <div className={`${showButton ? 'block' : 'hidden'}`}>
-                  <ButtonLink
-                    buttonText="Book Now"
-                    buttonLink="https://thefunbug.as.me/"
-                    buttonClass="bg-soft-blue hover:bg-worm-blue"
-                    external={true}
-                  />
-                </div>
+                <ButtonLink
+                  buttonText="Book Now"
+                  buttonLink="https://thefunbug.as.me/"
+                  buttonClass="bg-soft-blue hover:bg-worm-blue"
+                  external={true}
+                />
               </div>
             </nav>
           ))}
