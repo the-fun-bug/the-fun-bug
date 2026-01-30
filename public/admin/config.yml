@@ -122,6 +122,7 @@ collections:
                   name: 'page',
                   widget: 'boolean',
                   default: false,
+                  required: false,
                 }
           - label: 'Open Play'
             name: 'openPlay'
@@ -146,6 +147,7 @@ collections:
                   name: 'page',
                   widget: 'boolean',
                   default: false,
+                  required: false,
                 }
       - label: 'Photos (Homepage, About)'
         name: 'photos'

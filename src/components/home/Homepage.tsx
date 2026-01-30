@@ -1,19 +1,19 @@
 import React from 'react';
 import ButtonLink from '../common/ButtonLink';
-import HomepageGallery from './Gallery';
+import PhotoCarousel from './PhotoCarousel';
 import OurStory from './OurStory';
 import HowWePlay from './HowWePlay';
 import ImageNextToTextSection from '../common/ImageNextToText';
 import VisitUs from '../common/VisitUs';
 import cafeDrinksImg from './img/cafe-drinks.png';
-import { Hours, HomePagePhoto } from '@/types/types';
+import { Hours, Photo } from '@/types/types';
 
 export default function Homepage({
   hours,
   galleryImages,
 }: {
   hours: Hours;
-  galleryImages: HomePagePhoto[];
+  galleryImages: Photo[];
 }) {
   return (
     <>
@@ -46,7 +46,7 @@ export default function Homepage({
           </div>
         </div>
         <div className="lg:w-[55%] bg-gray-200">
-          <HomepageGallery images={galleryImages} />
+          <PhotoCarousel images={galleryImages} />
         </div>
       </div>
       <OurStory />

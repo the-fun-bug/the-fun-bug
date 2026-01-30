@@ -66,7 +66,7 @@ openPlay:
   - alt: open play
     image: /uploads/open-play-8.webp
   - alt: open play
-    image: /uploads/9.webp
+    image: /uploads/open-play-9.webp
   - alt: open play
     image: /uploads/open-play-10.webp
   - alt: open play
@@ -106,16 +106,16 @@ cafe:
     page: false
   - image: /uploads/cafe-slide.webp
     alt: cafe drinks
-    page: false
+    page: true
   - image: /uploads/cafe-pink-drink.webp
     alt: cafe drinks
     page: false
   - image: /uploads/cafe-menu.webp
     alt: cafe drinks
-    page: false
+    page: true
   - image: /uploads/cafe-drinks-rings.webp
     alt: cafe drinks
-    page: false
+    page: true
   - alt: cafe drinks
     image: /uploads/cafe-christmas-drinks.webp
     page: false

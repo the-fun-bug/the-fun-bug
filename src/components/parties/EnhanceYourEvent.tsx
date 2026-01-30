@@ -4,6 +4,7 @@ import thirtyMinutesImg from './img/30-minutes.png';
 import cookiesImg from './img/cookies.png';
 import balloonsImg from './img/baloon-arch.png';
 import discountDrinksImg from './img/discounted-drinks.png';
+import bannerImg from './img/banner.webp';
 import ButtonLink from '../common/ButtonLink';
 
 type Enhancement = {
@@ -55,6 +56,19 @@ export default function EnhanceYourEvent() {
       imageHeight: 628,
       imageWidth: 644,
       alt: 'The Fun Bug worm wearing sunglasses under a balloon arch',
+      buttonLink: null,
+      buttonLinkExternal: false,
+      buttonText: null,
+      buttonClass: null,
+    },
+    {
+      title: 'Custom Banner',
+      description:
+        'Put the finishing touch on your celebration with one of our custom banners. Each one is thoughtfully designed to complement your special day.',
+      image: bannerImg,
+      imageHeight: 523,
+      imageWidth: 978,
+      alt: 'The Fun Bug gang on a banner with the words Come Celebrate with Us',
       buttonLink: null,
       buttonLinkExternal: false,
       buttonText: null,

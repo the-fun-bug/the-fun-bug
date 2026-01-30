@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
-import coffeeImg from './img/cafe-header-3.png';
 import useIsMobile from '@/hooks/useIsMobile';
+import PhotoCarousel from '../home/PhotoCarousel';
+import { Photo } from '@/types/types';
 
-export default function CaféHeader() {
+export default function CaféHeader({ images }: { images: Photo[] }) {
   const isMobile = useIsMobile(768);
 
   const scrollToDirtySodasMenu = () => {
@@ -25,8 +25,11 @@ export default function CaféHeader() {
     }
   };
   return (
-    <section className="flex justify-center items-center pt-[1rem] pb-[3rem] px-[1rem]">
-      <div className="flex flex-col justify-center items-center text-center gap-[1.25rem] w-full max-w-[750px]">
+    <section className="flex flex-col-reverse lg:flex-row gap-6 pt-[1rem] px-[1rem] lg:items-center">
+      <div className="lg:w-[55%] bg-gray-200">
+        <PhotoCarousel images={images} fit="cover" />
+      </div>
+      <div className="lg:w-[45%] flex flex-col gap-4 text-center lg:text-left">
         <h1 className="font-nickainley">The Fun Bug Café</h1>
         <p>
           Enjoy your favorite beverage while your little bugs play! The Fun Bug
@@ -44,15 +47,6 @@ export default function CaféHeader() {
         >
           Check Out Our New Dirty Sodas Menu
         </button>
-        <Image
-          priority={true}
-          src={coffeeImg}
-          alt="Four cups of beverages that can be found in the cafe"
-          width={1100}
-          height={460}
-          className="w-full max-w-[550px]"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        />
       </div>
     </section>
   );

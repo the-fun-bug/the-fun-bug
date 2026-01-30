@@ -58,9 +58,10 @@ export type Milk = {
   milk: string;
 };
 
-export type HomePagePhoto = {
+export type Photo = {
   image: string;
   alt: string;
+  page?: boolean;
 };
 
 export type Bullet = {
@@ -80,7 +81,7 @@ export type Hours = {
 
 export type Photos = {
   aboutPhoto: string;
-  homepagePhotos: HomePagePhoto[];
+  homepagePhotos: Photo[];
 };
 
 export type MenuType = {
@@ -98,3 +99,27 @@ export type MenuType = {
   bites: Item[];
   kids: Item[];
 };
+
+export type GalleryPhotos = {
+  parties: Photo[];
+  openPlay: Photo[];
+  events: Photo[];
+  cafe: Photo[];
+};
+
+export interface GalleryImageGroup {
+  eventType: GalleryEventType;
+  images: ImageType[];
+}
+
+export type GalleryEventType =
+  | 'parties'
+  | 'openPlay'
+  | 'cafe'
+  | 'events'
+  | 'all'
+  | null;
+
+export interface ImageType {
+  image: string;
+}

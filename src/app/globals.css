@@ -83,21 +83,18 @@ p {
 
 /* Swiper */
 
-/* .packages-at-a-glance .swiper-pagination {
-  bottom: 10px;
-} */
-
-.homepage-gallery .swiper-pagination-bullet-active {
-  background: #218b82 !important;
+/* Scrollbar track (like inactive bullets) */
+.homepage-gallery .swiper-scrollbar {
+  background: #d9ebdd;
+  border-radius: 999px;
 }
 
-.homepage-gallery .swiper-pagination-bullet {
-  width: 15px;
-  height: 15px;
-  background: #d9ebdd;
-  opacity: 1;
+/* Scrollbar thumb (like active bullet) */
+.homepage-gallery .swiper-scrollbar-drag {
+  background: #218b82;
+  border-radius: 999px;
+}
 
-  @media (max-width: 640px) {
-    margin: 0 10px !important;
-  }
+.homepage-gallery .swiper-scrollbar-drag:hover {
+  background: #1a746d;
 }
