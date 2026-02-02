@@ -56,6 +56,27 @@ parties:
   - page: true
     image: /uploads/img_1033.jpeg
     alt: party
+  - page: true
+    image: /uploads/img_3518.jpeg
+    alt: "Toy Story "
+  - page: true
+    image: /uploads/img_3490.jpeg
+    alt: "Mermaid unicorn "
+  - page: true
+    image: /uploads/img_3458.jpeg
+    alt: "Twin birthday "
+  - page: true
+    image: /uploads/img_3457.jpeg
+    alt: "Family "
+  - page: true
+    image: /uploads/img_3456.jpeg
+    alt: "Group "
+  - page: true
+    image: /uploads/img_4335.jpeg
+    alt: "Farm birthday "
+  - page: true
+    image: /uploads/img_3405.jpeg
+    alt: "Toy Story "
 openPlay:
   - image: /uploads/open-play.webp
     alt: open play
