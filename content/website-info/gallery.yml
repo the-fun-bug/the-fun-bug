@@ -8,6 +8,9 @@ parties:
   - image: /uploads/img_0876.jpeg
     alt: birthday party banner
     page: true
+  - page: true
+    image: /uploads/img_3792.jpeg
+    alt: "race car birthday "
   - image: /uploads/img_0247.jpeg
     alt: birthday party banner
     page: true
@@ -77,9 +80,6 @@ parties:
   - page: true
     image: /uploads/img_3405.jpeg
     alt: "Toy Story "
-  - page: true
-    image: /uploads/img_3792.jpeg
-    alt: "race car birthday "
 openPlay:
   - image: /uploads/open-play.webp
     alt: open play
