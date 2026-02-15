@@ -80,6 +80,9 @@ parties:
   - page: true
     image: /uploads/img_3405.jpeg
     alt: "Toy Story "
+  - page: true
+    image: /uploads/img_8868.jpeg
+    alt: "Trolls birthday "
 openPlay:
   - image: /uploads/open-play.webp
     alt: open play
