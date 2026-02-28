@@ -86,6 +86,9 @@ parties:
   - page: true
     image: /uploads/img_3982.jpeg
     alt: "Cookies "
+  - page: true
+    image: /uploads/img_4640.jpeg
+    alt: "Monster trucks "
 openPlay:
   - image: /uploads/open-play.webp
     alt: open play
