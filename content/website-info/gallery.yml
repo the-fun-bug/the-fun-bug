@@ -155,6 +155,8 @@ openPlay:
     alt: "mom with twins "
   - image: /uploads/img_6553.jpeg
     alt: "girl with cookie "
+  - image: /uploads/img_6956.jpeg
+    alt: baby playing with magnet tiles
 events:
   - image: /uploads/events-shark.webp
     alt: shark event
